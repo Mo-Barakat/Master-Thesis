@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  7 DEC 2023 02:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  7 DEC 2023 03:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1919,80 +1919,80 @@ chapter 1.
 chapter 2.
 [2
 
-]) (Content/Mechanical Design.tex [3]
+]) (Content/Mechanical Design.tex [3] [4]
 chapter 3.
-) (Content/Electronic Design.tex [4
+) (Content/Electronic Design.tex [5
 
 ]
 chapter 4.
-) (Content/Modelling and Simulation.tex [5
+) (Content/Modelling and Simulation.tex [6
 
 ]
 chapter 5.
-[6
+[7
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 0.
  (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [7{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<./Figures/Modeling///Model.pdf, id=273, 150.18646pt x 236.27304pt>
+) [8{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+<./Figures/Modeling///Model.pdf, id=286, 150.18646pt x 236.27304pt>
 File: ./Figures/Modeling///Model.pdf Graphic file (type pdf)
 <use ./Figures/Modeling///Model.pdf>
 Package pdftex.def Info: ./Figures/Modeling///Model.pdf  used on input line 61.
 
 (pdftex.def)             Requested size: 227.62206pt x 358.12567pt.
- [8{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./Figures/Modeli
+ [9{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./Figures/Modeli
 ng///Model.pdf>]
 Overfull \hbox (2.66605pt too wide) detected at line 90
 [][][][][]
  []
 
-<./Figures/Modeling///Angles.pdf, id=282, 123.30772pt x 202.56958pt>
+<./Figures/Modeling///Angles.pdf, id=295, 123.30772pt x 202.56958pt>
 File: ./Figures/Modeling///Angles.pdf Graphic file (type pdf)
 <use ./Figures/Modeling///Angles.pdf>
 Package pdftex.def Info: ./Figures/Modeling///Angles.pdf  used on input line 11
 7.
 (pdftex.def)             Requested size: 227.62206pt x 373.96582pt.
-[9{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/M
-iKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/
-lm-mathex.enc} <./Figures/Modeling///Angles.pdf>] [10]
+[10{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/
+MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm
+/lm-mathex.enc} <./Figures/Modeling///Angles.pdf>] [11]
 Overfull \hbox (54.68748pt too wide) in paragraph at lines 243--259
  [][] 
  []
 
-) (Content/Mechanical Assembly.tex [11]
+) (Content/Mechanical Assembly.tex [12]
 chapter 6.
-) (Content/Firmware and Testing.tex [12
+) (Content/Firmware and Testing.tex [13
 
 ]
 chapter 7.
-) (Content/Design.tex [13
+) (Content/Design.tex [14
 
 ]
 chapter 8.
-<./Figures/Design///Capture.png, id=349, 553.31718pt x 530.73282pt>
+<./Figures/Design///Capture.png, id=362, 553.31718pt x 530.73282pt>
 File: ./Figures/Design///Capture.png Graphic file (type png)
 <use ./Figures/Design///Capture.png>
 Package pdftex.def Info: ./Figures/Design///Capture.png  used on input line 10.
 
 (pdftex.def)             Requested size: 455.24411pt x 436.66142pt.
-[14
+[15
 
- <./Figures/Design///Capture.png>] [15]
+ <./Figures/Design///Capture.png>] [16]
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Design///Component_diagram.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./Figures/Design///Component_diagram.pdf, id=359, 687.52856pt x 212.71469pt>
+<./Figures/Design///Component_diagram.pdf, id=372, 687.52856pt x 212.71469pt>
 File: ./Figures/Design///Component_diagram.pdf Graphic file (type pdf)
 <use ./Figures/Design///Component_diagram.pdf>
 Package pdftex.def Info: ./Figures/Design///Component_diagram.pdf  used on inpu
 t line 53.
 (pdftex.def)             Requested size: 455.24411pt x 140.85301pt.
-) (Content/Safety.tex [16 <./Figures/Design///Component_diagram.pdf>]
+) (Content/Safety.tex [17 <./Figures/Design///Component_diagram.pdf>]
 chapter 9.
-) [17
+) [18
 
 ]) (FrontBackMatter/BackMatter.tex (Master_Thesis.ind) (Master_Thesis.bbl
 chapter without number
@@ -2021,11 +2021,11 @@ Package rerunfilecheck Info: File `Master_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 50931 strings out of 475247
- 1037602 string characters out of 5767607
+ 50965 strings out of 475247
+ 1038307 string characters out of 5767607
  1943801 words of memory out of 5000000
- 71031 multiletter control sequences out of 15000+600000
- 653835 words of font info for 198 fonts, out of 8000000 for 9000
+ 71059 multiletter control sequences out of 15000+600000
+ 653918 words of font info for 199 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  119i,20n,113p,10934b,961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
@@ -2043,9 +2043,9 @@ gram Files/MiKTeX/fonts/type1/public/lm/lmro8.pfb><C:/Program Files/MiKTeX/font
 s/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/l
 msy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Master_Thesis.pdf (26 pages, 892980 bytes).
+Output written on Master_Thesis.pdf (27 pages, 898273 bytes).
 PDF statistics:
- 551 PDF objects out of 1000 (max. 8388607)
- 147 named destinations out of 1000 (max. 500000)
- 51575 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 574 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 500000)
+ 51599 words of extra memory for PDF output out of 61914 (max. 10000000)
 
