@@ -1,37 +1,50 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\nonumberline List of Figures}{VII}{chapter*.4}%
-\contentsline {chapter}{\nonumberline List of Tables}{VIII}{chapter*.5}%
+\contentsline {chapter}{\nonumberline List of Figures}{VIII}{chapter*.4}%
+\contentsline {chapter}{\nonumberline List of Tables}{IX}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Explanation of the Goals and Requirements}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Prior Works and Literature Review}{2}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Mechanical Design}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Electronic Design}{4}{chapter.3}%
+\contentsline {chapter}{\numberline {2}Literature Review}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Overview of Two-Wheeled Inverted Pendulum Robots}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Prior Works and Advances in Multi-Legged Robotic Systems}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}State-of-the-Art in Robotic Control Systems}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Mechanical Design}{4}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Design Objectives and Requirements}{4}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Assembly Process}{4}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Integration of Mechanical and Electronic Systems}{4}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Troubleshooting and Problem Solving}{4}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Safety Considerations}{4}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Modelling and Simulation}{5}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Mathematical Modelling}{6}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Center of Gravity}{7}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Moment of inertia}{7}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Equation of motion}{8}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Dynamics of the Two-Wheeled Inverted Pendulum Robot}{8}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Numerical Simulation}{10}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Simulation Environment}{10}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Controller Synthesis}{10}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Simulation Analysis}{10}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Mechanical Assembly}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Components Overview}{11}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Assembly Process}{11}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Integration of Mechanical and Electronic Systems}{11}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Troubleshooting and Problem Solving}{11}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Safety Considerations}{11}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Firmware and Testing}{12}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Design}{13}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Safety}{16}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Random}{17}{chapter.9}%
-\contentsline {chapter}{\nonumberline Bibliography}{IX}{chapter*.11}%
+\contentsline {section}{\numberline {3.2}Conceptual Design}{4}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Detailed Design Development}{4}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Design for Manufacturability and Assembly}{4}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Prototyping and Iterative Design}{4}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Electronic Design}{5}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Design Objectives and Constraints}{5}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Component Selection}{5}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Circuit Design}{5}{section.4.3}%
+\contentsline {section}{\numberline {4.4}PCB (Printed Circuit Board) Design}{5}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Power Management}{5}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Modelling and Simulation}{6}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Mathematical Modelling}{7}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Center of Gravity}{8}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Moment of inertia}{8}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Equation of motion}{9}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Dynamics of the Two-Wheeled Inverted Pendulum Robot}{9}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Numerical Simulation}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Simulation Environment}{11}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Controller Synthesis}{11}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Simulation Analysis}{11}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Mechanical Assembly}{12}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Components Overview}{12}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Assembly Process}{12}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Integration of Mechanical and Electronic Systems}{12}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Troubleshooting and Problem Solving}{12}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Safety Considerations}{12}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Firmware and Testing}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Firmware Development}{13}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Programming Languages and Tools}{13}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Integration with Hardware}{13}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Testing Framework and Methodology}{13}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Test Cases and Scenarios}{13}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Debugging and Troubleshooting}{14}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Safety}{15}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Random(Erase)}{18}{chapter.9}%
+\contentsline {chapter}{\nonumberline Bibliography}{X}{chapter*.11}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

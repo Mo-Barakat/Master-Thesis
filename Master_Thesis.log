@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  7 DEC 2023 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  7 DEC 2023 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1880,24 +1880,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package tocbasic Info: character protrusion at toc deactivated on input line 20
 .
  (Master_Thesis.toc
-Overfull \hbox (2.36052pt too wide) detected at line 4
+Overfull \hbox (2.36052pt too wide) detected at line 3
  [][][]\T1/lmss/bx/n/10 VIII[][]
  []
 
-)
+[6
+
+])
 \tf@toc=\write11
 \openout11 = `Master_Thesis.toc'.
 
- [6
-
-]
+ [7]
 Package tocbasic Info: character protrusion at lof deactivated on input line 24
 .
  (Master_Thesis.lof)
 \tf@lof=\write12
 \openout12 = `Master_Thesis.lof'.
 
- [7
+ [8
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 27
@@ -1907,45 +1907,49 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 27
 \openout13 = `Master_Thesis.lot'.
 
 \c@RomanNumbers=\count417
- [8
+ [9
 
-]) (Content/BodyMatter.tex
-(Content/Introduction.tex
+])
+(Content/BodyMatter.tex (Content/Introduction.tex
 chapter 1.
 [1
 
 
-]) (Content/Mechanical Design.tex [2]
+]) (Content/Literature Review.tex [2]
 chapter 2.
-) (Content/Electronic Design.tex [3
+) (Content/Mechanical Design.tex [3
 
 ]
 chapter 3.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
 .
 (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-(Content/Modelling and Simulation.tex [4
+(Content/Electronic Design.tex [4
 
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 chapter 4.
-[5
+) (Content/Modelling and Simulation.tex [5
 
 ]
-<./Figures/Modeling///Model.pdf, id=247, 150.18646pt x 236.27304pt>
+chapter 5.
+[6
+
+]
+<./Figures/Modeling///Model.pdf, id=294, 150.18646pt x 236.27304pt>
 File: ./Figures/Modeling///Model.pdf Graphic file (type pdf)
 <use ./Figures/Modeling///Model.pdf>
 Package pdftex.def Info: ./Figures/Modeling///Model.pdf  used on input line 25.
 
 (pdftex.def)             Requested size: 227.62206pt x 358.12567pt.
- [6{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./Figures/Modeli
+ [7{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./Figures/Modeli
 ng///Model.pdf>]
 Overfull \hbox (30.0411pt too wide) detected at line 54
 [][][][][]
  []
 
-<./Figures/Modeling///Angles.pdf, id=256, 123.30772pt x 202.56958pt>
+<./Figures/Modeling///Angles.pdf, id=303, 123.30772pt x 202.56958pt>
 File: ./Figures/Modeling///Angles.pdf Graphic file (type pdf)
 <use ./Figures/Modeling///Angles.pdf>
 Package pdftex.def Info: ./Figures/Modeling///Angles.pdf  used on input line 81
@@ -1954,56 +1958,52 @@ Package pdftex.def Info: ./Figures/Modeling///Angles.pdf  used on input line 81
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/M
+[8{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/M
 iKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/
-lm-mathex.enc}] [8 <./Figures/Modeling///Angles.pdf>]
+lm-mathex.enc}] [9 <./Figures/Modeling///Angles.pdf>]
 Overfull \hbox (54.68748pt too wide) in paragraph at lines 207--223
  [][] 
  []
 
-[9]) (Content/Mechanical Assembly.tex [10]
-chapter 5.
-) (Content/Firmware and Testing.tex [11
-
-]
+[10]) (Content/Mechanical Assembly.tex [11]
 chapter 6.
-) (Content/Design.tex [12
+) (Content/Firmware and Testing.tex [12
 
 ]
 chapter 7.
-<./Figures/Design///Capture.png, id=328, 553.31718pt x 530.73282pt>
+[13
+
+]) (Content/Safety.tex [14]
+chapter 8.
+[15
+
+] [16]) (Content/Design.tex [17]
+chapter 9.
+<./Figures/Design///Capture.png, id=450, 553.31718pt x 530.73282pt>
 File: ./Figures/Design///Capture.png Graphic file (type png)
 <use ./Figures/Design///Capture.png>
 Package pdftex.def Info: ./Figures/Design///Capture.png  used on input line 10.
 
 (pdftex.def)             Requested size: 455.24411pt x 436.66142pt.
-[13
+[18
 
- <./Figures/Design///Capture.png>] [14]
+ <./Figures/Design///Capture.png>] [19]
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Design///Component_diagram.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./Figures/Design///Component_diagram.pdf, id=338, 687.52856pt x 212.71469pt>
+<./Figures/Design///Component_diagram.pdf, id=460, 687.52856pt x 212.71469pt>
 File: ./Figures/Design///Component_diagram.pdf Graphic file (type pdf)
 <use ./Figures/Design///Component_diagram.pdf>
 Package pdftex.def Info: ./Figures/Design///Component_diagram.pdf  used on inpu
 t line 53.
 (pdftex.def)             Requested size: 455.24411pt x 140.85301pt.
-) (Content/Safety.tex [15 <./Figures/Design///Component_diagram.pdf>]
-chapter 8.
-) (Content/Literature Review.tex [16
-
-]
-chapter 9.
-[17
-
-] [18]) [19]) (FrontBackMatter/BackMatter.tex (Master_Thesis.ind)
-(Master_Thesis.bbl
+) [20 <./Figures/Design///Component_diagram.pdf>])
+(FrontBackMatter/BackMatter.tex (Master_Thesis.ind) (Master_Thesis.bbl
 chapter without number
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-) [9
+) [10
 
 
 ])
@@ -2025,13 +2025,13 @@ Package rerunfilecheck Info: File `Master_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51027 strings out of 475247
- 1039404 string characters out of 5767607
+ 51059 strings out of 475247
+ 1039686 string characters out of 5767607
  1944801 words of memory out of 5000000
- 71090 multiletter control sequences out of 15000+600000
- 657502 words of font info for 209 fonts, out of 8000000 for 9000
+ 71104 multiletter control sequences out of 15000+600000
+ 657585 words of font info for 210 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 119i,20n,113p,10934b,993s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 119i,20n,113p,10934b,955s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
 lic/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:
@@ -2047,9 +2047,9 @@ gram Files/MiKTeX/fonts/type1/public/lm/lmro8.pfb><C:/Program Files/MiKTeX/font
 s/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/l
 msy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Master_Thesis.pdf (28 pages, 913979 bytes).
+Output written on Master_Thesis.pdf (30 pages, 932910 bytes).
 PDF statistics:
- 641 PDF objects out of 1000 (max. 8388607)
- 163 named destinations out of 1000 (max. 500000)
- 53727 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 730 PDF objects out of 1000 (max. 8388607)
+ 179 named destinations out of 1000 (max. 500000)
+ 53831 words of extra memory for PDF output out of 61914 (max. 10000000)
 
