@@ -1,0 +1,76 @@
+\chapter{Iterative Input-Transfer Estimation for Lifted Systems}\label{ch:app_iterative_input_transfer}
+\graphicspath{{./Bilder/appendix/iterative_estimation}} 
+
+The concept of iterative input-transfer estimation (\secref{sec:iterative_transfer_estiamtion}) was evaluated on two simulated \gls{ipc} systems. A unit step input was used to excite both systems and produce the reference trajectory in the first trial iteration. An estimated transfer function was used as the initial deviation system. The transfer function was then used to calculate a lifted system matrix according to \eqref{eq:ss2ls}. Two methods are evaluated. In the first method \highlight{tfest}, the initial estimation of the input transfer using the deviation system was used in all subsequent trials without further adaptation (thus, the trials were not really necessary, as the final approached input value was that of the first trial). The second method \highlight{tfest+ILC} used the proposed adaptation of the input transfer with \textit{iterative model learning}.\\
+The input transfer was evaluated in both direction - with the slow system producing the reference output and with the quicker system producing the reference output. The initial response to the step input is shown in \figref{fig:app_itest_step}, with the slower system producing the reference (\textit{left}) and the quicker as the reference (\textit{right}). The non-linear and the linearised dynamics were evaluated.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{app_itest_slow}
+        \caption{Slower system produces the reference output agent 1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{app_itest_fast}
+        \caption{Quicker system produces the reference output of agent 1}
+    \end{subfigure}
+    \caption[Iterative Estimation -- Initial Input and Reference]{Response to the initial unit step input (training input and reference)}
+    \label{fig:app_itest_step}
+\end{figure}
+
+
+\figref{fig:app_itest_lin_slow} shows the normalized transfer error of both methods \textit{tfest} and \textit{tfest+ILC} and how the inputs and corresponding outputs evolve over the first five iterations. In this figure, the slower \gls{ipc} system produced the reference output trajectory. A linearisation of the dynamics was used (so shown is a purely linear system).\\
+\figref{fig:app_itest_nonlin_slow} then shows the same systems (with the slower one producing the reference output), but for the true non-linear dynamics.\\
+In \figref{fig:app_itest_lin_fast} source and target are reversed, so quicker \gls{ipc} system produces the reference output trajectory. The systems are again approximated by the linearised \gls{ipc} systems. \\
+In \figref{fig:app_itest_nonlin_fast}, the quicker dynamics are again used as the target reference output, but now the true non-linear system dynamics are simulated, which is the most difficult transfer case for those systems. This achieved the most fascinating results, as the iterative approach (\textit{red}) was able to recover from the poor (and potentially destabilised) initial transfer results which is seen in the approach without iterative uptdates to the transfer map (\textit{blue}). Using the iterative method, the peak input is smoothed down, which results in much better transfer (as it seemingly avoids the destabilizing inputs). However, since the iteratively estimated transfer matrix is still causal but cannot apply the peak input as initially aimed for, the output after the transfer now lags behind the desired output trajectory. This is seen in the initial phase after the step is applied and motivates the acausal lifted system matrix presented in \secref{sec:acausal_lsd_transfer}. While the new input trajectory seems as it would have been obtained using \gls{ilc} adaptations on the input, it was actually obtained using a transfer map from the initial step input. The transfer map can now be applied to other inputs as well, which makes this approach far superior to traditional \gls{ilc} directly on the inputs.
+
+\begin{figure}
+         \centering
+         \includegraphics[width=0.95\textwidth]{app_itest_lin_slow.png}
+         \caption[Iterative Estimation -- Linear Systems and Slow Reference]{Input transfer with and without iterative updates to the estimated input-transfer matrix for two linearised \acrshort{ipc} systems. The slower system is the reference system.}
+         \label{fig:app_itest_lin_slow}
+ \end{figure} 
+ 
+ \begin{figure}
+         \centering
+         \includegraphics[width=0.95\textwidth]{app_itest_nonlin_slow}
+         \caption[Iterative Estimation -- Non-Linear Systems and Slow Reference]{Input transfer with and without iterative updates to the estimated input-transfer matrix for two non-linear \acrshort{ipc} systems. The slower system is the reference system.}
+         \label{fig:app_itest_nonlin_slow}
+ \end{figure} 
+ 
+  \begin{figure}
+         \centering
+         \includegraphics[width=0.95\textwidth]{app_itest_lin_fast}
+         \caption[Iterative Estimation -- Linear Systems and Fast Reference]{Input transfer with and without iterative updates to the estimated input-transfer matrix for two linearised \acrshort{ipc} systems. The quicker system is the reference system.}
+         \label{fig:app_itest_lin_fast}
+ \end{figure} 
+ 
+  \begin{figure}
+         \centering
+         \includegraphics[width=0.95\textwidth]{app_itest_nonlin_fast}
+         \caption[Iterative Estimation -- Non-Linear Systems and Fast Reference]{Input transfer with and without iterative updates to the estimated input-transfer matrix for two non-linear \acrshort{ipc} systems. The quicker system is the reference system.}
+         \label{fig:app_itest_nonlin_fast}
+ \end{figure} 
+ 
+ 
+It was tested, how the estimated input-transfer after the final iteration trial performs in the transfer of slightly different iputs. Therefore, the input-transfer was applied to step inputs with different gains (in contrast to the unit gain in the training) and to ramp inputs (a unit step input that takes "more time"). Results are shown for the slow target in \figref{fig:app_itest_gen_slow} and for the quick target in \figref{fig:app_itest_gen_fast}.
+
+  \begin{figure}
+         \centering
+         \includegraphics[width=0.95\textwidth]{app_itest_gen_slow}
+         \caption[Iterative Estimation -- Test Data and Fast Reference]{Input transfer with and without iterative updates to the estimated input-transfer matrix for different test inputs. The slower system is the reference system.}
+         \label{fig:app_itest_gen_slow}
+ \end{figure} 
+ 
+  \begin{figure}
+         \centering
+         \includegraphics[width=0.95\textwidth]{app_itest_gen_fast}
+         \caption[Iterative Estimation -- Test Data and Slow Reference]{Input transfer with and without iterative updates to the estimated input-transfer matrix for different test inputs. The quicker system is the reference system.}
+         \label{fig:app_itest_gen_fast}
+ \end{figure} 
+ 
+ 
+ 

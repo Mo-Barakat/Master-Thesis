@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Master Thesis.iml" filepath="$PROJECT_DIR$/.idea/Master Thesis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../PyCharm/Master thesis calculations/.idea/Master thesis calculations.iml" filepath="$PROJECT_DIR$/../../PyCharm/Master thesis calculations/.idea/Master thesis calculations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../PyCharm/cm4_core/.idea/cm4_core.iml" filepath="$PROJECT_DIR$/../../PyCharm/cm4_core/.idea/cm4_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/.idea/scioi-pysim.iml" filepath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/.idea/scioi-pysim.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../PyCharm/scioi-pysim-collision/.idea/scioi-pysim-collision.iml" filepath="$PROJECT_DIR$/../../PyCharm/scioi-pysim-collision/.idea/scioi-pysim-collision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../PyCharm/scioi-pysim-collision/scioi-pysim-collision/.idea/scioi-pysim-new.iml" filepath="$PROJECT_DIR$/../../PyCharm/scioi-pysim-collision/scioi-pysim-collision/.idea/scioi-pysim-new.iml" />
+    </modules>
+  </component>
+</project>

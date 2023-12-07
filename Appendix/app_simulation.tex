@@ -1,0 +1,501 @@
+\chapter{Simulation}
+% ____________________________________________________________________
+% ======================== Spring Damper System =====================
+\section{Double Oscillator}\label{sec:app_sim1}
+\graphicspath{{./Bilder/simulation_linear}} 
+% ====================================================================
+
+\subsection{Derivation of the Transfer Function}\label{sec:derivation_double_osci}
+The dynamical system used in the simulation \secref{sec:double_oscillator} is derived from the state-space system:
+\begin{equation}
+	\vec{x} = 
+		\begin{bmatrix}
+			x_1 & \dot{x}_1 & x_2 & \dot{x}_2		
+		\end{bmatrix}^\mathrm{T}
+		\qquad u = F \qquad y = x_1
+\end{equation}
+\begin{align}
+	\dot{\vec{x}} &= 
+%			\begin{bmatrix}
+%				0 			& 1 		& 0 			& 0			\\
+%				-c_1/m_1	& -d_1/m_1  & c_2/m_1 		& d_2/m_1	\\
+%				0			& 0			& 1				& 0			\\
+%				c_1/m_2		& d_1/m_2  	& (c_1+c_2)/m_2 & (d_1+d_2)/m_2
+%			\end{bmatrix} \vec{x} + 
+		\begin{bmatrix}
+			0 			& 1 		& 0 			& 0			\\
+			-\frac{c_1}{m_1}	& -\frac{d_1}{m_1}  & \frac{c_2}{m_1} 		& \frac{d_2}{m_1}	\\
+			0			& 0			& 1				& 0			\\
+			\frac{c_1}{m_2}		& \frac{d_1}{m_2}  	& -\frac{c_1+c_2}{m_2} & -\frac{d_1+d_2}{m_2}
+		\end{bmatrix} \vec{x} + 
+		\begin{bmatrix}
+			0 \\ \frac{1}{m_1} \\ 0 \\ 0		
+		\end{bmatrix} u 	\\		
+	y &= 
+		\begin{bmatrix}
+			1 & 0 & 0 & 0		
+		\end{bmatrix} \vec{x} + [0] u	
+\end{align}
+The derivatives $\dot{\vec{x}}$ is obtained from the internal and external forces on the masses $m_1$ and $m_2$ visualized in \figref{fig:app_sim1_forces}. The transfer function description \eqref{eq:sim1_dynamics} used in the simulation is than given as
+\begin{equation}
+	F(s) = \mathrm{C}\left(s\mathrm{I}-\mathrm{A}\right)^{-1}\mathrm{B}\,.
+\end{equation}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.30\textwidth]{double_oscillator/double_oscillator_freischnitt.pdf}
+        \caption[Double Oscillator -- External and Internal Forces]{External and internal forces on mass $m_1$ and $m_2$ for the derivation of the state-space model}
+        \label{fig:app_sim1_forces}
+\end{figure}
+	
+\subsection{Distribution of Simulated Systems}
+\figref{fig:sim1_app_param_dist} shows the underlying distribution from which the parameters of the dynamical systems are drawn and how the sampled parameters actually distribute. Recall that $L=100$ pairs of systems were simulated. Since each system contains two parameters of each type (mass, damping constant and spring constant) and there are two systems in each pair, a total of $4L$ parameters is drawn from each distribution.\\
+%\figref{fig:sim1_app_pzmap} shows the poles and zeros of the drawn systems. Note that all systems are minimum phase. One pair if systems is highlighted. The highlighted pair is used in figures \figref{} as an example system to demonstrate the approach.
+	
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf random Parameter Distribution Mass m.pdf}
+        \caption{Masses $m_1, m_2$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf random Parameter Distribution Damping Constant d.pdf}
+        \caption{Damping constants $d_1, d_2$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf random Parameter Distribution Spring Constant c.pdf}
+        \caption{Spring constants $c_1, c_2$}
+    \end{subfigure}
+    \caption[Double Oscillator -- Parameter Distributions]{Underlying distribution and actual sampled parameters of the simulated spring-damper systems}
+    \label{fig:sim1_app_param_dist}
+\end{figure}	
+	
+%\begin{figure}
+%        \centering
+%        \includegraphics[width=0.5\textwidth]{double_oscillator/Sim1 tf random Parameter Distribution PZ Map2.pdf}
+%        \caption{Appendix: Pole-Zero map of randomly drawn double mass spring-damper systems. The highlighted pair of systems $\left(F^{(1)}(s), F^{(2)}(s)\right)_k$ is used as the example system in ...(insert image links)}
+%        \label{fig:sim1_app_pzmap}
+%\end{figure}	
+\subsection{Further Results}\label{sec:sim1_further_results}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=1\textwidth]{double_oscillator/Sim1 tf random BAR_Order_training.pdf}
+        \caption[Double Oscillator -- Transfer Error (Transfer Function Training Error)]{Normalized transfer error for the transfer of chirp training trajectories (\textit{training error}) using transfer functions of different system orders. Results are similar to the transfer of random test trajectories.}
+        \label{fig:sim1_rand_tf_order_train}
+    \end{figure}
+
+\subsection{Pure Sine Test Trajectories}\label{subsec:app_sim1_sine}
+ Instead of evaluating the input transfer on random input sequences, pure sine-wave input signals of different frequencies $f_{\mathrm{sine}}$ are used to validate the estimated input-transfer methods $\hat T^{(1 \rightarrow 2)}$ and $\vec{\hat T}^{(1 \rightarrow 2)}$. 
+Evaluated frequencies are
+\begin{equation}
+	f_{\mathrm{sine}} \in [0.03,\; 0.05,\; 0.08,\; 0.13,\; 0.20,\; 0.32,\; 0.50,\; 0.80,\; 1.25]\unit{Hz}\,.
+\end{equation}
+
+\figref{fig:sim1_sine} shows the input signals for  $f_{\mathrm{sine}}=0.05\unit{Hz}$ and $f_{\mathrm{sine}}=0.20\unit{Hz}$. Additionally, the figure shows the outputs with and without input transformation for a selected pair of test systems 
+$\left(F^{(1)}(s), F^{(2)}(s)\right)_l$. Input transfer was done using a transfer function of order 2. %and a lifted system matrix with $0.5N$ parameters.
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf sine Test Inputs 0.05.pdf}
+        \caption{Sine input of $f_{\mathrm{sine}}=0.05\unit{Hz}$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf sine Test Inputs 0.20.pdf}
+         \caption{Sine input of $f_{\mathrm{sine}}=0.20\unit{Hz}$}
+    \end{subfigure}
+	%%%
+	\begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf sine Test Outputs with Transfer 0.05.pdf}
+        \caption{Input-transfer for $f_{\mathrm{sine}}=0.05\unit{Hz}$ using a transfer function of order 2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf sine Test Outputs with Transfer 0.20.pdf}
+         \caption{Input-transfer for $f_{\mathrm{sine}}=0.20\unit{Hz}$ using a transfer function of order 2}
+    \end{subfigure}    
+	%%%
+%	\begin{subfigure}[t]{0.495\textwidth}
+%        \centering
+%        \includegraphics[width=\textwidth]{double_oscillator/Sim1 lift sine Test Outputs with Transfer 0.05.pdf}
+%        \caption{Input-transfer for $f_{\mathrm{sine}}=0.05\unit{Hz}$ using a lifted system with $0.5N$ parameters}
+%    \end{subfigure}
+%    \hfill
+%    \begin{subfigure}[t]{0.495\textwidth}
+%        \centering
+%        \includegraphics[width=\textwidth]{double_oscillator/Sim1 lift sine Test Inputs 0.20.pdf}
+%        \caption{Input-transfer for $f_{\mathrm{sine}}=0.20\unit{Hz}$ using a lifted system with $0.5N$ parameters}
+%    \end{subfigure}     
+%    %%%%
+    \caption[Double Oscillator -- Input Trajectories and Output Error Trajectories (Sinusoidal Input)]{Sinewave test inputs and their corresponding input-transfer results using a transfer-function}
+    \label{fig:sim1_sine}
+\end{figure}
+
+
+
+\figref{fig:sim1_sine_results} shows the average normalized transfer error for different test frequencies $f_{\mathrm{sine}}$ for an estimated transfer functions. The general results are similar to those regarding the order of the estimated transfer, with $K=0$ being only slightly beneficial compared to the direct transfer error and $K=2$ resulting in the best overall transfer performance with low mean and standard deviation of the normalized transfer error, especially when output noise is considered. On average, positive transfer can be achieved in most cases as long as the input-transfer is not a constant gain ($K\neq0$).
+
+The best input transfer is achieved for test inputs with a frequency of around $f_{\mathrm{sine}}= 0.13\unit{Hz}$. The training input might excite the systems very well for that frequency, while other frequencies are less prevalent in the training input. This is most notable for $K=0$ where the normalized transfer significantly decreases at first but than increases again for higher frequencies. This is seen in both cases, with and without output noise.\\
+Higher transfer function orders of $K\geq6$ result in a greater normalized transfer error for higher frequencies when noise is considered in \figref{subfig:sim1_sine_noise}, but less in the deterministic case of \figref{subfig:sim1_sine_det}. 
+This might be due to over-adaptation of transfer functions with greater order to the high frequency components in the noise.
+
+In addition to the previous results, the training error is depicted on the far left side of the scale. As expected, the training error is in general smaller than the test errors. The behaviour of the training error is very similar to the test error regarding the order of the estimated transfer-function. This suggests, that the estimated input-transfer generalises very well with other inputs, but its over all performance depends heavily on the system order.\\
+ 
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf sine BAR Cutoff x Order noise0.0000.pdf}
+        \caption{Normalised Transfer Error for estimated input-transfer without output noise}
+        \label{subfig:sim1_sine_det}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf sine BAR Cutoff x Order noise0.0200.pdf}
+        \caption{Normalised Transfer Error for estimated input-transfer without output noise}
+        \label{subfig:sim1_sine_noise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 tf sine NaN.pdf}
+        \caption{Percentage of attempted estimation which failed or were removed as outliers}
+        \label{subfig:sim1_sine_failes}
+    \end{subfigure}
+    \caption[Double Oscillator -- Results for Sinusoidal Test Inputs (Transfer Function)]{Input-transfer using an estimated transfer function of different orders for various test frequencies}
+    \label{fig:sim1_sine_results}
+\end{figure}
+
+\figref{fig:sim1_sine_results_lsd} shows the average normalized transfer error for different test frequencies $f_{\mathrm{sine}}$ for an estimated lifted system input-transfer. For both cases, with and without output noise, the input transfer results in negative transfer for higher test frequencies, thus degrading the initial performance of the direct transfer. In the deterministic case (without output noise) seen in \figref{subfig:sim1_sine_det_lsd}, positive transfer can be achieved on average for higher frequencies only when $1N$ parameters are estimated. 
+Reducing the parameter limit for higher frequencies greatly increases the transfer error.\\
+The opposite seems true when output noise is considered, seen in \figref{subfig:sim1_sine_noise_lsd}. Fewer estimated parameters result in a lower transfer error for high frequencies. However, the transfer is still negative.\\ 
+This shows, that the performance of the lifted system input transfer depends much more heavily on the frequency of the test data than the input transfer using a transfer function, where positive transfer was achieved in most cases. 
+
+%\paragraph{Lifted System Estimation: Transfer Error (deterministic)}~\\
+%\begin{figure}
+%        \centering
+%        \includegraphics[width=0.96\textwidth]{double_oscillator/Sim1 lift sine BAR Cutoff x Parameter Limit noise0.0000.pdf}
+%\end{figure}
+%
+%
+%
+%\paragraph{Lifted System Estimation: Transfer Error (noisy)}~\\
+%\begin{figure}
+%        \centering
+%        \includegraphics[width=0.96\textwidth]{double_oscillator/Sim1 lift sine BAR Cutoff x Parameter Limit noise0.0200.pdf}
+%\end{figure}
+%
+%
+%\paragraph{Lifted System Estimation: Failed Estimations}~\\
+%\begin{figure}
+%        \centering
+%        \includegraphics[width=0.96\textwidth]{double_oscillator/Sim1 lift sine NaN.pdf}
+%\end{figure}
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 lift sine BAR Cutoff x Parameter Limit noise0.0000.pdf}
+        \caption{Normalised Transfer Error for estimated input-transfer without output noise}
+        \label{subfig:sim1_sine_det_lsd}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 lift sine BAR Cutoff x Parameter Limit noise0.0200.pdf}
+        \caption{Normalised Transfer Error for estimated input-transfer without output noise}
+        \label{subfig:sim1_sine_noise_lsd}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{double_oscillator/Sim1 lift sine NaN.pdf}
+        \caption{Percentage of attempted estimation which failed or were removed as outliers}
+        \label{subfig:sim1_sine_failes_lsd}
+    \end{subfigure}
+    \caption[Double Oscillator -- Results for Sinusoidal Test Inputs (Transfer Matrix)]{Input-transfer using an estimated lifted system matrix of different orders for various test frequencies for double oscillator systems}
+    \label{fig:sim1_sine_results_lsd}
+\end{figure}
+
+
+% ____________________________________________________________________
+% ======================== Pendulum on cart =====================
+\section{Inverted Pendulum on a Cart}\label{sec:app_sim2}
+\graphicspath{{./Bilder/simulation_linear}} 
+% ====================================================================
+\subsection{Dynamics of the Linearised IPC}
+Linearising the pendulum dynamics for $\theta = \pi $ results in the following state-space system
+\begin{equation}
+	\vec{x} = 
+		\begin{bmatrix}
+			x & \dot{x} & \varphi & \dot{\varphi}		
+		\end{bmatrix}^\mathrm{T}
+		\qquad u = F \qquad 
+		y = \begin{bmatrix}
+				x  & \varphi	
+			\end{bmatrix}^\mathrm{T}
+\end{equation}
+\begin{align}
+	\dot{\vec{x}} &= \mathbf{A} \vec{x} + \mathbf{B} u 	\\		
+	y &= \mathbf{C} + [0] u	
+\end{align}
+
+\begin{align}
+	p &= I(M+m)+M m l^2 \\
+	\mathbf{A} &= \frac{1}{p}
+		\begin{bmatrix}
+			0 			& 1 		  & 0 			& 0			\\
+			0			& -d(I+ml^2)  & m^2 g l^2	& 0			\\
+			0			& 0			  & 0			& 1			\\
+			0			& - m l d  	  & m g l (M+m) & 0
+		\end{bmatrix}\\			
+	\mathbf{B} &= \frac{1}{p}
+		\begin{bmatrix}
+			0 \\ I+m l^2 \\ 0 \\ ml		
+		\end{bmatrix} 	\qquad
+	\mathbf{C} = 
+		\begin{bmatrix}
+			1 & 0 & 0 & 0	\\
+			0 & 0 & 1 & 0	
+		\end{bmatrix} 			
+\end{align}
+
+%\figref{fig:sim1_app_pzmap} shows the poles and zeros of the linearised, controlled systems. Note that all systems are stable.
+%\begin{figure}
+%        \centering
+%        \includegraphics[width=0.5\textwidth]
+%        {pendulum/Sim IPC tf random linear Parameter Distribution PZ Map1.pdf}
+%        \caption{?? Zeros missing Pole-zero map of all linearised inverted pendulum on a cart systems}
+%        \label{fig:sim2_app_pzmap}
+%\end{figure}  
+
+Each input-transfer system is estimated for $L=100$ pairs of test systems. Five trajectories are drawn per cutoff frequency of the test inputs. For all pairs of systems and all input trajectories, the transfer error was calculated. However, since the systems can get unstable for certain inputs, some error values are very different from the majority and could be considered as outliers. To ensure, that the mean transfer error is not to much affected by outliers, values below the 3rd percentile and above the 97th percentile are removed from the dataset.  
+\begin{notebox}
+	Keep in mind, that the transfer error values are not normally distributed, since the error can get arbitrarily large but not smaller than zero. While the mean value should still give a good measure of what transfer error to expect, outliers with extremely large errors have a far greater effect on the mean value, than outliers with extremely small values.
+\end{notebox} 
+
+% ====================================================================
+\subsection{Input Transfer in IPC Systems for Inputs of Small Magnitude}
+The simulative evaluation of \secref{sec:ipc} was repeated using inputs which excite the systems mostly within a linear range. For this, the gain $\alpha_l$ in \eqref{eq:sim2_input_scaling} previously set in \secref{subsec:sim2_training_and_test_data} is reduced by an order of magnitude. Inputs are therefore scaled by
+\begin{equation}
+	\vec{u}_l = a_l / 10 \cdot \vec{u} \qquad \text{for} 
+	\qquad l = 1,\hdots,L \,.
+\end{equation}
+\begin{notebox}
+	This does not necessarily mean, that the systems are linear. Input-transfer can still result in inputs which produce fairly nonlinear responses.\\
+	The magnitude of the output noise was not scaled to the input. The effect of the noise in this section is therefore significantly higher then in \secref{sec:ipc} (where the magnitude of the inputs is greater) as the noise-to-signal ratio is different.
+\end{notebox}
+
+Few example inputs (with one highlighted) for two different $f_{\mathrm{cutoff}}$ are shown in the upper images of \figref{fig:sim2_test_inputs_outputs}. In addition, the resulting displacement $y$ and the pendulums angle $\varphi$ of two example systems are plotted for the highlighted inputs. 
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth]
+        {pendulum/Sim IPC tf random linear Training Chirp Outputs}
+        \caption[IPC -- Training Data (Low Amplitude)]{Output to the chirp input for one pair of \acrshort{ipc} systems}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Test Inputs 0.20.pdf}
+        \caption{Test inputs for $f_{\mathrm{cutoff}}=0.2\unit{Hz}$ with one input highlighted}
+        \label{subfig:sim2_test_input_slow}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Test Inputs 0.80.pdf}
+        \caption{Test inputs for $f_{\mathrm{cutoff}}=0.8\unit{Hz}$ with one input highlighted}
+        \label{subfig:sim2_test_input_fast}
+    \end{subfigure}
+    \hfill    
+    \medskip
+    %%%
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Outputs Linear Reference Y 2.pdf}
+        \caption{Displacement for a test input with $f_{\mathrm{cutoff}}=0.2\unit{Hz}$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Outputs Linear Reference Y 3.pdf}
+        \caption{Displacement for a test input with $f_{\mathrm{cutoff}}=0.8\unit{Hz}$}
+    \end{subfigure}
+    \hfill
+    \medskip
+    %%%
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Outputs Linear Reference Phi 2.pdf}
+        \caption{Deflection angle for a test input with $f_{\mathrm{cutoff}}=0.2\unit{Hz}$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Outputs Linear Reference Phi 3.pdf}
+         \caption{Deflection angle for a test input with $f_{\mathrm{cutoff}}=0.8\unit{Hz}$}
+    \end{subfigure}
+    
+    \caption[IPC -- Test Data (Low Amplitude)]{Example test inputs and corresponding system response of two nonlinear \acrshort{ipc} systems and their linearisation for inputs of small magnitude}
+    \label{fig:sim2_test_inputs_outputs}
+\end{figure}
+
+
+% _____________________________________________________________________________
+% =========================== INPUT TRANSFER RESULTS ==========================
+\figref{fig:sim2_example_outputs} shows the system response to the training input and the highlighted test inputs in \figref{subfig:sim2_test_input_slow}, \figref{subfig:sim2_test_input_fast} with and without the input-transfer for a selected pair of test systems. On the left, the input-transfer is shown for a second order transfer function. On the right, a lifted system matrix with $0.5N$ parameters is used as the input-transfer.
+
+
+% EXAMPLE TF RESULTS 
+\begin{figure}
+    \centering
+    % TRAINING
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Training Chirp Outputs with Transfer.pdf}
+        \caption{Input-transfer of the training input using a second order transfer function}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC lifted random linear Training Chirp Outputs with Transfer.pdf}
+        \caption{Input-transfer of the training input using a lifted-system matrix with $0.5\cdot N$ parameters}
+    \end{subfigure}
+    \hfill
+    \medskip
+    %TEST SLOW
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Test Outputs with Transfer 0.20.pdf}
+        \caption{Input-transfer of a test input with $f_{\mathrm{cutoff}}=0.2\unit{Hz}$ using a second order transfer function}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC lifted random linear Test Outputs with Transfer 0.20.pdf}
+        \caption{Input-transfer of a test input with $f_{\mathrm{cutoff}}=0.2\unit{Hz}$  using a lifted-system matrix with $0.5\cdot N$ parameters}
+    \end{subfigure}
+    \hfill
+    \medskip
+    %TEST FAST
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC tf random linear Test Outputs with Transfer 0.80.pdf}
+        \caption{Input-transfer of a test input with $f_{\mathrm{cutoff}}=0.8\unit{Hz}$ using a second order transfer function}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pendulum/Sim IPC lifted random linear Test Outputs with Transfer 0.80.pdf}
+        \caption{Input-transfer of a test input with $f_{\mathrm{cutoff}}=0.8\unit{Hz}$  using a lifted-system matrix with $0.5\cdot N$ parameters}
+    \end{subfigure}
+    %%%%
+    \caption[IPC -- Output Error Trajectories with Input Transfer (Low Amplitude)]{Input-transfer using a second order transfer function for the training and test inputs for one selected pair of test system and small inputs}
+    \label{fig:sim2_example_outputs}
+\end{figure}
+	
+
+% TRANSFER ERROR
+\begin{figure}
+    \centering
+    % TF
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \hyperlink{fig:bar_order_lift_lin}{
+	        \includegraphics[width=0.94\textwidth]
+	        {pendulum/Sim IPC tf random linear BAR Order.pdf}
+        }
+        \hypertarget{fig:bar_order_tf_lin}{}
+        \caption{Input-transfer with a transfer-function of order 0 and 2 with and without output noise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \hyperlink{fig:bar_freq_tf_nonlin}{
+	        \includegraphics[width=0.95\textwidth]
+	        {pendulum/Sim IPC tf random linear BAR Cutoff x Order noise0.0000.pdf}
+        }
+        \hypertarget{fig:bar_freq_tf_lin}{}
+        \caption{Input-transfer with a transfer-function of order 0 and 2 without noise for different test inputs}
+    \end{subfigure}
+    \hfill
+    \medskip
+    % LIFTED
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \hyperlink{fig:bar_order_tf_lin}{
+	        \includegraphics[width=0.92\textwidth]
+	        {pendulum/Sim IPC lifted random linear BAR Order.pdf}
+	        }
+	    \hypertarget{fig:bar_order_lift_lin}{}
+        \caption{Input-transfer with a lifted-system matrix of $1N$ and $0.5N$ parameters with and without output noise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \hyperlink{fig:bar_freq_lift_nonlin}{
+	        \includegraphics[width=0.92\textwidth]
+	        {pendulum/Sim IPC lifted random linear BAR Cutoff x Order noise0.0000.pdf}
+	        }
+	   	\hypertarget{fig:bar_freq_lift_lin}{}
+        \caption{Input-transfer with a lifted-system matrix of $1N$ and $0.5N$ parameters without noise for different test inputs}
+    \end{subfigure}
+    % CAPTION
+    \caption[IPC -- Transfer Error (Low Amplitude)]{Normalized Transfer Error between \acrshort{ipc} systems using an estimated transfer-function (upper figures) or estimated lifted-system matrix (lower figures) for small inputs}
+    \label{fig:sim2_results}
+\end{figure}
+
+
+
+% FAILED ESTIMATIONS
+\begin{figure}
+    \centering
+    % TF
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+	        \includegraphics[width=0.94\textwidth]{pendulum/Sim IPC tf random linear NaN Order.pdf}
+        \caption{Input-transfer with a transfer-function of order 0 and 2 with and without output noise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+	        \includegraphics[width=0.95\textwidth]{pendulum/Sim IPC tf random linear NaN F_cutoff.pdf}
+        \caption{Input-transfer with a transfer-function of order 0 and 2 for different test inputs}
+    \end{subfigure}
+    \hfill
+    \medskip
+    % LIFTED
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+	        \includegraphics[width=0.92\textwidth]{pendulum/Sim IPC lifted random linear NaN Order.pdf}
+        \caption{Input-transfer with a lifted-system matrix of $1N$ and $0.5N$ parameters with and without output noise}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+	        \includegraphics[width=0.92\textwidth]{pendulum/Sim IPC lifted random linear NaN F_cutoff.pdf}
+        \caption{Input-transfer with a lifted-system matrix of $1N$ and $0.5N$ parameters for different test inputs}
+    \end{subfigure}
+    % CAPTION
+    \caption[IPC -- Unsuccessful Trajectory Transfer (Low Amplitude)] {Percentage of attempted estimations which failed or were removed as outliers between \acrshort{ipc} systems using an estimated transfer-function (upper figures) or estimated lifted-system matrix (lower figures) for small inputs}
+    \label{fig:sim2_results_nan}
+\end{figure}
+
+

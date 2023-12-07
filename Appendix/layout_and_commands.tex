@@ -1,0 +1,75 @@
+\chapter{Playground for Layout and Latex Commands}
+\graphicspath{{./Bilder/transfer_methods}} 
+
+\begin{example}\label{example:test}
+	Test ev
+	\begin{equation}
+		3 = 3 \label{eq:testi}
+	\end{equation}
+	This is test text with \eqref{eq:testi}.
+
+%	\begin{minipage}[c]{1\linewidth}	
+	\begingroup
+		\centering
+	    \captionsetup{type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}		
+		\tabskip=0pt
+		\valign{#\cr
+		  \hbox{%
+		    \begin{subfigure}[b]{.495\textwidth}
+		    \centering
+		        \includegraphics[width=0.95\textwidth]{/perfect transfer bode.pdf}
+		        \caption{Bode Diagram}
+		        \label{subfig:testi}
+		    \end{subfigure}%
+		  }\cr
+		  \noalign{\hfill}
+		  \hbox{%
+		    \begin{subfigure}{.495\textwidth}
+		    \centering
+		        \includegraphics[width=0.95\textwidth]{/perfect transfer slow time.pdf}
+		        \caption{Sine Input slow}
+		    \end{subfigure}%
+		  }\vfill
+		  \hbox{%
+		    \begin{subfigure}{.495\textwidth}
+		    \centering
+		        \includegraphics[width=0.95\textwidth]{/perfect transfer fast time.pdf}
+		        \caption{Sine Input fast}
+		    \end{subfigure}%
+		  }\cr
+		}
+	\caption{Input transfer for systems ... and ... using the ideal input transfer}
+	\label{fig:testi}
+	\endgroup
+
+%	\end{minipage}
+	See u in \figref{subfig:testi} and \figref{fig:testi}. \\
+	\textbf{Conclusions}
+	\vspace{-0.5em}
+	\begin{itemize}[noitemsep, topsep=0pt]
+		\item When choosing an input transfer approach, it is important to define the requirements for the transfer with regards to the expected input frequencies, complexity of the transfer and largest allowed transfer error.
+		\item Using the minimum $\|\cdot\|_{\infty}$-norm of the error dynamics to evaluate transfer can be disadvantageous, as a low $\|\cdot\|_{\infty}$-norm might come at the cost of very poor transfer performance over a certain range of input frequencies, which could have been much better otherwise.	
+		\item A constant gain has limited abilities to decrease the transfer error, as the ideal constant gain that minimizes the output error depends the input frequency. (I.e a gain can be chosen to minimize the error for slow frequencies or to minimize the overall maximum error).  The benefit is very limited to small frequency ranges.
+		\item A constant gain cannot account for difference in phase. It is impossible, to achieve perfect output alignment for an arbitrary frequency using a constant gain. 
+		\item Adding a time-shift to a constant gain can perfectly align two outputs at an arbitrary frequency. The benefit is limited to this frequency only, as it cannot compensate for frequency dependence 
+		\item The error can be removed completely for all frequencies with the ideal input-transfer
+		\item A reduced order model of the ideal input-transfer can achieve good transfer performance over a long range of input frequencies. 
+	\end{itemize}
+\end{example}
+
+\section{Glossar Entries Playground}
+Acronyms:\\
+Gls (first use): \highlight{\Gls{lttm}}\\
+Second use: \gls*{lttm}\\
+Acrolongpl: \acrlongpl{lttm}\\
+Acroshort: \acrshort{lttm}\\
+\gls{lti}\gls{lqr}\gls{siso}\gls{ipc}\gls{twipr}\gls{pca}\gls{svd}\gls{nrmse}\gls{rmse}\gls{rms}\gls{mas}\gls{prbs}\gls{bibo}\gls{todo}\\
+Glossar:\\
+\gls{dcgain}\gls{transfer_map}\gls{deviation_system}\gls{input_transfer}\gls{output_transfer}\gls{error_dynamics}\\
+\Gls{transfer_error_dynamics}\\
+\gls{sim2real}\\
+
+\lipsum[1] %\hyperlink{gls:transfer_error_dynamics}{\gls*{transfer_error_dynamics}}
+\glsc{transfer_error_dynamics}
+
+

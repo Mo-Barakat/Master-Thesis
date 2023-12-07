@@ -1,0 +1,223 @@
+\chapter{Parameters in Lifted System Description}
+\graphicspath{{./Bilder/appendix/lifted_system_parameters}} 
+
+\section{Lifted System Parameters}
+This chapter shows the impact different parameters in the state space description of a stable second order, \gls{siso} \gls{lti} system on the parameters of their lifted system dynamics and their deviation system (in lifted system description).\\
+The parameters of a lifted system correspond to the impulse response and can therefore be plotted over time. 
+The following continuous system description is used
+\begin{align}
+	\vec{\dot x} &= \begin{bmatrix}
+		0 & 1 \\
+		-a_1 & -a_2
+	\end{bmatrix} + 
+	\begin{bmatrix}
+		o \\ b_1
+	\end{bmatrix} u\\
+	y &= \begin{bmatrix}
+		c_1 & 0
+	\end{bmatrix} \vec{x}
+\end{align}
+The following steps were done:
+\vspace{-0.5em}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Transform the continuous dynamics into a discrete state-space model (for each parameter)
+    \item Calculate the step responses seen in \figref{fig:app_stepres}.
+    \item Use the discrete models to calculate the lifted dynamics in \figref{fig:app_lifted_params}
+    \item Calculate input-transfer from a source system to the target system. The target system is seen in \figref{fig:app_lifted_params} as the most intense line in the plots with the last parameter value in the legend. The parameters of the transfer systems are seen in \figref{fig:app_lifted_transfer}.
+    \item  Calculate the step responses using the transformation seen in \figref{fig:app_step_res_transfer}.
+\end{itemize}
+
+\begin{table}[h]
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{1\textwidth}{@{}lcccccX@{}}
+        \toprule
+        \textbf{Parameter} 	& $N$  	&  $T_s$ & $a_1$ & $a_2$ & $b_1$ & $c_1$ \\ \midrule
+        \textbf{Value} 		& $100$ &  $0.02$ & $100$ & $5$ & $1$ & $1$ \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Parameters of the baseline system}
+\end{table}
+
+% STEP RESPONSE
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Step response of the lifted plant P for changes in a_1.pdf}
+        \caption{Variation of $a_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Step response of the lifted plant P for changes in a_2.pdf}
+        \caption{Variation of $a_2$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Step response of the lifted plant P for changes in b.pdf}
+        \caption{Variation of $b_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Step response of the lifted plant P for changes in c.pdf}
+        \caption{Variation of $c_1$}
+    \end{subfigure}
+    \caption[Parameter Variations -- Impulse Response]{Impulse response for different parameter variations}
+    \label{fig:app_stepres}
+\end{figure}
+
+% LIFTED SYSTEM PARAMETERS
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{First column values of the lifted plant P for changes in a_1.pdf}
+        \caption{Variation of $a_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{First column values of the lifted plant P for changes in a_2.pdf}
+        \caption{Variation of $a_2$}
+    \end{subfigure}
+    
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{First column values of the lifted plant P for changes in b.pdf}
+        \caption{Variation of $b_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{First column values of the lifted plant P for changes in c.pdf}
+        \caption{Variation of $c_1$}
+    \end{subfigure}
+    \caption[Parameter Variations -- Lifted System Parameters]{Lifted system parameters for different parameter variations}
+    \label{fig:app_lifted_params}
+\end{figure}
+
+% TRANSFER PARAMTERS
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{First column values of the transformation matrix for different a_1.pdf}
+        \caption{Variation of $a_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{First column values of the transformation matrix for different a_2.pdf}
+        \caption{Variation of $a_2$}
+    \end{subfigure}
+    
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{First column values of the transformation matrix for different b.pdf}
+        \caption{Variation of $b_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{First column values of the transformation matrix for different c.pdf}
+        \caption{Variation of $c_1$}
+    \end{subfigure}
+    \caption[Parameter Variations -- Transfer Map Parameters]{Parameters of the transfer system for different parameter variations}
+    \label{fig:app_lifted_transfer}
+\end{figure}
+
+% TRANSFER STEP RESPONSE
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Step response of the transformed input for different a_1.pdf}
+        \caption{Variation of $a_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Step response of the transformed input for different a_2.pdf}
+        \caption{Variation of $a_2$}
+    \end{subfigure}
+    
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Step response of the transformed input for different b.pdf}
+        \caption{Variation of $b_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Step response of the transformed input for different c.pdf}
+        \caption{Variation of $c_1$}
+    \end{subfigure}
+    \caption[Parameter Variations -- Impulse Response with Output Transfer]{Impulse response including the deviation system (output-transfer) for different parameters variations}
+    \label{fig:app_step_res_transfer}
+\end{figure}
+
+
+\section{SVD Dimensionality Reduction}\label{app:svd_dim_red}
+The lifted system of the target system (baseline) are approximated using a linear combination of different numbers ($1-5$) of basis systems (principal components). Basis systems were identified with \gls{svd}. The results are seen in \figref{fig:app_approx_lifted}. The fit describes how well the dynamics of all systems can be described by those basis systems.\\
+The same was done for the transformations. Shown is the approximation of the transformation from the first source system (first parameter with least intense line) to the target system using a linear combination of different numbers of basis transformations. The fit describes how well the transformations from all source systems to the target system can be described by the different number of basis transformations. The results are seen in \figref{fig:app_approx_transfer}.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Approximate P for different a_1.pdf}
+        \caption{Variation of $a_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Approximate P for different a_2.pdf}
+        \caption{Variation of $a_2$}
+    \end{subfigure}
+    
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Approximate P for different b.pdf}
+        \caption{Variation of $b_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Approximate P for different c.pdf}
+        \caption{Variation of $c_1$}
+    \end{subfigure}
+    \caption[SVD -- Lifted System Parameters]{Lifted system parameters of the target system approximated by a different amount of principal components}
+    \label{fig:app_approx_lifted}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Approximate T_{12} for different a_1.pdf}
+        \caption{Variation of $a_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Approximate T_{12} for different a_2.pdf}
+        \caption{Variation of $a_2$}
+    \end{subfigure}
+    
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Approximate T_{12} for different b.pdf}
+        \caption{Variation of $b_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Approximate T_{12} for different c.pdf}
+        \caption{Variation of $c_1$}
+    \end{subfigure}
+    \caption[SVD -- Transfer Map Parameters]{Parameters of the deviation system from the first source system (first parameter with least intense line color) to the target approximated by a different amount of principal components}
+    \label{fig:app_approx_transfer}
+\end{figure}

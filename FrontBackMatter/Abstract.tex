@@ -1,0 +1,71 @@
+
+\selectlanguage{english}
+\begin{abstract}
+%General Problem
+This thesis addresses the challenge of input trajectory transfer in heterogeneous multi-agent systems, where each agent has distinct system dynamics. \\
+The concept of transfer learning has been applied to MAS to accelerate the learning process of a target agent by leveraging previously learned trajectories from a different source agent. However, directly transferring input trajectories between agents with dissimilar dynamics can lead to unwanted behaviour.
+% Research Gap
+This can be overcome by applying a mapping that transforms the input trajectory of the source system into an appropriate input trajectory for a target system so that their outputs match.
+Obtaining such an input transfer map from simple experiments is difficult, so previous research often focuses on output transfer, adaptive control or strong similarity assumptions. Those approaches either require extensive model knowledge or have limited usability.  
+ 
+% Content
+%To address this problem, this thesis proposes a simple, data driven method to estimate a mapping used for input trajectory transfer.
+This thesis provides a comprehensive understanding of trajectory transfer, distinguishing the input and output transfer cases and highlighting their similarities. Those insights are then used to propose a simple, data-driven method to estimate a dynamic input transfer map for SISO systems that addresses the aforementioned problem. Structural similarity in the systems is leveraged to simplify the estimation process further. The transfer map is estimated as a lifted system matrix and a transfer function. The performance of the estimated dynamic input transfer map is compared to a static map using a simple gain and to the direct transfer of the input trajectories.
+
+% Contributions
+It is shown that input and output transfer are equivalent under certain conditions. An input transfer map based on this assumption was able to significantly reduce the differences between a source and a target system in three simulated scenarios. This even includes scenarios where the systems have nonlinear, non-minimum phase dynamics. \\
+Compared to a static map, the performance of a dynamic input transfer is superior, especially in cases where the estimated transfer map is applied to input trajectories which are not part of the training data. \\
+Furthermore, the dynamic input transfer map can have a model order lower than the theoretically expected order of the transfer system, given that the source and target systems are related. Therefore, the expected order only provides an upper limit for the order of an estimated transfer map, and not a recommended choice. \\
+Nonetheless, this thesis alone does not fully explore the potential and limitations of the proposed method. Future research is necessary to address these topics further.
+
+
+%
+%This can be leveraged to estimate an input transfer map from simple experiments. 
+%
+%This thesis therefore proposes an efficient data driven method to easily estimate a dynamic input transfer map from a simple training experiment. 
+%
+%For this, A differentiation between he input transfer case and the output transfer case is made and their similarities highlighted. 
+%
+%Previous methods make use of adaptive control or error prediction to overcome the challenge of dissimilar model dynamics. However
+%Previous methods focus on adaptive control or error prediction overcome the challenge of dissimilar model dynamics,  restrictive similarity assumptions or require extensive model knowledge. This thesis addresses this problem by providing a data driven approch on input transfer estimation which leverages a less restrictive  
+%
+%- similar dynamics or model knowledge necessary
+%- output transfer + static map
+%- output transfe: easily estimated, this is not true for input transfer
+%
+%% this work does
+%- trajectory transfer and concludes a correlation between input and output transfer
+%- leverages structural similarity between agents to find an easy transfer map, which is less restictive than other sim assumptions
+%- proposed method: 
+%-- transfer function representation
+%-- lifted system representation
+%
+%
+%
+%% contributions
+%- input transfer vs output transfer
+%- under certain conditions, input transfer and output transfer are identical
+%- the transfer is dynamic system and not static, but can be ov much lower order the it would have been assumed
+%
+%
+%The proposed method leverages structural similarity between two agents to estimate
+%
+%
+%To overcome this challenge, several approaches have been proposed, including predicting the transfer's benefit, using adaptive controllers to force similar dynamics on all agents. A mapping between agents has been mostly studied for output trajectories.
+%However, these approaches have limitations, such as disregarding potentially valuable source systems or requiring knowledge of the underlying dynamical systems.
+%
+%This thesis provides a more comprehensive understanding of input trajectory transfer. A differentiation between he input transfer case and the output transfer case is made and their similarities highlighted. 
+%The insights were  In addition to this, the proposed method leverages structural similarity 
+%
+%expands current research through an efficient data-driven input transfer approach for learning control in unknown heterogeneous MAS. The proposed approach involves applying the same input sequence to different systems of a MAS, using the observed output sequences to learn the corresponding input transfer, and using the identified transfer to exchange information and improve the target agents learning performance.
+%
+%The thesis presents specific approaches to modeling and estimating input-transfer systems and evaluates the proposed methods in three simulated scenarios and a real-world system. The results show promising potential for the proposed approach in challenging MAS applications and highlight the importance of dynamic input transfer.
+
+%Overall, this thesis provides a valuable contribution to the field of input trajectory transfer in MAS and proposes future research ideas in this area.\\
+%%%
+\par
+\keywords{input transfer, trajectory transfer, transfer learning, multi-agent systems}
+\end{abstract}
+
+
+

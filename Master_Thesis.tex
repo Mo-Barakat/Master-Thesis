@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%    Template for academic works at TU Berlin                  %%
+%%    -------------------------------------------------------   %%
+%%                 Created by Felix Reich, M.Sc.                %%
+%%                    UTF-Version, status (2013)                %%
+%%                                                              %%
+%%  Operating the template using the files:                     %%
+%%   - Project settings (Title, Name, Date, ...)                %% 
+%%   - Commands (Custom and predefined macros)                  %%
+%%   - Hyphenation (For words that are incorrectly hyphenated)  %%
+%%   - Glossary (= dictionary)                                  %%
+%%   - Symbols (Formula symbols for the directory)              %%
+%%   - Abbreviations (For the list of abbreviations)            %%
+%%   - FrontMatter (Table of contents, title page, ...)         %%
+%%   - BodyMatter (IMPORTANT! Insert chapters from the folder   %%
+%%                  Content with \include here)                 %%
+%%   - BackMatter (List of figures, etc.)                       %% 
+%%       IMPORTANT: Definitely customize Front and Backmatter   %%
+%%       individually by commenting or uncommenting commands    %%
+%%   - Appendix (if available, insert with \include here)       %%
+%%                                                              %%
+%%  Three different KOMA classes can be used:                   %%
+%%  - scrartcl -scrreprt (standard) -scrbook                    %%
+%%  To change, in the file Class adjust the documentclass and   %%
+%%  the logical switch accordingly.                             %%
+%%                                                              %% 
+%%  It is recommended to modify the other files as little as    %%
+%%  possible. Newcomers to academic typesetting should study    %%
+%%  the documents in the Help directory to achieve an           %%
+%%  aesthetically pleasing result.                              %%
+%%                                                              %%
+%% Those who want to include eps files must pass to pdflatex    %%
+%%    --shell-escape for tetex or texlive or                    %%
+%%    --enable-write18 for miktex.                              %%
+%%                                                              %%
+%% To use the directories Index, Glossary, Abbreviations,       %%
+%% and Symbols, respectively, makeindex must be called with:    %%
+%% -s "Index/Index.ist -i Document.idx -o Document.ind          %%
+%% -s Document.ist -t Document.glg -o Document.gls Document.glo %%
+%% -s Document.ist -t Document.alg -o Document.acr Document.acn %%
+%% -s Document.ist -t Document.slg -o Document.sym Document.sbl %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% cd C:\CloudStorage\tubCloud\13. MA\Latex\Thesis
+% Index: 	makeindex -s "Index/Index.ist -i Document.idx -o Document.ind
+% Acronym: 	makeindex -s Document.ist -t Document.alg -o Document.acr Dokument.acn
+% Glossar:  makeindex -s Document.ist -t Document.glg -o Document.gls Dokument.glo
+
+
+% Basic Settings
+\input{Settings/Klasse}
+
+% Project Definitions
+\input{Settings/Projekteinstellungen}
+
+% Packet Definitions
+\input{Settings/Einstellungen}
+
+% Own commands
+\input{Settings/Kommandos}
+
+% Hyphenation
+\input{Settings/Silbentrennung}
+
+% Glossary, Symbols, and Abbreviations
+%\input{Glossar/Glossar}
+%\input{Glossar/Symbole}
+%\input{Glossar/Abkuerzungen}
+
+%\includeonly{
+	%
+	%            }
+
+
+\begin{document}
+	
+% Front Matter - Title page, table of contents, etc.
+\input{FrontBackMatter/FrontMatter}
+%
+%% Body Matter - Here the text of the document, the content, is set
+\input{Content/BodyMatter}
+%
+%% Back Matter - List of figures and tables, listings, index, glossaries, etc.
+\input{FrontBackMatter/BackMatter}
+
+% If applicable, Appendix
+%\input{Anhang/Anhang}
+	
+\end{document}
+

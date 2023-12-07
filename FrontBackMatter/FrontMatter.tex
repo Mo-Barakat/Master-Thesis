@@ -1,0 +1,65 @@
+% Roman numerals for Front Matter
+\pagenumbering{Roman}
+
+% Include title page
+\input{FrontBackMatter/Titlepage}
+
+%include Declaration of Authorship
+\include{FrontBackMatter/selbst}
+
+% If desired, include a blank page
+\input{FrontBackMatter/Leerseite}
+
+% If desired, include a declaration of authorship
+\input{FrontBackMatter/Erklaerung}
+
+% Include abstract
+\input{FrontBackMatter/Abstract}
+
+% If desired, uncomment the table of contents
+\tableofcontents
+
+% From the Backmatter --
+% If desired, uncomment the list of figures
+\listoffigures
+
+% If desired, uncomment the list of tables
+\listoftables
+
+% If desired, uncomment the list of listings
+%\lstlistoflistings
+
+% Include this switch if symbols, abbreviations, etc., without reference in the document should be included in the directories (usually the case)
+% \glsaddall
+%\glsaddallunused
+
+%\setglossarypreamble[main]{This list of glossary entries only includes the most important items. Descriptions might not be universal and are intended for this thesis.}
+
+%% If desired, uncomment the glossary (will only be created if entries are available)
+%\setglossarystyle{long3col}
+%%\setglossarystyle{long}
+%\renewenvironment{theglossary}%
+% {\begin{longtable}{lp{\glsdescwidth}p{\glspagelistwidth}}}
+	% %{\begin{longtable}[l]{lp{\glsdescwidth+\glspagelistwidth+0cm}}}%
+		% {\end{longtable}}
+	%\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+	%\printglossary[type=main, style=altlist]%[style=index]
+	%\glsfindwidesttoplevelname
+	%\glssetwidest[1]{transfer error dynamics}
+	%\setglossarystyle{alttree}
+	%\printglossary[type=main]
+	
+	% If desired, uncomment the abbreviations (will only be created if entries are available)
+	%\printglossary[type=\acronymtype, nonumberlist]%[type=\acronymtype,style=list]
+	
+	% If desired, uncomment the symbols (will only be created if entries are available)
+	%\printglossary[type=symbols, style=symb3spaltig, nonumberlist]
+	%\printglossary[type=symbols, nonumberlist]
+	
+	%\input{Glossar/Notation.tex}
+	% --
+	
+	% Save page number for Back Matter and conclude Front Matter
+\newcounter{RomanNumbers}
+\addtocounter{RomanNumbers}{\value{page}}
+\clearpage

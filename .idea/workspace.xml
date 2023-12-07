@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="64dd9fbe-13da-4204-839c-1d3b17f12621" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/../../PyCharm/Master thesis calculations/Calc_New_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/.idea/scioi-pysim_2023-11-17.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/.idea/scioi-pysim.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Inkspace/drawing.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Inkspace/drawing.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LUH-IMES Thesis Template/LUH_IMES_Orignal_template.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../LUH-IMES Thesis Template/LUH_IMES_Orignal_template.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BodyMatter.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BodyMatter.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Design.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Design.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Literature Review.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Literature Review.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Modeling.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Modeling.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figures/Modeling/Angles.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Modeling/Angles.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figures/Modeling/Model.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Modeling/Model.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontBackMatter/Abstract.tex" beforeDir="false" afterPath="$PROJECT_DIR$/FrontBackMatter/Abstract.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontBackMatter/BackMatter.tex" beforeDir="false" afterPath="$PROJECT_DIR$/FrontBackMatter/BackMatter.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontBackMatter/FrontMatter.tex" beforeDir="false" afterPath="$PROJECT_DIR$/FrontBackMatter/FrontMatter.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontBackMatter/Titlepage.tex" beforeDir="false" afterPath="$PROJECT_DIR$/FrontBackMatter/Titlepage.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.blg" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.ist" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.ist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.lof" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.lof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.log" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.lot" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.lot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master_Thesis.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Master_Thesis.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/Einstellungen.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/Einstellungen.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/Klasse.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/Klasse.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/Kommandos.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/Kommandos.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/Projekteinstellungen.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/Projekteinstellungen.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/Silbentrennung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/Silbentrennung.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TU-Berlin Thesis Template/TU_Berlin_Original_template.ist" beforeDir="false" afterPath="$PROJECT_DIR$/../TU-Berlin Thesis Template/TU_Berlin_Original_template.ist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TU-Berlin Thesis Template/TU_Berlin_Original_template.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TU-Berlin Thesis Template/TU_Berlin_Original_template.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TU-Berlin Thesis Template/TU_Berlin_Original_template.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../TU-Berlin Thesis Template/TU_Berlin_Original_template.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/Master thesis calculations/Modelling.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/Master thesis calculations/Modelling.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/EnvironmentTWIPR_objects_Mohamed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/EnvironmentTWIPR_objects_Mohamed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/Environments/Environment_SingleTWIPR.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/Environments/Environment_SingleTWIPR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Tests/TWIPR_Simple_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Tests/TWIPR_Simple_Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/core/scheduling.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/core/scheduling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/utils/joystick/keyboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/utils/joystick/keyboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/create_object_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/create_object_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/object_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/object_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/pysim_env.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/pysim_env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/pysim_env_old.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/pysim_objects.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/pysim_objects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/twipr.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/scioi_py_core/visualization/babylon/babylon_lib/twipr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Body_V2.SLDPRT" beforeDir="false" afterPath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Body_V2.SLDPRT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Bolts/~$RX-M2.5x5.7.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Camera/camera/~$Camera Module Part.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Motors/XM,H-430_idler.SLDASM" beforeDir="false" afterPath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Motors/XM,H-430_idler.SLDASM" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Motors/~$SC040A_Assy_2019-01-29.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Motors/~$XM,H-430_idler.SLDASM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Motors/~$XM,H-430_idler.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/PCBs/pcb/~$SimpleBMS.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/PCBs/pcb/~$robot-hub.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Robot_Assembly_V2.SLDASM" beforeDir="false" afterPath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Robot_Assembly_V2.SLDASM" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Sensors/~$distance_led_board.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Wheel/~$T81H-RM41.stp.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/Wheel/~$banebots_4_78.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Battery.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Body_Knee_Joint.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Body_V2.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Body_cover.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Motor safty.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$PCB_Rack.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Robot_Assembly_V2.SLDASM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Support_flexible.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Wheel_Knee_Joint_Left.SLDPRT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Solidworks/Robot_Design_Final/~$Wheel_Knee_Joint_right.SLDPRT" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2WxTmVk58aXcUHnRug5pUstz8Wf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/MASTERS/semester 4/Legged_TWIPR/PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="BibTeX.Master_Thesis bibliography">
+    <configuration name="Master_Thesis bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/Master_Thesis.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$APPLICATION_HOME_DIR$/jbr/bin</main-file>
+        <aux-dir>$APPLICATION_HOME_DIR$/jbr/bin</aux-dir>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Lat" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>SUMATRA</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/Master_Thesis.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[Makeindex.Master_Thesis makeindex, Makeindex.Master_Thesis makeglossarieslite]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>SUMATRA</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>SUMATRA</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="Master_Thesis makeglossarieslite" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-makeindex>
+        <program>MAKEGLOSSARIESLITE</program>
+        <main-file>$PROJECT_DIR$/Master_Thesis.tex</main-file>
+        <command-line-args />
+        <work-dir>$PROJECT_DIR$/auxil</work-dir>
+      </texify-makeindex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Master_Thesis makeindex" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-makeindex>
+        <program>MAKEINDEX</program>
+        <main-file>$PROJECT_DIR$/Master_Thesis.tex</main-file>
+        <command-line-args />
+        <work-dir>$PROJECT_DIR$/auxil</work-dir>
+      </texify-makeindex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-makeindex>
+        <program>MAKEINDEX</program>
+        <main-file />
+        <command-line-args />
+        <work-dir />
+      </texify-makeindex>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="BibTeX.Master_Thesis bibliography" />
+      <item itemvalue="LaTeX.Unnamed" />
+      <item itemvalue="LaTeX.Lat" />
+      <item itemvalue="Makeindex.Master_Thesis makeglossarieslite" />
+      <item itemvalue="Makeindex.Master_Thesis makeindex" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64dd9fbe-13da-4204-839c-1d3b17f12621" name="Changes" comment="" />
+      <created>1697673390883</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697673390883</updated>
+      <workItem from="1697673393430" duration="6000" />
+      <workItem from="1697673416602" duration="4000" />
+      <workItem from="1697673622690" duration="620000" />
+      <workItem from="1697674266338" duration="1256000" />
+      <workItem from="1697675662645" duration="1679000" />
+      <workItem from="1697733173195" duration="588000" />
+      <workItem from="1697898282828" duration="56000" />
+      <workItem from="1697898352045" duration="251000" />
+      <workItem from="1697898628122" duration="77000" />
+      <workItem from="1697975652384" duration="11158000" />
+      <workItem from="1698185242280" duration="9771000" />
+      <workItem from="1698518065686" duration="10536000" />
+      <workItem from="1698843464991" duration="36567000" />
+      <workItem from="1699224792171" duration="635000" />
+      <workItem from="1699225561147" duration="1549000" />
+      <workItem from="1699466781918" duration="7082000" />
+      <workItem from="1699528556031" duration="11416000" />
+      <workItem from="1699784703626" duration="7309000" />
+      <workItem from="1700132474225" duration="26211000" />
+      <workItem from="1701193008446" duration="466000" />
+    </task>
+    <task id="LOCAL-00001" summary="updates">
+      <option name="closed" value="true" />
+      <created>1698967798023</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698967798023</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updates">
+      <option name="closed" value="true" />
+      <created>1698967937036</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698967937036</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updates">
+      <option name="closed" value="true" />
+      <created>1699224603691</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699224603691</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updates">
+      <option name="closed" value="true" />
+      <created>1699803079025</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699803079025</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/Environments/Environment_SingleTWIPR.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/main.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/Master thesis calculations/Calc_New_1.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/EnvironmentTWIPR_objects_Mohamed.py</url>
+          <line>494</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/Environments/Environment_SingleTWIPR.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/EnvironmentTWIPR_objects_Mohamed.py</url>
+          <line>469</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/Master thesis calculations/Calc_New_1.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/Master thesis calculations/Calc_New_1.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/EnvironmentTWIPR_objects_Mohamed.py</url>
+          <line>427</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/EnvironmentTWIPR_objects_Mohamed.py</url>
+          <line>544</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="model.l" />
+        <watch expression="model.x_CG" />
+        <watch expression="model.y_CG" />
+        <watch expression="model.phi_1" />
+        <watch expression="model.phi_2" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Master_Thesis$TWIPR_Mohamed.coverage" NAME="TWIPR_Mohamed Coverage Results" MODIFIED="1697994336097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../PyCharm" />
+    <SUITE FILE_PATH="coverage/Master_Thesis$EnvironmentTWIPR_objects_Mohamed.coverage" NAME="EnvironmentTWIPR_objects_Mohamed Coverage Results" MODIFIED="1700226996253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment" />
+    <SUITE FILE_PATH="coverage/Master_Thesis$EnvironmentTWIPR_objects.coverage" NAME="EnvironmentTWIPR_objects Coverage Results" MODIFIED="1699528686752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../PyCharm/scioi-pysim-collision/scioi-pysim-collision/applications/TWIPR_Simple/Environment" />
+    <SUITE FILE_PATH="coverage/Master_Thesis$main.coverage" NAME="main Coverage Results" MODIFIED="1699563978587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim" />
+    <SUITE FILE_PATH="coverage/Master_Thesis$Environment_SingleTWIPR.coverage" NAME="Environment_SingleTWIPR Coverage Results" MODIFIED="1700054521871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../PyCharm/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Environment/Environments" />
+    <SUITE FILE_PATH="coverage/Master_Thesis$Calc_New_1.coverage" NAME="Calc_New_1 Coverage Results" MODIFIED="1700226899902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../PyCharm/Master thesis calculations" />
+    <SUITE FILE_PATH="coverage/Master_Thesis$TWIPR_Simple_Test.coverage" NAME="TWIPR_Simple_Test Coverage Results" MODIFIED="1700438055799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../PyCharm/scioi-pysim_2023-11-17/scioi-pysim_2023-11-17/scioi-pysim/scioi-pysim/applications/TWIPR_Simple/Tests" />
+  </component>
+</project>

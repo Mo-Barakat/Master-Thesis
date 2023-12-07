@@ -1,0 +1,192 @@
+\chanumfalse
+\addchap{Notation} % add chapter without numbering that appears in table of contents
+% Manuelles Symbolverzeichnis
+% ___________________________________________________________________
+% ============================ NOTATION ==========================
+% ====================================================================
+\begin{table}[h]
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabularx}{1\textwidth}{@{}lX@{}}
+		\toprule
+		\textbf{Example} & \textbf{Description}  \\ \midrule
+		$\mathbb{R}, \mathbb{N}$ 	& Capital letters in blackboard bold font represent common number types. \\
+		$\mathcal{A}, \mathcal{T}$ 	& Capital letters in calligraphic font represent custom sets or its members. \\
+		$\vec{A}, \vec{P}$ 			& Capital bold letters represent matrices.	\\
+		$\vec{x}, \vec{f}$			& Lower-case bold letters represent column vectors or vector-functions. \\
+		$F(z), T(s)$				& Capital regular letters represent transfer functions.	\\		
+		$i, e^{(i \rightarrow j)}$	& Lower-case regular letters represent scalars and scalar-functions.\\
+		$\vec{x}^{(i)}, F^{(2)}$	
+			& A single upper, bracketed index represents the dependency on a single, specific agent.\\
+		$ H^{(1, 2)}, e^{(i, j)}$ 
+			& Two upper, bracketed indices represent the dependency on two specific agents, where the order of the agents is not relevant.\\
+		$ H^{(1 \rightarrow 2)}, e^{(i \rightarrow j)}$
+			& An arrow between two upper, bracketed indices represent the directional dependency on two specific agents, where the order of the agents matters.\\
+		$\hat{\vec{t}}^{(i \rightarrow j)}, \hat{\mathbf{P}}^{(1)}$ 
+	     	& An upper hat symbol represents an estimated or approximated entity.\\	
+		$\bar H^{(1 \rightarrow 2)}, \bar e^{(i \rightarrow j)}$
+	     	& An upper bar symbol represents a mean value.\\	
+		\bottomrule
+	\end{tabularx}
+	\caption[General notation style]{General notation style. Some exceptions are possible.}
+\end{table}
+
+% ====================================================================
+\begin{notebox}
+	To be precise, the error dynamics depend on the order of agent $i$ and $j$, 
+	since they differ in their sign.
+		\begin{equation}
+			H^{(i,j)}\neq H^{(j,i)}
+		\end{equation}			
+		However, both result in the same \gls*{output_error}. 
+		$H^{(i,j)}$ and $H^{(j,i)}$ are not distinguished in this work, 
+		which is consistent with the given notation. This also applies to other cases like the error trajectory $\vec{e}^{(i,j)}$ or the output error $\varepsilon^{(i,j)}_{\vec{u}}$ as well.
+\end{notebox}
+
+% ====================================================================
+\pagebreak
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{1\textwidth}{@{}lX@{}}
+    \endfirsthead \endhead \endfoot \endlastfoot
+    \toprule
+	\multicolumn{2}{@{}l}{\textbf{Mathematical Notations}} \\ 
+	\textit{Symbol} & \textit{Description}  \\ \midrule
+	$\left\Vert \cdot \right\Vert_2$ & denotes the 2-norm \\
+	$\left\Vert \cdot \right\Vert_{\infty}$ & denotes the maximum-norm \\
+	$ |\cdot |$	& 
+	\begin{enumerate*}[label=(\roman*)]
+		\item absolute of a number or 
+		\item gain of a transfer function
+	\end{enumerate*} \\
+	$\angle $ & denotes the phase of a transfer function \\
+	$\circ$	& denotes the composition of two functions or matrices \\
+	$\vec{0}$ & denotes a zero vector or zero matrix  \\
+	$\vec{I}$ & denotes the unit matrix \\
+%		$\emptyset$ & denotes an empty set\\
+	$\mathcal{N}(\mu, \sigma^2)$& normal distribution with mean $\mu$ and standard deviation $\sigma$ \\ 
+	\bottomrule
+	\multicolumn{2}{@{}l}{\textbf{General Parameters}} \\ 
+	\textit{Symbol} & \textit{Description}  \\ \midrule
+	$k, l$		 				&  running indeces \\
+	$t$							&  time or duration (in seconds) \\
+	$n_{\mathcal{A}}$	 		&  number of agents in a MAS \\
+	$N, R$				 		&  dimension of a vector, matrix, i.e. length of an input trajectory \\
+	$K$					 		&  degree of a biproper transfer function \\
+	$K_N, K_D$		 	 		&	degree of numerator, denominator of a transfer function \\
+	$m$						 	&  relative degree of a dynamic system \\
+	$f_s, f_\mathrm{cutoff}, f$	&  sample frequency, cutoff frequency, other frequencies in $1/\unit{s}$\\ 
+	\bottomrule
+	\multicolumn{2}{@{}l}{\textbf{Sets \& Agents}} \\ 
+	\textit{Symbol} & \textit{Description}  \\ \midrule
+	$i, j$				 &  indices of a specific, but arbitrary agent in a MAS \\
+	$\mathbb{R}$		 &	set of all real numbers \\
+	$\mathbb{R}^n$		 &	$n$-dimensional set of all real numbers \\
+	$\mathbb{N}_0$		 &  set of all natural numbers and zero \\
+	$\mathcal{U}^{(i)}$	 	&  input space of agent $i$ \\
+	$(\mathcal{U}^{(i)})^N$ &  input space of agent $i$ for input sequences of length $N$\\
+	$(\mathcal{U}^{(i,j)})^N$&  input space of agent $i$ and $j$ for input sequences of length $N$ with 
+	$(\mathcal{U}^{(i)})^N \cap (\mathcal{U}^{(j)})^N$ \\
+    $\mathcal{A}$    	 &  set of all agents in a MAS\\
+    $\mathcal{A}^{(i)}$  &  specific agent with index $i$\\
+    $\mathcal{T}$    	 &  set of input maps between all agents in a MAS \\
+    \bottomrule\\[10mm]\\[0.01mm]    
+	\toprule
+	\multicolumn{2}{@{}l}{\textbf{Discrete time step $k$}} \\ 
+	\textit{Symbol} & \textit{Description}  \\ \midrule
+	$k$			 &  time (sample) index for discrete systems and trajectories \\	    
+    $u_{k}$		 & scalar input at time step $k$ \\
+    $y_{k}$		 & scalar output at time step $k$ \\
+   		$e^{(i,j)}_{k}$		 	 
+   			& difference $y^{(j)}_k-y^{(j)}_k$ between the outputs of agent $i$ and $j$ at time $k$\\
+   		$w_k$
+   			& noise drawn from a normal distribution with zero mean and variance $\sigma^2$\\
+    $\vec{x}^{(i)}_{k}$  & state of agent $i$ at time $k$ \\	
+	$\vec{\tilde{f}}$ 	
+		& state-function that advances the state $\vec{x}$ one step in time \\
+	$\tilde{h}$ 	
+		& output-function that returns the current output depending on the 
+		current state and input\\   
+	$\vec{A}, \vec{B}, \vec{C}$ 
+		& state matrix, input matrix, output matrix of a linear system in discrete-time 
+		state-space representation \\ \bottomrule
+	\multicolumn{2}{@{}l}{\textbf{Transfer Function Representation}} \\ 
+	\textit{Symbol} & \textit{Description}  \\ \midrule
+	$s, z$ & denotes a transfer function in continuous time, discrete time\\
+	$U(s), U(z)$		
+		& System input in $s$-domain, $z$-domain\\
+	$E(s), E(z)$		
+		& $s$-Transformation, $z$-Transformation of the difference $y^{(j)}-y^{(j)}$\\
+	$F$				
+		& Transfer function of of a linear system\\
+	$F^{(i\rightarrow j)}$	
+		& \Glsc{deviation_system} in the transfer-function representation from agent $i$ to agent $j$	\\
+	$Q$	
+		& Filter function\\	
+	$\hat{T}^{(i\rightarrow j)}$	
+		& Estimation of the \glsc{input_map} in the transfer-function representation from agent $i$ to agent $j$\\
+	$H^{(i,j)}$	
+		& \Glsc{error_dynamics} in the transfer function representation describing the difference between agent 
+		$i$ and $j$ when the same input is applied to both systems\\
+	$H^{(i \rightarrow j)}$	
+		& \Glsc{transfer_error_dynamics} in the transfer function representation describing the difference between agent 
+		$i$ and $j$ including the input-transfer $\hat T^{(i \rightarrow j)}$\\	
+	$a_k, b_k$ & Numerator, denominator coefficients in transfer-function \\ \bottomrule%\\[54mm]\\[0.01mm] \toprule
+	\multicolumn{2}{@{}l}{\textbf{Batch Process \& Lifted System Representation}} \\ 
+	\textit{Symbol} & \textit{Description}  \\ \midrule
+	$\vec{u}, \vec{v}$		  	
+		& An \glsc{input_trajectory} as a sequence of scalar inputs of length $N$\\
+	$\vec{\tilde u}^{(i)}$	
+		& Input trajectory of length $N$ for agent $i$ that results from some input-transfer 
+		$\vec{t}^{(j\rightarrow i)}$\\
+	$\vec{y}$		 	
+		& An \glsc{output_trajectory} as a sequence of scalar outputs of length $N$\\
+	$\vec{e}^{(i,j)}$
+		& An \glsc{error_trajectory} describing the difference $\vec{y}^{(j)}-\vec{y}^{(i)}$ between the 
+		output trajectories of agent $i$ and $j$\\
+	$\vec{e}^{(i\rightarrow j)}_{\vec{u}}$
+		& \Glsc{transfer_error_trajectory} describing the difference $\vec{y}^{(j)}-\vec{y}^{(i)}$ between the 
+		output trajectories of agent $i$ and $j$ for a certain input trajectory $\vec{u}$\\ \midrule\\[0.1mm] \midrule
+	\textit{Symbol} & \textit{Description}  \\ \midrule	
+	$\vec{w}$
+		& Sequence of normally distributed noise values with zero mean and variance $\sigma^2$\\ 	
+	$\vec{f}$ 			
+		& Nonlinear \glsc{batch_function} that maps a given input trajectory to a corresponding 
+		output trajectory \\
+	$\vec{f}^{(i\rightarrow j)}$
+		& \Glsc{deviation_system} as a \gls*{batch_function} from agent $i$ to agent $j$\\
+	$\mathbf{t}^{(i\rightarrow j)}$	
+		& \Glsc{input_map} as a \gls*{batch_function} from agent $i$ to agent $j$\\
+	$\mathbf{\hat t}^{(i\rightarrow j)}$	
+		& Estimated input-transfer batch-function from agent $i$ to agent $j$
+		(Here as a general expression for either $\mathbf{\hat T}^{(i\rightarrow j)}$ or $T^{(i\rightarrow j)}$)\\
+	$\mathbf{h}^{(i\rightarrow j)}$	
+		& \Glsc{error_dynamics} as a \gls*{batch_function} describing the difference between agent 
+		$i$ and $j$ when the same input is applied to both systems.\\
+	$\vec{P}$				
+		& lifted-system matrix that maps an input trajectory to an output trajectory\\
+	$\vec{P}^{(i\rightarrow j)}$	
+		& \Glsc{deviation_system} in the lifted-system representation from agent $i$ to agent $j$\\
+	$\mathbf{T}^{(i\rightarrow j)}$	
+		& \Glsc{input_map} in the lifted-system representation from agent $i$ to agent $j$\\
+	$p_k, p^{(i \rightarrow j)}_k$					
+		& $k$-th parameter in lifted-system matrix $\vec{P}, \vec{P}^{(i\rightarrow j)}$\\
+	$t^{(i\rightarrow j)}_k$	
+		&  $k$-th parameter in lifted-system matrix $\mathbf{T}^{(i\rightarrow j)}$\\ \bottomrule
+	\multicolumn{2}{@{}l}{\textbf{Error Metrics}} \\ 
+	\textit{Symbol} & \textit{Description}  \\ \midrule
+   		$\varepsilon^{(i,j)}$ % \left(\vec{y}^{(i)}, \vec{y}^{(j)}\right)	 	 
+   			& \Glsc{output_error}: 2-norm of the difference between the output trajectories of agent $i$ and $j$\\	
+   		$\varepsilon^{(i,j)}_{\vec{u}}$ %\left(\vec{u}^{(i)}\right)		 	 
+   			& \Glsc{direct_transfer_error}: Output error $e^{(i,j)}$ when the same input is applied 
+   			to agents $i$ and $j$ \\
+	$\varepsilon^{(i\rightarrow j)}_{\vec{u}}$ 
+		& \Glsc{transfer_error}: Output error $\varepsilon^{(i,j)}$  for a certain input trajectory $\vec{u}$ 
+			after applying the \gls*{input_map} $\vec{t}^{(i \rightarrow j)}$ to agent $j$ \\	
+	$\varepsilon^{(i\rightarrow j)}_{\vec{u},\mathrm{NRMS}}$ 
+		& \Glsc{nte}: Transfer error $\varepsilon^{(i\rightarrow j)}_{\vec{u}}$ 
+		normalized to the \gls*{direct_transfer_error} $\varepsilon^{(i,j)}_{\vec{u}}$\\	
+	\bottomrule
+	\caption{Mathematical notations}
+\end{tabularx}
+
+\chanumtrue
+    

@@ -1,0 +1,13 @@
+% Roman numerals for Back Matter - continue page numbering from Front Matter
+\pagenumbering{Roman}
+\addtocounter{RomanNumbers}{1}
+\setcounter{page}{\value{RomanNumbers}}
+
+% If desired, uncomment the index
+\printindex
+
+% If desired, uncomment the bibliography
+\bibliography{Bibliography/Bibliography}
+
+% Conclude Back Matter
+\clearpage

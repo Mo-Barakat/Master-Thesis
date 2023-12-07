@@ -1,0 +1,58 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = de_DE
+% !TEX root = ../main.tex
+
+\newpage
+% Logos oben einbinden
+\begin{flushright}
+			\vspace*{-20mm}
+			\includegraphics[width=\textwidth]{Figures/title/CoverLogos.pdf}
+\end{flushright}
+	
+\begingroup
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
+\chapter*{Declaration of Authorship}
+\endgroup
+\thispagestyle{empty}
+
+%Kennnummer platzieren:
+\begin{tikzpicture}[remember picture, overlay]
+\node[xshift=-22mm,yshift=-43mm,anchor=north east,align=right] at (current page.north east){\Large{\textbf{\Kennnummer}}};
+\end{tikzpicture}
+%
+%
+\begin{tabular}{@{}p{0.25\textwidth} p{0.7\textwidth}}
+\textbf{Name:} 		& \textbf{\Autor} \\ % Name des Autors
+Registration no.: & \Matrikelnummer \\ % Matrikelnummer
+\\
+Thesis title: 		& \TitelDerArbeit \\
+\\
+Type of thesis: 	& \ArtDerArbeit\\
+Study program: 		& Mechanical Engineering\\ % Please Choose:
+Submission date:	& \Datum \\
+\\
+First examiner : 	& \Erstpruefer\\
+Second examiner: 	& \Zweitpruefer\\
+Supervisor: 			& \Betreuer
+\end{tabular}
+
+\vspace{10mm}
+
+I, \emph{\Autor}, hereby affirm that the \ArtDerArbeit~entitled \emph{\TitelDerArbeit}~was written independently, that no references and aids other than those indicated were used, that all passages of the thesis which were taken over literally or analogously from other sources are marked as such and that the thesis has not yet been presented to any examination board in the same or similar form.
+
+I hereby agree to the transmission of my work also to external services for plagiarism checking by plagiarism software.
+
+\vspace{5mm}
+
+
+\noindent Hannover, \Datum
+
+
+
+\vspace{20mm}
+(\Autor)
+
+%\end{spacing}
+% Leerseite einfügen
+\cleardoublepage

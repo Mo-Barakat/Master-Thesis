@@ -1,0 +1,89 @@
+% Paket für schnellen Beispieltext zum Füllen
+\usepackage{blindtext}
+% Aus der Hilfe:
+% \blindtext creates some text,
+% \Blindtext creates more text.
+% \blinddocument creates a small document with sections, lists...
+% \Blinddocument creates a large document with sections, lists...
+
+% etools
+
+% Weitertes Macro-Paket. Zwar depreciated, dennoch benötigt, da es in Skripten Kommandos auflöst
+\usepackage{ifthen}
+% Bsp: \ifthenelse{\equal{\kommando1}{\kommando2}}{true}{false}
+
+% Ermöglicht das Verwenden von Listen mit kleineren vertikalen Abständen
+%\usepackage{mdwlist}
+%% Statt itemize einfach itemize* verwenden. Analog dazu existiert enumerate* und description*
+%% Diese Umbegungen erlauben auch Unterbrechungen, z. B.  mit \suspend{itemize*} bla bla \resume{itemize*}
+% stattdessen \begin{itemize}[noitemsep,topsep=0pt], bzw \begin{enumerate}[resume*]
+\usepackage[inline]{enumitem}
+
+% for todolists
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$,noitemsep, topsep=0pt}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+% EXAMPLE CODE FOR TODO LIST IN S TODO BOX ENVIRONMENT:
+%\begin{todobox}
+%  \begin{todolist}
+%  \item[\done] Frame the problem
+%  \item Write solution
+%  \item[\wontfix] profit
+%  \end{todolist}
+%\end{todobox}
+
+
+
+% Ermöglicht erweiterte Referenzen. Soweit angepasst, dass schöne Makros möglich sind (siehe Kommando-Definitionen)
+\usepackage[english]{varioref}
+\renewcommand*{\reftextfaraway}[1]{auf S.\,\pageref{#1}}%
+\renewcommand*{\reftextcurrent}{\unskip}%
+% generell neu: \vpageref, \vref und \vref*, diese Referenzierungen geben die Seite mit an
+
+% Ermöglichung von Unterabbildungen
+%\usepackage{subfig}
+%% Verwendung in figure: \subfloat[Optionaler Verzeichnistext][Unterschrift \label{sfig:bla}]{...Zeug...}
+% I use subcaption
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup{width=.8\textwidth}
+
+% Das normgerechte Eurozeichen
+\usepackage{eurosym}
+% Verwendung mit \euro
+
+% Kommandos nach Ende einer Seite absetzen
+\usepackage{afterpage} 
+% Wichtigste Anwendung ist das Flushen von Floats: \afterpage{\clearpage}
+
+ % Nassi-Schneidermann Unterstützung
+\usepackage{Packets/nassi}
+\setiftext{W}{F}
+\nassiwidth=\textwidth
+% Wichtige Befehle:
+% \NSD{}
+% \WHILE{Text}{} \ENDWHILE
+% \ACTION{Text}
+
+% Einrahmen von Text
+\usepackage{framed}
+\addtolength{\FrameRule}{1pt} % dickeren Rahmen
+% Verwendung: \begin{framed} ... \end{framed}
+
+%Comment blocks using \begin{comment} ... \end{comment}
+\usepackage{comment}
+%\includecomment{commentnotes} % environment to comment stuff
+\excludecomment{commentnotes}
+
+% For color boxes like todobox, notebox, etc
+\usepackage[most]{tcolorbox}
+
+
+% Abstrct
+\usepackage{abstract}
+\usepackage{lipsum}

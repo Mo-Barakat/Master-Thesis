@@ -1,0 +1,23 @@
+% Document settings are made here. Deeper layout settings follow separately.
+
+% Also possible here, among others:
+% Number of columns (onecolumn, twocolumn)
+% Chapters start only on right-hand pages or on any (openright, openany)
+% Beginning of paragraphs (parindent, halfparskip, parskip)
+
+\documentclass[
+headings=normal,                        % Headings size (options: small, normal, and big)
+captions=tableheading,                  % Format table captions as headings
+bibliography=totoc,                     % Adds the bibliography to the table of contents
+listof=totoc,                           % Adds the other lists to the table of contents
+index=totoc,                            % Also adds the index to the table of contents
+draft=false                             % Figures are set. With draft=true, figures are only available as frame dummies
+]{scrreprt}                             % Choose from scrartcl, scrreprt, and scrbook !!! Definitely adjust the switch below !!!
+
+% Logical switches for document class
+\def\typeScrartcl{1}  % For scrartcl
+\def\typeScrreprt{2}  % For scrreprt
+\def\typeScrbook{3}   % For scrbook
+
+% !! Set the switch here so that the template works correctly !!
+\let\doctype=\typeScrreprt

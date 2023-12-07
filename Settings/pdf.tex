@@ -1,0 +1,95 @@
+% Custom colors
+\usepackage{color}
+
+\definecolor{scioi_blue}{RGB}{103, 206, 236} % light blue
+\definecolor{marker_blue}{RGB}{31, 119, 179}
+\definecolor{question_color}{RGB}{227, 127, 45}
+\definecolor{note_color}{RGB}{31, 119, 179}
+\definecolor{ressources_color}{RGB}{207, 177, 205}
+\definecolor{example_color}{RGB}{90, 90, 90} %grey
+\definecolor{example_font_color}{RGB}{60, 60, 60} % dark grey
+
+\definecolor{agent_1}{RGB}{61,83,149} %dark blue
+\definecolor{agent_2}{RGB}{223,96,125} %pink
+\definecolor{pink_link}{RGB}{236, 0, 141} %pink for links
+
+
+
+
+
+% Ermöglicht die Erweiterung von pdf-Dateien mit Links und Ähnlichem.
+\usepackage{hyperref}
+% Wenn Linkstellen im Text farbig sein sollen oder gar Formeln gesetzt werden, \texorpdfstring nutzen
+% Mit \hypersetup werden die Schalter dieses Pakets weiter modifiziert
+
+
+% Wichtige Macro-Definitionen  % vorher bei Hilfpaketen
+\usepackage{etoolbox}
+% Z. B. wichtig für logische Abfragen:
+% \ifstrequal{String}{Vergleichstring}{...passiert when gleich}{...ansonsten}
+% Anderes Beispiel, s. "Anpassen der Tiefe von nummerierten Überschriften" in Satzeinstellungen
+
+
+% Dokumenttitel setzen
+\hypersetup{pdftitle={\Titel}}
+
+% Autor setzen
+\hypersetup{pdfauthor={\Autor}}
+
+% Thema setzen
+\hypersetup{pdfsubject={\Untertitel}}
+
+% Einstellung der Linkfarben (Drucken oder reine PDF-Ansicht)
+\ifcase\pdftype 
+\or % Für Drucken
+\hypersetup{
+%    colorlinks=true,
+%    citecolor=black,
+%    filecolor=black,
+%    linkcolor=black,
+%    menucolor=black,
+%    urlcolor=black
+   colorlinks=true,
+   linkcolor=marker_blue, %blue,
+	anchorcolor=black,
+   citecolor=marker_blue, %blue,
+   filecolor=magenta,
+   menucolor=blue,
+   urlcolor=pink_link
+}
+\or % Für reine PDF-Verwendung
+\hypersetup{
+   colorlinks=true,
+   linkcolor=marker_blue, %blue,
+	anchorcolor=black,
+   citecolor=marker_blue, %blue,
+   filecolor=magenta,
+   menucolor=blue,
+   urlcolor=blue
+}
+\fi
+
+% Einstellung, was das Inhaltsverzeichnis als Link verwenden soll
+\ifcase\pdftype 
+\or % Für Drucken
+\hypersetup{linktoc=all}
+\or % Für reine PDF-Verwendung
+\hypersetup{linktoc=page}
+\fi
+
+% Einstellen der Bookmarks
+\hypersetup{
+bookmarksopen=true,
+bookmarksnumbered=true
+}
+
+% Setzt Links korrekt für Floats (Fixt, das Labels nicht mehr am Ende stehen müssen)
+\usepackage[all]{hypcap}
+
+% Schönere URL-Formatierung (Für BibTeX und Text) von http://www.kronto.org/thesis/tips/url-formatting.html
+\makeatletter
+\def\url@leostyle{\@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+% Manuelles Hinzufügen einer URL mit \url{www.narf.com}
+

@@ -1,0 +1,314 @@
+% Beispiel für einen Glossareintrag:
+% \newglossaryentry{wagen}{name=Wa-gen,description={Macht Brum Brum},plural=Wa-gen,sort=wagen} 
+
+% Dereferenzierung: \gls{wagen} (klein) \Gls{wagen} (fängt groß an) \GLS{wagen} (Kapitalschrift) \glspl{wagen} (Plural) ...\Glspl. \GLSpl
+
+% Anderes Bsp.: \newglossaryentry{ohm}{name=ohm,symbol={\ensuremath{\Omega}},description=unit of electrical resistance}
+
+\newglossaryentry{dcgain}{
+    name={\hypertarget{gls:dcgain}{DC gain}},
+    description={Static gain of a system for a constant input ($\omega=0$)},
+    category=black,
+    text={DC gain},
+    nonumberlist
+    }
+
+\newglossaryentry{transfer_map}{
+    name={\hypertarget{gls:transfer_map}{transfer map}},
+    description={Mapping between the output trajectories or the input trajectories of two systems. Can be any transformation, 
+        like a lifted system matrix, transfer function or nonlinear mapping},
+    text={transfer map}
+    }
+    %     text={\hypersetup{linkcolor=black}}
+
+\newglossaryentry{deviation_system}{
+    name={\hypertarget{gls:deviation_system}{deviation system}},
+    description={System describing the dynamics between the outputs of two system. Is equivalent to the mapping used for output transfer}
+    see={output_transfer},
+    text={deviation system}
+    }
+
+\newglossaryentry{output_map}{
+    name={\hypertarget{gls:output_map}{output (transfer) map}},
+    description={\nopostdesc},
+    alias={deviation_system},
+    text={output map}
+    }
+
+\newglossaryentry{input_map}{
+    name={\hypertarget{gls:input_map}{input (transfer) map}},
+    description={Transfer map that transferres an input trajectory of one system to an input trajectory for another system, 
+        so that their output trajectories match},
+    see={transfer_map,input_transfer},
+    text={input map}
+    }
+
+\newglossaryentry{input_transfer}{
+    name={\hypertarget{gls:input_transfer}{input transfer}},
+    description={The process of transformorming an input from a source system into an input for a target system, so that their outputs match},
+    see={input_map},
+    text={input transfer}
+    }
+    
+\newglossaryentry{output_transfer}{
+    name={\hypertarget{gls:output_transfer}{output transfer}},
+    description={The process of transformorming an output from a source system to the output of a target system, 
+        if both systems are given the same input, \nopostdesc},
+    alias={transfer_map},
+    text={output transfer}
+    }
+
+\newglossaryentry{error_dynamics}{
+    name={\hypertarget{gls:error_dynamics}{error dynamics}},
+    description={Dynamics describing the difference between two systems, if excited by the same input},
+    text={error dynamics}
+    }
+
+% \newglossaryentry{transfer_error_dynamics}{
+%     name=transfer error dynamics,
+%     description={\textit{transfer error dynamics} -- Error dynamics with additional transfer map applied to one system},
+%     parent=error_dynamics
+%     }
+\newglossaryentry{transfer_error_dynamics}{
+    name={\hypertarget{gls:transfer_error_dynamics}{transfer error dynamics}}, %\hspace{1cm}
+    description={Error dynamics when an additional transfer map is applied to one system},
+    text={transfer error dynamics},
+    see={error_dynamics}
+    %parent={error_dynamics}
+    %sort={error dynamics transfer}
+    }
+    
+\newglossaryentry{sim2real}{
+    name={\hypertarget{gls:sim2real}{sim-to-real}},
+    description={Transfer of data from a simulated system to an equivalent physical system. 
+        Transferred data could be input trajectories solving a certain motion lerning task.},
+    text={sim-to-real}
+    }
+
+\newglossaryentry{output_error}{
+    name={\hypertarget{gls:output_error}{output error}},
+    description={2-norm of an error trajectory between two systems},
+    text={output error},
+    see={error_trajectory}
+    }
+
+\newglossaryentry{transfer_error}{
+    name={\hypertarget{gls:test_error}{transfer error}},
+    description={Output error when a (input) transfer map is applied to one system},
+    text={transfer error},
+    see={output_error}
+    }
+
+\newglossaryentry{direct_transfer_error}{
+    name={\hypertarget{gls:direct_transfer_error}{direct transfer error}},
+    description={Output error when no transfer map is applied and both systems are excited using the same input trajectory},
+    text={direct transfer error},
+    see={output_error}
+    }
+
+\newglossaryentry{nte}{
+    name={\hypertarget{gls:nte}{normalised transfer error}},
+    description={Transfer error normalised to the direct transfer error for the same input trajectory},
+    text={normalised transfer error},
+    see={direct_transfer_error,transfer_error}
+    }
+    
+\newglossaryentry{test_error}{
+    name={\hypertarget{gls:test_error}{test error}},
+    description={Normalised transfer error for test inputs},
+    text={test error},
+    see={nte,test_input}
+    }
+
+\newglossaryentry{training_error}{
+    name={\hypertarget{gls:training_error}{training error}},
+    description={Normalised transfer error for training inputs},
+    text={training error},
+    see={nte,training_input}
+    }
+
+\newglossaryentry{test_input}{
+    name={\hypertarget{gls:test_input}{test input}},
+    description={Applied input trajectories to obtain output trajectories which are used to evaluate (but not estimate) a transfer map},
+    text={test input},
+    see={transfer_map}
+    }
+    
+\newglossaryentry{training_input}{
+    name={\hypertarget{gls:training_input}{training input}},
+    description={Applied input trajectories to obtain output trajectories which are used to estimate a transfer map},
+    text={training input},
+    see={transfer_map}
+    }
+
+\newglossaryentry{training_data}{
+    name={\hypertarget{gls:training_data}{training data}},
+    description={Data which is used to estimate the transfer map. Outputs stem from the training input},
+    text={training data},
+    see={training_input}
+    }
+
+\newglossaryentry{test_data}{
+    name={\hypertarget{gls:test_data}{test data}},
+    description={Data which is used to evaluate (but not estimate) a transfer map. Outputs stem from the test input},
+    text={test data},
+    see={test_input}
+    }
+
+\newglossaryentry{static_map}{
+    name={\hypertarget{gls:static_map}{static (scalar) map}},
+    description={Transfer map between two (\acrshort*{siso}) systems using a constant scalar. 
+        Corresponds to a transfer function of order zero},
+    text={static map},
+    sort={static map},
+    see={transfer_map}
+    }
+
+\newglossaryentry{dynamic_map}{
+    name={\hypertarget{gls:dynamic_map}{dynamic map}},
+    description={Transfer map between two systems using a dynamic system, governed by difference or differential equations. 
+        Can be a transfer function of order $K>0$ or lifted system matrix with multiple parameters if the mapping is \acrshort*{lti}},
+    text={dynamic map},
+    sort={dynamic map},
+    see={transfer_map}
+    }
+
+\newglossaryentry{homogeneous_mas}{
+    name={\hypertarget{gls:homogeneous_mas}{homogeneous MAS}},
+    description={Multi-agent system in which all agents share the same dynamics},
+    see={heterogeneous_mas},
+    text={homogeneous MAS}
+    }
+
+\newglossaryentry{heterogeneous_mas}{
+    name={\hypertarget{gls:heterogeneous_mas}{heterogeneous MAS}},
+    description={Multi-agent system in which the dynamics of the individual agents differ},
+    see={homogeneous_mas},
+    text={heterogeneous MAS}
+    }
+
+\newglossaryentry{biproper}{
+    name={\hypertarget{gls:biproper}{biproper transfer function}},
+    description={Transfer function with same numerator and denominator degree.},
+    text={biproper}
+    }  
+    
+\newglossaryentry{positive_transfer}{
+    name={\hypertarget{gls:positive_transfer}{positive transfer}},
+    description={Transfer learning, where the target system benefits from the knwodlegde of the source system. 
+        Here: Transfer error after applying the transfer map is smaller than the direct transfer},
+    see={negative_transfer},
+    text={positive transfer},
+    plural={positive}
+    } 
+
+\newglossaryentry{negative_transfer}{
+    name={\hypertarget{gls:negative_transfer}{negative transfer}},
+    description={Transfer learning, where knwodlegde from the source system degrades the performance of the target system. 
+        Here: Transfer error after applying the transfer map is greater than the direct transfer},
+    see={positive_transfer},
+    text={negative transfer},
+    plural={negative}
+    }
+
+\newglossaryentry{direct_transfer}{
+    name={\hypertarget{gls:direct_transfer}{direct transfer}},
+    description={Direct transfer of trajectories from the source to the target system without any additional mapping. 
+        Common between very similar systems or in homogeneous MAS. Is used for reference.},
+        text={direct transfer}
+    }
+
+\newglossaryentry{minimum_phase}{
+    name={\hypertarget{gls:minimum_phase}{minimum phase system}},
+    description={Causal stable system whose inverse is stable.},
+    %see={nonminimum_phase},
+    text={minimum phase}
+    }
+
+\newglossaryentry{nonminimum_phase}{
+    name={\hypertarget{gls:nonminimum_phase}{non-minimum phase system}},
+    description={System which is not minimum phase},
+    see={minimum_phase},
+    text={non-minimum phase}
+    }
+
+\newglossaryentry{input_trajectory}{
+    name={\hypertarget{gls:input_trajectory}{input trajectory}},
+    description={Here: Evolution of a scalar input variable in a finite time.},
+    text={input trajectory},
+    plural={input trajectories},
+    }
+
+\newglossaryentry{output_trajectory}{
+    name={\hypertarget{gls:output_trajectory}{output trajectory}},
+    description={Here: Evolution of a scalar output variable in a finite time.},
+    text={output trajectory},
+    plural={output trajectories}
+    }
+
+\newglossaryentry{error_trajectory}{
+    name={\hypertarget{gls:error_trajectory}{error trajectory}},
+    description={Difference between an output trajectory and a refernce trajectory. 
+        Reference can be the output trajectory of a second system},
+    text={error trajectory},
+    plural={error trajectories},
+    see={output_trajectory,reference_trajectory}
+    }
+
+    \newglossaryentry{transfer_error_trajectory}{
+        name={\hypertarget{gls:transfer_error_trajectory}{transfer error trajectory}},
+        description={Error trajectory, when an (input) transfer map is applied to one system},
+        text={transfer error trajectory},
+        plural={transfer error trajectories},
+        see={error_trajectory}
+        }
+
+\newglossaryentry{reference_trajectory}{
+    name={\hypertarget{gls:reference_trajectory}{reference trajectory}},
+    description={Output trajectory, which is set as an intended reference for a system to follow.
+         Can be a manually pre-defined trajectory or the output trajectory of another system},
+    text={reference trajectory},
+    plural={reference trajectories},
+    see={error_trajectory,output_trajectory}
+    }
+
+\newglossaryentry{batch_function}{
+    name={\hypertarget{gls:batch_function}{batch function}},
+    description={General, nonlinear mapping between two trajectories},
+    text={batch function},
+    % see={transfer_map}
+    }
+
+\newglossaryentry{structural_similarity}{
+    name={\hypertarget{gls:structural_similarity}{structural similarity}},
+    description={Property of two dynamical systems. Here, systems are structurally similar, 
+        if system order and relative degree is identical in both systems},
+    text={structural similarity},
+    plural={structurally similar},
+    % see={transfer_map}
+    }
+
+\newglossaryentry{io_similarity}{
+    name={\hypertarget{gls:io_similarity}{input-output similarity}},
+    description={Property of two dynamical systems. Here, systems are input-output similar, 
+        if their output error is small},
+    text={input-output similarity},
+    plural={input-output similar},
+    see={output_error}
+    % see={transfer_map}
+    }
+
+% \newglossaryentry{test}{
+%     name=??,
+%     description={??}
+%     }
+% \newglossaryentry{test}{
+%     name=??,
+%     description={??}
+%     }
+    
+% \newglossaryentry{test}{
+%     name=??,
+%     description={??}
+%     }
+

@@ -1,0 +1,56 @@
+\appendix
+% Im Anhang kleine römische Zahlen, beginnend ab i
+\pagenumbering{roman}
+
+% Hier den Anhang einfügen, z. B.
+% \include{Anhang/TollesKapitel} ...
+
+
+
+
+
+\chapter{Related Works}\label{ch:app_prior_works}
+\graphicspath{{./Bilder/prior_works}} 
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=1\textwidth]
+        {schoellig_et_al_connected_papers_a_dyn_sys_pers.png}
+        \caption[Connected Papers for "A dynamical systems perspective"]{Connected Papers overview based on the work "A dynamical systems perspective" showing how tightly interconnected papers from Schoellig et al. are on this topic. The authors Schoellig, Pereida, Zhou, Rimalwala, Helwa and Sorocky are seemingly one research group, making up the majority of the more recent papers in that field.}\label{fig:connected_papers}
+\end{figure}
+
+
+
+\include{Anhang/app_method}
+\include{Anhang/app_simulation}
+\include{Anhang/iterative_estimation}
+\include{Anhang/app_liftded_system_parameters_svd}
+
+
+
+% ___________________________________________________________________
+% ====================== COLLECTIVE ILC =======================
+\chapter{Collective ILC with Trajectory Transfer}\label{ch:cilc}
+\graphicspath{{./Bilder/appendix/cilc}} 
+% ===================================================================
+% -------------------------------------------------------------------
+
+Extending the CILC framework by an input transfer is visualized in \figref{fig:app_cilc_with_input_transfer}.
+
+In some systems, input-transfer might not be easily estimated. In \figref{fig:app_cilc_with_output_transfer} a method is illustrated that makes use of the output transfer to find agent specific best performing input trajectories. Instead of updating the input before the ILC update as in the input transfer case, an error trajectory is estimated that corresponds to the best input for each agents. 
+\begin{figure}
+        \centering
+        \includegraphics[width=0.6\textwidth]{cilc_with_input_transfer}
+        \caption[CILC with Input Transfer]{CILC with input transfer}
+        \label{fig:app_cilc_with_input_transfer}
+\end{figure}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{cilc_with_output_transfer}
+        \caption[CILC with Input Transfer]{CILC with output transfer}
+        \label{fig:app_cilc_with_output_transfer}
+\end{figure}
+
+
+%\include{Anhang/layout_and_commands}
+

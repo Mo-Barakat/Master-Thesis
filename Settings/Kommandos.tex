@@ -1,0 +1,341 @@
+% Insert custom commands here. Some predefined commands can be found below.
+
+% Creates the diag operator 
+\DeclareMathOperator{\diag}{diag}
+% Creates a partial derivative (a \partial above and below)
+\newcommand{\pfrac}[2]{\frac{\partial #1}{\partial #2}}
+% "Total" derivative
+\newcommand{\tdfrac}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+% Differentials at the end of an integral
+\renewcommand{\d}{\,\mathrm{d}}
+% "Partial" symbol
+\newcommand{\p}{\partial}
+% Bold symbols (including Greek)
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+% Absolute value
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+% Norm
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+% Divergence
+\DeclareMathOperator{\divv}{div}
+% Gradient
+\DeclareMathOperator{\grad}{grad}
+% Curl
+\DeclareMathOperator{\rot}{rot}
+% Cofactor
+\DeclareMathOperator{\cof}{Cof}
+% Trace
+\DeclareMathOperator{\Spur}{Sp}
+% Jump bracket
+\newcommand{\jump}[1]{\left \llbracket #1 \right \rrbracket}
+% Physical components
+\newcommand{\phy}[1]{{\langle #1 \rangle}}
+% Inverse of a symbol, with adjusted virtual height,
+% so that indices fit (e.g., \inverse{\sigma}^{ij} )
+\newcommand{\inverse}[1]{\stackrel{-1}{#1}\!\!\vphantom{#1}}
+% Fixes broken indentations, e.g., after aligns
+\newcommand{\fixIndent}{ \\[-\parskip]}
+% Abbreviations for creating equations
+\newcommand{\beq}{\begin{equation}}
+	\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqq}{\begin{equation*}}
+	\newcommand{\eeqq}{\end{equation*}}
+% Formula symbols with subscripted formula (or character), with index height adjustment.
+\newcommand{\sU}[2]{\underset{#2}{#1}\vphantom{#1}}
+% Like above, but ignores the width of the formula in the typesetting
+\newcommand{\sUs}[2]{\smash{\underset{#2}{#1}\vphantom{#1}}}
+
+%% Neue Referenzbefehle über varioref (kein fancyref, da dies keine Abkürzungen vorsieht)
+%\newcommand{\charef}[1]{Kap.\,\vref*{#1}}
+%\newcommand{\secref}[1]{Abschn.\,\vref*{#1}}
+%\newcommand{\ssecref}[1]{Unterabschn.\,\vref*{#1}}
+%\newcommand{\veqref}[1]{Gl.\,\eqref{#1}\vpageref{#1}}
+%\newcommand{\figref}[1]{Abb.\,\vref*{#1}}
+%\newcommand{\sfigref}[2]{Abb.\,\ref{#1}\subref{#2}\vpageref{#1}}
+%\newcommand{\tabref}[1]{Tab.\,\vref*{#1}}
+%\newcommand{\lstref}[1]{Lst.\,\vref*{#1}}
+%% Ohne Seitenangabe
+%\newcommand{\neqref}[1]{Gl.\,\eqref{#1}}
+%\newcommand{\ncharef}[1]{Kap.\,\ref*{#1}}
+%\newcommand{\nsecref}[1]{Abschn.\,\ref*{#1}}
+%\newcommand{\nssecref}[1]{Unterabschn.\,\ref*{#1}}
+%\newcommand{\nfigref}[1]{Abb.\,\ref*{#1}}
+%\newcommand{\nsfigref}[2]{Abb.\,\ref{#1}\subref{#2}}
+%\newcommand{\ntabref}[1]{Tab.\,\ref*{#1}}
+%\newcommand{\nlstref}[1]{Lst.\,\ref*{#1}}
+
+%%  ENGLISH VERSION
+%% Neue Referenzbefehle über varioref (kein fancyref, da dies keine Abkürzungen vorsieht)
+%\newcommand{\charef}[1]{ch.\,\vref*{#1}}
+%\newcommand{\secref}[1]{sec.\,\vref*{#1}}
+%\newcommand{\ssecref}[1]{subsec.\,\vref*{#1}}
+%\newcommand{\veqref}[1]{eq.\,\eqref{#1}\vpageref{#1}}
+%\newcommand{\figref}[1]{Fig.\,\vref*{#1}}
+%\newcommand{\sfigref}[2]{fig.\,\ref{#1}\subref{#2}\vpageref{#1}}
+%\newcommand{\tabref}[1]{tab.\,\vref*{#1}}
+%\newcommand{\lstref}[1]{lst.\,\vref*{#1}}
+%% Ohne Seitenangabe
+%\newcommand{\neqref}[1]{eq.\,\eqref{#1}}
+%\newcommand{\ncharef}[1]{ch.\,\ref*{#1}}
+%\newcommand{\nsecref}[1]{sec.\,\ref*{#1}}
+%\newcommand{\nssecref}[1]{subsec.\,\ref*{#1}}
+%\newcommand{\nfigref}[1]{fig.\,\ref*{#1}}
+%\newcommand{\nsfigref}[2]{fig.\,\ref{#1}\subref{#2}}
+%\newcommand{\ntabref}[1]{tab.\,\ref*{#1}}
+%\newcommand{\nlstref}[1]{lst.\,\ref*{#1}}
+%% Anwendung z. B. mit: ...siehe \charef{cha:01}  -> ... siehe Kap. 3 auf S. 2
+%% Unterabbildungen z. B. mit: ... siehe \sfigref{fig:01}{sfig:01:a} -> ... siehe Abb. 3.2(a)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Use this command for a filename
+\newcommand{\filenamecode}[1]{\texttt{#1}}
+
+%Appendix Reference
+\newcommand*{\appref}[1]{%
+	\ifcase\colorfulLayout
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=marker_blue}%
+	    Appendix\,\ref{#1}%
+	  \endgroup
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=black}%
+	    Appendix\,\ref{#1}%
+	  \endgroup
+	\fi
+}
+
+
+%Section Reference
+\newcommand*{\secref}[1]{%
+	\ifcase\colorfulLayout
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=marker_blue}%
+	    Sec.\,\ref{#1}%
+	  \endgroup
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=black}%
+	    Sec.\,\ref{#1}%
+	  \endgroup
+	\fi
+}
+
+%Chapter Reference
+\newcommand*{\charef}[1]{%
+	\ifcase\colorfulLayout
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=marker_blue}%
+	    Ch.\,\ref{#1}%
+	  \endgroup
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=black}%
+	    Ch.\,\ref{#1}%
+	  \endgroup
+	\fi
+}
+
+%\newcommand{\noteref}[1]{note on p.\pageref{#1}}
+\newcommand*{\noteref}[1]{%
+	\ifcase\colorfulLayout
+	\or
+	  \begingroup
+%	    \hypersetup{linkcolor=example_color}%
+	    Note~\ref{#1}%
+	  \endgroup
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=black}%
+	    Note~\ref{#1}%
+	  \endgroup
+	\fi
+}
+
+
+% Item Reference
+\newcommand{\itemref}[1]{\begingroup\hypersetup{linkcolor=marker_blue}\ref{#1}\endgroup}
+
+
+%Equation Reference
+\renewcommand*{\eqref}[1]{%
+	\ifcase\colorfulLayout
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=scioi_blue}%
+	    (\ref{#1})%
+	  \endgroup
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=black}%
+	    (\ref{#1})%
+	  \endgroup
+	\fi
+}
+
+% Figure Reference
+\newcommand*{\figref}[1]{%
+	\ifcase\colorfulLayout
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=marker_blue}%
+	    Fig.\,\ref{#1}%
+	  \endgroup
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=black}%
+	    Fig.\,\ref{#1}%
+	  \endgroup
+	\fi
+}
+
+% Table Reference
+\newcommand*{\tabref}[1]{%
+	\ifcase\colorfulLayout
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=marker_blue}%
+	    Tab.\,\ref{#1}%
+	  \endgroup
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=black}%
+	    Tab.\,\ref{#1}%
+	  \endgroup
+	\fi
+}
+
+% Example Reference
+\newcommand*{\exref}[1]{%
+	\ifcase\colorfulLayout
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=example_color}%
+	    Ex.\,\ref{#1}%
+	  \endgroup
+	\or
+	  \begingroup
+	    \hypersetup{linkcolor=black}%
+	    Ex.\,\ref{#1}%
+	  \endgroup
+	\fi
+}
+
+
+% Text Highlight
+%\newcommand{\highlight}[1]{
+%	\ifcase\colorfulLayout 
+%	\or\textcolor{marker_blue}{\textbf{#1}}\or\textit{#1}\fi
+%	}
+\newcommand{\highlight}[1]{\textcolor{marker_blue}{\textbf{#1}}}
+	
+% Test
+%\let\oldacrshort\acrshort
+%\renewcommand{\acrshort}[1]{\textbf{\oldacrshort{#1}}}
+
+% General
+%\renewcommand{\vec}[2][]{\ensuremath{\prescript{}{\mathcal{#1}}{\mathbf{#2}}}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\renewcommand{\norm}[1]{\ensuremath{\left\lVert#1\right\rVert}}
+% Transfer error
+\newcommand{\err}{\ensuremath{\varepsilon_{\vec{u}}^{(i\rightarrow j)}}}
+\newcommand{\errn}{\ensuremath{\varepsilon_{\vec{u},\mathrm{NRMS}}^{(i\rightarrow j)}}}
+
+\newcommand{\inv}{\mathrm{inv}}
+% ENVIRONMENTS
+
+\newenvironment{todobox}{
+\hypersetup{linkcolor=red!75!black} %linkcolor=red!75!black
+\begin{tcolorbox}[boxsep=1pt, coltext=red!75!black, colback=red!5!white,colframe=red!75!black, boxrule=1pt,  left = 1pt, top = 1pt, bottom=1pt, right = 1pt, title=\begingroup \hypersetup{linkcolor=white}  \endgroup]  %title=\textbf{ToDo}
+%\acrshort{todo} 
+}{\end{tcolorbox}}
+
+% NOTE BOX
+\newcounter{notecount}
+\counterwithin{notecount}{chapter}
+% env
+\newenvironment{notebox}[1][]{
+%\let\oldacrshort\acrshort
+%\renewcommand{\acrshort}[1]{\hypersetup{linkcolor=note_color}{\oldacrshort{##1}}}
+\refstepcounter{notecount}
+\hypersetup{linkcolor=note_color}
+\begin{tcolorbox}[boxsep=1pt, coltext=note_color, colback=note_color!5!white,colframe=note_color!90!black, boxrule=1pt,  left = 1pt, top = 1pt, bottom=1pt, right = 1pt, title=\ifthenelse{\equal {#1}{} }
+	{\textbf{Note~\thenotecount} } % if no example titel given, print only "Example 5.12" with number
+	{\textbf{Note~\thenotecount : #1} }] % if titel given, add colon "Example 5.12: Titel"
+}{\end{tcolorbox}}
+%title=\textbf{Note~\thenotecount #1}
+
+
+\newenvironment{question}{\begin{tcolorbox}[boxsep=1pt, coltext=question_color, colback=question_color!5!white,colframe=question_color!75!black, boxrule=1pt,  left = 1pt, top = 1pt, bottom=1pt, right = 1pt, title=\textbf{Question}]
+%\setbeamercolor{itemize/enumerate body}{fg=question_color}
+%\setbeamercolor{item}{fg=question_color}
+}{\end{tcolorbox}}
+
+%agent_2
+%ressources_color
+\newenvironment{ressources}{
+%\hypersetup{linkcolor=pink_link}
+\begin{tcolorbox}[boxsep=1pt, coltext=ressources_color!80!black, colback=ressources_color!15!white,colframe=ressources_color!85!black, boxrule=1pt,  left = 1pt, top = 1pt, bottom=1pt, right = 1pt, title=\textbf{Ressources}]
+%\setbeamercolor{itemize/enumerate body}{fg=ressources_color!85!black}
+%\setbeamercolor{item}{fg=ressources_color!85!black}
+}{\end{tcolorbox}}
+
+\newenvironment{outlook}{
+%\let\oldacrshort\acrshort
+%\renewcommand{\acrshort}[1]{\hypersetup{linkcolor=note_color}{\oldacrshort{##1}}}
+\hypersetup{linkcolor=note_color}
+\begin{tcolorbox}[boxsep=1pt, coltext=note_color, colback=note_color!5!white,colframe=note_color!90!black, boxrule=1pt,  left = 1pt, top = 1pt, bottom=1pt, right = 1pt, title=\textbf{Outlook}]
+%\setbeamercolor{itemize/enumerate body}{fg=note_color}
+%\setbeamercolor{item}{fg=note_color}
+}{\end{tcolorbox}}
+
+% EXAMPLE BOX
+\newcounter{examplecount}
+\counterwithin{examplecount}{chapter}
+% env
+\newenvironment{example}[1][]{
+%\hypersetup{linkcolor=note_color}
+\refstepcounter{examplecount}
+\begin{tcolorbox}[breakable, boxsep=1pt, coltext=example_font_color, colback=example_color!5!white, colframe=example_color, boxrule=1pt,  left = 1pt, top = 1pt, bottom=1pt, right = 1pt, 
+title=\ifthenelse{\equal {#1}{} }
+	{\textbf{Example~\theexamplecount} } % if no example titel given, print only "Example 5.12" with number
+	{\textbf{Example~\theexamplecount : #1} }] % if titel given, add colon "Example 5.12: Titel"
+}{\end{tcolorbox}}
+% , float=t
+% example_color!3!white
+%title=\textbf{Example~\theexamplecount #1}
+
+% Simple Red Todobox (Inline)
+\newtcbox{\todo}[1][red]{on line,
+arc=3pt,colback=#1!5!white,colframe=#1!75!black,
+before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,coltext=#1,
+boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=.5pt}
+
+
+% custom gls command that links to Glossary, but is not listed (has link color)
+\newcommand{\glsc}[1]{\hyperlink{gls:#1}{\gls*{#1}}}
+\newcommand{\Glsc}[1]{\hyperlink{gls:#1}{\Gls*{#1}}}
+\newcommand{\glsplc}[1]{\hyperlink{gls:#1}{\glspl*{#1}}}
+\newcommand{\Glsplc}[1]{\hyperlink{gls:#1}{\Glspl*{#1}}}
+\newcommand{\glslinkc}[2]{\hyperlink{gls:#1}{\glslink*{#1}{#2}}}
+
+
+%\newcommand{\glsc}[1]{\hyperlink{gls:#1}{\gls*{#1}}}
+%\newcommand{\Glsc}[1]{\hyperlink{gls:#1}{\Gls*{#1}}}
+%\newcommand{\glsplc}[1]{\hyperlink{gls:#1}{\glspl*{#1}}}
+%\newcommand{\Glsplc}[1]{\hyperlink{gls:#1}{\Glspl*{#1}}}
+%\newcommand{\glslinkc}[2]{\hyperlink{gls:#1}{\glslink*{#1}{#2}}}
+
+% Avoid page break (does not work)
+%\newcommand\mynobreakpar{\par\nobreak\@afterheading} 
+
+% Keywords command
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+

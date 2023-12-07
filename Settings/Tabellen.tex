@@ -1,0 +1,21 @@
+% Tabellen mit fester Gesamtbreite
+\usepackage{tabularx}
+% Beispiel: \begin{tabularx}{6cm}{lrX} <- X ist die variable Größe
+
+% Mehrseitige, lange Tabellen
+\usepackage{longtable}
+% Wichtig: Setzen von \endfirsthead, \endhead, \endfoot, \endlastfoot am Anfang nach \begin{longtable}
+
+% Ermöglichung von gedrehten Tabellen
+\usepackage{rotating}
+% gedrehte Tabelle mit der neuen Float-Tabellenumgebung \begin{sidewaystable} erstellen
+
+% Professionelles Tabellenlayout
+\usepackage{booktabs}
+% Ermöglicht die Verwendung von \toprule, \midrule, \bottomrule, \cmidrule
+% Wichtig für wissenschaftlich und ästhetisch ansprechende Tabellen
+% add \ra{1.3} between \begin{table} and \begin{tabularx} to increase size between rows
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\usepackage{ltablex} % for tables that span multiple pages in combination with tabularx
+\usepackage{multirow} % form multirow cells in tables

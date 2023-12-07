@@ -1,0 +1,869 @@
+\chapter{Method}
+% ____________________________________________________________________
+% ======================== Spring Damper System =====================
+\section{Input Types}\label{sec:app_meth1}
+\graphicspath{{./Bilder/transfer_function_estimation}} 
+% ====================================================================
+
+
+% ===============================================================
+% =================  INPUT TYPE: STEP Long ===============
+\begin{example}[: Step input (long)]\label{ex:step_input_long}
+	Consider the same example systems and method as presented in \exref{ex:single_sine_input_01hz}.
+    Both systems are excited using a step signal. The final step value is held for 
+    \begin{equation}
+        t_{\mathrm{step\,hold}} = 100\,s.
+    \end{equation} 
+     The estimated input transfer is
+     \begin{equation}
+        \hat{T}^{(1 \rightarrow 2)}(z) = \frac{0.347\,z - 0.345}{z - 0.999} 
+     \end{equation}
+     \begin{notebox}
+     Note that the longer hold duration results in a smaller error gain for slow frequencies but increases the maximum error gain $\|H^{(1 \rightarrow 2)}\|_{\infty}$.
+     \end{notebox}
+
+\begin{minipage}{1\textwidth}
+\begingroup
+	\centering
+	\vspace{1em}
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{/input_types/step 100 time.pdf}
+        \caption{System response to a step training input with and without the estimated input-transfer}
+        \label{subfig:tf_est_input_step2_time}
+    \end{subfigure}
+    \hfill    
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{/input_types/step 100 bode.pdf}
+        \caption{Bode diagram of the error dynamics with and without the estimated input-transfer}
+        \label{subfig:tf_est_input_step2_bode}
+    \end{subfigure}
+    \caption[Training Inputs for Transfer Map Estimation (Step II)]{Estimated input-transfer from a unit step training input which was held for $t_{\mathrm{step\,hold}} = 100\unit{s}$}
+    \label{subfig:tf_est_input_step2}
+\endgroup
+\end{minipage}
+\end{example}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ============================================================================
+% =================  INPUT TRANSFER ORDER: INPUT SET  ===================
+\section{Input Transfer Order}\label{subsecapp:input_transfe_order}
+% -------------------------------------------------------------------
+\graphicspath{{./Bilder/appendix/tf_order}} 
+\begin{commentnotes}
+\textbf{Main Idea}
+\vspace{-0.5em}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item The order of the \gls*{transfer_map} impacts the transfer performance. We would expect, that a transfer of lower order can still achieve good results for certain frequencies. Training data from random input trajectories is used to estimate \glspl*{input_map} of different orders between two known second-order systems. The transfer error dynamics as well as the training and test errors are evaluated for all system orders. Additionally, the training data is deteriorated by output noise and the estimation is repeated.
+\end{itemize}
+
+\textbf{Conclusions}
+\vspace{-0.5em}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item A constant gain hardly decreases the direct transfer error. A system order of at least 2 is recommended.
+	\item The best transfer is achieved for the ideal system order of $K=3$
+	\item Without noise, a higher system order has no real impact.
+	\item With noise, a too high system order results more often in negative transfer. 
+	\item With noise, higher frequencies, not part of the training (and test) input, resulted in high transfer errors. (especially for higher transfer errors)
+\end{itemize}
+\end{commentnotes}
+% -------------------------------------------------------------------
+
+
+This section explores how the model order choice impacts the transfer error dynamics for two second-order example systems. The setup is given in detail in \exref{exapp:input_transfer_order}. The main results are described in the following. 
+
+Given two second-order \acrshort{lti} \acrshort{siso} systems with a relative order of one, the order of the ideal transfer map from \eqref{eq:ideal_sys_order} is $K=3$.
+Since both systems have the same system order and relative degree, they are structurally similar. The relative degree of the ideal transfer is $m=0$.
+
+A trivial transfer choice is a static map with only a single scalar parameter tuned to transfer trajectories between two systems. This is equivalent to a transfer function of order $K=0$. As seen in \secref{subsec:static_map}, a static map cannot account for frequency-dependent differences in the phase and gain of the systems.
+%The resulting dynamics of the transfer error are mainly impacted by the choice of the training input.  
+While this transfer is easily implemented, the benefits are limited to specific inputs, and the decrease in the transfer error compared to the direct transfer is only marginal. The transfer error dynamics for $K=0$ are shown for the two example systems in \figref{subfigapp:tf_order_a}.
+
+Increasing the order of the estimated \gls*{input_map} to $K=1$ improves the transfer performers. However, a transfer function of order one lacks the ability to model oscillating behaviour. This may be the reason why the transfer error is still very high over a large range of inputs. This is seen in \figref{subfigapp:tf_order_c}.
+
+When the order of the estimated system is increased to $K=2$, the error dynamics show a sudden improvement over the previous order of $K=1$. This can be seen especially in the substantial decrease of the maximum error gain $h_{\infty}$ seen in \figref{subfigapp:tf_order_e}. This may be to its ability to model oscillating behaviour. 
+
+The ideal model order of $K=3$ results in the best overall transfer performance. Under perfect conditions\footnote{no disturbances / noise affect the outputs of the training input}, the estimated transfer function is so similar to the ideal \gls*{input_map} that only an insignificant transfer error remained, even for frequencies not contained in the training data (\figref{subfigapp:tf_order_g}).
+
+Increasing the model order further ($K>3$) does not affect the transfer error under ideal conditions. However, if output noise deteriorates the training data even slightly, outliers with very poor transfer performance become more frequent with a higher model order of the estimated \gls*{transfer_map}. 
+
+The effect of output noise is most noteworthy in higher frequencies, which are absent in the deterministic training input. 
+This may result in a large difference between training and test errors. Increasing the model order leads to a greater difference in transfer errors between the perfect training data and data corrupted with output noise. This indicates that lower-order systems are more resilient to imperfect training data than higher-order systems. 
+\figref{figapp:input_transfer_order} illustrates the transfer error dynamics in the absence of output noise on the left side and in the presence of noise on the right side.
+
+
+\begin{notebox}[Random trajectories]\label{noteapp:sample_random_input}
+	\textbf{How random trajectories of length $N$ and magnitude $\sigma_{\vec{u}}$ are generated in this work}~\\
+	\vspace{-1em}
+	\begin{enumerate}[noitemsep, topsep=0pt]
+		\item A sequence of random samples is drawn from a uniform distribution.
+		\item The sequence is filtered using the MATLAB method \texttt{filtfilt()} with a 6th-order Butterworth filter with a cutoff frequency of $f_{\mathrm{cutoff}}$.
+		\item A sequence $\vec{u}$ containing $N$ samples is selected from the filtered sequence so that the initial value $u_0$ is close to zero. 
+		\item The \textit{peak-to-rms factor} (\textit{crest factor}) of $\vec{u}$ is evaluated using the MATALB method \texttt{peak2rms}, so that $\texttt{peak2rms}(\vec{u}) \leq 3$ is given. If not, a new sequence is drawn. 
+		\item The sequence $\vec{u}$ is rescaled so that its standard deviation $\mathrm{std}(\vec{u})$ matches 
+		$2\sigma_{\vec{u}}$. (I.e. for $\sigma_{\vec{u}}=1$, the standard deviation of the sequence $\mathrm{std}(\vec{u})=2$, which means that most of the signal lies between $-1$ and $1$)
+	\end{enumerate}	
+	See the file \filenamecode{fun\_sample\_random\_input.m}.	
+\end{notebox}
+
+% -------------------------------------------------------------------
+\begin{commentnotes}
+\begin{table}
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabularx}{1\textwidth}{@{}ccccccc@{}}
+            \toprule
+            \textbf{Order} & \phantom{a} & \multicolumn{2}{c}{\textbf{Training Error}} & \phantom{abc} & \multicolumn{2}{c}{\textbf{Test Error}} \\ \cmidrule{3-4} \cmidrule{6-7}
+            $K$ && $\sigma = 0$ & $\sigma = 0.05$ && $\sigma = 0$ & $\sigma = 0.05$ \\ \midrule
+            $0$ && $9.6 \cdot 10^{-1}$ & $9.6 \cdot 10^{-1}$ && $9.8 \cdot 10^{-1}$ & $9.8 \cdot 10^{-1}$ \\
+            $1$ && $8.2 \cdot 10^{-1}$ & $8.2 \cdot 10^{-1}$ && $8.4 \cdot 10^{-1}$ & $8.5 \cdot 10^{-1}$ \\
+            $2$ && $5.6 \cdot 10^{-2}$ & $1.7 \cdot 10^{-1}$ && $6.0 \cdot 10^{-2}$ & $1.8 \cdot 10^{-1}$\\
+            $3$ && $4 \cdot 10^{-15}$ & $0.9 \cdot 10^{-1}$ && $4 \cdot 10^{-15}$ & $1.0 \cdot 10^{-1}$\\
+            $4$ && $4 \cdot 10^{-15}$ & $5.6 \cdot 10^{-2}$ && $4 \cdot 10^{-15}$ & $6.2 \cdot 10^{-2}$\\
+            $5$ && $3.5 \cdot 10^{-11}$ & $9.4 \cdot 10^{-1}$ && $4.1 \cdot 10^{-11}$ & $9.5 \cdot 10^{-1}$\\
+            $6$ && $4.2 \cdot 10^{-5}$ & $8.1 \cdot 10^{-1}$ && $5.3 \cdot 10^{-5}$ & $8.0 \cdot 10^{-1}$\\
+%            $•$ & $• \cdot 10^{-1}$ & $• \cdot 10^{-1}$\\
+%\multirow{2}{*}{\textbf{Order} $K$}
+            \bottomrule
+        \end{tabularx}
+        \caption[Test and Training Errors of Input Transfer Maps for various System Orders]{Average training and test error for different system orders $K$ of the estimated \gls*{input_map} dynamics without output noise $\sigma = 0$ and with output noise $\sigma = 0.05$ in the training data}
+        \label{tab:input_transfer_transfer_order}
+\end{table} 
+\end{commentnotes} 
+% -------------------------------------------------------------------
+
+
+% ============================================================================
+\begin{example}[System order of the estimated input transfer map]\label{exapp:input_transfer_order}
+%\paragraph{Input Set}\label{frame:input transfer order: input set}~\\
+Consider the following two second-order minimum phase \glsxtrshort{lti} \glsxtrshort{siso} systems
+\begin{equation}
+    F^{(1)}(s) = \frac{2s+1}{0.9s^2+1.2s+0.5} \quad
+    F^{(2)}(s) = \frac{0.5s+1}{1s^2+0.5s+1}\,. \label{eqapp:example_order_change}
+\end{equation}
+\figref{figapp:input_tf_order_training_data_bode} shows the bode plot of the two systems and their corresponding error dynamics.
+
+\begingroup
+	\centering
+	\vspace{1em}
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+        \includegraphics[width=0.5\textwidth]{/system_order/input transfer order systems bode.pdf}
+        \caption[System Order of Transfer Maps Example (Bode Plot of the Error Dynamics)]{Bode plot of systems $F^{(1)}(s)$ and $F^{(1)}(s)$ and their error dynamics $H^{(1,2)}(s)$}
+		\label{figapp:input_tf_order_training_data_bode}
+\endgroup
+
+Consider multiple input trajectories 
+\begin{equation}
+    \vec{u}_l \in (\mathcal{U}^{(i,j)})^N \quad
+    \text{for} \quad l \in [1,\ldots,20] 
+% &&\text{, } |\mathcal{U}| = 20
+\end{equation} 
+Each input $\vec{u}_l$ is a random input trajectory of length $t=50\unit{s}$ and magnitude one which is drawn according to \noteref{note:sample_random_input}. A sampling rate of $f_s = 100\unit{Hz}$ was chosen. \figref{subfigapp:input_tf_order_training_data_in} shows some of the randomly generated input trajectories, with one trajectory highlighted. The corresponding deterministic ($\sigma = 0$) outputs of the systems $F^{(1)}$ and $F^{(2)}$ to the inputs are shown in \figref{subfigapp:input_tf_order_training_data_out}.
+
+In a second case, a noise sequence $\vec{w}$ is added to the deterministic output trajectories, with  
+\begin{equation}
+    w \sim  \mathcal{N}(0,\sigma^2) \quad
+    \forall w  \in \vec{w} \qquad \text{and}
+    \qquad \sigma = 0.05\,.
+\end{equation} 
+The resulting output trajectories, including the additional noise, are depicted in \figref{subfigapp:input_tf_order_training_data_out2}.
+
+\begin{minipage}{1\textwidth}
+\begingroup
+	\centering
+	\vspace{1em}
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+    \begin{subfigure}[t]{0.515\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/system_order/input transfer order input set.pdf}
+        \caption{Some training inputs with one input highlighted}
+        \label{subfigapp:input_tf_order_training_data_in}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/system_order_noise/input transfer order output set.pdf}
+        \caption{Corresponding deterministic output trajectories to the training inputs}
+        \label{subfigapp:input_tf_order_training_data_out}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/system_order_noise/input transfer order output set noise 0.050.pdf}
+        \caption{Corresponding output trajectories to the training inputs with artificial noise}
+        \label{subfigapp:input_tf_order_training_data_out2}
+    \end{subfigure}
+    \caption[System Order of Transfer Maps Example (Training Data)]{Training data for \gls*{input_map} estimation of different system orders}
+    \label{figapp:input_tf_order_training_data}
+\endgroup
+\end{minipage}
+ 
+
+% ============================================================================
+% =================  INPUT TRANSFER ORDER: EXAMPLE SYSTEMS  ==================
+
+For every input $\vec{u}_l$ an \gls*{input_map} $\hat{T}^{(1 \rightarrow 2)}_l(s)$ with $l = 1,\ldots, 20$ of order $K$ in the form of \eqref{eq:estimated_tf} is estimated using the corresponding outputs $\left(\vec{y}^{(1)}, \vec{y}^{(2)}\right)_{\vec{u}_l}$. Each \gls*{input_map} is estimated once using the deterministic output trajectories and once under the presence of output noise.\\ 
+The system orders of the estimated \glspl*{input_map} are increased from zero to six, so that
+\begin{equation}
+	K = 0,\ldots,6\,.
+\end{equation}
+Note that the ideal order of the \gls*{input_map} for the sytems in \eqref{eqapp:example_order_change} is $K=3$.\\
+
+    For an \gls*{input_map} $\hat{T}^{(1 \rightarrow 2)}_l(s)$, the training error $e^{(1 \rightarrow 2)}_{\vec{u}, \mathrm{NRMS}}(\vec{u}_l)$ is calculated using the training input $\vec{u}_l$.\\
+    The test error $e^{(1 \rightarrow 2)}_{\vec{u}, \mathrm{NRMS}}(\vec{u}_k)$ is calculated using the remaining test inputs $\vec{u}_k$ for $k = 1,\ldots,20$ and $k\neq l$.
+    
+    We then average the training error and test error over all estimated \glspl*{input_map} 
+    $\hat{T}^{(1 \rightarrow 2)}_l(s)$. This is shown in \figref{figapp:tf_order_error}.
+    
+    The resulting transfer error dynamics are shown in \figref{figapp:input_transfer_order}.
+
+\begin{minipage}{1\textwidth}
+\begingroup
+	\centering
+	\vspace{1em}
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+           \includegraphics[width=0.6\textwidth]{/system_order_noise/error_over_order.pdf}
+           \caption[System Order of Transfer Maps Example (Test and Training Errors)]{Mean training error and mean test error over the order of the estimated biproper transfer function with ($\sigma = 0.05$) and without ($\sigma = 0$) noise in the training trajectories}
+           \label{figapp:tf_order_error}
+       \endgroup
+\end{minipage}
+
+    
+% ===================================================================
+\begingroup
+	\centering	
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+	\begin{minipage}{1\textwidth}
+	\vspace{1em}     
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order/input transfer order random input s0 n0.000 bode.pdf}
+           \caption{$K = 0$ and $\sigma = 0$}
+           \label{subfigapp:tf_order_a}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order_noise/input transfer order random input s0 n0.050 bode.pdf}
+           \caption{$K = 0$ and $\sigma = 0.05$}
+           \label{subfigapp:tf_order_b}
+       \end{subfigure}
+       \hfill 
+       
+       \medskip      
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order/input transfer order random input s1 n0.000 bode.pdf}
+           \caption{$K = 1$ and $\sigma = 0$}
+           \label{subfigapp:tf_order_c}
+       \end{subfigure}
+       \hfill 
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order_noise/input transfer order random input s1 n0.050 bode.pdf}
+           \caption{$K = 1$ and $\sigma = 0.05$}
+           \label{subfigapp:tf_order_d}
+       \end{subfigure}
+       \hfill
+       
+       \medskip
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order/input transfer order random input s2 n0.000 bode.pdf}
+           \caption{$K = 2$ and $\sigma = 0$}
+           \label{subfigapp:tf_order_e}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order_noise/input transfer order random input s2 n0.050 bode.pdf}
+           \caption{$K = 2$ and $\sigma = 0.05$}
+           \label{subfigapp:tf_order_f}
+       \end{subfigure}
+       \hfill
+       
+       \medskip
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order/input transfer order random input s3 n0.000 bode.pdf}
+           \caption{$K = 3$ and $\sigma = 0$}
+           \label{subfigapp:tf_order_g}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order_noise/input transfer order random input s3 n0.050 bode.pdf}
+           \caption{$K = 3$ and $\sigma = 0.05$}
+           \label{subfigapp:tf_order_h}
+       \end{subfigure}
+       \vspace{1em}
+\end{minipage}
+%\end{figure}
+%\clearpage
+%\begin{figure}
+%       \ContinuedFloat
+\newpage
+\begin{minipage}{1\textwidth}
+\vspace{1em}
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order/input transfer order random input s4 n0.000 bode.pdf}
+           \caption{$K = 4$ and $\sigma = 0$}
+           \label{subfigapp:tf_order_i}
+       \end{subfigure}
+       \hfill 
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order_noise/input transfer order random input s4 n0.050 bode.pdf}
+           \caption{$K = 4$ and $\sigma = 0.05$}
+           \label{subfigapp:tf_order_j}
+       \end{subfigure}
+       \hfill 
+       
+       \medskip                   
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order/input transfer order random input s5 n0.000 bode.pdf}
+           \caption{$K = 5$ and $\sigma = 0$}
+           \label{subfigapp:tf_order_k}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order_noise/input transfer order random input s5 n0.050 bode.pdf}
+           \caption{$K = 5$ and $\sigma = 0.05$}
+           \label{subfigapp:tf_order_l}
+       \end{subfigure}
+       \hfill
+       
+       \medskip  
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order/input transfer order random input s6 n0.000 bode.pdf}
+           \caption{$K = 6$ and $\sigma = 0$}
+           \label{subfigapp:tf_order_m}
+       \end{subfigure} 
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/system_order_noise/input transfer order random input s6 n0.050 bode.pdf}
+           \caption{$K = 6$ and $\sigma = 0.05$}
+           \label{subfigapp:tf_order_n}
+       \end{subfigure} 
+       %%%%%              
+       \caption[System Order of Transfer Maps Example (Bode Plot of the Transfer Error Dynamics)]{Bode diagram of the error dynamics with and without the estimated \gls*{input_map} $\hat{T}^{(1 \rightarrow 2)}_{l}$ for different system orders $K$ of the input transfer dynamics}
+       \label{figapp:input_transfer_order}
+%\end{figure} 
+\end{minipage}
+\endgroup
+\end{example} 
+
+
+
+
+% =============================== EXAMPLE 0  ================================
+% ============================================================================
+\graphicspath{{./Bilder/transfer_function_estimation/system_order/example4}} 
+\clearpage
+\begin{example}[Example 1: System order - constant gain]\label{ex:input_transfer_order_appex0}   
+% ===================================================================
+\begingroup
+	\centering	
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+	\begin{minipage}{1\textwidth}
+	\vspace{1em}     
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s0 n0.000 bode.pdf}
+           \caption{$K = 0$ and $\sigma = 0$}
+           \label{subfig:tf_order_a_appex0}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s0 n0.030 bode.pdf}
+           \caption{$K = 0$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_b_appex0}
+       \end{subfigure}
+       \hfill 
+       
+       \medskip      
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s1 n0.000 bode.pdf}
+           \caption{$K = 1$ and $\sigma = 0$}
+           \label{subfig:tf_order_c_appex0}
+       \end{subfigure}
+       \hfill 
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s1 n0.030 bode.pdf}
+           \caption{$K = 1$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_d_appex0}
+       \end{subfigure}
+       \hfill
+       
+       \medskip
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s2 n0.000 bode.pdf}
+           \caption{$K = 2$ and $\sigma = 0$}
+           \label{subfig:tf_order_e_appex0}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s2 n0.030 bode.pdf}
+           \caption{$K = 2$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_f_appex0}
+       \end{subfigure}
+       \hfill
+       
+       \medskip
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s3 n0.000 bode.pdf}
+           \caption{$K = 3$ and $\sigma = 0$}
+           \label{subfig:tf_order_g_appex0}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s3 n0.030 bode.pdf}
+           \caption{$K = 3$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_h_appex0}
+       \end{subfigure}
+       \vspace{1em}
+\end{minipage}
+
+\newpage
+\begin{minipage}{1\textwidth}
+\vspace{1em}
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s4 n0.000 bode.pdf}
+           \caption{$K = 4$ and $\sigma = 0$}
+           \label{subfig:tf_order_i_appex0}
+       \end{subfigure}
+       \hfill 
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s4 n0.030 bode.pdf}
+           \caption{$K = 4$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_j_appex0}
+       \end{subfigure}
+       \hfill 
+       
+       \medskip                   
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s5 n0.000 bode.pdf}
+           \caption{$K = 5$ and $\sigma = 0$}
+           \label{subfig:tf_order_k_appex0}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s5 n0.030 bode.pdf}
+           \caption{$K = 5$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_l_appex0}
+       \end{subfigure}
+       \hfill
+       
+       \medskip  
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s6 n0.000 bode.pdf}
+           \caption{$K = 6$ and $\sigma = 0$}
+           \label{subfig:tf_order_m_appex0}
+       \end{subfigure} 
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s6 n0.030 bode.pdf}
+           \caption{$K = 6$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_n_appex0}
+       \end{subfigure}        
+       \hfill
+       
+       \medskip  
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s7 n0.000 bode.pdf}
+           \caption{$K = 7$ and $\sigma = 0$}
+           \label{subfig:tf_order_o_appex0}
+       \end{subfigure} 
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s7 n0.030 bode.pdf}
+           \caption{$K = 7$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_p_appex0}
+       \end{subfigure} 
+       %%%%%              
+       \caption[System Order of Transfer Maps Example (Bode Plot of the Transfer Error Dynamics)]{Bode diagram of the error dynamics with and without the estimated \gls*{input_map} $\hat{T}^{(1 \rightarrow 2)}_{l}$ for different system orders $K$ of the input transfer dynamics}
+       \label{fig:input_transfer_order_appex0}
+\end{minipage}
+\endgroup
+\end{example}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
+ 
+
+% =============================== EXAMPLE 2  ================================
+% ============================================================================
+\graphicspath{{./Bilder/transfer_function_estimation/system_order/example2}} 
+\begin{example}[Example 3: System order - complex error dynamics I]\label{ex:input_transfer_order_appex2}    
+% ===================================================================
+\begingroup
+	\centering	
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+	\begin{minipage}{1\textwidth}
+	\vspace{1em}     
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s0 n0.000 bode.pdf}
+           \caption{$K = 0$ and $\sigma = 0$}
+           \label{subfig:tf_order_a_appex2}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s0 n0.030 bode.pdf}
+           \caption{$K = 0$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_b_appex2}
+       \end{subfigure}
+       \hfill 
+       
+       \medskip      
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s1 n0.000 bode.pdf}
+           \caption{$K = 1$ and $\sigma = 0$}
+           \label{subfig:tf_order_c_appex2}
+       \end{subfigure}
+       \hfill 
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s1 n0.030 bode.pdf}
+           \caption{$K = 1$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_d_appex2}
+       \end{subfigure}
+       \hfill
+       
+       \medskip
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s2 n0.000 bode.pdf}
+           \caption{$K = 2$ and $\sigma = 0$}
+           \label{subfig:tf_order_e_appex2}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s2 n0.030 bode.pdf}
+           \caption{$K = 2$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_f_appex2}
+       \end{subfigure}
+       \hfill
+       
+       \medskip
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s3 n0.000 bode.pdf}
+           \caption{$K = 3$ and $\sigma = 0$}
+           \label{subfig:tf_order_g_appex2}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s3 n0.030 bode.pdf}
+           \caption{$K = 3$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_h_appex2}
+       \end{subfigure}
+       \vspace{1em}
+\end{minipage}
+
+\newpage
+\begin{minipage}{1\textwidth}
+\vspace{1em}
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s4 n0.000 bode.pdf}
+           \caption{$K = 4$ and $\sigma = 0$}
+           \label{subfig:tf_order_i_appex2}
+       \end{subfigure}
+       \hfill 
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s4 n0.030 bode.pdf}
+           \caption{$K = 4$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_j_appex2}
+       \end{subfigure}
+       \hfill 
+       
+       \medskip                   
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s5 n0.000 bode.pdf}
+           \caption{$K = 5$ and $\sigma = 0$}
+           \label{subfig:tf_order_k_appex2}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s5 n0.030 bode.pdf}
+           \caption{$K = 5$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_l_appex2}
+       \end{subfigure}
+       \hfill
+       
+       \medskip  
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s6 n0.000 bode.pdf}
+           \caption{$K = 6$ and $\sigma = 0$}
+           \label{subfig:tf_order_m_appex2}
+       \end{subfigure} 
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s6 n0.030 bode.pdf}
+           \caption{$K = 6$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_n_appex2}
+       \end{subfigure}        
+       \hfill
+       
+       \medskip  
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s7 n0.000 bode.pdf}
+           \caption{$K = 7$ and $\sigma = 0$}
+           \label{subfig:tf_order_o_appex2}
+       \end{subfigure} 
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s7 n0.030 bode.pdf}
+           \caption{$K = 7$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_p_appex2}
+       \end{subfigure} 
+       %%%%%              
+       \caption[System Order of Transfer Maps Example (Bode Plot of the Transfer Error Dynamics)]{Bode diagram of the error dynamics with and without the estimated \gls*{input_map} $\hat{T}^{(1 \rightarrow 2)}_{l}$ for different system orders $K$ of the input transfer dynamics}
+       \label{fig:input_transfer_order_appex2}
+\end{minipage}
+\endgroup
+
+\begin{minipage}{1\textwidth}
+\begingroup
+	\centering
+	\vspace{1em}
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/noise/input transfer order input set.pdf}
+        \caption{Some training inputs with one input highlighted}
+        \label{subfig:input_tf_order_training_data_in_appex2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/noise/input transfer order output set.pdf}
+        \caption{Corresponding deterministic output trajectories to the training inputs}
+        \label{subfig:input_tf_order_training_data_out_appex2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/noise/input transfer order output set noise 0.030.pdf}
+        \caption{Corresponding output trajectories to the training inputs with artificial noise}
+        \label{subfig:input_tf_order_training_data_out2_appex2}
+    \end{subfigure}
+    \caption[System Order of Transfer Maps Example (Training Data)]{Training data for \gls*{input_map} estimation of different system orders}
+    \label{fig:input_tf_order_training_data_appex2}
+\endgroup
+\end{minipage}
+\end{example}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% =============================== EXAMPLE 3 ================================
+% ============================================================================
+\graphicspath{{./Bilder/transfer_function_estimation/system_order/example3}} 
+\clearpage
+\begin{example}[Example 3: System order - complex error dynamics II]\label{ex:input_transfer_order_appex3}  
+\begingroup
+	\centering	
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+	\begin{minipage}{1\textwidth}
+	\vspace{1em}     
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s0 n0.000 bode.pdf}
+           \caption{$K = 0$ and $\sigma = 0$}
+           \label{subfig:tf_order_a_appex3}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s0 n0.030 bode.pdf}
+           \caption{$K = 0$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_b_appex3}
+       \end{subfigure}
+       \hfill 
+       
+       \medskip      
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s1 n0.000 bode.pdf}
+           \caption{$K = 1$ and $\sigma = 0$}
+           \label{subfig:tf_order_c_appex3}
+       \end{subfigure}
+       \hfill 
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s1 n0.030 bode.pdf}
+           \caption{$K = 1$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_d_appex3}
+       \end{subfigure}
+       \hfill
+       
+       \medskip
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s2 n0.000 bode.pdf}
+           \caption{$K = 2$ and $\sigma = 0$}
+           \label{subfig:tf_order_e_appex3}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s2 n0.030 bode.pdf}
+           \caption{$K = 2$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_f_appex3}
+       \end{subfigure}
+       \hfill
+       
+       \medskip
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s3 n0.000 bode.pdf}
+           \caption{$K = 3$ and $\sigma = 0$}
+           \label{subfig:tf_order_g_appex3}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s3 n0.030 bode.pdf}
+           \caption{$K = 3$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_h_appex3}
+       \end{subfigure}
+       \vspace{1em}
+\end{minipage}
+
+\newpage
+\begin{minipage}{1\textwidth}
+\vspace{1em}
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s4 n0.000 bode.pdf}
+           \caption{$K = 4$ and $\sigma = 0$}
+           \label{subfig:tf_order_i_appex3}
+       \end{subfigure}
+       \hfill 
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s4 n0.030 bode.pdf}
+           \caption{$K = 4$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_j_appex3}
+       \end{subfigure}
+       \hfill 
+       
+       \medskip                   
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s5 n0.000 bode.pdf}
+           \caption{$K = 5$ and $\sigma = 0$}
+           \label{subfig:tf_order_k_appex3}
+       \end{subfigure}
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s5 n0.030 bode.pdf}
+           \caption{$K = 5$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_l_appex3}
+       \end{subfigure}
+       \hfill
+       
+       \medskip  
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s6 n0.000 bode.pdf}
+           \caption{$K = 6$ and $\sigma = 0$}
+           \label{subfig:tf_order_m_appex3}
+       \end{subfigure} 
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s6 n0.030 bode.pdf}
+           \caption{$K = 6$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_n_appex3}
+       \end{subfigure}        
+       \hfill
+       
+       \medskip  
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/det/input transfer order random input s7 n0.000 bode.pdf}
+           \caption{$K = 7$ and $\sigma = 0$}
+           \label{subfig:tf_order_o_appex3}
+       \end{subfigure} 
+       \hfill
+       \begin{subfigure}{0.495\textwidth}
+           \centering
+           \includegraphics[width=\textwidth]{/noise/input transfer order random input s7 n0.030 bode.pdf}
+           \caption{$K = 7$ and $\sigma = 0.03$}
+           \label{subfig:tf_order_p_appex3}
+       \end{subfigure} 
+       %%%%%              
+       \caption[System Order of Transfer Maps Example (Bode Plot of the Transfer Error Dynamics)]{Bode diagram of the error dynamics with and without the estimated \gls*{input_map} $\hat{T}^{(1 \rightarrow 2)}_{l}$ for different system orders $K$ of the input transfer dynamics}
+       \label{fig:input_transfer_order_appex3}
+\end{minipage}
+\endgroup
+
+\begin{minipage}{1\textwidth}
+\begingroup
+	\centering
+	\vspace{1em}
+	\captionsetup{format=plain, type=figure, labelfont={color=example_font_color, bf}, font={color=example_font_color}}
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/noise/input transfer order input set.pdf}
+        \caption{Some training inputs with one input highlighted}
+        \label{subfig:input_tf_order_training_data_in_appex1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/noise/input transfer order output set.pdf}
+        \caption{Corresponding deterministic output trajectories to the training inputs}
+        \label{subfig:input_tf_order_training_data_out_appex1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth]{/noise/input transfer order output set noise 0.030.pdf}
+        \caption{Corresponding output trajectories to the training inputs with artificial noise}
+        \label{subfig:input_tf_order_training_data_out2_appex1}
+    \end{subfigure}
+    \caption[System Order of Transfer Maps Example (Training Data)]{Training data for \gls*{input_map} estimation of different system orders}
+    \label{fig:input_tf_order_training_data_appex1}
+\endgroup
+\end{minipage}
+\end{example}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
