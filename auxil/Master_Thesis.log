@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  10 DEC 2023 22:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  12 DEC 2023 05:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1614,10 +1614,6 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Warning: Label `fig:Schematic representation detailing the requisite angl
 es and lengths for calculating the moment of inertia.' multiply defined.
 
-
-LaTeX Warning: Label `fig:Schematic representation detailing the requisite angl
-es and lengths for calculating the moment of inertia.' multiply defined.
-
 )
 \openout1 = `Master_Thesis.aux'.
 
@@ -1925,89 +1921,115 @@ chapter 3.
 [4
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-9.
+<./Figures/Mechanical Design/Conceptual Design.pdf, id=288, 539.86023pt x 143.7
+3386pt>
+File: ./Figures/Mechanical Design/Conceptual Design.pdf Graphic file (type pdf)
+
+<use ./Figures/Mechanical Design/Conceptual Design.pdf>
+Package pdftex.def Info: ./Figures/Mechanical Design/Conceptual Design.pdf  use
+d on input line 33.
+(pdftex.def)             Requested size: 455.24411pt x 121.20714pt.
+<./Figures/Mechanical Design/Leg Design.pdf, id=289, 199.90388pt x 182.2772pt>
+File: ./Figures/Mechanical Design/Leg Design.pdf Graphic file (type pdf)
+<use ./Figures/Mechanical Design/Leg Design.pdf>
+Package pdftex.def Info: ./Figures/Mechanical Design/Leg Design.pdf  used on in
+put line 43.
+(pdftex.def)             Requested size: 182.09486pt x 166.04773pt.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
+7.
  (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-(Content/Electronic Design.tex [5{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm
--ts1.enc}]
-chapter 4.
-) (Content/Modelling and Simulation.tex [6
+) [5 <./Figures/Mechanical Design/Conceptual Design.pdf> <./Figures/Mechanical 
+Design/Leg Design.pdf
 
-]
-chapter 5.
+pdfTeX warning: pdflatex (file ./Figures/Mechanical Design/Leg Design.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>]) (Content/Electronic Design.tex [6{C:/Program Files/MiKTeX/fonts/enc/dvips/l
+m/lm-ts1.enc}]
+chapter 4.
+<./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf, id=303, 597.52838pt 
+x 421.1173pt>
+File: ./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf Graphic file (ty
+pe pdf)
+<use ./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf>
+Package pdftex.def Info: ./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.p
+df  used on input line 8.
+(pdftex.def)             Requested size: 455.24411pt x 320.84924pt.
 [7
 
-]
-<./Figures/Modeling///Model.pdf, id=298, 150.18646pt x 236.27304pt>
-File: ./Figures/Modeling///Model.pdf Graphic file (type pdf)
-<use ./Figures/Modeling///Model.pdf>
-Package pdftex.def Info: ./Figures/Modeling///Model.pdf  used on input line 30.
+ <./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf>])
+(Content/Modelling and Simulation.tex [8]
+chapter 5.
+[9
 
+]
+<./Figures/Modeling/Model.pdf, id=321, 150.18646pt x 236.27304pt>
+File: ./Figures/Modeling/Model.pdf Graphic file (type pdf)
+<use ./Figures/Modeling/Model.pdf>
+Package pdftex.def Info: ./Figures/Modeling/Model.pdf  used on input line 46.
 (pdftex.def)             Requested size: 227.62206pt x 358.12567pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (30.0411pt too wide) detected at line 59
+Overfull \hbox (2.66605pt too wide) detected at line 77
 [][][][][]
  []
 
-<./Figures/Modeling///Angles.pdf, id=299, 123.30772pt x 202.56958pt>
-File: ./Figures/Modeling///Angles.pdf Graphic file (type pdf)
-<use ./Figures/Modeling///Angles.pdf>
-Package pdftex.def Info: ./Figures/Modeling///Angles.pdf  used on input line 86
-.
+<./Figures/Modeling/Angles.pdf, id=322, 123.30772pt x 202.56958pt>
+File: ./Figures/Modeling/Angles.pdf Graphic file (type pdf)
+<use ./Figures/Modeling/Angles.pdf>
+Package pdftex.def Info: ./Figures/Modeling/Angles.pdf  used on input line 104.
+
 (pdftex.def)             Requested size: 227.62206pt x 373.96582pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/M
-iKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips
-/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
-[9 <./Figures/Modeling///Model.pdf>] [10 <./Figures/Modeling///Angles.pdf>]
-Overfull \hbox (54.68748pt too wide) in paragraph at lines 212--228
+[10{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/
+MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvip
+s/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
+[11 <./Figures/Modeling/Model.pdf>] [12 <./Figures/Modeling/Angles.pdf>]
+Overfull \hbox (54.68748pt too wide) in paragraph at lines 230--246
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11]) (Content/Mechanical Assembly.tex [12]
+[13]) (Content/Mechanical Assembly.tex [14]
 chapter 6.
-) (Content/Firmware and Testing.tex [13
+) (Content/Firmware and Testing.tex [15
 
 ]
 chapter 7.
-[14
-
-]) (Content/Safety.tex [15]
-chapter 8.
 [16
 
-] [17]) (Content/Design.tex [18]
+]) (Content/Safety.tex [17]
+chapter 8.
+[18
+
+] [19]) (Content/Design.tex [20]
 chapter 9.
-<./Figures/Design///Capture.png, id=454, 553.31718pt x 530.73282pt>
+<./Figures/Design///Capture.png, id=478, 553.31718pt x 530.73282pt>
 File: ./Figures/Design///Capture.png Graphic file (type png)
 <use ./Figures/Design///Capture.png>
 Package pdftex.def Info: ./Figures/Design///Capture.png  used on input line 10.
 
 (pdftex.def)             Requested size: 455.24411pt x 436.66142pt.
-[19
+[21
 
- <./Figures/Design///Capture.png>] [20]
+ <./Figures/Design///Capture.png>] [22]
 
 pdfTeX warning: pdflatex (file ./Figures/Design///Component_diagram.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./Figures/Design///Component_diagram.pdf, id=464, 687.52856pt x 212.71469pt>
+<./Figures/Design///Component_diagram.pdf, id=490, 687.52856pt x 212.71469pt>
 File: ./Figures/Design///Component_diagram.pdf Graphic file (type pdf)
 <use ./Figures/Design///Component_diagram.pdf>
 Package pdftex.def Info: ./Figures/Design///Component_diagram.pdf  used on inpu
 t line 53.
 (pdftex.def)             Requested size: 455.24411pt x 140.85301pt.
-) [21 <./Figures/Design///Component_diagram.pdf>])
+) [23 <./Figures/Design///Component_diagram.pdf>])
 (FrontBackMatter/BackMatter.tex (Master_Thesis.ind) (Master_Thesis.bbl
 chapter without number
 
@@ -2035,32 +2057,44 @@ Package rerunfilecheck Info: File `Master_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51070 strings out of 475247
- 1040069 string characters out of 5767607
- 1944801 words of memory out of 5000000
- 71104 multiletter control sequences out of 15000+600000
- 657917 words of font info for 214 fonts, out of 8000000 for 9000
+ 51106 strings out of 475247
+ 1041698 string characters out of 5767607
+ 1943801 words of memory out of 5000000
+ 71134 multiletter control sequences out of 15000+600000
+ 657834 words of font info for 213 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  119i,20n,113p,10934b,955s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
-iKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/l
-m/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr5.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiK
-TeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Pro
-gram Files/MiKTeX/fonts/type1/public/lm/lmro8.pfb><C:/Program Files/MiKTeX/font
-s/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/l
-msy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+
+pdfTeX warning (dest): name{table.caption.9} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.11} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter*.12} has been referenced but does not exist
+, replaced by a fixed one
+
+<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/
+lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr5.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
+/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/lm/lmro8.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lms
+y10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program Fi
+les/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on "D:/MASTERS\semester 4\Legged_TWIPR\Latex\Master Thesis\Maste
-r-Thesis\Master_Thesis.pdf" (31 pages, 936973 bytes).
+r-Thesis\Master_Thesis.pdf" (33 pages, 1003465 bytes).
 PDF statistics:
- 735 PDF objects out of 1000 (max. 8388607)
- 180 named destinations out of 1000 (max. 500000)
- 53831 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 765 PDF objects out of 1000 (max. 8388607)
+ 188 named destinations out of 1000 (max. 500000)
+ 53846 words of extra memory for PDF output out of 61914 (max. 10000000)
 
