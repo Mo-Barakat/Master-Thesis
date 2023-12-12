@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  12 DEC 2023 06:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  12 DEC 2023 11:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1920,7 +1920,7 @@ chapter 3.
 [4
 
 ]
-<./Figures/Mechanical Design/Conceptual Design.pdf, id=294, 539.86023pt x 143.7
+<./Figures/Mechanical Design/Conceptual Design.pdf, id=297, 539.86023pt x 143.7
 3386pt>
 File: ./Figures/Mechanical Design/Conceptual Design.pdf Graphic file (type pdf)
 
@@ -1928,7 +1928,7 @@ File: ./Figures/Mechanical Design/Conceptual Design.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figures/Mechanical Design/Conceptual Design.pdf  use
 d on input line 34.
 (pdftex.def)             Requested size: 455.24411pt x 121.20714pt.
-<./Figures/Mechanical Design/Leg Design.pdf, id=295, 199.90388pt x 182.2772pt>
+<./Figures/Mechanical Design/Leg Design.pdf, id=298, 199.90388pt x 182.2772pt>
 File: ./Figures/Mechanical Design/Leg Design.pdf Graphic file (type pdf)
 <use ./Figures/Mechanical Design/Leg Design.pdf>
 Package pdftex.def Info: ./Figures/Mechanical Design/Leg Design.pdf  used on in
@@ -1946,23 +1946,40 @@ pdfTeX warning: pdflatex.exe (file ./Figures/Mechanical Design/Leg Design.pdf):
 >]) (Content/Electronic Design.tex [6{C:/Program Files/MiKTeX/fonts/enc/dvips/l
 m/lm-ts1.enc}]
 chapter 4.
-<./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf, id=309, 597.52838pt 
+
+
+pdfTeX warning: pdflatex.exe (file ./Figures/Electronic Design/Component_Diagra
+m.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
+ed
+<./Figures/Electronic Design/Component_Diagram.pdf, id=313, 687.52856pt x 212.7
+1469pt>
+File: ./Figures/Electronic Design/Component_Diagram.pdf Graphic file (type pdf)
+
+<use ./Figures/Electronic Design/Component_Diagram.pdf>
+Package pdftex.def Info: ./Figures/Electronic Design/Component_Diagram.pdf  use
+d on input line 27.
+(pdftex.def)             Requested size: 455.24411pt x 140.85301pt.
+<./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf, id=314, 597.52838pt 
 x 421.1173pt>
 File: ./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf Graphic file (ty
 pe pdf)
 <use ./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf>
 Package pdftex.def Info: ./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.p
-df  used on input line 8.
+df  used on input line 42.
 (pdftex.def)             Requested size: 455.24411pt x 320.84924pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [7
 
- <./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf>])
-(Content/Modelling and Simulation.tex [8]
+ <./Figures/Electronic Design/Component_Diagram.pdf>])
+(Content/Modelling and Simulation.tex [8 <./Figures/Electronic Design/Legged_TW
+IPR_Wiring_Tree.pdf>]
 chapter 5.
 [9
 
 ]
-<./Figures/Modeling/Model.pdf, id=327, 150.18646pt x 236.27304pt>
+<./Figures/Modeling/Model.pdf, id=342, 150.18646pt x 236.27304pt>
 File: ./Figures/Modeling/Model.pdf Graphic file (type pdf)
 <use ./Figures/Modeling/Model.pdf>
 Package pdftex.def Info: ./Figures/Modeling/Model.pdf  used on input line 46.
@@ -1976,7 +1993,7 @@ Overfull \hbox (2.66605pt too wide) detected at line 77
 [][][][][]
  []
 
-<./Figures/Modeling/Angles.pdf, id=328, 123.30772pt x 202.56958pt>
+<./Figures/Modeling/Angles.pdf, id=343, 123.30772pt x 202.56958pt>
 File: ./Figures/Modeling/Angles.pdf Graphic file (type pdf)
 <use ./Figures/Modeling/Angles.pdf>
 Package pdftex.def Info: ./Figures/Modeling/Angles.pdf  used on input line 104.
@@ -2010,7 +2027,7 @@ chapter 8.
 
 ] [19]) (Content/Design.tex [20]
 chapter 9.
-<./Figures/Design///Capture.png, id=482, 553.31718pt x 530.73282pt>
+<./Figures/Design///Capture.png, id=497, 553.31718pt x 530.73282pt>
 File: ./Figures/Design///Capture.png Graphic file (type png)
 <use ./Figures/Design///Capture.png>
 Package pdftex.def Info: ./Figures/Design///Capture.png  used on input line 10.
@@ -2022,7 +2039,7 @@ Package pdftex.def Info: ./Figures/Design///Capture.png  used on input line 10.
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Design///Component_diagram.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./Figures/Design///Component_diagram.pdf, id=493, 687.52856pt x 212.71469pt>
+<./Figures/Design///Component_diagram.pdf, id=508, 687.52856pt x 212.71469pt>
 File: ./Figures/Design///Component_diagram.pdf Graphic file (type pdf)
 <use ./Figures/Design///Component_diagram.pdf>
 Package pdftex.def Info: ./Figures/Design///Component_diagram.pdf  used on inpu
@@ -2056,10 +2073,10 @@ Package rerunfilecheck Info: File `Master_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51103 strings out of 475247
- 1041405 string characters out of 5767607
- 1943801 words of memory out of 5000000
- 71136 multiletter control sequences out of 15000+600000
+ 51115 strings out of 475247
+ 1041939 string characters out of 5767607
+ 1944801 words of memory out of 5000000
+ 71147 multiletter control sequences out of 15000+600000
  657834 words of font info for 213 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  119i,20n,113p,10934b,955s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2078,9 +2095,9 @@ gram Files/MiKTeX/fonts/type1/public/lm/lmro8.pfb><C:/Program Files/MiKTeX/font
 s/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/l
 msy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Master_Thesis.pdf (33 pages, 1004410 bytes).
+Output written on Master_Thesis.pdf (33 pages, 1047614 bytes).
 PDF statistics:
- 765 PDF objects out of 1000 (max. 8388607)
- 185 named destinations out of 1000 (max. 500000)
- 53846 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 780 PDF objects out of 1000 (max. 8388607)
+ 186 named destinations out of 1000 (max. 500000)
+ 53851 words of extra memory for PDF output out of 61914 (max. 10000000)
 
