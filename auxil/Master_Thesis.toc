@@ -14,45 +14,47 @@
 \contentsline {section}{\numberline {3.2}Conceptual Design}{5}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Initial Calculations}{6}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Detailed Design Development}{7}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Design for Manufacturability and Assembly}{7}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Prototyping and Iterative Design}{7}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Electronic Design}{8}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Design Objectives and Constraints}{8}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Component Selection}{8}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Hip and Knee Motors}{9}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Wheel Motors}{9}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Microcontroller}{9}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Raspberry Pi}{10}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Distance Sensor}{10}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Camera}{10}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}Battery}{11}{subsection.4.2.7}%
-\contentsline {section}{\numberline {4.3}Circuit Design}{11}{section.4.3}%
-\contentsline {section}{\numberline {4.4}PCB (Printed Circuit Board) Design}{12}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Power Management}{13}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Modelling and Simulation}{14}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Mathematical Modelling}{15}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Center of Gravity}{15}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Moment of inertia}{16}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Equation of motion}{17}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Dynamics of the Two-Wheeled Inverted Pendulum Robot}{17}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Numerical Simulation}{18}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Simulation Environment}{18}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Controller Synthesis}{19}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Simulation Analysis}{19}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Mechanical Assembly}{20}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Components Overview}{20}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Assembly Process}{20}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Integration of Mechanical and Electronic Systems}{20}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Troubleshooting and Problem Solving}{20}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Safety Considerations}{20}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Firmware and Testing}{21}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Firmware Development}{21}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Programming Languages and Tools}{21}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Integration with Hardware}{21}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Testing Framework and Methodology}{21}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Test Cases and Scenarios}{21}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Debugging and Troubleshooting}{22}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Safety}{23}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Random(Erase)}{26}{chapter.9}%
-\contentsline {chapter}{\nonumberline Bibliography}{X}{chapter*.23}%
+\contentsline {subsection}{\numberline {3.4.1}Body Design}{7}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}random}{7}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Design for Manufacturability and Assembly}{9}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Prototyping and Iterative Design}{9}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Electronic Design}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Design Objectives and Constraints}{10}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Component Selection}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Hip and Knee Motors}{11}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Wheel Motors}{11}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Microcontroller}{11}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Raspberry Pi}{12}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Distance Sensor}{12}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Camera}{12}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Battery}{13}{subsection.4.2.7}%
+\contentsline {section}{\numberline {4.3}Circuit Design}{13}{section.4.3}%
+\contentsline {section}{\numberline {4.4}PCB (Printed Circuit Board) Design}{14}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Power Management}{15}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Modelling and Simulation}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Mathematical Modelling}{17}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Center of Gravity}{17}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Moment of inertia}{18}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Equation of motion}{19}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Dynamics of the Two-Wheeled Inverted Pendulum Robot}{19}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Numerical Simulation}{20}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Simulation Environment}{20}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Controller Synthesis}{21}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Simulation Analysis}{21}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Mechanical Assembly}{22}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Components Overview}{22}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Assembly Process}{22}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Integration of Mechanical and Electronic Systems}{22}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Troubleshooting and Problem Solving}{22}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Safety Considerations}{22}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Firmware and Testing}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Firmware Development}{23}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Programming Languages and Tools}{23}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Integration with Hardware}{23}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Testing Framework and Methodology}{23}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Test Cases and Scenarios}{23}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Debugging and Troubleshooting}{24}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Safety}{25}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Random(Erase)}{28}{chapter.9}%
+\contentsline {chapter}{\nonumberline Bibliography}{X}{chapter*.25}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

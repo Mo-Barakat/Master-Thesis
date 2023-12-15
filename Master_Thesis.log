@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  15 DEC 2023 02:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  15 DEC 2023 23:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,19 +6,6 @@ entering extended mode
 (Master_Thesis.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \usepackage{
-                miscdoc}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%...
-
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
 (Settings/Klasse.tex
 (C:\Program Files\MiKTeX\tex/latex/koma-script\scrreprt.cls
 Document Class: scrreprt 2023/07/07 v3.41 KOMA-Script document class (report)
@@ -1626,6 +1613,10 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Warning: Label `fig:Schematic representation detailing the requisite angl
 es and lengths for calculating the moment of inertia.' multiply defined.
 
+
+LaTeX Warning: Label `fig:Schematic representation detailing the requisite angl
+es and lengths for calculating the moment of inertia.' multiply defined.
+
 )
 \openout1 = `Master_Thesis.aux'.
 
@@ -1933,27 +1924,27 @@ chapter 3.
 [4
 
 ]
-<./Figures/Mechanical Design/Conceptual Design.pdf, id=346, 539.86023pt x 143.7
+<./Figures/Mechanical Design/Conceptual Design.pdf, id=358, 539.86023pt x 143.7
 3386pt>
 File: ./Figures/Mechanical Design/Conceptual Design.pdf Graphic file (type pdf)
 
 <use ./Figures/Mechanical Design/Conceptual Design.pdf>
 Package pdftex.def Info: ./Figures/Mechanical Design/Conceptual Design.pdf  use
-d on input line 34.
+d on input line 33.
 (pdftex.def)             Requested size: 455.24411pt x 121.20714pt.
-<./Figures/Mechanical Design/Leg Design.pdf, id=347, 199.90388pt x 182.2772pt>
+<./Figures/Mechanical Design/Leg Design.pdf, id=359, 199.90388pt x 182.2772pt>
 File: ./Figures/Mechanical Design/Leg Design.pdf Graphic file (type pdf)
 <use ./Figures/Mechanical Design/Leg Design.pdf>
 Package pdftex.def Info: ./Figures/Mechanical Design/Leg Design.pdf  used on in
-put line 48.
+put line 46.
 (pdftex.def)             Requested size: 182.09486pt x 166.04773pt.
-<./Figures/Mechanical Design/Initial Calculations.pdf, id=348, 171.4851pt x 66.
+<./Figures/Mechanical Design/Initial Calculations.pdf, id=360, 171.4851pt x 66.
 29317pt>
 File: ./Figures/Mechanical Design/Initial Calculations.pdf Graphic file (type p
 df)
 <use ./Figures/Mechanical Design/Initial Calculations.pdf>
 Package pdftex.def Info: ./Figures/Mechanical Design/Initial Calculations.pdf  
-used on input line 62.
+used on input line 60.
 (pdftex.def)             Requested size: 318.66948pt x 123.20285pt.
  [5 <./Figures/Mechanical Design/Conceptual Design.pdf> <./Figures/Mechanical D
 esign/Leg Design.pdf
@@ -1961,22 +1952,41 @@ esign/Leg Design.pdf
 pdfTeX warning: pdflatex.exe (file ./Figures/Mechanical Design/Leg Design.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-13.
- (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
+14.
+(C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [6{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files
 /MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX/fonts/enc/dvi
 ps/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./F
-igures/Mechanical Design/Initial Calculations.pdf>]) (Content/Electronic Design
-.tex [7{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+igures/Mechanical Design/Initial Calculations.pdf>]
+<./Figures/Mechanical Design/Robot_Assembly_V2.pdf, id=387, 794.97pt x 614.295p
+t>
+File: ./Figures/Mechanical Design/Robot_Assembly_V2.pdf Graphic file (type pdf)
+
+<use ./Figures/Mechanical Design/Robot_Assembly_V2.pdf>
+Package pdftex.def Info: ./Figures/Mechanical Design/Robot_Assembly_V2.pdf  use
+d on input line 127.
+(pdftex.def)             Requested size: 318.66948pt x 246.24792pt.
+File: ./Figures/Mechanical Design/Robot_Assembly_V2.pdf Graphic file (type pdf)
+
+<use ./Figures/Mechanical Design/Robot_Assembly_V2.pdf>
+Package pdftex.def Info: ./Figures/Mechanical Design/Robot_Assembly_V2.pdf  use
+d on input line 145.
+(pdftex.def)             Requested size: 455.24411pt x 351.79211pt.
+ [7{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./Figures/Mechanica
+l Design/Robot_Assembly_V2.pdf>] [8])
+(Content/Electronic Design.tex [9]
 chapter 4.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Electronic Design/Component_Diagra
 m.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
 ed
-<./Figures/Electronic Design/Component_Diagram.pdf, id=382, 687.52856pt x 212.7
+<./Figures/Electronic Design/Component_Diagram.pdf, id=405, 687.52856pt x 212.7
 1469pt>
 File: ./Figures/Electronic Design/Component_Diagram.pdf Graphic file (type pdf)
 
@@ -1984,7 +1994,7 @@ File: ./Figures/Electronic Design/Component_Diagram.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figures/Electronic Design/Component_Diagram.pdf  use
 d on input line 31.
 (pdftex.def)             Requested size: 455.24411pt x 140.85301pt.
-<./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png, id=383, 501.875pt x 220.
+<./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png, id=406, 501.875pt x 220.
 825pt>
 File: ./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png Graphic file (type p
 ng)
@@ -1992,10 +2002,10 @@ ng)
 Package pdftex.def Info: ./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png  
 used on input line 42.
 (pdftex.def)             Requested size: 227.62206pt x 100.15541pt.
-[8
+[10
 
  <./Figures/Electronic Design/Component_Diagram.pdf>]
-<./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png, id=397, 439.6425pt x 18
+<./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png, id=421, 439.6425pt x 18
 9.70876pt>
 File: ./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png Graphic file (type 
 png)
@@ -2003,9 +2013,9 @@ png)
 Package pdftex.def Info: ./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png 
  used on input line 68.
 (pdftex.def)             Requested size: 227.62206pt x 98.2178pt.
- [9 <./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png> <./Figures/Electroni
-c Design/SIMPLEX_MOTION_SC040A.png>]
-<./Figures/Electronic Design/Raspberry_Pi_4_compute_module.jpg, id=403, 752.812
+ [11 <./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png> <./Figures/Electron
+ic Design/SIMPLEX_MOTION_SC040A.png>]
+<./Figures/Electronic Design/Raspberry_Pi_4_compute_module.jpg, id=427, 752.812
 5pt x 752.8125pt>
 File: ./Figures/Electronic Design/Raspberry_Pi_4_compute_module.jpg Graphic fil
 e (type jpg)
@@ -2013,7 +2023,7 @@ e (type jpg)
 Package pdftex.def Info: ./Figures/Electronic Design/Raspberry_Pi_4_compute_mod
 ule.jpg  used on input line 84.
 (pdftex.def)             Requested size: 227.62206pt x 227.62596pt.
-<./Figures/Electronic Design/VL53L1X.png, id=404, 1274.51157pt x 670.00313pt>
+<./Figures/Electronic Design/VL53L1X.png, id=428, 1274.51157pt x 670.00313pt>
 File: ./Figures/Electronic Design/VL53L1X.png Graphic file (type png)
 <use ./Figures/Electronic Design/VL53L1X.png>
 Package pdftex.def Info: ./Figures/Electronic Design/VL53L1X.png  used on input
@@ -2023,7 +2033,7 @@ Package pdftex.def Info: ./Figures/Electronic Design/VL53L1X.png  used on input
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Figures/Electronic Design/Raspberry_Pi_Camera_Module_V2.jpg, id=405, 301.125
+<./Figures/Electronic Design/Raspberry_Pi_Camera_Module_V2.jpg, id=429, 301.125
 pt x 301.125pt>
 File: ./Figures/Electronic Design/Raspberry_Pi_Camera_Module_V2.jpg Graphic fil
 e (type jpg)
@@ -2031,8 +2041,8 @@ e (type jpg)
 Package pdftex.def Info: ./Figures/Electronic Design/Raspberry_Pi_Camera_Module
 _V2.jpg  used on input line 104.
 (pdftex.def)             Requested size: 227.62206pt x 227.63055pt.
-[10 <./Figures/Electronic Design/Raspberry_Pi_4_compute_module.jpg>]
-<./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg, id=411, 1204.5pt x 803
+[12 <./Figures/Electronic Design/Raspberry_Pi_4_compute_module.jpg>]
+<./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg, id=434, 1204.5pt x 803
 .25093pt>
 File: ./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg Graphic file (type
  jpg)
@@ -2044,7 +2054,7 @@ Package pdftex.def Info: ./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf, id=412, 597.52838pt 
+<./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf, id=435, 597.52838pt 
 x 421.1173pt>
 File: ./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf Graphic file (ty
 pe pdf)
@@ -2055,15 +2065,15 @@ df  used on input line 125.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./Figures/Electronic Design/VL53L1X.png> <./Figures/Electronic Design/Rasp
-berry_Pi_Camera_Module_V2.jpg>] [12 <./Figures/Electronic Design/SLS_XTRON_3000
+[13 <./Figures/Electronic Design/VL53L1X.png> <./Figures/Electronic Design/Rasp
+berry_Pi_Camera_Module_V2.jpg>] [14 <./Figures/Electronic Design/SLS_XTRON_3000
 MAH_4S1P.jpg> <./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf>])
-(Content/Modelling and Simulation.tex [13]
+(Content/Modelling and Simulation.tex [15]
 chapter 5.
-[14
+[16
 
 ]
-<./Figures/Modeling/Model.pdf, id=436, 150.18646pt x 236.27304pt>
+<./Figures/Modeling/Model.pdf, id=460, 150.18646pt x 236.27304pt>
 File: ./Figures/Modeling/Model.pdf Graphic file (type pdf)
 <use ./Figures/Modeling/Model.pdf>
 Package pdftex.def Info: ./Figures/Modeling/Model.pdf  used on input line 46.
@@ -2077,7 +2087,7 @@ Overfull \hbox (2.66605pt too wide) detected at line 77
 [][][][][]
  []
 
-<./Figures/Modeling/Angles.pdf, id=437, 123.30772pt x 202.56958pt>
+<./Figures/Modeling/Angles.pdf, id=461, 123.30772pt x 202.56958pt>
 File: ./Figures/Modeling/Angles.pdf Graphic file (type pdf)
 <use ./Figures/Modeling/Angles.pdf>
 Package pdftex.def Info: ./Figures/Modeling/Angles.pdf  used on input line 104.
@@ -2086,7 +2096,7 @@ Package pdftex.def Info: ./Figures/Modeling/Angles.pdf  used on input line 104.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15] [16 <./Figures/Modeling/Model.pdf>] [17 <./Figures/Modeling/Angles.pdf>]
+[17] [18 <./Figures/Modeling/Model.pdf>] [19 <./Figures/Modeling/Angles.pdf>]
 Overfull \hbox (54.68748pt too wide) in paragraph at lines 230--246
  [][] 
  []
@@ -2094,39 +2104,39 @@ Overfull \hbox (54.68748pt too wide) in paragraph at lines 230--246
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18]) (Content/Mechanical Assembly.tex [19]
+[20]) (Content/Mechanical Assembly.tex [21]
 chapter 6.
-) (Content/Firmware and Testing.tex [20
+) (Content/Firmware and Testing.tex [22
 
 ]
 chapter 7.
-[21
-
-]) (Content/Safety.tex [22]
-chapter 8.
 [23
 
-] [24]) (Content/Design.tex [25]
+]) (Content/Safety.tex [24]
+chapter 8.
+[25
+
+] [26]) (Content/Design.tex [27]
 chapter 9.
-<./Figures/Design///Capture.png, id=585, 553.31718pt x 530.73282pt>
+<./Figures/Design///Capture.png, id=608, 553.31718pt x 530.73282pt>
 File: ./Figures/Design///Capture.png Graphic file (type png)
 <use ./Figures/Design///Capture.png>
 Package pdftex.def Info: ./Figures/Design///Capture.png  used on input line 10.
 
 (pdftex.def)             Requested size: 455.24411pt x 436.66142pt.
-[26
+[28
 
- <./Figures/Design///Capture.png>] [27]
+ <./Figures/Design///Capture.png>] [29]
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Design///Component_diagram.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./Figures/Design///Component_diagram.pdf, id=595, 687.52856pt x 212.71469pt>
+<./Figures/Design///Component_diagram.pdf, id=619, 687.52856pt x 212.71469pt>
 File: ./Figures/Design///Component_diagram.pdf Graphic file (type pdf)
 <use ./Figures/Design///Component_diagram.pdf>
 Package pdftex.def Info: ./Figures/Design///Component_diagram.pdf  used on inpu
 t line 53.
 (pdftex.def)             Requested size: 455.24411pt x 140.85301pt.
-) [28 <./Figures/Design///Component_diagram.pdf>])
+) [30 <./Figures/Design///Component_diagram.pdf>])
 (FrontBackMatter/BackMatter.tex (Master_Thesis.ind) (Master_Thesis.bbl
 chapter without number
 
@@ -2154,10 +2164,10 @@ Package rerunfilecheck Info: File `Master_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51256 strings out of 475247
- 1046906 string characters out of 5767607
+ 51275 strings out of 475247
+ 1047508 string characters out of 5767607
  1943801 words of memory out of 5000000
- 71255 multiletter control sequences out of 15000+600000
+ 71268 multiletter control sequences out of 15000+600000
  658083 words of font info for 216 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  119i,20n,113p,10934b,955s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2176,9 +2186,9 @@ gram Files/MiKTeX/fonts/type1/public/lm/lmro8.pfb><C:/Program Files/MiKTeX/font
 s/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/l
 msy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Master_Thesis.pdf (38 pages, 1992883 bytes).
+Output written on Master_Thesis.pdf (40 pages, 2458698 bytes).
 PDF statistics:
- 899 PDF objects out of 1000 (max. 8388607)
- 213 named destinations out of 1000 (max. 500000)
- 53950 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 932 PDF objects out of 1000 (max. 8388607)
+ 219 named destinations out of 1000 (max. 500000)
+ 53971 words of extra memory for PDF output out of 61914 (max. 10000000)
 
