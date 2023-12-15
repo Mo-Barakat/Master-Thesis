@@ -4,7 +4,7 @@
 
 
 
-	
+
 %	\item Outline the purpose and scope of the chapter.
 
  Modeling In this chapter, the details of the mechanical design are presented. where it goes from the initial conceptual design to the final design showing in the process the design decision-making for each critical point, This chapter emphasis the detailed description of the precise placement and alignment of different components such as the motors, wheels, battery, boards, and others to maintain the seamless integration of all the components into the robot body.
@@ -18,13 +18,13 @@ The mechanical design serves as an important pillar to define the new physical f
 \section{Design Objectives and Requirements}
 
 %	Detail the primary objectives of the mechanical design
-	The main objective is to come up with a new design for a multiple joints Robot to perform complex dynamic movements. this robot would be based on the Two wheeled inverted pendulum robot. The new design would add more degrees of freedom to enable the more complex movements.This enhances the robot capabilities where it can execute more diverse scenarios. 
+	The main objective is to come up with a new design for a multiple joints Robot to perform complex dynamic movements. this robot would be based on the Two wheeled inverted pendulum robot. The new design would add more degrees of freedom to enable the more complex movements.This enhances the robot capabilities where it can execute more diverse scenarios.
 %	\item List the requirements that the design must meet (e.g., weight limits, size constraints, mobility requirements).
 	Initially, the main requirement was to add more two degrees of freedom where originally it used to have one degree of freedom in the wheels. The new design has three degrees of freedom one in the wheels, one as a knee joint and one as a hip joint. The current design has two identical legs.
 
 \section{Conceptual Design}
 %Discuss the initial design concepts.
-As for the initial design concepts the body was that main point of focus as shown in the figure.Three initial designs where considered mainly for the body.\ Symmetrical vertical body in figure A, symmetrical horizontal body in figure B and leaning forward body in figure C.
+As for the initial design concepts the body was that main point of focus as shown in the figure \ref{fig:initialdesigns}.Three initial designs where considered mainly for the body.\ Symmetrical vertical body in figure A, symmetrical horizontal body in figure B and leaning forward body in figure C.
 \ For the three designs, two independent legs where considered.
 two designs where considered for the legs, the normal joint leg and the compliant leg
 
@@ -55,21 +55,75 @@ the compliant leg is more flexible and can be used to absorb the shock from the 
 
 %Explain the decision-making process for selecting the final concept.
 % Include sketches or early design models.
+\section{Initial Calculations}
+%figure for the initial calculations
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Initial Calculations}
+	\caption[Initial Calculations]{Initial Calculations}
+	\label{fig:initialcalculations}
+\end{figure}
+One of the main critical positions for the robot, as shown in the figure \ref{fig:initialcalculations} is important to make the initial torque calculations to be able to select the right motors for the robot.
+Starting from that position first, the robot should be able to balance itself and maintain the upright position.
+secondly, the robot should be able to change the knee angle to lift the body while maintaining its balance.
+The calculations are based on some assumptions and simplifications, Considering only half the body weight and one leg joint.
+As shown in the figure, The Wheel motor shaft is aligned with the hip joint, the minimum torque required to balance the robot is calculated as follows:
 
+The summation of the torques around point x should be equal to zero to maintain the balance with minimum motor torque.
+\begin{equation}
+	\sum_{i=1}^{n} \tau_{i}=0
+\end{equation}
+\begin{equation}
+	\sum_{i=1}^{n} \tau_{i}=m_{B}*g*D-m_{K}*g*I
+\end{equation}
+\begin{equation}
+	\sum_{i=1}^{n} \tau_{i}=0.5*9.81*0.03-0.2*9.81*0.5*0.15=0 Nm
+\end{equation}
+The torque required to lift the body is calculated as follows:
+\begin{equation}
+	\sum_{i=1}^{n} \tau_{i}=m_{B}*g*(D+I)-m_{K}*g*L_{1}
+\end{equation}
+\begin{equation}
+	\sum_{i=1}^{n} \tau_{i}=0.5*9.81*(0.03+0.15)-0.1*9.81*0.5*0.15=0.9555 Nm
+\end{equation}
+0.9555 Nm is the minimum torque required to hold the body in position. The motor should be able to generate more torque to be able to move the body and change the knee angle.
+
+table for the assumptions
+\begin{table}[h]
+	\centering
+	\caption{Assumptions}
+	\label{tab:assumptions}
+	\begin{tabular}{lcl}
+		\toprule
+		Parameter & Value & Description 			  \\
+		\midrule
+		$m_B$         & 0.5 kg  & Mass of the body  \\
+		$m_K$         & 0.2 kg  & Mass of the Knee including the two legs\\
+		$L_1$         & 0.15 m   & Length of Link 1  \\
+		$L_2$         & 0.15 m   & Length of Link 2   \\
+		$d$ 	  	  & 0.3 m   & distance from the hip joint axis to the center of mass of the body   \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{notebox}
+	\textbf{To reduce the needed torque to lift we can:}
+	%bullit points
+	\begin{itemize}
+		\item shorten the links then calculate position 4 again
+		\item reduce the body weight then calculate position 4 again
+		\item use gearbox then calculate position for again
+	\end{itemize}
+\end{notebox}
 \section{Detailed Design Development}
-\begin{itemize}
-	\item Elaborate on the development of the detailed mechanical design.
-	\item Discuss material selection and the rationale behind these choices.
-	\item Include detailed CAD drawings and design schematics.
-\end{itemize}
+% Elaborate on the development of the detailed mechanical design.
+% Discuss material selection and the rationale behind these choices.
+% Include detailed CAD drawings and design schematics.
 \section{Design for Manufacturability and Assembly}
-\begin{itemize}
-	\item Discuss how the design facilitates manufacturing and assembly..
-	\item Explain any design choices made to simplify these processes of manufacturing and assembly.
-\end{itemize}
+% Discuss how the design facilitates manufacturing and assembly.
+% Explain any design choices made to simplify these processes of manufacturing and assembly.
 \section{Prototyping and Iterative Design}
-\begin{itemize}
-	\item Discuss the process of prototyping.
-	\item Explain how feedback from prototyping phases was incorporated into design revisions.
-\end{itemize}
+% Discuss the process of prototyping.
+% Explain how feedback from prototyping phases was incorporated into design revisions.
+
 
