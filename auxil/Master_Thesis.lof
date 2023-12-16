@@ -7,24 +7,23 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces between brakets for leg design}}{5}{figure.caption.7}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Initial Calculations}}{6}{figure.caption.8}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Body Design}}{7}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Moment of inertia Schematic representation}}{8}{figure.caption.11}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Components Diagram}}{10}{figure.caption.12}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces DYNAMIXEL XM430-W350}}{11}{figure.caption.13}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces SIMPLEX MOTION SC040A}}{11}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Raspberry Pi 4 compute module}}{12}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces VL53L1X}}{13}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Raspberry Pi Camera Module V2}}{13}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces SLS XTRON 3000MAH 4S1P}}{14}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces brakets for delectronic design second test }}{14}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Components Diagram}}{9}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces DYNAMIXEL XM430-W350}}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces SIMPLEX MOTION SC040A}}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Raspberry Pi 4 compute module}}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces VL53L1X}}{12}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Raspberry Pi Camera Module V2}}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces SLS XTRON 3000MAH 4S1P}}{13}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces brakets for delectronic design second test }}{13}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Mechanical model with the local coordinate system}}{18}{figure.caption.20}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Moment of inertia Schematic representation}}{19}{figure.caption.21}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Mechanical model with the local coordinate system}}{17}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Moment of inertia Schematic representation}}{18}{figure.caption.20}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Moment of inertia Schematic representation}}{28}{figure.caption.23}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Moment of inertia Schematic representation}}{30}{figure.caption.24}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Moment of inertia Schematic representation}}{27}{figure.caption.22}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Moment of inertia Schematic representation}}{29}{figure.caption.23}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
