@@ -32,7 +32,7 @@ two designs where considered for the legs, the normal joint leg and the complian
 	\centering
 	\includegraphics[width=1\linewidth]{Conceptual Design}
 	%\includegraphics[width=0.5\linewidth]{Figures/Mechanical Design/Conceptual_Design}
-	\caption[Initial Design Concepts TEST]{Three initial Design Concepts for the robot body}
+	\caption[Initial Design Concepts]{Three initial Design Concepts for the robot body}
 	\label{fig:initialdesigns}
 \end{figure}
 
@@ -40,11 +40,11 @@ two designs where considered for the legs, the normal joint leg and the complian
 Two main designs where considered for the legs, the normal joint leg and the compliant leg. The compliant leg is more flexible and can be used to absorb the shock from the ground.\ The normal joint leg is more rigid and can be used to generate more torque.in addition, the normal is more relative to our use-case as it can precisely control the position of the leg.
 
 
-% figure for the leg designs
+% figure for the leg designs concepts
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.4\linewidth]{Leg Design}
-	\caption[between brakets for leg design]{Leg different Designs }
+	\caption[Leg Design Concepts]{Leg Design Concepts}
 	\label{fig:legdesignsjbhi}
 \end{figure}
 
@@ -118,39 +118,70 @@ table for the assumptions
 \end{notebox}
 \section{Detailed Design Development}
 % Elaborate on the development of the detailed mechanical design.
-
+Throughout the design process, modularity and ease of assembly were considered.
+The design was broken down into three main parts: the body, the hip-knee joint, and the knee-wheel joint.
+Print iterations were made to ensure that the parts fit together and that the robot could be assembled with ease. Modifications were made to simplify the printing process and reduce the support material used.
 
 \subsection{Body Design}
-%three figures for the body design
-\begin{figure}[h!]
-    \centering
-    \begin{subfigure}[t]{0.495\textwidth}
-        \centering\captionsetup{width=.87\linewidth}
-        \includegraphics[width=\textwidth]{Body_Design_1}
-        \caption{Training error for trajectory transfer with and without output noise in the training data}
-        \label{subfig:sim1_lsd_results_training}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.495\textwidth}
-        \centering\captionsetup{width=.87\linewidth}
-        \includegraphics[width=\textwidth]{Body_Design_2}
-        \caption{Test error for trajectory transfer with and without output noise in the training data}
-		\label{subfig:sim1_lsd_results_test}
-    \end{subfigure}
-    \par\bigskip
-    \begin{subfigure}[t]{1\textwidth}
-        \centering\captionsetup{width=.87\linewidth}
-        \includegraphics[width=0.99\textwidth]{Body_Design_3}
-        \caption{Normalised transfer error for different input sets and transfer maps estimated without output noise in the training data}
-        \label{subfig:sim1_lsd_results_freq}
-    \end{subfigure}
-    \caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
-    {Normalised transfer error for input trajectory transfer between two double oscillator systems using lifted-system matrices with different numbers of estimated parameters\textsuperscript{\textcolor{note_color}{a}}}
-    \raggedright\small\textsuperscript{\hspace{0.132\textwidth}\textcolor{note_color}{a}: Mean values are represented by the wide bars, and one added standard deviation by thin bars.}
-    \label{fig:sim1_lsd_results}
-\end{figure}
+
 % Discuss the design of the body.
 The body design is the main part of the robot, it is the main structure that holds all the components together.
+The components that are mounted on the body are the hip motors, the battery, camera, sensor, a rack that includes the power distribution board, the microcontroller board attached to the Raspberry Pi.The optimization of the body design is crucial to be able to fit all the components in a compact form and at the same time distribute the weight equally to maintain the balance of the robot.
+Different design features were considered, such as the cable management, the fastening features specifically designed to easily mount the battery, organize the cable between the boards and the rest of the robot parts.
+
+%%three figures for the body design
+%\begin{figure}[h!]
+%    \centering
+%    \begin{subfigure}[t]{0.495\textwidth}
+%        \centering\captionsetup{width=.87\linewidth}
+%        \includegraphics[width=\textwidth]{Body_Design_1}
+%        \caption{Training error for trajectory transfer with and without output noise in the training data}
+%        \label{subfig:sim1_lsd_results_training}
+%    \end{subfigure}
+%    \hfill
+%    \begin{subfigure}[t]{0.495\textwidth}
+%        \centering\captionsetup{width=.87\linewidth}
+%        \includegraphics[width=\textwidth]{Body_Design_2}
+%        \caption{Test error for trajectory transfer with and without output noise in the training data}
+%		\label{subfig:sim1_lsd_results_test}
+%    \end{subfigure}
+%    \par\bigskip
+%    \begin{subfigure}[t]{1\textwidth}
+%        \centering\captionsetup{width=.87\linewidth}
+%        \includegraphics[width=0.99\textwidth]{Body_Design_3}
+%        \caption{Normalised transfer error for different input sets and transfer maps estimated without output noise in the training data}
+%        \label{subfig:sim1_lsd_results_freq}
+%    \end{subfigure}
+%    \caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
+%    {Normalised transfer error for input trajectory transfer between two double oscillator systems using lifted-system matrices with different numbers of estimated parameters\textsuperscript{\textcolor{note_color}{a}}}
+%    \raggedright\small\textsuperscript{\hspace{0.132\textwidth}\textcolor{note_color}{a}: Mean values are represented by the wide bars, and one added standard deviation by thin bars.}
+%    \label{fig:sim1_lsd_results}
+%\end{figure}
+%figure 1 for the body design
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Body_Design_1}
+	\caption[TOP view of the Body Design]{TOP view of the Body Design}
+	\label{fig:bodydesign1}
+\end{figure}
+%figure 2 for the body design
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Body_Design_2}
+	\caption[Side view of the Body Design]{side view of the Body Design}
+	\label{fig:bodydesign2}
+\end{figure}
+%figure 3 for the body design
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Body_Design_3}
+	\caption[3D view of the Body Design]{3D view of the Body Design}
+	\label{fig:bodydesign3}
+\end{figure}
+
+
+
+
 % Discuss material selection and the rationale behind these choices.
 % Include detailed CAD drawings and design schematics.
 
@@ -191,27 +222,140 @@ The body design is the main part of the robot, it is the main structure that hol
 %	\end{itemize}
 %\end{itemize}
 \subsection{Hip Knee Joint Design}
-%three figures for the Body_Knee_Joint
+% Discuss the design of the hip knee joint.
+This joint connects the hip body axis to the knee axis.
+The design of this joint includes the knee motor housing form one-side and a frame to attach to the output horn of the hip motor.
+The motor housing is designed to ensure the fixed placement of the motor inside the joint, As shown in the figure, \ref{fig:bodykneejoint1} Cable management is also considered in the design of this joint to make sure that the cables are not interfering with the movement of the joint.The curvature of the joint creates enough clearance so that when the hip axis is aligned with the wheel axis, they would not touch with each other even when considering the elastic bending of the legs.
+
+
+%figure 1 for the Body_Knee_Joint
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Body_Knee_Joint_1}
+	\caption[TOP view of the Body Knee Joint]{TOP view of the Body Knee Joint}
+	\label{fig:bodykneejoint1}
+\end{figure}
+%figure 2 for the Body_Knee_Joint
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Body_Knee_Joint_2}
+	\caption[Side view of the Body Knee Joint]{side view of the Body Knee Joint}
+	\label{fig:bodykneejoint2}
+\end{figure}
+%figure 3 for the Body_Knee_Joint
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Body_Knee_Joint_3}
+	\caption[3D view of the Body Knee Joint]{3D view of the Body Knee Joint}
+	\label{fig:bodykneejoint3}
+\end{figure}
+%%three figures for the Body_Knee_Joint
+%\begin{figure}[h!]
+%	\centering
+%	\begin{subfigure}[t]{1\textwidth}
+%		\centering\captionsetup{width=.87\linewidth}
+%		\includegraphics[width=\textwidth]{Body_Knee_Joint_1}
+%		\caption{Training error for trajectory transfer with and without output noise in the training data}
+%		\label{subfig:sim1_lsd_results_training}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[t]{1\textwidth}
+%		\centering\captionsetup{width=.87\linewidth}
+%		\includegraphics[width=\textwidth]{Body_Knee_Joint_2}
+%		\caption{Test error for trajectory transfer with and without output noise in the training data}
+%		\label{subfig:sim1_lsd_results_test}
+%	\end{subfigure}
+%	\par\bigskip
+%	\begin{subfigure}[t]{1\textwidth}
+%		\centering\captionsetup{width=.87\linewidth}
+%		\includegraphics[width=\textwidth]{Body_Knee_Joint_3}
+%		\caption{Normalised transfer error for different input sets a nd transfer maps estimated without output noise in the training data}
+%		\label{subfig:sim1_lsd_results_freq}
+%	\end{subfigure}
+%	\caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
+%	{Normalised transfer error for input trajectory transfer between two double oscillator systems using lifted-system matrices with different numbers of estimated parameters\textsuperscript{\textcolor{note_color}{a}}}
+%	\raggedright\small\textsuperscript{\hspace{0.132\textwidth}\textcolor{note_color}{a}: Mean values are represented by the wide bars, and one added standard deviation by thin bars.}
+%	\label{fig:sim1_lsd_results}
+%\end{figure}
+
+
+\subsection{Knee Wheel Joint Design}
+% Discuss the design of the Wheel_Knee_Joint
+This joint connects the knee axis to the wheel axis.
+%figure 1 for the Wheel_Knee_Joint
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Wheel_Knee_Joint_1}
+	\caption[SIDE view of the Knee Wheel Joint]{SIDE view of the Knee Wheel Joint}
+	\label{fig:wheelkneejoint1}
+\end{figure}
+%figure 2 for the Wheel_Knee_Joint
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Wheel_Knee_Joint_2}
+	\caption[TOP view of the Knee Wheel Joint]{TOP view of the Knee Wheel Joint}
+	\label{fig:wheelkneejoint2}
+\end{figure}
+%figure 3 for the Wheel_Knee_Joint
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Wheel_Knee_Joint_3}
+	\caption[3D view of the Knee Wheel Joint]{3D view of the Knee Wheel Joint}
+	\label{fig:wheelkneejoint3}
+\end{figure}
+
+
+
+%%three figures for the Wheel_Knee_Joint
+%\begin{figure}[h!]
+%	\centering
+%	\begin{subfigure}[t]{1\textwidth}
+%		\centering\captionsetup{width=.87\linewidth}
+%		\includegraphics[width=\textwidth]{Wheel_Knee_Joint_1}
+%		\caption{side view of the Knee Wheel Joint}
+%		\label{subfig:Wheel_Knee_Joint_1}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[t]{1\textwidth}
+%		\centering\captionsetup{width=.87\linewidth}
+%		\includegraphics[width=\textwidth]{Wheel_Knee_Joint_2}
+%		\caption{Top view of the Knee Wheel Joint}
+%		\label{subfig:Wheel_Knee_Joint_2}
+%	\end{subfigure}
+%	\par\bigskip
+%	\begin{subfigure}[t]{1\textwidth}
+%		\centering\captionsetup{width=.87\linewidth}
+%		\includegraphics[width=\textwidth]{Wheel_Knee_Joint_3}
+%		\caption{Normalised transfer error for different input sets a nd transfer maps estimated without output noise in the training data}
+%		\label{subfig:Wheel_Knee_Joint_3}
+%	\end{subfigure}
+%	\caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
+%	{Normalised transfer error for input trajectory transfer between two double oscillator systems using lifted-system matrices with different numbers of estimated parameters\textsuperscript{\textcolor{note_color}{a}}}
+%	\raggedright\small\textsuperscript{\hspace{0.132\textwidth}\textcolor{note_color}{a}: Mean values are represented by the wide bars, and one added standard deviation by thin bars.}
+%	\label{fig:Wheel_Knee_Joint}
+%\end{figure}
+\subsection{Full Design}
+%three figure for the Robot_Assembly
 \begin{figure}[h!]
 	\centering
-	\begin{subfigure}[t]{0.495\textwidth}
+	\begin{subfigure}[t]{1\textwidth}
 		\centering\captionsetup{width=.87\linewidth}
-		\includegraphics[width=\textwidth]{Body_Knee_Joint_1}
+		\includegraphics[width=\textwidth]{Robot_Assembly_1}
 		\caption{Training error for trajectory transfer with and without output noise in the training data}
 		\label{subfig:sim1_lsd_results_training}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[t]{0.495\textwidth}
+	\begin{subfigure}[t]{1\textwidth}
 		\centering\captionsetup{width=.87\linewidth}
-		\includegraphics[width=\textwidth]{Body_Knee_Joint_2}
+		\includegraphics[width=\textwidth]{Robot_Assembly_2}
 		\caption{Test error for trajectory transfer with and without output noise in the training data}
 		\label{subfig:sim1_lsd_results_test}
 	\end{subfigure}
 	\par\bigskip
 	\begin{subfigure}[t]{1\textwidth}
 		\centering\captionsetup{width=.87\linewidth}
-		\includegraphics[width=0.99\textwidth]{Body_Knee_Joint_3}
-		\caption{Normalised transfer error for different input sets and transfer maps estimated without output noise in the training data}
+		\includegraphics[width=\textwidth]{Robot_Assembly_3}
+		\caption{Normalised transfer error for different input sets a nd transfer maps estimated without output noise in the training data}
 		\label{subfig:sim1_lsd_results_freq}
 	\end{subfigure}
 	\caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
@@ -221,7 +365,6 @@ The body design is the main part of the robot, it is the main structure that hol
 \end{figure}
 
 
-\subsection{Knee Wheel Joint Design}
 
 \subsection{safety considerations}
 
