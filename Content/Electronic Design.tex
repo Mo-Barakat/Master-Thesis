@@ -10,6 +10,7 @@ In addition, the chapter discusses the power management and the power distributi
 % Emphasize the importance of electronic design in the context of the overall project.
 The electronic design serves as a critical link between the robitic conceptual framework and the physical implementation of the robot.The electronic design translates the abstract control algorithm into tangible action and responses.
 The electronic design directly influences the performance, responsiveness, adaptability to various scenarios.
+\newpage
 
 \section{Design Objectives and Constraints}
 % Clearly define the objectives and goals for the electronic design
@@ -73,10 +74,9 @@ The SIMPLEX MOTION SC040A is chosen as a motor for the wheels. The motor is chos
 
 
 %Rationale behind the choice of each component, focusing on specifications and performance requirements.
-\subsection{Microcontroller}
-The STM32H7 is chosen as a microcontroller for the robot. The microcontroller is chosen because it has a high processing power and it has a high number of input and output pins. The microcontroller has a 32-bit ARM Cortex-M7 core running at 400 MHz. The microcontroller has 2 MB of flash memory and 1 MB of RAM. The microcontroller has 16-bit ADCs with 3.2 MSPS in interleaved mode. The microcontroller has 16-bit DACs with 2.5 MSPS. The microcontroller has 2 CAN interfaces. The microcontroller has 3 I2C interfaces. The microcontroller has 4 SPI interfaces. The microcontroller has 6 USART interfaces. The microcontroller has 4 UART interfaces. The microcontroller has 2 USB OTG interfaces. The microcontroller has 2 SDMMC interfaces. The microcontroller has 2 SAI interfaces. The microcontroller has 2 DFSDM interfaces. The microcontroller has 2 FMC interfaces. The microcontroller has 2 QUADSPI interfaces. The microcontroller has 2 SWPMI interfaces. The microcontroller has 2 LPTIM interfaces. The microcontroller has 2 MDIOS interfaces. The microcontroller has 2 OCTOSPI interfaces. The microcontroller has 2 SPDIFRX interfaces. The microcontroller has 2 HDMI-CEC interfaces. The microcontroller has 2 RNG interfaces. The microcontroller has 2 HRTIM interfaces. The microcontroller has 2 MDMA interfaces. The microcontroller has 2 JPEG interfaces. The microcontroller has 2 FDCAN interfaces. The microcontroller has 2 DFSDM interfaces. The microcontroller has 2 USB OTG interfaces. The microcontroller has 2 SDMMC interfaces. The microcontroller has 2 SAI interfaces. The microcontroller has 2 DFSDM interfaces. The microcontroller has 2 FMC interfaces. The microcontroller has 2 QUADSPI interfaces. The microcontroller has 2 SWPMI interfaces. The microcontroller has 2 LPTIM interfaces. The microcontroller has 2 MDIOS interfaces. The microcontroller has 2 OCTOSPI interfaces. The microcontroller has 2 SPDIFRX interfaces. The microcontroller has 2 HDMI-CEC interfaces. The microcontroller has 2 RNG interfaces. The microcontroller has 2 HRTIM interfaces. The microcontroller has 2
+
 \subsection{Raspberry Pi}
-The Raspberry Pi 4 compute module is chosen
+The Raspberry Pi 4 compute module is chosen since it offers several advantages such as remote ssh connection via wifi. It can directly pass new control parameters to the microcontroller. It can be used to stream the video from the camera. The Raspberry Pi 4 compute module has a 64-bit quad-core ARM Cortex-A72 processor running at 1.5 GHz. It has 4 GB of LPDDR4-3200 SDRAM. The Raspberry Pi 4 compute module has a 32 GB eMMC Flash memory, a maximum current of 3 A and maximum voltage of 5.1 V.
 
 %figure of the Raspberry Pi 4 compute module
 \begin{figure}[h]
@@ -86,6 +86,7 @@ The Raspberry Pi 4 compute module is chosen
 	\caption[Raspberry Pi 4 compute module]{Raspberry Pi 4 compute module}
 	\label{fig:Raspberry_Pi_4}
 \end{figure}
+\newpage
 \subsection{Distance Sensor}
 The VL53L1X is chosen as a distance sensor for the robot. The sensor is chosen because it has a high accuracy and it has a high range. The sensor has a maximum range of 4 m. The sensor has a maximum accuracy of 1 mm. The sensor has a maximum field of view of 27 degrees. The sensor has a maximum current of 20 mA. The sensor has a maximum voltage of 3.6 V. The sensor has a weight of 1.6 g and a size of 4.4 x 2.4 x 1.0 mm.
 %figure of the VL53L1X sensor
@@ -106,6 +107,7 @@ The Raspberry Pi Camera Module V2 is chosen as a camera for the robot. The camer
 	\caption[Raspberry Pi Camera Module V2]{Raspberry Pi Camera Module V2}
 	\label{fig:Raspberry_Pi_Camera_Module_V2}
 \end{figure}
+\newpage
 \subsection{Battery}
 The SLS XTRON 3000MAH 4S1P 14.8V 35C LIPO BATTERY is chosen as a battery for the robot. The battery is chosen because it has a high capacity and it has a high discharge rate. The battery has a capacity of 3000 mAh. The battery has a discharge rate of 35 C. The battery has a maximum current of 105 A. The battery has a maximum voltage of 16.8 V. The battery has a weight of 300 g and a size of 135 x 42 x 30 mm.
 %figure of the SLS XTRON 3000MAH 4S1P
@@ -128,19 +130,50 @@ The SLS XTRON 3000MAH 4S1P 14.8V 35C LIPO BATTERY is chosen as a battery for the
 	\label{fig:electronicdesign}
 \end{figure}
 %expanation of the electronic design
-The wiring tree of the electronic components is shown in figure \ref{fig:electronicdesign} where it shows the connection between the different components and the microcontroller.The first motor of each leg is connected to the microcontroller and the rest of the motors are connected in series to the first motor of using daisy chain connection. the motors have the drivers board intigrated so they only need the control signal comimg from the microcontroller.
-\begin{itemize}
-	\item Provide comprehensive information about the circuit design, including schematic diagrams.
-	\item Explain the functionality and interaction of different circuit components.
-	\item Discuss the design considerations for signal integrity, power distribution, and noise reduction.
-\end{itemize}
-\section{PCB (Printed Circuit Board) Design}
-\begin{itemize}
-	\item Describe the layout and design of any custom PCBs used in the project.
-	\item Include information about PCB fabrication and assembly processes.
-\end{itemize}
+The wiring tree of the electronic components is shown in figure \ref{fig:electronicdesign} where it shows the connection between the different components and the microcontroller.The first motor of each leg is connected to the microcontroller and the rest of the motors are connected in series to the first motor of using daisy chain connection. the motors have the drivers board intigrated so they only need the control signal comimg from the microcontroller. The motor voltage is supplied from the power management board.
+%\begin{itemize}
+%	\item Provide comprehensive information about the circuit design, including schematic diagrams.
+%	\item Explain the functionality and interaction of different circuit components.
+%	\item Discuss the design considerations for signal integrity, power distribution, and noise reduction.
+%\end{itemize}
+\section{Robot Hub Board}
+%\subsection{Microcontroller}
+%The STM32H7 is chosen as a microcontroller for the robot. The microcontroller is chosen because it has a high processing power and it has a high number of input and output pins. The microcontroller has a 32-bit ARM Cortex-M7 core running at 400 MHz. The microcontroller has 2 MB of flash memory and 1 MB of RAM.
+The robot hub board is the main board that connects all the components together.
+The board includes the stm32h7 microcontroller that controls the motors and the sensors.
+The board also acts as a carrier board for the raspberry pi compute module, where different peripherals can be connected to the raspberry pi via the robot hub board.
+High-density edge connector is used to connect the raspberry pi to the robot hub board.
+UART is used to communicate between the microcontroller and the raspberry pi.
+%figure of the Robot hub board
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Robot_Hub_Board}
+	\caption[ Robot Hub Board ]{Robot Hub Board}
+	\label{fig:robothubboard}
+\end{figure}
+
+%\begin{itemize}
+%	\item Describe the layout and design of any custom PCBs used in the project.
+%	\item Include information about PCB fabrication and assembly processes.
+%\end{itemize}
 \section{Power Management}
-\begin{itemize}
-	\item Discuss how power is managed and distributed within the system.
-	\item Include details on battery management, voltage regulation, and power efficiency considerations.
-\end{itemize}
+%figure of the power mangment board
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Power_Management_Board}
+	\caption[ Power Management Board ]{Power Management Board}
+	\label{fig:powermanagementboard}
+\end{figure}
+
+%For the power management board, can you open the Kicad file for a nice screenshot? If not, I can make one later. But basically it features:
+%- 15A Fuse
+%- STM32L4 Mikrocontroller for measuring cell voltages and distributing power
+%- High Power MOSFET Switches for output power
+%- 4-cell battery undervoltage, overvoltage, overcurrent protection
+%- Current Measurement
+%- Cell Balancing
+The power mangment board is responsible for managing the power distribution between the different components. The board has a stm32l4 microcontroller that monitors the battery voltage and the current consumption of the motors. The board has a 15 A fuse that protects the battery from over current. The board has a 4-cell battery undervoltage, overvoltage, overcurrent protection. The board has a cell balancing circuit that balances the voltage between the cells of the battery. The board has a high power MOSFET switches that controls the power distribution between the different components.
+%\begin{itemize}
+%	\item Discuss how power is managed and distributed within the system.
+%	\item Include details on battery management, voltage regulation, and power efficiency considerations.
+%\end{itemize}

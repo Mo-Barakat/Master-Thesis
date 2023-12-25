@@ -1,30 +1,30 @@
 \chapter{Mechanical Design}
 
 \graphicspath{{./Figures/Mechanical Design/}}
-
-
-
-
 %	\item Outline the purpose and scope of the chapter.
-
- Modeling In this chapter, the details of the mechanical design are presented. where it goes from the initial conceptual design to the final design showing in the process the design decision-making for each critical point, This chapter emphasis the detailed description of the precise placement and alignment of different components such as the motors, wheels, battery, boards, and others to maintain the seamless integration of all the components into the robot body.
+ Modeling In this chapter, the details of the mechanical design are presented.
+ where it goes from the initial conceptual design to the final design showing in the process the design decision-making for each critical point, This chapter emphasis the detailed description of the precise placement and alignment of different components such as the motors, wheels, battery, boards, and others to maintain the seamless integration of all the components into the robot body.
 %	\item Briefly describe the mechanical design's role in the overall project.
 \newline
-The mechanical design serves as an important pillar to define the new physical form, size, and shape of the TWIPR. Depending on how these criteria are defined, the robot would interact with the environment. taking into account that the design directly influences the center of gravity, which is crucial to consider in our robot due to the inverted pendulum nature to be able to balance and maintain the upright position. In addition to the impact that the design has on the maneuverability of the robot and how it would respond to the control signals to be able to execute a task.
-
+The mechanical design serves as an important pillar to define the new physical form, size, and shape of the TWIPR. Depending on how these criteria are defined, the robot would interact with the environment.
+taking into account that the design directly influences the center of gravity, which is crucial to consider in our robot due to the inverted pendulum nature to be able to balance and maintain the upright position.
+In addition to the impact that the design has on the maneuverability of the robot and how it would respond to the control signals to be able to execute a task.
 \newpage
-
-
 \section{Design Objectives and Requirements}
 
 %	Detail the primary objectives of the mechanical design
-	The main objective is to come up with a new design for a multiple joints Robot to perform complex dynamic movements. this robot would be based on the Two wheeled inverted pendulum robot. The new design would add more degrees of freedom to enable the more complex movements.This enhances the robot capabilities where it can execute more diverse scenarios.
+	The main objective is to come up with a new design for a multiple joints Robot to perform complex dynamic movements.
+	This robot would be based on the Two wheeled inverted pendulum robots.
+	The new design would add more degrees of freedom to enable the more complex movements.
+	This enhances the robot's capabilities where it can execute more diverse scenarios.
 %	\item List the requirements that the design must meet (e.g., weight limits, size constraints, mobility requirements).
-	Initially, the main requirement was to add two more degrees of freedom where originally it used to have one degree of freedom in the wheels. The new design has three degrees of freedom one in the wheels, one as a knee joint and one as a hip joint. The current design has two identical legs.
+	Initially, the main requirement was to add two more degrees of freedom where originally it used to have one degree of freedom in the wheels.
+	The new design has three degrees of freedom, one in the wheels, one as a knee joint and one as a hip joint.
+	The current design has two identical legs.
 
 \section{Conceptual Design}
 %Discuss the initial design concepts.
-As for the initial design concepts the body was that main point of focus as shown in the figure \ref{fig:initialdesigns}.Three initial designs where considered mainly for the body.\ Symmetrical vertical body in figure A, symmetrical horizontal body in figure B and leaning forward body in figure C.
+As for the initial design concepts the body was that main point of focus as shown in the figure \ref{fig:initialdesigns}.Three initial designs where considered mainly for the body.\ Symmetrical vertical body in figure A, symmetrical horizontal body in figure B and leaning forward body in figure C\@.
 \ For the three designs, two independent legs where considered.
 two designs where considered for the legs, the normal joint leg and the compliant leg
 
@@ -35,11 +35,8 @@ two designs where considered for the legs, the normal joint leg and the complian
 	\caption[Initial Design Concepts]{Three initial Design Concepts for the robot body}
 	\label{fig:initialdesigns}
 \end{figure}
-
-
-Two main designs where considered for the legs, the normal joint leg and the compliant leg. The compliant leg is more flexible and can be used to absorb the shock from the ground.\ The normal joint leg is more rigid and can be used to generate more torque.in addition, the normal is more relative to our use-case as it can precisely control the position of the leg.
-
-
+Two main designs where considered for the legs, the normal joint leg and the compliant leg.
+The compliant leg is more flexible and can be used to absorb the shock from the ground.\ The normal joint leg is more rigid and can be used to generate more torque.in addition, the normal is more relative to our use-case as it can precisely control the position of the leg.
 % figure for the leg designs concepts
 \begin{figure}[h]
 	\centering
@@ -48,11 +45,12 @@ Two main designs where considered for the legs, the normal joint leg and the com
 	\label{fig:legdesignsjbhi}
 \end{figure}
 
-
-
-
 %Explain the decision-making process for selecting the final concept.
 % Include sketches or early design models.
+\section{Schmatic Representation of the Robot}
+% the schematic representation of the robot should show the location of the different components such as the motors, wheels, battery, boards, and others.
+%figure for the schematic representation of the robot
+
 \section{Initial Calculations}
 %figure for the initial calculations
 \begin{figure}[h]
@@ -79,6 +77,8 @@ The summation of the torques around point x should be equal to zero to maintain 
 \end{equation}
 The Lengths of D and I can be modified to make sure that the summation of the torques around point x is equal or approximately equal to zero.
 This will make sure that the robot can balance itself with minimum wheel motor torque.
+The torques can cancel each other out by readjusting the lengths of D or I and also by modefiing the weight distribution in the body and the legs.
+
 The torque required to lift the body is calculated as follows:
 \begin{equation}
 	\sum_{i=1}^{n} \tau_{i}=m_{B}*g*(D+I)-m_{K}*g*L_{1}
@@ -87,13 +87,12 @@ The torque required to lift the body is calculated as follows:
 	\sum_{i=1}^{n} \tau_{i}=0.5*9.81*(0.03+0.15)-0.1*9.81*0.5*0.15=0.9555 Nm
 \end{equation}
 0.9555 Nm is the minimum torque required to hold the body in position.
-The motor should be able to generate more torque to be able to lift the body and change the knee angle.
+The Knee motor should be able to generate more torque to be able to lift the body and change the knee angle.
 
-table for the assumptions
 \begin{table}[h]
 	\centering
-	\caption{Assumptions}
-	\label{tab:assumptions}
+	\caption{Initial Calculations Assumptions}
+	\label{tab:initialcalculationsassumptions}
 	\begin{tabular}{lcl}
 		\toprule
 		Parameter & Value & Description 			  \\
@@ -111,52 +110,24 @@ table for the assumptions
 	\textbf{To reduce the needed torque to lift we can:}
 	%bullit points
 	\begin{itemize}
-		\item shorten the links then calculate position 4 again
-		\item reduce the body weight then calculate position 4 again
-		\item use gearbox then calculate position for again
+		\item Shorten the links
+		\item Reduce the body weight
+		\item Use gearbox to increase the torque
 	\end{itemize}
 \end{notebox}
+\newpage
 \section{Detailed Design Development}
 % Elaborate on the development of the detailed mechanical design.
 Throughout the design process, modularity and ease of assembly were considered.
 The design was broken down into three main parts: the body, the hip-knee joint, and the knee-wheel joint.
 Print iterations were made to ensure that the parts fit together and that the robot could be assembled with ease. Modifications were made to simplify the printing process and reduce the support material used.
 
-\subsection{Body Design}
 
+\subsection{Body Design}
 % Discuss the design of the body.
 The body design is the main part of the robot, it is the main structure that holds all the components together.
 The components that are mounted on the body are the hip motors, the battery, camera, sensor, a rack that includes the power distribution board, the microcontroller board attached to the Raspberry Pi.The optimization of the body design is crucial to be able to fit all the components in a compact form and at the same time distribute the weight equally to maintain the balance of the robot.
 Different design features were considered, such as the cable management, the fastening features specifically designed to easily mount the battery, organize the cable between the boards and the rest of the robot parts.
-
-%%three figures for the body design
-%\begin{figure}[h!]
-%    \centering
-%    \begin{subfigure}[t]{0.495\textwidth}
-%        \centering\captionsetup{width=.87\linewidth}
-%        \includegraphics[width=\textwidth]{Body_Design_1}
-%        \caption{Training error for trajectory transfer with and without output noise in the training data}
-%        \label{subfig:sim1_lsd_results_training}
-%    \end{subfigure}
-%    \hfill
-%    \begin{subfigure}[t]{0.495\textwidth}
-%        \centering\captionsetup{width=.87\linewidth}
-%        \includegraphics[width=\textwidth]{Body_Design_2}
-%        \caption{Test error for trajectory transfer with and without output noise in the training data}
-%		\label{subfig:sim1_lsd_results_test}
-%    \end{subfigure}
-%    \par\bigskip
-%    \begin{subfigure}[t]{1\textwidth}
-%        \centering\captionsetup{width=.87\linewidth}
-%        \includegraphics[width=0.99\textwidth]{Body_Design_3}
-%        \caption{Normalised transfer error for different input sets and transfer maps estimated without output noise in the training data}
-%        \label{subfig:sim1_lsd_results_freq}
-%    \end{subfigure}
-%    \caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
-%    {Normalised transfer error for input trajectory transfer between two double oscillator systems using lifted-system matrices with different numbers of estimated parameters\textsuperscript{\textcolor{note_color}{a}}}
-%    \raggedright\small\textsuperscript{\hspace{0.132\textwidth}\textcolor{note_color}{a}: Mean values are represented by the wide bars, and one added standard deviation by thin bars.}
-%    \label{fig:sim1_lsd_results}
-%\end{figure}
 %figure 1 for the body design
 \begin{figure}[h]
 	\centering
@@ -179,55 +150,12 @@ Different design features were considered, such as the cable management, the fas
 	\label{fig:bodydesign3}
 \end{figure}
 
-
-
-
-% Discuss material selection and the rationale behind these choices.
-% Include detailed CAD drawings and design schematics.
-
-
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=1\textwidth]{Robot_Assembly_V2}
-%	\caption[Moment of inertia Schematic representation]{Schematic representation detailing the requisite angles and lengths for calculating the moment of inertia.}
-%	\label{fig:Schematic representation detailing the requisite angles and lengths for calculating the moment of inertia.}
-%\end{figure}
-%\newpage
-%\begin{itemize}
-%	\item The Robot new design.
-%	\item The added degrees of freedom.
-%	\item Different motions that can be performed.
-%	\item Discussing each component of the robot and things taken into account while designing it.
-%	\begin{itemize}
-%		\item Body
-%		\begin{itemize}
-%		\item overall design inspiration
-%		\item For the body: the consideration for including all the necessary components in a compact form is to optimize the use of space and at the same time distribute the weight equally.
-%		\item The body includes the hip motors, the battery, camera, sensor, a rack that includes the motors drivers board, the micro-controller board attached to the Raspberry Pi.
-%		\item fastening features that were specifically designed in order to easily mount the battery, organize the cable between the boards and the rest of the robot parts.
-%		\item Features for modular design and easy printing.
-%		\end{itemize}
-%			\item Thigh
-%		\begin{itemize}
-%			\item curvature of that joint to give room for the motors
-%			\item cable management
-%			\item motor cover to insure its fixation.
-%		\end{itemize}
-%			\item Calf
-%		\begin{itemize}
-%			\item curvature of that joint and the thigh joint combined make enough room for the wheel motor so the it have clearance from the body.
-%			\item cable management
-%			\item motor mount and additional frame.
-%		\end{itemize}
-%	\end{itemize}
-%\end{itemize}
+\newpage
 \subsection{Hip Knee Joint Design}
 % Discuss the design of the hip knee joint.
 This joint connects the hip body axis to the knee axis.
 The design of this joint includes the knee motor housing form one-side and a frame to attach to the output horn of the hip motor.
 The motor housing is designed to ensure the fixed placement of the motor inside the joint, As shown in the figure, \ref{fig:bodykneejoint1} Cable management is also considered in the design of this joint to make sure that the cables are not interfering with the movement of the joint.The curvature of the joint creates enough clearance so that when the hip axis is aligned with the wheel axis, they would not touch with each other even when considering the elastic bending of the legs.
-
-
 %figure 1 for the Body_Knee_Joint
 \begin{figure}[h]
 	\centering
@@ -249,39 +177,11 @@ The motor housing is designed to ensure the fixed placement of the motor inside 
 	\caption[3D view of the Body Knee Joint]{3D view of the Body Knee Joint}
 	\label{fig:bodykneejoint3}
 \end{figure}
-%%three figures for the Body_Knee_Joint
-%\begin{figure}[h!]
-%	\centering
-%	\begin{subfigure}[t]{1\textwidth}
-%		\centering\captionsetup{width=.87\linewidth}
-%		\includegraphics[width=\textwidth]{Body_Knee_Joint_1}
-%		\caption{Training error for trajectory transfer with and without output noise in the training data}
-%		\label{subfig:sim1_lsd_results_training}
-%	\end{subfigure}
-%	\hfill
-%	\begin{subfigure}[t]{1\textwidth}
-%		\centering\captionsetup{width=.87\linewidth}
-%		\includegraphics[width=\textwidth]{Body_Knee_Joint_2}
-%		\caption{Test error for trajectory transfer with and without output noise in the training data}
-%		\label{subfig:sim1_lsd_results_test}
-%	\end{subfigure}
-%	\par\bigskip
-%	\begin{subfigure}[t]{1\textwidth}
-%		\centering\captionsetup{width=.87\linewidth}
-%		\includegraphics[width=\textwidth]{Body_Knee_Joint_3}
-%		\caption{Normalised transfer error for different input sets a nd transfer maps estimated without output noise in the training data}
-%		\label{subfig:sim1_lsd_results_freq}
-%	\end{subfigure}
-%	\caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
-%	{Normalised transfer error for input trajectory transfer between two double oscillator systems using lifted-system matrices with different numbers of estimated parameters\textsuperscript{\textcolor{note_color}{a}}}
-%	\raggedright\small\textsuperscript{\hspace{0.132\textwidth}\textcolor{note_color}{a}: Mean values are represented by the wide bars, and one added standard deviation by thin bars.}
-%	\label{fig:sim1_lsd_results}
-%\end{figure}
 
 
 \subsection{Knee Wheel Joint Design}
 % Discuss the design of the Wheel_Knee_Joint
-This joint connects the knee axis to the wheel axis.
+This joint connects the knee axis to the wheel axis. The design of this joint includes the wheel motor mounting form one-side and a frame to attach to the output horn of the knee motor from the other side.
 %figure 1 for the Wheel_Knee_Joint
 \begin{figure}[h]
 	\centering
@@ -304,68 +204,30 @@ This joint connects the knee axis to the wheel axis.
 	\label{fig:wheelkneejoint3}
 \end{figure}
 
-
-
-%%three figures for the Wheel_Knee_Joint
-%\begin{figure}[h!]
-%	\centering
-%	\begin{subfigure}[t]{1\textwidth}
-%		\centering\captionsetup{width=.87\linewidth}
-%		\includegraphics[width=\textwidth]{Wheel_Knee_Joint_1}
-%		\caption{side view of the Knee Wheel Joint}
-%		\label{subfig:Wheel_Knee_Joint_1}
-%	\end{subfigure}
-%	\hfill
-%	\begin{subfigure}[t]{1\textwidth}
-%		\centering\captionsetup{width=.87\linewidth}
-%		\includegraphics[width=\textwidth]{Wheel_Knee_Joint_2}
-%		\caption{Top view of the Knee Wheel Joint}
-%		\label{subfig:Wheel_Knee_Joint_2}
-%	\end{subfigure}
-%	\par\bigskip
-%	\begin{subfigure}[t]{1\textwidth}
-%		\centering\captionsetup{width=.87\linewidth}
-%		\includegraphics[width=\textwidth]{Wheel_Knee_Joint_3}
-%		\caption{Normalised transfer error for different input sets a nd transfer maps estimated without output noise in the training data}
-%		\label{subfig:Wheel_Knee_Joint_3}
-%	\end{subfigure}
-%	\caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
-%	{Normalised transfer error for input trajectory transfer between two double oscillator systems using lifted-system matrices with different numbers of estimated parameters\textsuperscript{\textcolor{note_color}{a}}}
-%	\raggedright\small\textsuperscript{\hspace{0.132\textwidth}\textcolor{note_color}{a}: Mean values are represented by the wide bars, and one added standard deviation by thin bars.}
-%	\label{fig:Wheel_Knee_Joint}
-%\end{figure}
 \subsection{Full Design}
-%three figure for the Robot_Assembly
-\begin{figure}[h!]
+
+
+%figure 1 for the Robot_Assembly
+\begin{figure}[h]
 	\centering
-	\begin{subfigure}[t]{1\textwidth}
-		\centering\captionsetup{width=.87\linewidth}
-		\includegraphics[width=\textwidth]{Robot_Assembly_1}
-		\caption{Training error for trajectory transfer with and without output noise in the training data}
-		\label{subfig:sim1_lsd_results_training}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[t]{1\textwidth}
-		\centering\captionsetup{width=.87\linewidth}
-		\includegraphics[width=\textwidth]{Robot_Assembly_2}
-		\caption{Test error for trajectory transfer with and without output noise in the training data}
-		\label{subfig:sim1_lsd_results_test}
-	\end{subfigure}
-	\par\bigskip
-	\begin{subfigure}[t]{1\textwidth}
-		\centering\captionsetup{width=.87\linewidth}
-		\includegraphics[width=\textwidth]{Robot_Assembly_3}
-		\caption{Normalised transfer error for different input sets a nd transfer maps estimated without output noise in the training data}
-		\label{subfig:sim1_lsd_results_freq}
-	\end{subfigure}
-	\caption[Double Oscillator -- Transfer Error (Transfer Matrix)]
-	{Normalised transfer error for input trajectory transfer between two double oscillator systems using lifted-system matrices with different numbers of estimated parameters\textsuperscript{\textcolor{note_color}{a}}}
-	\raggedright\small\textsuperscript{\hspace{0.132\textwidth}\textcolor{note_color}{a}: Mean values are represented by the wide bars, and one added standard deviation by thin bars.}
-	\label{fig:sim1_lsd_results}
+	\includegraphics[width=1\linewidth]{Robot_Assembly_1}
+	\caption[Side view of the Robot Assembly]{Side view of the Robot Assembly}
+	\label{fig:robotassembly1}
 \end{figure}
-
-
-
+%figure 2 for the Robot_Assembly
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Robot_Assembly_2}
+	\caption[Front view of the Robot Assembly]{Front view of the Robot Assembly}
+	\label{fig:robotassembly2}
+\end{figure}
+%figure 3 for the Robot_Assembly
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Robot_Assembly_3}
+	\caption[3D view of the Robot Assembly]{3D view of the Robot Assembly}
+	\label{fig:robotassembly3}
+\end{figure}
 \subsection{safety considerations}
 
 

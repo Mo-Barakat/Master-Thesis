@@ -3,36 +3,42 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Initial Design Concepts}}{5}{figure.caption.6}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Leg Design Concepts}}{5}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Initial Calculations}}{6}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces TOP view of the Body Design}}{8}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Initial Design Concepts}}{4}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Leg Design Concepts}}{4}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Initial Calculations}}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces TOP view of the Body Design}}{7}{figure.caption.10}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Side view of the Body Design}}{8}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces 3D view of the Body Design}}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 3D view of the Body Design}}{8}{figure.caption.12}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces TOP view of the Body Knee Joint}}{9}{figure.caption.13}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Side view of the Body Knee Joint}}{9}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces 3D view of the Body Knee Joint}}{10}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces 3D view of the Body Knee Joint}}{9}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces SIDE view of the Knee Wheel Joint}}{10}{figure.caption.16}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces TOP view of the Knee Wheel Joint}}{10}{figure.caption.17}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces 3D view of the Knee Wheel Joint}}{11}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Double Oscillator -- Transfer Error (Transfer Matrix)}}{12}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Side view of the Robot Assembly}}{12}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Front view of the Robot Assembly}}{13}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces 3D view of the Robot Assembly}}{14}{figure.caption.21}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Components Diagram}}{13}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces DYNAMIXEL XM430-W350}}{14}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces SIMPLEX MOTION SC040A}}{14}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Raspberry Pi 4 compute module}}{15}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces VL53L1X}}{16}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Raspberry Pi Camera Module V2}}{16}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces SLS XTRON 3000MAH 4S1P}}{17}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces brakets for delectronic design second test }}{17}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Components Diagram}}{16}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces DYNAMIXEL XM430-W350}}{16}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces SIMPLEX MOTION SC040A}}{17}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Raspberry Pi 4 compute module}}{17}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces VL53L1X}}{18}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Raspberry Pi Camera Module V2}}{18}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces SLS XTRON 3000MAH 4S1P}}{19}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces brakets for delectronic design second test }}{19}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Robot Hub Board }}{20}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Power Management Board }}{21}{figure.caption.31}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Mechanical model with the local coordinate system}}{21}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Moment of inertia Schematic representation}}{22}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Comparison between the old and new models}}{23}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Mechanical model with the local coordinate system}}{25}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Moment of inertia Schematic representation}}{26}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Block diagram of a state feedback controller}}{28}{figure.caption.37}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Moment of inertia Schematic representation}}{31}{figure.caption.31}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Moment of inertia Schematic representation}}{33}{figure.caption.32}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Moment of inertia Schematic representation}}{38}{figure.caption.38}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Moment of inertia Schematic representation}}{40}{figure.caption.39}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
