@@ -1,7 +1,7 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\nonumberline List of Figures}{VIII}{chapter*.4}%
-\contentsline {chapter}{\nonumberline List of Tables}{IX}{chapter*.5}%
+\contentsline {chapter}{\nonumberline List of Tables}{X}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Explanation of the Goals and Requirements}{1}{section.1.2}%
@@ -16,10 +16,11 @@
 \contentsline {section}{\numberline {3.4}Initial Calculations}{5}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Detailed Design Development}{7}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Body Design}{7}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Hip Knee Joint Design}{8}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Knee Wheel Joint Design}{9}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.2}Hip Knee Link Design}{8}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Knee Wheel Link Design}{9}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}Full Design}{10}{subsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.5.5}safety considerations}{10}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.5}Boards Mounting rack}{10}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}safety considerations}{10}{subsection.3.5.6}%
 \contentsline {section}{\numberline {3.6}Design for Manufacturability and Assembly}{10}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Prototyping and Iterative Design}{10}{section.3.7}%
 \contentsline {chapter}{\numberline {4}Electronic Design}{15}{chapter.4}%
@@ -55,18 +56,24 @@
 \contentsline {subsection}{\numberline {5.5.4}Controller Setting Comparisons}{30}{subsection.5.5.4}%
 \contentsline {chapter}{\numberline {6}Mechanical Assembly}{31}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Components Overview}{32}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Assembly Process}{32}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Integration of Mechanical and Electronic Systems}{32}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Troubleshooting and Problem Solving}{32}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Safety Considerations}{32}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Firmware and Testing}{33}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Firmware Development}{33}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Programming Languages and Tools}{33}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Integration with Hardware}{33}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Testing Framework and Methodology}{33}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Test Cases and Scenarios}{33}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Debugging and Troubleshooting}{34}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Safety}{35}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Random(Erase)}{38}{chapter.9}%
-\contentsline {chapter}{\nonumberline Bibliography}{X}{chapter*.40}%
+\contentsline {section}{\numberline {6.2}Fabrication}{32}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Assembly Process}{33}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Motors Assembly}{33}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Screws and thread inserts}{34}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Chassis Assembly}{34}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Integration of Mechanical and Electronic Systems}{36}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Wiring tree}{36}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Electronics Assembly}{36}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Troubleshooting and Problem Solving}{36}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Safety Considerations}{37}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Firmware and Testing}{38}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Firmware Development}{38}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Programming Languages and Tools}{38}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Integration with Hardware}{38}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Testing Framework and Methodology}{38}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Test Cases and Scenarios}{38}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Debugging and Troubleshooting}{39}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Safety}{40}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Random(Erase)}{43}{chapter.9}%
+\contentsline {chapter}{\nonumberline Bibliography}{XI}{chapter*.52}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

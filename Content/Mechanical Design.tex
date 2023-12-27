@@ -48,7 +48,7 @@ The compliant leg is more flexible and can be used to absorb the shock from the 
 %Explain the decision-making process for selecting the final concept.
 % Include sketches or early design models.
 \section{Schmatic Representation of the Robot}
-% the schematic representation of the robot should show the location of the different components such as the motors, wheels, battery, boards, and others.
+% the schematic representation of the robot should show the location of the different components such as the motors, wheels, battery, boards, and others
 %figure for the schematic representation of the robot
 
 \section{Initial Calculations}
@@ -62,7 +62,7 @@ The compliant leg is more flexible and can be used to absorb the shock from the 
 One of the main critical positions for the robot, as shown in the figure \ref{fig:initialcalculations} is the position where the center of mass of the body and the center of mass of the legs are the furthest away from point x on the horizontal axis.It is important to make the initial torque calculations to be able to select the right motors for the robot.
 Starting from that position first, the robot should be able to balance itself and maintain the upright position.
 secondly, the robot should be able to change the knee angle to lift the body while maintaining its balance.
-The calculations are based on some assumptions and simplifications, Considering only half the body weight and one leg joint.
+The calculations are based on some assumptions and simplifications, Considering only half the body weight and one leg.
 As shown in the figure, The Wheel motor shaft is aligned with the hip joint, the minimum torque required to balance the robot is calculated as follows:
 
 The summation of the torques around point x should be equal to zero to maintain the balance with minimum motor torque.
@@ -119,7 +119,7 @@ The Knee motor should be able to generate more torque to be able to lift the bod
 \section{Detailed Design Development}
 % Elaborate on the development of the detailed mechanical design.
 Throughout the design process, modularity and ease of assembly were considered.
-The design was broken down into three main parts: the body, the hip-knee joint, and the knee-wheel joint.
+The design was broken down into three main parts: the body, the hip-knee link, and the knee-wheel link.
 Print iterations were made to ensure that the parts fit together and that the robot could be assembled with ease. Modifications were made to simplify the printing process and reduce the support material used.
 
 
@@ -151,57 +151,57 @@ Different design features were considered, such as the cable management, the fas
 \end{figure}
 
 \newpage
-\subsection{Hip Knee Joint Design}
-% Discuss the design of the hip knee joint.
-This joint connects the hip body axis to the knee axis.
-The design of this joint includes the knee motor housing form one-side and a frame to attach to the output horn of the hip motor.
-The motor housing is designed to ensure the fixed placement of the motor inside the joint, As shown in the figure, \ref{fig:bodykneejoint1} Cable management is also considered in the design of this joint to make sure that the cables are not interfering with the movement of the joint.The curvature of the joint creates enough clearance so that when the hip axis is aligned with the wheel axis, they would not touch with each other even when considering the elastic bending of the legs.
-%figure 1 for the Body_Knee_Joint
+\subsection{Hip Knee Link Design}
+% Discuss the design of the hip knee Link.
+This link connects the hip body axis to the knee axis.
+The design of this link includes the knee motor housing form one-side and a frame to attach to the output horn of the hip motor.
+The motor housing is designed to ensure the fixed placement of the motor inside the link, As shown in the figure, \ref{fig:bodykneelink1} Cable management is also considered in the design of this link to make sure that the cables are not interfering with the movement of the link.The curvature of the link creates enough clearance so that when the hip axis is aligned with the wheel axis, they would not touch with each other even when considering the elastic bending of the legs.
+%figure 1 for the Body_Knee_link
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Body_Knee_Joint_1}
-	\caption[TOP view of the Body Knee Joint]{TOP view of the Body Knee Joint}
-	\label{fig:bodykneejoint1}
+	\includegraphics[width=1\linewidth]{Body_Knee_Link_1}
+	\caption[TOP view of the Body Knee Link]{TOP view of the Body Knee Link}
+	\label{fig:bodykneelink1}
 \end{figure}
-%figure 2 for the Body_Knee_Joint
+%figure 2 for the Body_Knee_link
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Body_Knee_Joint_2}
-	\caption[Side view of the Body Knee Joint]{side view of the Body Knee Joint}
-	\label{fig:bodykneejoint2}
+	\includegraphics[width=1\linewidth]{Body_Knee_Link_2}
+	\caption[Side view of the Body Knee Link]{side view of the Body Knee Link}
+	\label{fig:bodykneelink2}
 \end{figure}
-%figure 3 for the Body_Knee_Joint
+%figure 3 for the Body_Knee_link
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Body_Knee_Joint_3}
-	\caption[3D view of the Body Knee Joint]{3D view of the Body Knee Joint}
-	\label{fig:bodykneejoint3}
+	\includegraphics[width=1\linewidth]{Body_Knee_Link_3}
+	\caption[3D view of the Body Knee Link]{3D view of the Body Knee Link}
+	\label{fig:bodykneelink3}
 \end{figure}
 
 
-\subsection{Knee Wheel Joint Design}
-% Discuss the design of the Wheel_Knee_Joint
-This joint connects the knee axis to the wheel axis. The design of this joint includes the wheel motor mounting form one-side and a frame to attach to the output horn of the knee motor from the other side.
-%figure 1 for the Wheel_Knee_Joint
+\subsection{Knee Wheel Link Design}
+% Discuss the design of the Wheel_Knee_link.
+This link connects the knee axis to the wheel axis. The design of this link includes the wheel motor mounting form one-side and a frame to attach to the output horn of the knee motor from the other side.
+%figure 1 for the Wheel_Knee_link
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Wheel_Knee_Joint_1}
-	\caption[SIDE view of the Knee Wheel Joint]{SIDE view of the Knee Wheel Joint}
-	\label{fig:wheelkneejoint1}
+	\includegraphics[width=1\linewidth]{Wheel_Knee_Link_1}
+	\caption[SIDE view of the Knee Wheel Link]{SIDE view of the Knee Wheel Link}
+	\label{fig:wheelkneelink1}
 \end{figure}
-%figure 2 for the Wheel_Knee_Joint
+%figure 2 for the Wheel_Knee_link
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Wheel_Knee_Joint_2}
-	\caption[TOP view of the Knee Wheel Joint]{TOP view of the Knee Wheel Joint}
-	\label{fig:wheelkneejoint2}
+	\includegraphics[width=1\linewidth]{Wheel_Knee_Link_2}
+	\caption[TOP view of the Knee Wheel Link]{TOP view of the Knee Wheel Link}
+	\label{fig:wheelkneelink2}
 \end{figure}
-%figure 3 for the Wheel_Knee_Joint
+%figure 3 for the Wheel_Knee_link
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Wheel_Knee_Joint_3}
-	\caption[3D view of the Knee Wheel Joint]{3D view of the Knee Wheel Joint}
-	\label{fig:wheelkneejoint3}
+	\includegraphics[width=1\linewidth]{Wheel_Knee_Link_3}
+	\caption[3D view of the Knee Wheel Link]{3D view of the Knee Wheel Link}
+	\label{fig:wheelkneelink3}
 \end{figure}
 
 \subsection{Full Design}
@@ -228,8 +228,9 @@ This joint connects the knee axis to the wheel axis. The design of this joint in
 	\caption[3D view of the Robot Assembly]{3D view of the Robot Assembly}
 	\label{fig:robotassembly3}
 \end{figure}
+\subsection{Boards Mounting rack}
 \subsection{safety considerations}
-
+% the motor cover, the face shield of the body and the body cover
 
 
 
