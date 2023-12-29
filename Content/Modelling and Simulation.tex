@@ -179,80 +179,78 @@ The following equations are used to calculate the center of gravity location ref
 
 
 
-	\subsection{Equation of motion }
-	%equation of motion 
-	Equation of motion 
+
 	
 	
-		\subsection{Dynamics of the Two-Wheeled Inverted Pendulum Robot}
+	\subsection{Dynamics of the Two-Wheeled Inverted Pendulum Robot}
 	Given the functions $B_i: \mathbb{R} \rightarrow \mathbb{R}$, $C_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_i: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, the equations of motion are given by:
 
 	\begin{align}
-		\ddot{s} &= \frac{\sin(\Theta)}{V_1(\Theta)} \left( -C_{11}(\Theta)g + C_{12}\dot{\Theta}^2 + C_{13}(\Theta)\dot{\psi}^2 \right) - \frac{D_{11}(\Theta)}{V_1(\Theta)}\dot{s} + \frac{D_{12}(\Theta)}{V_1(\Theta)}\dot{\Theta} + \frac{B_{1}(\Theta)}{V_1(\Theta)}(\tau_L + \tau_R) \\
-		\ddot{\Theta} &= \frac{\sin(\Theta)}{V_1(\Theta)} \left( C_{21} - C_{22}(\Theta)\dot{\Theta}^2 - C_{23}(\Theta)\dot{\psi}^2 \right) + \frac{D_{21}(\Theta)}{V_1(\Theta)}\dot{s} - \frac{D_{22}(\Theta)}{V_1(\Theta)}\dot{\Theta} - \frac{B_{2}(\Theta)}{V_1(\Theta)}(\tau_L + \tau_R)  \\
-		\ddot{\psi} &= \frac{\sin(\Theta)}{V_2(\Theta)} \left( C_{31}(\Theta)\dot{\Theta}\dot{\psi} - C_{32}(\Theta)\dot{\psi}\dot{s} \right) - \frac{D_{33}(\Theta)}{V_2(\Theta)}\dot{\psi} - \frac{B_{3}}{V_2(\Theta)}(\tau_L - \tau_R)
+		\ddot{s} &= \frac{\sin(\theta)}{V_1(\theta)} \left( -C_{11}(\theta)g + C_{12}\dot{\theta}^2 + C_{13}(\theta)\dot{\psi}^2 \right) - \frac{D_{11}(\theta)}{V_1(\theta)}\dot{s} + \frac{D_{12}(\theta)}{V_1(\theta)}\dot{\theta} + \frac{B_{1}(\theta)}{V_1(\theta)}(\tau_L + \tau_R) \\
+		\ddot{\theta} &= \frac{\sin(\theta)}{V_1(\theta)} \left( C_{21} - C_{22}(\theta)\dot{\theta}^2 - C_{23}(\theta)\dot{\psi}^2 \right) + \frac{D_{21}(\theta)}{V_1(\theta)}\dot{s} - \frac{D_{22}(\theta)}{V_1(\theta)}\dot{\theta} - \frac{B_{2}(\theta)}{V_1(\theta)}(\tau_L + \tau_R)  \\
+		\ddot{\psi} &= \frac{\sin(\theta)}{V_2(\theta)} \left( C_{31}(\theta)\dot{\theta}\dot{\psi} - C_{32}(\theta)\dot{\psi}\dot{s} \right) - \frac{D_{33}(\theta)}{V_2(\theta)}\dot{\psi} - \frac{B_{3}}{V_2(\theta)}(\tau_L - \tau_R)
 	\end{align}
 
 
-	The equations of motion are derived in [44]. The functions $B_i: \mathbb{R} \rightarrow \mathbb{R}$, $C_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_i: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, are given by:
+	The equations of motion are derived in \cite{kim2015dynamic}. The functions $B_i: \mathbb{R} \rightarrow \mathbb{R}$, $C_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_i: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, are given by:
 
 	\begin{equation}
-		C_{11}(\Theta) = m_B^2 l^2 \cos(\Theta)g,
+		C_{11}(\theta) = m_B^2 l^2 \cos(\theta)g,
 	\end{equation}
 	\begin{equation}
 		C_{12} = (I_2 + m_B l^2) m_B l,
 	\end{equation}
 	\begin{equation}
-		C_{13}(\Theta) = (I_2 + m_B l^2) m_B l + m_B l (I_3 - I_1 - m_B l^2) \cos^2(\Theta),
+		C_{13}(\theta) = (I_2 + m_B l^2) m_B l + m_B l (I_3 - I_1 - m_B l^2) \cos^2(\theta),
 	\end{equation}
 	\begin{equation}
 		C_{21} = (m_B + 2m_W + \frac{2J}{r^2}) m_B l,
 	\end{equation}
 	\begin{equation}
-		C_{22}(\Theta) = m_B^2 l^2 \cos(\Theta),
+		C_{22}(\theta) = m_B^2 l^2 \cos(\theta),
 	\end{equation}
 	\begin{equation}
-		C_{23}(\Theta) = m_B^2 l^2 + (m_B + 2m_W + \frac{2J}{r^2}) (I_3 - I_1 - m_B l^2) \cos(\Theta).
+		C_{23}(\theta) = m_B^2 l^2 + (m_B + 2m_W + \frac{2J}{r^2}) (I_3 - I_1 - m_B l^2) \cos(\theta).
 	\end{equation}
 	\begin{equation}
-		C_{31}(\Theta) = 2 (I_3 - I_1 - m_B^2) \cos(\Theta),
+		C_{31}(\theta) = 2 (I_3 - I_1 - m_B^2) \cos(\theta),
 	\end{equation}
 	\begin{equation}
 		C_{31} = m_B l,
 	\end{equation}
 	\begin{equation}
-		D_{11}(\Theta) = \frac{(I_2 + m_B^2) 2c_\alpha}{r^2} - \frac{m_B \cos(\Theta) 2c_\alpha}{r},
+		D_{11}(\theta) = \frac{(I_2 + m_B^2) 2c_\alpha}{r^2} - \frac{m_B \cos(\theta) 2c_\alpha}{r},
 	\end{equation}
 	\begin{equation}
-		D_{12}(\Theta) = \frac{(I_2 + m_B^2) 2c_\alpha}{r} - 2m_B \cos(\Theta) c_\alpha,
+		D_{12}(\theta) = \frac{(I_2 + m_B^2) 2c_\alpha}{r} - 2m_B \cos(\theta) c_\alpha,
 	\end{equation}
 	\begin{equation}
-		D_{21}(\Theta) = \frac{(m_B + 2m_W + \frac{2J}{r^2}) 2c_\alpha}{r} + \frac{m_B \cos(\Theta) 2c_\alpha}{r^2},
+		D_{21}(\theta) = \frac{(m_B + 2m_W + \frac{2J}{r^2}) 2c_\alpha}{r} + \frac{m_B \cos(\theta) 2c_\alpha}{r^2},
 	\end{equation}
 	\begin{equation}
-		D_{22}(\Theta) = \frac{(m_B + 2m_W + \frac{2J}{r}) 2c_\alpha + m_B \cos(\Theta) 2c_\alpha}{r},
+		D_{22}(\theta) = \frac{(m_B + 2m_W + \frac{2J}{r}) 2c_\alpha + m_B \cos(\theta) 2c_\alpha}{r},
 	\end{equation}
 	\begin{equation}
-		D_{33}(\Theta) = \frac{d^2}{2r^2 c_\alpha},
+		D_{33}(\theta) = \frac{d^2}{2r^2 c_\alpha},
 	\end{equation}
 	\begin{equation}
-		B_{1} = \frac{(I_2 + m_B^2) \frac{1}{r} + m_B \cos(\Theta)}{r},
+		B_{1} = \frac{(I_2 + m_B^2) \frac{1}{r} + m_B \cos(\theta)}{r},
 	\end{equation}
 	\begin{equation}
-		B_{2} = \frac{m_B l}{r} - \cos(\Theta) + m_B + 2m_W + \frac{2J}{r^2},
+		B_{2} = \frac{m_B l}{r} - \cos(\theta) + m_B + 2m_W + \frac{2J}{r^2},
 	\end{equation}
 	\begin{equation}
 		B_{3} = \frac{d}{2r},
 	\end{equation}
 	\begin{equation}
-		V_{1} = (m_B + 2m_W + \frac{2J}{r^2}) (I_2 + m_B^2) - m_B^2 \cos^2(\Theta),
+		V_{1} = (m_B + 2m_W + \frac{2J}{r^2}) (I_2 + m_B^2) - m_B^2 \cos^2(\theta),
 	\end{equation}
 	\begin{equation}
-		V_{2} = I_3 + 2K + (m_W + \frac{J}{r^2}) \frac{d^2}{2} - (I_3 - I_1 - m_B^2) \sin^2(\Theta).
+		V_{2} = I_3 + 2K + (m_W + \frac{J}{r^2}) \frac{d^2}{2} - (I_3 - I_1 - m_B^2) \sin^2(\theta).
 	\end{equation}
 
 
-	\begin{table}[h!]
+	\begin{table}[t!]
 		\centering
 		\caption{Parameters of the mechanical system}
 		\label{tab:parameters}
@@ -276,18 +274,121 @@ The following equations are used to calculate the center of gravity location ref
 	
 	
 	
+\subsection{Linearization of the Two-Wheeled Inverted Pendulum Robot}
+In this section, we linearize the equations of motion of the legged TWIPR robot about the upright equilibrium point. Movement of the robot is restricted to the x-y plane.
+
+The torque inputs are $\tau_L$ and $\tau_R$ for the left and right wheels, respectively.
+%equation tau_L and tau_R are equal
+\begin{equation}
+	\tau_L = \tau_R = \tau
+\end{equation}
+%the combined torque input u is equal to the torque tau_L plus tau_R
+the sum of the torques $\tau_L$ and $\tau_R$ is equal to the combined torque input $u$ which is an input and a variable.
+\begin{equation}
+	u = \tau_L + \tau_R = 2\tau
+\end{equation}
+The degree of freedom for the rotation around the z-axis $\psi$ is eleinated by assuming that the robot is always moving in the x-y plane in a straight line. therfore the equation of motion would be as follows:
+\begin{equation}
+	\ddot{s} = \frac{\sin(\theta)}{V_1(\theta)} \left( -C_{11}(\theta)g + C_{12}\dot{\theta}^2 \right) - \frac{D_{11}(\theta)}{V_1(\theta)}\dot{s} + \frac{D_{12}(\theta)}{V_1(\theta)}\dot{\theta} + \frac{B_{1}(\theta)}{V_1(\theta)}u
+\end{equation}
+\begin{equation}
+	\ddot{\theta} = \frac{\sin(\theta)}{V_1(\theta)} \left( C_{21} - C_{22}(\theta)\dot{\theta}^2 \right) + \frac{D_{21}(\theta)}{V_1(\theta)}\dot{s} - \frac{D_{22}(\theta)}{V_1(\theta)}\dot{\theta} - \frac{B_{2}(\theta)}{V_1(\theta)}u
+\end{equation}
+Therefore the state vector would be as follows:
+\begin{equation}
+	x = \begin{bmatrix}
+		\theta \\
+		\dot{\theta}\\
+		s \\
+		\dot{s}
+	\end{bmatrix}
+\end{equation}
+
+%Using thr functions
+\begin{equation}
+	f_1(x) = \frac{\sin(\theta)}{V_1(\theta)} \left( C_{21} - C_{22}(\theta)\dot{\theta}^2 \right) + \frac{D_{21}(\theta)}{V_1(\theta)}\dot{s} - \frac{D_{22}(\theta)}{V_1(\theta)}\dot{\theta}
+\end{equation}
+\begin{equation}
+	f_2(x) = \frac{\sin(\theta)}{V_1(\theta)} \left( -C_{11}(\theta)g + C_{12}\dot{\theta}^2 \right) - \frac{D_{11}(\theta)}{V_1(\theta)}\dot{s} + \frac{D_{12}(\theta)}{V_1(\theta)}\dot{\theta}
+\end{equation}
+\begin{equation}
+	g_1(x,u) = \frac{B_{2}(\theta)}{V_1(\theta)}u
+\end{equation}
+\begin{equation}
+	g_2(x,u) = \frac{B_{1}(\theta)}{V_1(\theta)}u
+\end{equation}
+The system can be represented in the following form:
+\begin{equation}
+	\dot{x} = \begin{bmatrix}
+		x_2 \\
+		f_1(x) \\
+		x_4    \\
+		f_2(x)
+	\end{bmatrix} + \begin{bmatrix}
+		0 \\
+		g_1(x,u) \\
+		0 \\
+		g_2(x,u)
+	\end{bmatrix}
+\end{equation}
+
+Linearization at the point $x = 0$, which corresponds to the upright equilibrium of the inverted pendulum, simplifies the system's dynamics as follows:
+\begin{equation}
+\dot{x} = A_cx + B_cu,
+\end{equation}
+where $A_c \in \mathbb{R}^{4\times4}$ is the system matrix of the time-continuous system, and $B_c \in \mathbb{R}^{4\times1}$ is the input matrix of the time-continuous system. Discretization of the system with a sampling frequency of 50 hertz yields:
+\begin{equation}
+x_{k+1} = Ax_k + Bu_k,
+\end{equation}
+where $k \in \mathbb{N}$ indexes the discrete time steps, $x_k \in \mathbb{R}^4$ denotes the state vector at the $k$-th sample, $u_k \in \mathbb{R}$ denotes the input at the $k$-th sample, $A \in \mathbb{R}^{4\times4}$ is the system matrix of the time-discrete system, and $B \in \mathbb{R}^{4\times1}$ is the input matrix of the time-discrete system \cite{MastersThesis}.
 
 
 
 \section{Numerical Simulation}
-\begin{itemize}
-	\item \textbf{Discrete Numerical Simulation:} Elaboration on the process of discrete numerical simulation, including the discrete double integration method to arrive at the state vector.
-\end{itemize}
+%\begin{itemize}
+%	\item \textbf{Discrete Numerical Simulation:} Elaboration on the process of discrete numerical simulation, including the discrete double integration method to arrive in the state vector.
+%\end{itemize}
+The discrete numerical simulation is a computational method that is used to model the behavior of dynamic systems over discrete periods of time intervals. In contrast to the continuous numerical simulation, the discrete numerical simulation that typically uses the Euler method to solve the differential equations analytically or working with infinitesimally small-timescale numerical solvers.
+\subsection{Discrete numerical simulation}
+Discrete numerical simulations approximate the state of the system step by step and evaluate the behavior of the system at predetermined intervals. When an analytical solution is not feasible or real-time simulation is required due to the complexity of the system, this approach is particularly helpful.
+\subsection{Discrete double integration method}
+The discrete double integration method is used to calculate the state vector of the system at each time step. The state vector is calculated by integrating the acceleration twice to get the position and velocity. The state vector is calculated using the following equation:
+\begin{equation}
+	x_{k+1} = x_k + \dot{x_k} \Delta t + \frac{1}{2} \ddot{x_k} \Delta t^2
+\end{equation}
+where $x_k$ is the state vector at the $k$-th sample, $\dot{x_k}$ is the derivative of the state vector at the $k$-th sample, $\ddot{x_k}$ is the second derivative of the state vector at the $k$-th sample, and $\Delta t$ is the time step.
+
 
 \section{Simulation Environment}
+%figure of the block diagram of the simulation environment
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{Block Diagram of Simulation Environment}
+	\caption{ The environment consists always of a world entity, other parts like user in-
+terface(UI), HW-manager and visualization are optional, it is closely linked to
+the Scheduler \cite{Bachlorsthesis}}
+	\label{fig:Block diagram of the simulation environment}
+\end{figure}
+The simulation environment is a software framework that is used to simulate the dynamics of the robot. The simulation enviroment is a A complex virtual environment created for realistic testing is the simulation environment. It comprises a variety of spaces with distinct states, dimensions, and mapping capabilities that enable the creation of a wide range of scenarios \cite{Bachlorsthesis}.
+\subsection{Physics and Object Primitives}
+The simulation ensures realistic movements and interactions by incorporating intricate physics. It makes use of object primitives such as spheres, cylinders, and cuboids, which serve as a basis for building a variety of structures and objects\cite{Bachlorsthesis}.
+\subsection{Collision Checking and Dynamics}
+The simulation uses sophisticated collision checking techniques, such as pre-checking and distinct algorithms for various situations, such as collisions involving cuboids. To simulate realistic physical interactions between objects, this feature is essential\cite{Bachlorsthesis}.
+\subsection{Objects and Agents}
+A range of objects, both static and dynamic, including agents that imitate autonomous behavior, are present in the environment. This variety improves the simulation's ability to mimic interactions in the real world.
+\subsection{Scheduling and Real Robot Integration}
+An advanced scheduling system controls the order and timing of events. Furthermore, the simulation incorporates real robots in a unique way, combining virtual and physical components for thorough testing\cite{Bachlorsthesis}.
+\subsection{Integration of the Model}
 %figure of the simulation environment
-\subsection{Overview of the Simulation Environment}
-\subsection{spaces}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{Simulation Environment}
+	\caption{The simulation environment}
+	\label{fig:The simulation environment}
+\end{figure}
+As shown in the figure \ref{fig:The simulation environment}, the simulation environment simulates the dynamics of the robot and the controller. where the blue sphere represents the robot center of gravity which changes its location according to the robot's dynamics.
+
+
 
 %\begin{itemize}
 %	\item \textbf{Overview of the Simulation Environment:} A brief overview of the simulation environment, referencing David's Bachelor Thesis for details.
@@ -406,19 +507,140 @@ In the above code \ref{lst:Changing the knee and hip angles in the dynamics and 
 \section{Simulation Analysis}
 %\begin{itemize}
 %	\item \textbf{Controller Responses:} Analysis of step response and responses to other inputs using one of the controllers in different configurations.
+The simulation analysis is a process of analyzing the performance of the controllers by conducting a series of simulations to evaluate their responses to various inputs in different configurations.
 \subsection{Controller Responses}
 In order to analyze the performance of the controllers, we conducted a series of simulations to evaluate their responses to various inputs.
+%figure for the test input
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{Test Input}
+	\caption{Test input}
+	\label{fig:Test input}
+\end{figure}
 
+As shown in the figure \ref{fig:Test input}, this test input data is selected to evaluate the performance of the controllers. External control input is applied at $t=1$ and is maintained until $t=7$ to see the response. Additionally, changing the knee and hip angles at $t=3$ and $t=5$ respectively to see the response of the controller to the change in the configuration.
+
+%two figures of the step response of the internal input and zoomed in for the hip angle effect
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Step Response of the Internal Input}
+		\caption{Step response of the internal input}
+		\label{fig:Step response of the internal input}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Step Response of the Internal Input hip angle}
+		\caption{Step response of the hip and knee angles}
+		\label{fig:Step response of the hip and knee angles}
+	\end{subfigure}
+	\caption{Step response of the internal input}
+	\label{fig:Step response of the internal input}
+\end{figure}
+%%figure of the step response of the internal input
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=.5\textwidth]{Step Response of the Internal Input}
+%	\caption{Step response of the internal input}
+%	\label{fig:Step response of the internal input}
+%\end{figure}
+The internal input is the input that is generated by the controller and is used to control the robot. The step response of the internal input is shown in the figure \ref{fig:Step response of the internal input}.The figure shows the response at time $t=1$ when the external input is applied where it overshoots and then converges to a value of $0.25$ which indicates that the robot is moving forward and the external input is still applied. The figure \ref{fig:Step response of the hip and knee angles} shows the response of the hip and knee angles to the change in the configuration at $t=3$ and $t=5$ respectively. The effect of the change in knee angle is more significant than the effect of the change in the hip angle since the knee angle has much higher effect on the center of gravity location than the hip angle.The stop of the external input is reflected in the response at $t=7$ where the internal input converges to $0$ which indicates that the robot is not moving forward anymore.
+%two sub figures for the s and s dot
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{S}
+		\caption{S}
+		\label{fig:S}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{S_dot}
+		\caption{S dot}
+		\label{fig:S dot}
+	\end{subfigure}
+	\caption{S and S dot}
+	\label{fig:S and S dot}
+\end{figure}
+
+As shown in the figure \ref{fig:S and S dot}, the s is the x position of the robot. The s dot is the derivative of the s. As showen in the figure \ref{fig:S} at $t=1$ the robot starts moving slightly backward befor it starts moving forward. The center of gravity is learned a bit forward with translates into a slightly backward movement.Afterwards the controller keeps the balance of the robot while it is moving forward.The external input is stopped at $t=7$ which is reflected in the figure \ref{fig:S} at $t=7$ where the robot comes to a stop. The figure \ref{fig:S dot} shows the velocity of the robot. The velocity is disrupted at $t=3$ and $t=5$ when the hip and knee angles are changed respectively.
+% two sub figures for the theta and theta dot
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{Theta}
+		\caption{Theta}
+		\label{fig:Theta}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{Theta_dot}
+		\caption{Theta dot}
+		\label{fig:Theta dot}
+	\end{subfigure}
+	\caption{Theta and Theta dot}
+	\label{fig:Theta and Theta dot}
+\end{figure}
+
+As shown in the figure \ref{fig:Theta and Theta dot}, the theta is the angle between the center of gravity and the vertical axis to the ground. The theta dot is the derivative of the theta.
+%two sub figures for the psi and psi dot
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{Psi}
+		\caption{Psi}
+		\label{fig:Psi}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{Psi_dot}
+		\caption{Psi dot}
+		\label{fig:Psi dot}
+	\end{subfigure}
+	\caption{Psi and Psi dot}
+	\label{fig:Psi and Psi dot}
+\end{figure}
+
+As shown in the figure \ref{fig:Psi and Psi dot}, the %
+
+
+%figure for the Gamma
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{Gamma}
+	\caption{Gamma}
+	\label{fig:Gamma}
+\end{figure}
+
+The Gamma angle is the angle between the center of gravity and the link 1. As shown in the figure \ref{fig:Gamma}, the Gamma angle is changed at $t=3$ and $t=5$ when the hip and knee angles are changed respectively. It decreased to zero if the robot is verticallly aligned with the ground meaning when the hip and knee angles are zero.
+
+%figure for L_m L_x L_b and L
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{L_m L_x L_b L}
+	\caption{Lm Lx Lb and L}
+	\label{fig:Lm Lx Lb and L}
+\end{figure}
+
+As shown in the figure \ref{fig:Lm Lx Lb and L}, the Lm Lx Lb and L are changed at $t=3$ and $t=5$ when the hip and knee angles are changed respectively.
+%figure for comparison between the two external inputs
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{Comparison between the two external inputs}
+	\caption{Comparison between the two external inputs}
+	\label{fig:Comparison between the two external inputs}
+\end{figure}
+
+In the figure \ref{fig:Comparison between the two external inputs}, two different external inputs are applied to the robot. In experment 1, 1 unit of external input is applied to the robot. In experment 2, 3 units of external input is applied to the robot. The experment 2 shows a better response than experment 1.The overshoot is less and the robot converges to the desired state faster. In addition, the robot is more stable when the hip and knee angles are changed at $t=3$ and $t=5$ respectively.
 %	\item \textbf{Impact of Non-Retuning:} Discussion on the effects of not retuning the controllers.
 \subsection{Impact of Non-Retuning}
 
 %	\item \textbf{Influence of Leg Configuration:} Analysis of how leg configuration influences the robot's behavior.
+If the controller is not returned when the configuration changes, the old K gains that rely on the old center of gravity location will be used, resulting in a poor response.
 \subsection{Influence of Leg Configuration}
 %	\item \textbf{Controller Setting Comparisons:} Comparative study of different controller settings and a comparison between LQR and Pole-Placement controllers.
 \subsection{Controller Setting Comparisons}
 %	\item \textbf{Optimal Controller Configuration:} Conclusion on which controller configuration might be best suited for such a robot.
 %\end{itemize}
-+
+
 
 
 

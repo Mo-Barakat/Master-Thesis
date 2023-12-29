@@ -5,53 +5,53 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: unsrtnat.bst
 Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: FrontBackMatter/selbst.aux
-Reallocating 'name_of_file' (item size: 1) to 26 items.
-I couldn't open database file Bibliography/Bibliography.bib
----line 166 of file Master_Thesis.aux
- : \bibdata{Bibliography/Bibliography
- :                                   }
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+Illegal, another \bibdata command---line 363 of file Master_Thesis.aux
+ : \bibdata
+ :         {Bibliographie/Bibliographie}
 I'm skipping whatever remains of this command
-I found no \citation commands---while reading file Master_Thesis.aux
-I found no database files---while reading file Master_Thesis.aux
-You've used 0 entries,
+Database file #1: Bibliographie/Bibliographie.bib
+Warning--entry type for "Bachlorsthesis" isn't style-file defined
+--line 79 of file Bibliographie/Bibliographie.bib
+You've used 4 entries,
             2481 wiz_defined-function locations,
-            552 strings with 4481 characters,
-and the built_in function-call counts, 34 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 11
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+            578 strings with 5229 characters,
+and the built_in function-call counts, 1549 in all, are:
+= -- 137
+> -- 68
+< -- 4
++ -- 28
+- -- 20
+* -- 101
+:= -- 245
+add.period$ -- 13
+call.type$ -- 4
+change.case$ -- 9
+chr.to.int$ -- 4
+cite$ -- 4
+duplicate$ -- 80
+empty$ -- 140
+format.name$ -- 26
+if$ -- 333
 int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 5
+missing$ -- 2
+newline$ -- 28
+num.names$ -- 12
+pop$ -- 38
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 4
 quote$ -- 0
-skip$ -- 1
+skip$ -- 58
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 64
+swap$ -- 19
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 28
 warning$ -- 0
-while$ -- 0
+while$ -- 13
 width$ -- 0
-write$ -- 7
-(There were 3 error messages)
+write$ -- 59
+(There was 1 error message)

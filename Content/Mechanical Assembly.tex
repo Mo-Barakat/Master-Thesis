@@ -198,6 +198,8 @@ The wheel motors were mounted on the knee wheel links using four screws, as show
 	\caption{Mounting motors on hip knee links}
 	\label{fig:Mounting motors on hip knee links}
 \end{figure}
+
+After the XM430-W350 is prepared, the motor is mounted into the dedicated cover as shown in figure \ref{fig:mountingmotorsonhipkneelinks} using 6 main screws, and it can be fixed with extra 10 screws around the cover.
 %%figure for mounting the motors on the hip knee links
 %\begin{figure}[h]
 %	\centering
@@ -221,24 +223,19 @@ The wheel motors were mounted on the knee wheel links using four screws, as show
 	\caption{Assembling knee wheel links and hip knee links}
 	\label{fig:Assembling knee wheel links and hip knee links}
 \end{figure}
-The XM430-W350 motors were mounted into the 
 
-%%figure for assembled knee wheel links and hip knee links
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=0.5\linewidth]{assembled_knee_wheel_links_and_hip_knee_links}
-%	\caption{Assembled knee wheel links and hip knee links}
-%	\label{fig:assembledkneewheellinksandhipkneelinks}
-%\end{figure}
+The knee wheel links were assembled to the hip knee links using sixteen screws as shown in figure \ref{fig:assemblingkneewheellinksandhipkneelinks} to the Knee motor horns after the motors were mounted in the hip knee links.
+The screws weren't over tightened to avoid exiting the horn from the other side and touching the motor thrust washer.
 %figure for the assembing the body hip knee links.
-\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{assembling_body_hip_knee_links}
 	\caption{Assembling body to hip knee links}
 	\label{fig:assemblingbodyhipkneelinks}
 \end{figure}
+
 The hip knee links were assembled to the body using sixteen screws as shown in figure \ref{fig:assemblingbodyhipkneelinks} to the hip motor horns after the motors were mounted in the body.
+
 %figure for fully assembled chassis
 \begin{figure}[h]
 	\centering
@@ -246,23 +243,10 @@ The hip knee links were assembled to the body using sixteen screws as shown in f
 	\caption{Fully assembled chassis}
 	\label{fig:fullyassembledchassis}
 \end{figure}
+The fully assembled chassis is shown in figure \ref{fig:fullyassembledchassis}.In that figure only the motors and the camera are mounted on the chassis.
 
 \section{Integration of Mechanical and Electronic Systems}
-
 %how the electronics were mounted on the chassis
-
-\subsection{Wiring tree}
-%how the wiring was made
-According to the wiring tree in the electrical design chapter, the wiring tree was made to fit the lengthes between the components.
-%figure for the wiring tree
-%\begin{figure}[h]
-%%	\centering
-%%	\includegraphics[width=0.5\linewidth]{wiring_tree}
-%%	\caption{Wiring tree}
-%%	\label{fig:wiringtree}
-%%\end{figure}
-%
-
 \subsection{Electronics Assembly}
 %figure for the electronics mounted on the board mounting rack
 \begin{figure}[h]
@@ -273,30 +257,51 @@ According to the wiring tree in the electrical design chapter, the wiring tree w
 \end{figure}
 %the process of connecting the wires to the board.
 %measurments of the wires used
-\begin{itemize}
-\item Discussion on how mechanical components interface with electronic systems.
-\item Challenges faced in integration and strategies employed to overcome them.
-\end{itemize}
+%\begin{itemize}
+%\item Discussion on how mechanical components interface with electronic systems.
+%\item Challenges faced in integration and strategies employed to overcome them.
+%\end{itemize}
+The electronics were mounted on the board mounting rack as shown in figure \ref{fig:electronicsmountedonboardmountingrack}.The power mangement board was mounted on the board mounting rack first using four screws, then the robot hub board was mounted on top of the power management board using four screws.The battery was placed under the board mounting rack in the space between the two designed brackets to hold it in place.
+
+\subsection{Wiring tree}
+%how the wiring was made
+According to the wiring tree in the electrical design chapter, the wiring tree was made to fit the lengthes between the components. The wires were cut to the required length and the connectors were crimped to the wires. The wires were connected to the components according to the wiring tree. The wires were tied together using cable ties to make sure they are managed properly and to avoid them interfering with the robot movement. The wires were also tied to the chassis using the designed cable management features to ensure that the wires are fixed in place.
+%figure for the wiring tree
+%\begin{figure}[h]
+%%	\centering
+%%	\includegraphics[width=0.5\linewidth]{wiring_tree}
+%%	\caption{Wiring tree}
+%%	\label{fig:wiringtree}
+%%\end{figure}
+%
+
+
 
 \section{Troubleshooting and Problem Solving}
 %the knee motor was touching the screw so we had to shorten the screw
 %the knee motor didn't fit in the link two solutions were considered either to file the link or to reprint with new dimentions.
-\begin{itemize}
-\item Discussion of any unexpected challenges or issues faced during assembly.
-\item How these issues were diagnosed and resolved.
-\end{itemize}
-\section{Safety Considerations}
-%cable lengthens
-% cables touching the motors
-\begin{itemize}
-	\item Safety measures taken during the assembly process.
-	\item Design considerations for ensuring the operational safety of the robot.
-\end{itemize}
-\begin{itemize}
-	\item \textbf{Discrete Numerical Simulation:} Elaboration on the process of discrete numerical simulation, including the discrete double integration method to arrive at the state vector.
-\end{itemize}
+Different problems were faced during the assembly process.
+The knee motor was touching the screw so the screw was shortened to avoid damaging the motor.
+The knee motor didn't fit in the link, so the link was initialy filed to make the motor fit, but then it was reprinted with new dimensions to make the motor fit.
+Some cabe management features were removed due to its interference with the robot movement.
+Other cable management features were modified due to print defects. In some narrow parts while installing the thread inserts the soldering iron touched the part and caused it to melt.
+%\begin{itemize}
+%\item Discussion of any unexpected challenges or issues faced during assembly.
+%\item How these issues were diagnosed and resolved.
+%\end{itemize}
 
-\begin{notebox}
-	the bolts used the problem to shorten them so that it wouldn't touch the motor 
-\end{notebox}
+\section{Safety Considerations}
+% cable lengthens
+% cables touching the motors
+%\begin{itemize}
+%	\item Safety measures taken during the assembly process.
+%	\item Design considerations for ensuring the operational safety of the robot.
+%\end{itemize}
+
+Some safety considerations were taken during the assembly process.
+Appling forces on differnt part of the robot to make sure that the clearance between the parts is enough to avoid the parts touching each other during the robot movement.The clearance between the hip knee links and the wheel motor covers was 2 mm, the clearance between hip knee links and wheel knee links was 2 mm.
+Soldering iron was used to insert the thread inserts into the chassis, so the soldering iron was kept away from the chassis to avoid damaging it. Considering that long wires would trip the robot and short wires would not allow the robot to move freely and may damage the wires, the wires were cut to the required length to avoid these problems.
+%\begin{notebox}
+%	the bolts used the problem to shorten them so that it wouldn't touch the motor
+%\end{notebox}
 

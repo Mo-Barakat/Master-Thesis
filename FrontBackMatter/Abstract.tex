@@ -1,22 +1,27 @@
 
 \selectlanguage{english}
 \begin{abstract}
-%General Problem
-This thesis addresses the challenge of input trajectory transfer in heterogeneous multi-agent systems, where each agent has distinct system dynamics. \\
-The concept of transfer learning has been applied to MAS to accelerate the learning process of a target agent by leveraging previously learned trajectories from a different source agent. However, directly transferring input trajectories between agents with dissimilar dynamics can lead to unwanted behaviour.
-% Research Gap
-This can be overcome by applying a mapping that transforms the input trajectory of the source system into an appropriate input trajectory for a target system so that their outputs match.
-Obtaining such an input transfer map from simple experiments is difficult, so previous research often focuses on output transfer, adaptive control or strong similarity assumptions. Those approaches either require extensive model knowledge or have limited usability.  
- 
-% Content
-%To address this problem, this thesis proposes a simple, data driven method to estimate a mapping used for input trajectory transfer.
-This thesis provides a comprehensive understanding of trajectory transfer, distinguishing the input and output transfer cases and highlighting their similarities. Those insights are then used to propose a simple, data-driven method to estimate a dynamic input transfer map for SISO systems that addresses the aforementioned problem. Structural similarity in the systems is leveraged to simplify the estimation process further. The transfer map is estimated as a lifted system matrix and a transfer function. The performance of the estimated dynamic input transfer map is compared to a static map using a simple gain and to the direct transfer of the input trajectories.
+    %General Problem
 
-% Contributions
-It is shown that input and output transfer are equivalent under certain conditions. An input transfer map based on this assumption was able to significantly reduce the differences between a source and a target system in three simulated scenarios. This even includes scenarios where the systems have nonlinear, non-minimum phase dynamics. \\
-Compared to a static map, the performance of a dynamic input transfer is superior, especially in cases where the estimated transfer map is applied to input trajectories which are not part of the training data. \\
-Furthermore, the dynamic input transfer map can have a model order lower than the theoretically expected order of the transfer system, given that the source and target systems are related. Therefore, the expected order only provides an upper limit for the order of an estimated transfer map, and not a recommended choice. \\
-Nonetheless, this thesis alone does not fully explore the potential and limitations of the proposed method. Future research is necessary to address these topics further.
+%%General Problem
+    %% Content
+    %% Contributions
+
+%This thesis addresses the challenge of input trajectory transfer in heterogeneous multi-agent systems, where each agent has distinct system dynamics. \\
+%The concept of transfer learning has been applied to MAS to accelerate the learning process of a target agent by leveraging previously learned trajectories from a different source agent. However, directly transferring input trajectories between agents with dissimilar dynamics can lead to unwanted behaviour.
+%% Research Gap
+%This can be overcome by applying a mapping that transforms the input trajectory of the source system into an appropriate input trajectory for a target system so that their outputs match.
+%Obtaining such an input transfer map from simple experiments is difficult, so previous research often focuses on output transfer, adaptive control or strong similarity assumptions. Those approaches either require extensive model knowledge or have limited usability.
+%
+%% Content
+%%To address this problem, this thesis proposes a simple, data driven method to estimate a mapping used for input trajectory transfer.
+%This thesis provides a comprehensive understanding of trajectory transfer, distinguishing the input and output transfer cases and highlighting their similarities. Those insights are then used to propose a simple, data-driven method to estimate a dynamic input transfer map for SISO systems that addresses the aforementioned problem. Structural similarity in the systems is leveraged to simplify the estimation process further. The transfer map is estimated as a lifted system matrix and a transfer function. The performance of the estimated dynamic input transfer map is compared to a static map using a simple gain and to the direct transfer of the input trajectories.
+%
+%% Contributions
+%It is shown that input and output transfer are equivalent under certain conditions. An input transfer map based on this assumption was able to significantly reduce the differences between a source and a target system in three simulated scenarios. This even includes scenarios where the systems have nonlinear, non-minimum phase dynamics. \\
+%Compared to a static map, the performance of a dynamic input transfer is superior, especially in cases where the estimated transfer map is applied to input trajectories which are not part of the training data. \\
+%Furthermore, the dynamic input transfer map can have a model order lower than the theoretically expected order of the transfer system, given that the source and target systems are related. Therefore, the expected order only provides an upper limit for the order of an estimated transfer map, and not a recommended choice. \\
+%Nonetheless, this thesis alone does not fully explore the potential and limitations of the proposed method. Future research is necessary to address these topics further.
 
 
 %
@@ -64,7 +69,7 @@ Nonetheless, this thesis alone does not fully explore the potential and limitati
 %Overall, this thesis provides a valuable contribution to the field of input trajectory transfer in MAS and proposes future research ideas in this area.\\
 %%%
 \par
-\keywords{input transfer, trajectory transfer, transfer learning, multi-agent systems}
+\keywords{Robotics, Multi-Legged Robot, Control, Simulation, Design, 3D Printing, CAD, Modeling}
 \end{abstract}
 
 

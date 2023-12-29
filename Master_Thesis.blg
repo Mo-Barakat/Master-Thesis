@@ -7,44 +7,47 @@ Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: FrontBackMatter/selbst.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: Bibliographie/Bibliographie.bib
-You've used 1 entry,
+Warning--entry type for "Bachlorsthesis" isn't style-file defined
+--line 79 of file Bibliographie/Bibliographie.bib
+You've used 6 entries,
             2481 wiz_defined-function locations,
-            560 strings with 4735 characters,
-and the built_in function-call counts, 706 in all, are:
-= -- 61
-> -- 39
-< -- 1
-+ -- 14
-- -- 12
-* -- 54
-:= -- 109
-add.period$ -- 5
-call.type$ -- 1
-change.case$ -- 2
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 33
-empty$ -- 55
-format.name$ -- 13
-if$ -- 154
+            588 strings with 5654 characters,
+and the built_in function-call counts, 2598 in all, are:
+= -- 219
+> -- 144
+< -- 6
++ -- 56
+- -- 44
+* -- 178
+:= -- 411
+add.period$ -- 21
+call.type$ -- 6
+change.case$ -- 13
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 127
+empty$ -- 224
+format.name$ -- 52
+if$ -- 562
 int.to.chr$ -- 1
-int.to.str$ -- 2
-missing$ -- 1
-newline$ -- 14
-num.names$ -- 3
-pop$ -- 11
+int.to.str$ -- 7
+missing$ -- 3
+newline$ -- 39
+num.names$ -- 18
+pop$ -- 62
 preamble$ -- 1
-purify$ -- 1
+purify$ -- 6
 quote$ -- 0
-skip$ -- 25
+skip$ -- 92
 stack$ -- 0
-substring$ -- 42
-swap$ -- 14
-text.length$ -- 1
+substring$ -- 108
+swap$ -- 35
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 7
+type$ -- 42
 warning$ -- 0
-while$ -- 5
+while$ -- 20
 width$ -- 0
-write$ -- 23
+write$ -- 87
+(There was 1 warning)
