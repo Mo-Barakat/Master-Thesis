@@ -9,45 +9,52 @@ Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: Bibliographie/Bibliographie.bib
 Warning--entry type for "Bachlorsthesis" isn't style-file defined
 --line 79 of file Bibliographie/Bibliographie.bib
-You've used 6 entries,
+Repeated entry---line 265 of file Bibliographie/Bibliographie.bib
+ : @article{guo2022design
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Dy"
+Warning--can't use both volume and number fields in nath2017design
+Warning--can't use both volume and number fields in hsu2022implementation
+You've used 17 entries,
             2481 wiz_defined-function locations,
-            588 strings with 5654 characters,
-and the built_in function-call counts, 2598 in all, are:
-= -- 219
-> -- 144
-< -- 6
-+ -- 56
-- -- 44
-* -- 178
-:= -- 411
-add.period$ -- 21
-call.type$ -- 6
-change.case$ -- 13
-chr.to.int$ -- 6
-cite$ -- 6
-duplicate$ -- 127
-empty$ -- 224
-format.name$ -- 52
-if$ -- 562
-int.to.chr$ -- 1
-int.to.str$ -- 7
-missing$ -- 3
-newline$ -- 39
-num.names$ -- 18
-pop$ -- 62
+            655 strings with 7664 characters,
+and the built_in function-call counts, 7564 in all, are:
+= -- 631
+> -- 429
+< -- 17
++ -- 165
+- -- 130
+* -- 546
+:= -- 1175
+add.period$ -- 62
+call.type$ -- 17
+change.case$ -- 35
+chr.to.int$ -- 16
+cite$ -- 19
+duplicate$ -- 376
+empty$ -- 666
+format.name$ -- 153
+if$ -- 1657
+int.to.chr$ -- 2
+int.to.str$ -- 18
+missing$ -- 11
+newline$ -- 97
+num.names$ -- 51
+pop$ -- 177
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 17
 quote$ -- 0
-skip$ -- 92
+skip$ -- 252
 stack$ -- 0
-substring$ -- 108
-swap$ -- 35
-text.length$ -- 2
+substring$ -- 313
+swap$ -- 108
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
-warning$ -- 0
-while$ -- 20
+type$ -- 119
+warning$ -- 2
+while$ -- 55
 width$ -- 0
-write$ -- 87
-(There was 1 warning)
+write$ -- 239
+(There was 1 error message)

@@ -1,20 +1,15 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Dynamics(2021)]{handle}
+\bibitem[Dynamics(2021{\natexlab{a}})]{handle}
 Boston Dynamics.
 \newblock Handle.
-\newblock \url{https://www.bostondynamics.com/handle}, 2021.
+\newblock \url{https://www.bostondynamics.com/handle}, 2021{\natexlab{a}}.
 \newblock Accessed: 2021-08-01.
-
-\bibitem[Stoll(2021)]{Bachlorsthesis}
-David Stoll.
-\newblock Development of a robot-in-the-loop testbed for cooperative learning
-  in multi-agent systems, 2021.
 
 \bibitem[Klemm et~al.(2019)Klemm, Morra, Salzmann, Tschopp, Bodie, Gulich,
   K{\"u}ng, Mannhart, Pfister, Vierneisel, et~al.]{klemm2019ascento}
@@ -25,12 +20,89 @@ Victor Klemm, Alessandro Morra, Ciro Salzmann, Florian Tschopp, Karen Bodie,
 \newblock In \emph{2019 International Conference on Robotics and Automation
   (ICRA)}, pages 7515--7521. IEEE, 2019.
 
-\bibitem[Kim and Kim(2015)]{kim2015dynamic}
-Hyun-Soo Kim and Jong-Hwan Kim.
-\newblock Dynamic modeling and control of a two-wheeled inverted pendulum
-  mobile robot.
-\newblock \emph{IEEE Transactions on Control Systems Technology}, 24\penalty0
-  (1):\penalty0 1--14, 2015.
+\bibitem[Honda(2021)]{asimo}
+Honda.
+\newblock Asimo.
+\newblock \url{https://asimo.honda.com/}, 2021.
+\newblock Accessed: 2021-08-01.
+
+\bibitem[Dynamics(2021{\natexlab{b}})]{atlas}
+Boston Dynamics.
+\newblock Atlas.
+\newblock \url{https://www.bostondynamics.com/atlas}, 2021{\natexlab{b}}.
+\newblock Accessed: 2021-08-01.
+
+\bibitem[Sony(2021)]{qrio}
+Sony.
+\newblock Qrio.
+\newblock
+  \url{https://www.sony.net/SonyInfo/technology/technology/theme/qrio/}, 2021.
+\newblock Accessed: 2021-08-01.
+
+\bibitem[Klokowski et~al.(2023)Klokowski, E{\ss}er, Gramse, Pschera, Plitt,
+  Feldmeier, Bajpai, Jestel, Bach, Urbann, et~al.]{klokowski2023evobot}
+Patrick Klokowski, Julian E{\ss}er, Nils Gramse, Benedikt Pschera, Marc Plitt,
+  Frido Feldmeier, Shubham Bajpai, Christian Jestel, Nicolas Bach, Oliver
+  Urbann, et~al.
+\newblock evobot--design and learning-based control of a two-wheeled compound
+  inverted pendulum robot.
+\newblock In \emph{2023 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 10425--10432. IEEE, 2023.
+
+\bibitem[Stoll(2021)]{Bachlorsthesis}
+David Stoll.
+\newblock Development of a robot-in-the-loop testbed for cooperative learning
+  in multi-agent systems, 2021.
+
+\bibitem[Nath et~al.(2017)Nath, Das, Mallick, and Chowdhury]{nath2017design}
+Alok Nath, Goutam Das, Anik Mallick, and Shovan Chowdhury.
+\newblock Design, implementation and stabilization of a bipedal robot.
+\newblock In \emph{AIP Conference Proceedings}, volume 1919. AIP Publishing,
+  2017.
+
+\bibitem[Madadi and Tosunoglu(2007)]{madadi2007design}
+Vishnu~Vardhan Madadi and Sabri Tosunoglu.
+\newblock Design and development of a biped robot.
+\newblock In \emph{2007 International Symposium on Computational Intelligence
+  in Robotics and Automation}, pages 243--247. IEEE, 2007.
+
+\bibitem[Guo et~al.(2022)Guo, Liu, Liang, Zhang, Chen, Xia, Wang, and
+  Wang]{guo2022design}
+Tiezheng Guo, Jinhui Liu, Haonan Liang, Yitong Zhang, Wei Chen, Ximing Xia,
+  Meiqing Wang, and Zhiming Wang.
+\newblock Design and dynamic analysis of jumping wheel-legged robot in complex
+  terrain environment.
+\newblock \emph{Frontiers in Neurorobotics}, 16:\penalty0 1066714, 2022.
+
+\bibitem[Zhang et~al.(2022)Zhang, Liu, Song, Wang, and Meng]{zhang2022dynamic}
+Chao Zhang, Tangyou Liu, Shuang Song, Jiaole Wang, and Max Q-H Meng.
+\newblock Dynamic wheeled motion control of wheel-biped transformable robots.
+\newblock \emph{Biomimetic Intelligence and Robotics}, 2\penalty0 (2):\penalty0
+  100027, 2022.
+
+\bibitem[Cui et~al.(2022)Cui, Xin, Liu, Rong, and Li]{cui2022modeling}
+Zemin Cui, Yaxian Xin, Shuyun Liu, Xuewen Rong, and Yibin Li.
+\newblock Modeling and control of a wheeled biped robot.
+\newblock \emph{Micromachines}, 13\penalty0 (5):\penalty0 747, 2022.
+
+\bibitem[Hsu et~al.(2022)Hsu, Chen, and Lin]{hsu2022implementation}
+Chun-Fei Hsu, Bo-Rui Chen, and Zi-Ling Lin.
+\newblock Implementation and control of a wheeled bipedal robot using a fuzzy
+  logic approach.
+\newblock In \emph{Actuators}, volume~11, page 357. MDPI, 2022.
+
+\bibitem[Xin and Vijayakumar(2020)]{xin2020online}
+Songyan Xin and Sethu Vijayakumar.
+\newblock Online dynamic motion planning and control for wheeled biped robots.
+\newblock In \emph{2020 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 3892--3899. IEEE, 2020.
+
+\bibitem[Kim and Kwon(2015)]{kim2015dynamic}
+Sangtae Kim and SangJoo Kwon.
+\newblock Dynamic modeling of a two-wheeled inverted pendulum balancing mobile
+  robot.
+\newblock \emph{International Journal of Control, Automation and Systems},
+  13:\penalty0 926--933, 2015.
 
 \bibitem[Meindl(2019)]{MastersThesis}
 Michael Meindl.
