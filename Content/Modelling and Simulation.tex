@@ -12,7 +12,7 @@ The careful derivation of these parameters is a testament to the thoroughness of
 \section{Mathematical Modelling}
 
 %	\item \textbf{TWIPR Model:} Explanation of the Two-Wheeled Inverted Pendulum Robot (TWIPR) model.
-The two-wheeled Inverted Pendulum robot model is as shown in the figure where it consists of two legs that include a hip and knee joints as well as wheels at the end of each leg.
+The two-wheeled Inverted Pendulum robot model is as shown in the figure  \ref{fig:New model} where it consists of two legs that include a hip and knee joints as well as wheels at the end of each leg.
 The robot needs to constantly adjust its posture to be able to maintain the balance, just like how the human being balances when standing on the feet.
 This new TWIPR model is the latest iteration in the evolution of its predecessor.
 
@@ -37,6 +37,7 @@ This new TWIPR model is the latest iteration in the evolution of its predecessor
 
 %	\item \textbf{Focus on 2D Dynamics:} Discussion on the scope limited to 2D dynamics and plans for future expansion to 3D dynamics and controller synthesis.
 \subsection{2D Dynamics}
+%golbal coordinate system and local coordinate system
 The scope of this project is limited to 2D dynamics.
 However, the model can be extended to 3D dynamics and controller synthesis for the 3D dynamics in the future.
 The 2D dynamics is considered for simplification purposes and to reduce the complexity of the model.
@@ -44,8 +45,9 @@ The 2D dynamics modeling takes into account the robot's movement in the x-y plan
 The 2D dynamics modeling considers one leg and half of the body mass.
 %	\item \textbf{Assumptions and Parameters:} Detailing assumptions such as considering motor angles as parameters.
 	%the cansilation of the radial forces and the assumption of the motor angles as parameters.
+\newpage
 \subsection{Assumptions and Parameters}
-Many assumptions were made to simplify the model and reduce the complexity of the calculations.The weights and the lengths of the links are constant, and the angles $\phi_2$, $\phi_3$ are input variables that can be controlled to adjust the robot's posture.
+Many assumptions as outlined in \ref{tab:parameters} for the figure \ref{fig:Mechanical model with the local coordinate system} were made to simplify the model and reduce the complexity of the calculations. The weights and the lengths of the links are constant, and the angles $\phi_2$, $\phi_3$ are input variables that can be controlled to adjust the robot's posture.
 %table of the assumptions
 	\begin{table}[h!]
 		\centering
@@ -59,25 +61,46 @@ Many assumptions were made to simplify the model and reduce the complexity of th
 			$L_2$ & 0.017 m & Length of the Body knee Link \\
 			$L_{C1}$ & 0.013 m & Distance between the Wheel Joint and the center of mass of the Wheel knee Link \\
 			$L_{C2}$ & 0.013 m & Distance between the Knee Joint and the center of mass of the Body knee Link \\
-			$L_{C3}$ & 0.013 m & Distance between the Hip Joint and the center of mass of the body \\
-			$m_{L1}$ & 0.1 kg & Mass of the Wheel knee Link \\
-			$m_{L2}$ & 0.1 kg & Mass of the Body knee Link \\
-			$m_K$ & 0.1 kg & Mass of the Knee Joint \\
-			$m_B$ & 0.1 kg & Mass of the Body \\
+			$L_{C3}$ & 0.01 m & Distance between the Hip Joint and the center of mass of the body \\
+			$m_{L1}$ & 0.2 kg & Mass of the Wheel knee Link \\
+			$m_{L2}$ & 0.2 kg & Mass of the Body knee Link \\
+			$m_K$ & 0.2 kg & Mass of the Knee Joint \\
+			$m_B$ & 0.5 kg & Mass of the Body \\
 			$L_G$ & - & Distance between the center of gravity and the Wheel Joint \\
 			$\theta$ & - & Angle between the center of gravity and the Wheel knee Link \\
 			$\phi_1$ & - & Angle between the Body knee Link and the $y_B$ vertical axis of the body \\
 			$\phi_2$ & - & Angle between the Wheel knee Link and the Body knee Link \\
 			$\phi_3$ & - & Angle between the Body knee Link and the center of mass of the body \\
 			$\phi_4$ & - & Angle between the Body knee Link and the $X_B$ horizontal axis of the body \\
+			$L_m$ & - & Distance between the Wheel Joint and the center of mass of the Wheel knee Link \\
+			$L_x$ & - & Distance between the Wheel Joint and the center of mass of the hip knee Link \\
+			$L_b$ & - & Distance between the Wheel Joint and the center of mass of the body \\
+			$\alpha$ & - & Angle between $L_x$ and $L_2$ \\
+			$I_{L1}$ & - & Moment of inertia of the knee wheel link around the z-axis \\
+			$I_{L2}$ & - & Moment of inertia of the hip knee link around the z-axis \\
+			$I_K$ & - & Moment of inertia of the knee joint around the z-axis \\
+			$I_B$ & - & Moment of inertia of the body around the z-axis \\
+			$I$ & - & Total moment of inertia of the robot around the z-axis \\
+			$a_1$ & - & Length of the knee wheel link \\
+			$b_1$ & - & Width of the knee wheel link \\
+			$a_2$ & - & Length of the hip knee link \\
+			$b_2$ & - & Width of the hip knee link \\
+			$a_B$ & - & Length of the body \\
+			$b_B$ & - & Width of the body \\
+			$R_m$ & - & Radius of the knee joint \\
+			$a_B$ & - & Length of the body \\
+			$b_B$ & - & Width of the body \\
 			\bottomrule
 		\end{tabular}
 	\end{table}
 
 
+
 %	\item \textbf{Model Derivation for \textit{l\_cg} and \textit{I\_y}:} Derivation of the models for center of gravity length (\textit{l\_cg}) and inertia around the y-axis (\textit{I\_y}).
-%Center of Gravity
+%skip one page
+
 \newpage
+%Center of Gravity
 \subsection{Center of Gravity }
 %	$\bullet$ in that section the calculations of the overall center of gravity
 %
@@ -88,40 +111,46 @@ Many assumptions were made to simplify the model and reduce the complexity of th
 %	$\bullet$ accurately determining the COG is crucial for predicting and controlling dynamic behavior
 %
 %	in the above figure in order to simplify the deriviation of the center of
-
-The calculation of the center of gravity is crucial for the dynamic analysis of the robot.
-The center of gravity is calculated by taking into account the weights of the links, the knee joint, the body and the distances between these weights and the local coordinate system of the robot.
-The stability of the robot is directly impacted by the center of gravity position, which also affects how it reacts to forces and moments from the outside world.
-The following equations are used to calculate the center of gravity location referencing the local coordinate system of the robot.
-% input the model figure from the graphics path
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=.5\textwidth]{Model}
 		\caption[Mechanical model with the local coordinate system]{Figure illustrating the mechanical model with the local coordinate system to determine the center of gravity.}
-		\label{Mechanical model with the local coordinate system}
+		\label{fig:Mechanical model with the local coordinate system}
 	\end{figure}
+
+The calculation of the center of gravity is crucial for the dynamic analysis of the robot.
+The center of gravity is calculated by taking into account the weights of the links, the knee joint, the body and the distances between these weights and the local coordinate system of the robot.
+The stability of the robot is directly impacted by the center of gravity position, which also affects how it reacts to forces and moments from the outside world.
+The following equations are used to calculate the center of gravity location referencing the local coordinate system of the robot as shown in the figure \ref{Mechanical model with the local coordinate system}.
+% input the model figure from the graphics path
+
 
 	\begin{equation}
 		\begin{aligned}
 			x_{CG} = \frac{m_{L1} \cdot 0 + m_K \cdot 0 + m_{L2} \cdot L_{C2} \cdot \sin(\phi_2) + m_B \cdot (L_2 \cdot \sin(\phi_2) + L_{C3} \cdot \sin(\phi_2 + \phi_3))}{m_{L1} + m_{L2} + m_K + m_B}
 		\end{aligned}
 	\end{equation}
+Where $x_{CG}$ is the center of gravity in the x-axis.
 
 	\begin{equation}
 		\begin{aligned}
 			y_{CG} = \frac{m_{L1} \cdot L_{C1} + m_K \cdot L_1 + m_{L2} \cdot (L_1 + L_{C2} \cdot \cos(\phi_2)) + m_B \cdot (L_1 + L_2 \cdot \cos(\phi_2) + L_{C3} \cdot \cos(\phi_2 + \phi_3))}{m_{L1} + m_{L2} + m_K + m_B}
 		\end{aligned}
 	\end{equation}
+Where $y_{CG}$ is the center of gravity in the y-axis.
 
 %expain the equations in more details
 	\begin{equation}
 		L_G = \sqrt{x_{CG}^2 + y_{CG}^2}
 	\end{equation}
+The distance between the center of gravity and the Wheel Joint is calculated using the Pythagorean theorem.
 
 	\begin{equation}
 		\theta = \arctan\left(\frac{{x_{CG}}}{{y_{CG}}}\right)
 	\end{equation}
+The angle between the center of gravity $L_G$ and the knee wheel link $L_1$ is calculated using the arctangent function.
 
+\subsection{Moment of inertia}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=.5\textwidth]{Angles}
@@ -129,13 +158,13 @@ The following equations are used to calculate the center of gravity location ref
 		\label{fig:Schematic representation xxxxx detailing the requisite angles and lengths for calculating the moment of inertia.}
 	\end{figure}
 
-	\subsection{Moment of inertia}
+
 	%MOI
-	Moment of inertia calculations
+	Moment of inertia calculations are important for the dynamic analysis of the robot. In order to calculate the moment of inertia, the lengths from the wheel joint to the center of mass of each link are calculated. The moment of inertia is calculated using the following equations.
 	\begin{equation}
 		L_m = \sqrt{L_1^2 + L_{C2}^2 - L_1 L_{C2} \cos(180 - \phi_2)}
 	\end{equation}
-
+Where $L_m$ is the distance between the wheel joint and the center of mass of the knee wheel link.
 	\begin{equation}
 		L_{x} = \sqrt{L_1^2 + L_2^2 - L_1 L_2 \cos(180 - \phi_2)}
 	\end{equation}
@@ -155,17 +184,20 @@ The following equations are used to calculate the center of gravity location ref
 		I_{L1} = \frac{1}{12} m_{L1} (a_1^2 + b_1^2)
 	\end{equation}
 	\begin{equation}
-		I_{L2} = \frac{1}{12} m_{L1} (a_2^2 + b_2^2)
-	\end{equation}
-	\begin{equation}
-		I_K = \frac{1}{2} m_K R_m^2
+		I_{L2} = \frac{1}{12} m_{L2} (a_2^2 + b_2^2)
 	\end{equation}
 	\begin{equation}
 		I_B = \frac{1}{12} m_B (a_B^2 + b_B^2)
 	\end{equation}
+Since the knee wheel link, the hip knee link and the body are assumed to be cuboids, the moment of inertia of each link is calculated using the equation above.
+	\begin{equation}
+		I_K = \frac{1}{2} m_K R_m^2
+	\end{equation}
+	The moment of inertia of the knee joint is calculated using the equation above where the knee joint is assumed to be a cylinder.
 	\begin{equation}
 		I = I_{L1} + m_{L1} L_{C1}^2 + I_K + m_K L_1^2 + I_{L2} + m_{L2} L_m^2 + I_B + m_B L_b^2
 	\end{equation}
+	The total moment of inertia of the robot is calculated using the equation above.
 %	\item \textbf{Integration into TWIPR Model:} Integration of derived models into a new TWIPR framework.
 
 %	\item \textbf{Linear Model Derivation:} Derivation of the linear model from the integrated TWIPR model.
@@ -183,6 +215,14 @@ The following equations are used to calculate the center of gravity location ref
 	
 	
 	\subsection{Dynamics of the Two-Wheeled Inverted Pendulum Robot}
+%figure of the TWIPR dynamics
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\textwidth]{TWIPR dynamics}
+		\caption[Two-Wheeled Inverted Pendulum Robot Dynamics]{Figure illustrating the Two-Wheeled Inverted Pendulum Robot Dynamics.}
+		\label{fig:Two-Wheeled Inverted Pendulum Robot Dynamics}
+	\end{figure}
+
 	Given the functions $B_i: \mathbb{R} \rightarrow \mathbb{R}$, $C_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_i: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, the equations of motion are given by:
 
 	\begin{align}
@@ -250,7 +290,7 @@ The following equations are used to calculate the center of gravity location ref
 	\end{equation}
 
 
-	\begin{table}[t!]
+	\begin{table}[h]
 		\centering
 		\caption{Parameters of the mechanical system}
 		\label{tab:parameters}
@@ -273,7 +313,7 @@ The following equations are used to calculate the center of gravity location ref
 	\end{table}
 	
 	
-	
+\newpage
 \subsection{Linearization of the Two-Wheeled Inverted Pendulum Robot}
 In this section, we linearize the equations of motion of the legged TWIPR robot about the upright equilibrium point. Movement of the robot is restricted to the x-y plane.
 
@@ -643,7 +683,7 @@ If the controller is not returned when the configuration changes, the old K gain
 
 
 
-
+%%pitch angle
 
 
 

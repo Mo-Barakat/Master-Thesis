@@ -13,48 +13,47 @@ Repeated entry---line 265 of file Bibliographie/Bibliographie.bib
  : @article{guo2022design
  :                       ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Dy"
 Warning--can't use both volume and number fields in nath2017design
 Warning--can't use both volume and number fields in hsu2022implementation
-You've used 17 entries,
+You've used 24 entries,
             2481 wiz_defined-function locations,
-            655 strings with 7664 characters,
-and the built_in function-call counts, 7564 in all, are:
-= -- 631
-> -- 429
-< -- 17
-+ -- 165
-- -- 130
-* -- 546
-:= -- 1175
-add.period$ -- 62
-call.type$ -- 17
-change.case$ -- 35
-chr.to.int$ -- 16
-cite$ -- 19
-duplicate$ -- 376
-empty$ -- 666
-format.name$ -- 153
-if$ -- 1657
+            695 strings with 9477 characters,
+and the built_in function-call counts, 11150 in all, are:
+= -- 927
+> -- 654
+< -- 23
++ -- 247
+- -- 198
+* -- 846
+:= -- 1732
+add.period$ -- 86
+call.type$ -- 24
+change.case$ -- 49
+chr.to.int$ -- 23
+cite$ -- 26
+duplicate$ -- 545
+empty$ -- 968
+format.name$ -- 232
+if$ -- 2434
 int.to.chr$ -- 2
-int.to.str$ -- 18
-missing$ -- 11
-newline$ -- 97
-num.names$ -- 51
-pop$ -- 177
+int.to.str$ -- 25
+missing$ -- 18
+newline$ -- 132
+num.names$ -- 72
+pop$ -- 240
 preamble$ -- 1
-purify$ -- 17
+purify$ -- 24
 quote$ -- 0
-skip$ -- 252
+skip$ -- 360
 stack$ -- 0
-substring$ -- 313
-swap$ -- 108
-text.length$ -- 8
+substring$ -- 509
+swap$ -- 153
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 119
+type$ -- 168
 warning$ -- 2
-while$ -- 55
+while$ -- 84
 width$ -- 0
-write$ -- 239
+write$ -- 334
 (There was 1 error message)

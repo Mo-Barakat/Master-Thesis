@@ -7,82 +7,84 @@
 \contentsline {section}{\numberline {1.2}Explanation of the Goals and Requirements}{2}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Literature Review}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Overview of Two-Wheeled Inverted Pendulum Robots (TWIPR)}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Prior Works and Advances in Multi-Legged Robotic Systems}{3}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Mechanical Design and Development of Wheeled Robots}{3}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Dynamic Modeling of Wheeled Bipedal Robots}{4}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.2}Prior Works and Advances in Multi-Legged Robotic Systems}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Mechanical Design and Development}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Dynamic Modeling of Wheeled Bipedal Robots}{5}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Control of Wheeled Bipedal Robots}{5}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Integration of Learning and Adaptive Control Mechanisms in Wheeled Bipedal Robots}{5}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Applications and Future Directions}{5}{subsection.2.2.5}%
-\contentsline {chapter}{\numberline {3}Mechanical Design}{6}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Design Objectives and Requirements}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Conceptual Design}{7}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Schmatic Representation of the Robot}{8}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Initial Calculations}{8}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Detailed Design Development}{10}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Body Design}{10}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Hip Knee Link Design}{11}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Knee Wheel Link Design}{12}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Full Design}{13}{subsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.5.5}Boards Mounting rack}{13}{subsection.3.5.5}%
-\contentsline {subsection}{\numberline {3.5.6}Safety considerations}{13}{subsection.3.5.6}%
-\contentsline {section}{\numberline {3.6}Design for Manufacturability and Assembly}{13}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Prototyping and Iterative Design}{13}{section.3.7}%
-\contentsline {chapter}{\numberline {4}Electronic Design}{18}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Design Objectives and Constraints}{19}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Component Selection}{19}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Hip and Knee Motors}{19}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Wheel Motors}{20}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Raspberry Pi}{20}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Distance Sensor}{21}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Camera}{21}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Battery}{22}{subsection.4.2.6}%
-\contentsline {section}{\numberline {4.3}Circuit Design}{22}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Robot Hub Board}{23}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Power Management}{24}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Modelling and Simulation}{25}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Mathematical Modelling}{26}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}2D Dynamics}{26}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Assumptions and Parameters}{26}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Center of Gravity}{27}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Moment of inertia}{27}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}Dynamics of the Two-Wheeled Inverted Pendulum Robot}{29}{subsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.1.6}Linearization of the Two-Wheeled Inverted Pendulum Robot}{30}{subsection.5.1.6}%
-\contentsline {section}{\numberline {5.2}Numerical Simulation}{32}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Discrete numerical simulation}{32}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Discrete double integration method}{32}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Simulation Environment}{32}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Physics and Object Primitives}{33}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Collision Checking and Dynamics}{33}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Objects and Agents}{33}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Scheduling and Real Robot Integration}{33}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Integration of the Model}{33}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Controller Synthesis}{34}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Linear Quadratic Regulator (LQR)}{34}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Pole-Placement Technique}{34}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Configuration Specificity}{35}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}Simulation Analysis}{36}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Controller Responses}{36}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Impact of Non-Retuning}{39}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Influence of Leg Configuration}{39}{subsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.5.4}Controller Setting Comparisons}{39}{subsection.5.5.4}%
-\contentsline {chapter}{\numberline {6}Mechanical Assembly}{40}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Components Overview}{41}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Fabrication}{41}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Assembly Process}{42}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Motors Assembly}{42}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Screws and thread inserts}{43}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Chassis Assembly}{43}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Integration of Mechanical and Electronic Systems}{46}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Electronics Assembly}{46}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Wiring tree}{46}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Troubleshooting and Problem Solving}{46}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Safety Considerations}{47}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Firmware and Testing}{48}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Firmware Development}{49}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Programming Languages and Tools}{49}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Integration with Hardware}{49}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Testing Framework and Methodology}{49}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Test Cases and Scenarios}{49}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Debugging and Troubleshooting}{49}{section.7.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{XII}{chapter*.65}%
+\contentsline {subsection}{\numberline {2.2.4}Integration of Learning and Adaptive Control Mechanisms in Wheeled Bipedal Robots}{6}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Applications and Future Directions}{6}{subsection.2.2.5}%
+\contentsline {chapter}{\numberline {3}Mechanical Design}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Design Objectives and Requirements}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Conceptual Design}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Schmatic Representation of the Robot}{9}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Initial Calculations}{9}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Detailed Design Development}{11}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Body Design}{11}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Hip Knee Link Design}{13}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Knee Wheel Link Design}{14}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Boards Mounting rack}{15}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Motor Cover}{16}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}Full Design}{17}{subsection.3.5.6}%
+\contentsline {subsection}{\numberline {3.5.7}Dimensions}{19}{subsection.3.5.7}%
+\contentsline {subsection}{\numberline {3.5.8}Safety considerations}{20}{subsection.3.5.8}%
+\contentsline {section}{\numberline {3.6}Design for Manufacturability and Assembly}{20}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Prototyping and Iterative Design}{20}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Electronic Design}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Design Objectives and Constraints}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Component Selection}{22}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Hip and Knee Motors}{22}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Wheel Motors}{23}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Raspberry Pi}{23}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Distance Sensor}{24}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Camera}{24}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Battery}{25}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}Circuit Design}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Robot Hub Board}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Power Management}{27}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Modelling and Simulation}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Mathematical Modelling}{29}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}2D Dynamics}{29}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Assumptions and Parameters}{30}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Center of Gravity}{31}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Moment of inertia}{32}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Dynamics of the Two-Wheeled Inverted Pendulum Robot}{33}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}Linearization of the Two-Wheeled Inverted Pendulum Robot}{34}{subsection.5.1.6}%
+\contentsline {section}{\numberline {5.2}Numerical Simulation}{36}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Discrete numerical simulation}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Discrete double integration method}{36}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Simulation Environment}{36}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Physics and Object Primitives}{36}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Collision Checking and Dynamics}{37}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Objects and Agents}{37}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Scheduling and Real Robot Integration}{37}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Integration of the Model}{37}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Controller Synthesis}{37}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Linear Quadratic Regulator (LQR)}{38}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Pole-Placement Technique}{38}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Configuration Specificity}{39}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Simulation Analysis}{40}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Controller Responses}{40}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Impact of Non-Retuning}{42}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Influence of Leg Configuration}{42}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Controller Setting Comparisons}{42}{subsection.5.5.4}%
+\contentsline {chapter}{\numberline {6}Mechanical Assembly}{44}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Components Overview}{45}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Fabrication}{45}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Assembly Process}{46}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Motors Assembly}{46}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Screws and thread inserts}{47}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Chassis Assembly}{47}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Integration of Mechanical and Electronic Systems}{50}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Electronics Assembly}{50}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Wiring tree}{50}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Troubleshooting and Problem Solving}{50}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Safety Considerations}{51}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Firmware and Testing}{52}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Firmware Development}{53}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Programming Languages and Tools}{53}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Integration with Hardware}{53}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Testing Framework and Methodology}{53}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Test Cases and Scenarios}{53}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Debugging and Troubleshooting}{53}{section.7.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{XII}{chapter*.74}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

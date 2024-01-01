@@ -35,7 +35,7 @@ two designs where considered for the legs, the normal joint leg and the complian
 	\caption[Initial Design Concepts]{Three initial Design Concepts for the robot body}
 	\label{fig:initialdesigns}
 \end{figure}
-Two main designs where considered for the legs, the normal joint leg and the compliant leg.
+Two main designs where considered for the legs as shown in the figure \ref{fig:legdesignsjbhi}, the normal joint leg and the compliant leg.
 The compliant leg is more flexible and can be used to absorb the shock from the ground.\ The normal joint leg is more rigid and can be used to generate more torque.in addition, the normal is more relative to our use-case as it can precisely control the position of the leg.
 % figure for the leg designs concepts
 \begin{figure}[h]
@@ -70,25 +70,28 @@ The summation of the torques around point x should be equal to zero to maintain 
 	\sum_{i=1}^{n} \tau_{i}=0
 \end{equation}
 \begin{equation}
-	\sum_{i=1}^{n} \tau_{i}=m_{B}*g*D-m_{K}*g*I
+	\sum_{i=1}^{n} \tau_{i}=m_{B}gI-m_{K}g(0.7)D
 \end{equation}
 \begin{equation}
-	\sum_{i=1}^{n} \tau_{i}=0.5*9.81*0.03-0.2*9.81*0.5*0.15=0 Nm
+	\sum_{i=1}^{n} \tau_{i}=0.704(9.81)(0.03)-0.2(9.81)(0.7)(0.15)\approx0 Nm
 \end{equation}
 The Lengths of D and I can be modified to make sure that the summation of the torques around point x is equal or approximately equal to zero.
 This will make sure that the robot can balance itself with minimum wheel motor torque.
-The torques can cancel each other out by readjusting the lengths of D or I and also by modefiing the weight distribution in the body and the legs.
+The torques can cancel each other out by readjusting the lengths of D or I and also by modeling the weight distribution in the body and the legs.
 
-The torque required to lift the body is calculated as follows:
+The torque required to lift the body is calculated around the knee joint point y as follows:
 \begin{equation}
-	\sum_{i=1}^{n} \tau_{i}=m_{B}*g*(D+I)-m_{K}*g*L_{1}
+	\sum_{i=1}^{n} \tau_{i}=m_{B}g(D+I)-m_{K}g(0.3)D
 \end{equation}
 \begin{equation}
-	\sum_{i=1}^{n} \tau_{i}=0.5*9.81*(0.03+0.15)-0.1*9.81*0.5*0.15=0.9555 Nm
+	\sum_{i=1}^{n} \tau_{i}=0.704(9.81)(0.03+0.15)-0.2(9.81)(0.3)(0.15) \approx 1.154 Nm
 \end{equation}
-0.9555 Nm is the minimum torque required to hold the body in position.
+1.154 Nm is the minimum torque required to hold the body in position.
 The Knee motor should be able to generate more torque to be able to lift the body and change the knee angle.
+\vspace{2cm}
 
+The approximate masses of the body and the legs are estimated in the table\ref{tab:initialcalculationsassumptions}.
+After manufacturing the parts and assembling the robot, the actual masses of the body and the legs are measured and the calculations are updated accordingly.
 \begin{table}[h]
 	\centering
 	\caption{Initial Calculations Assumptions}
@@ -97,11 +100,12 @@ The Knee motor should be able to generate more torque to be able to lift the bod
 		\toprule
 		Parameter & Value & Description 			  \\
 		\midrule
-		$m_B$         & 0.5 kg  & Mass of the body  \\
+		$m_B$         & 0.704 kg  & Mass of the body  \\
 		$m_K$         & 0.2 kg  & Mass of the Knee including the two legs\\
 		$L_1$         & 0.15 m   & Length of Link 1  \\
 		$L_2$         & 0.15 m   & Length of Link 2   \\
-		$d$ 	  	  & 0.3 m   & distance from the hip joint axis to the center of mass of the body   \\
+		$D$ 	  	  & 0.03 m   & distance from the Wheel axis to the center of mass of leg \\
+		$I$ 	  	  & 0.03 m   & distance from the hip joint axis to the center of mass of the body   \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -126,8 +130,9 @@ Print iterations were made to ensure that the parts fit together and that the ro
 \subsection{Body Design}
 % Discuss the design of the body.
 The body design is the main part of the robot, it is the main structure that holds all the components together.
-The components that are mounted on the body are the hip motors, the battery, camera, sensor, a rack that includes the power distribution board, the microcontroller board attached to the Raspberry Pi.The optimization of the body design is crucial to be able to fit all the components in a compact form and at the same time distribute the weight equally to maintain the balance of the robot.
-Different design features were considered, such as the cable management, the fastening features specifically designed to easily mount the battery, organize the cable between the boards and the rest of the robot parts.
+The components that are mounted on the body are the hip motors, the battery, camera, sensor, a rack that includes the power distribution board, the microcontroller board attached to the Raspberry Pi. The optimization of the body design is crucial to be able to fit all the components in a compact form and at the same time distribute the weight equally to maintain the balance of the robot.
+Different design features were considered, such as the cable management, the fastening features specifically designed to easily mount the battery, organizing the cable between the boards and the rest of the robot parts.
+Opening slots were to one side of the body to be able to access the boards and connect charging cables to the battery.
 %figure 1 for the body design
 \begin{figure}[h]
 	\centering
@@ -182,7 +187,8 @@ The motor housing is designed to ensure the fixed placement of the motor inside 
 \newpage
 \subsection{Knee Wheel Link Design}
 % Discuss the design of the Wheel_Knee_link.
-This link connects the knee axis to the wheel axis. The design of this link includes the wheel motor mounting form one-side and a frame to attach to the output horn of the knee motor from the other side.
+This link connects the knee axis to the wheel axis.
+The design of this link includes the wheel motor mounting form one-side and a frame to attach to the output horn of the knee motor from the other side. The motor mounting is designed to ensure the fixed placement of the motor on the link, As shown in the figure, \ref{fig:wheelkneelink2}. Cable management is also considered in the design of this link by adding a cable fastener and holes to pass the cables through the link.
 %figure 1 for the Wheel_Knee_link
 \begin{figure}[h]
 	\centering
@@ -209,49 +215,54 @@ This link connects the knee axis to the wheel axis. The design of this link incl
 \newpage
 \subsection{Boards Mounting rack}
 % Discuss the design of the Boards Mounting rack.
-The boards mounting rack is designed to hold the power distribution board, the microcontroller board, and the Raspberry Pi.
-The rack is designed to be mounted on the body of the robot.
+As shown in the figure \ref{fig:pcbrack1},\ref{fig:pcbrack2},\ref{fig:pcbrack3}, the board mounting rack is designed to hold the power distribution board, the microcontroller board, and the Raspberry Pi.
+The rack is designed to be mounted in the body of the robot by using four screws.
+Appropriate space is considered between the two boards as well as the clearance between the rack and the battery underneath it and the body cover on top of it.
 %figure 1 for the PCB_Rack
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\linewidth]{PCB_Rack_1}
-	\caption[Side view of the PCB Rack]{TOP view of the PCB Rack}
+	\includegraphics[width=.7\linewidth]{PCB_Rack_1}
+	\caption[Side view of the PCB Rack]{Side view of the PCB Rack}
 	\label{fig:pcbrack1}
 \end{figure}
 %figure 2 for the PCB_Rack
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\linewidth]{PCB_Rack_2}
-	\caption[Top view of the PCB Rack]{Side view of the PCB Rack}
+	\includegraphics[width=.7\linewidth]{PCB_Rack_2}
+	\caption[Top view of the PCB Rack]{Top view of the PCB Rack}
 	\label{fig:pcbrack2}
 \end{figure}
 %figure 3 for the PCB_Rack
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\linewidth]{PCB_Rack_3}
+	\includegraphics[width=.7\linewidth]{PCB_Rack_3}
 	\caption[3D view of the PCB Rack]{3D view of the PCB Rack}
 	\label{fig:pcbrack3}
 \end{figure}
 \newpage
 \subsection{Motor Cover}
+% Discuss the design of the Motor Cover.
+The motor cover is designed to protect the motor from any external objects that might interfere with the motor operation.
+The motor cover is designed to be mounted on the wheel knee link with the consideration of the clearance between the motor cover and hip knee link.
+Slots are designed to dissipate the heat generated from the motor as shown in the figure \ref{fig:motorcover1}, \ref{fig:motorcover3}.
 %fugure 1 for the motor_cover
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\linewidth]{motor_cover_1}
+	\includegraphics[width=.6\linewidth]{motor_cover_1}
 	\caption[Side view of the Motor Cover]{Side view of the Motor Cover}
 	\label{fig:motorcover1}
 \end{figure}
 %fugure 2 for the motor_cover
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\linewidth]{motor_cover_2}
+	\includegraphics[width=.6\linewidth]{motor_cover_2}
 	\caption[Top view of the Motor Cover]{Top view of the Motor Cover}
 	\label{fig:motorcover2}
 \end{figure}
 %fugure 3 for the motor_cover
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\linewidth]{motor_cover_3}
+	\includegraphics[width=.6\linewidth]{motor_cover_3}
 	\caption[3D view of the Motor Cover]{3D view of the Motor Cover}
 	\label{fig:motorcover3}
 \end{figure}
@@ -264,15 +275,15 @@ The rack is designed to be mounted on the body of the robot.
 %figure 1 for the Robot_Assembly
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Robot_Assembly_1}
+	\includegraphics[width=.6\linewidth]{Robot_Assembly_1}
 	\caption[Side view of the Robot Assembly]{Side view of the Robot Assembly}
 	\label{fig:robotassembly1}
 \end{figure}
 %figure 2 for the Robot_Assembly
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{Robot_Assembly_2}
-	\caption[Front view of the Robot Assembly]{Front view of the Robot Assembly}
+	\includegraphics[width=.6\linewidth]{Robot_Assembly_2}
+	\caption[Top view of the Robot Assembly]{Top view of the Robot Assembly}
 	\label{fig:robotassembly2}
 \end{figure}
 %figure 3 for the Robot_Assembly
@@ -282,24 +293,86 @@ The rack is designed to be mounted on the body of the robot.
 	\caption[3D view of the Robot Assembly]{3D view of the Robot Assembly}
 	\label{fig:robotassembly3}
 \end{figure}
-
+\vspace{3cm}
+The full design of the robot is shown in the figure\ref{fig:robotassembly3}.
+The robot is designed to be assembled in a modular way.
+The full assembly reveals how all the parts fit together.
+This includes the body, the hip-knees, the knee-wheel links, the motor cover, the boards mounting rack,the hip motors, the knee motors, the camera, the sensor, the face shield, the body cover,the BaneBots shaft hub, and the wheels.
+After assembling the robot, different movements configurations are tested using the CAD software to make sure that the robot can move freely without any interference between the different parts.
+\newpage
+%sub section for the dimentions of the robot
+\subsection{Dimensions}
+%figure for the dimensions of the robot
+As shown in the figure \ref{fig:robotassemblyv2side}, \ref{fig:robotassemblyv2top}, the main dimensions of the robot are shown.
+Comparing the dimensions of the robot to the dimensions of the previous TWIPR robot, the new robot is much bigger in size because of the addition of the two legs.
+Compactness was not a main concern in the design of the robot, the main concern was to make sure that the robot can perform the required movements and interact with the environment.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Robot_Assembly_V2_Side}
+	\caption[Side view of the Robot Assembly]{Side view of the Robot Assembly}
+	\label{fig:robotassemblyv2side}
+\end{figure}
+%figure for the dimensions of the robot top view
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Robot_Assembly_V2_Top}
+	\caption[Top view of the Robot Assembly]{Top view of the Robot Assembly}
+	\label{fig:robotassemblyv2top}
+\end{figure}
+\newpage
 \subsection{Safety considerations}
 % the motor cover, the face shield of the body and the body cover
 Safety is a crucial aspect to consider in the design of the robot.
-The robot is designed to be safe to operate in the environment and safe to interact with humans. Clearences are considered in the design to make sure that moving parts wouldn't interfere with eachother.
+The robot is designed to be safe to operate in the environment and safe to interact with humans.
+Clearances are considered in the design to make sure that moving parts wouldn't interfere with each other.
 The motor cover is designed to protect the motor from any external objects that might interfere with the motor operation.
 %Two subfigures side by side of the motor cover
-
-The face shield of the body is designed to protect the components inside the body from any external objects that might hit the robot.
 %two subfigures side by side of the face shield
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{Support_flexible_1}
+		\caption{Face Shield Side View}
+		\label{fig:face shield side view}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{Support_flexible_2}
+		\caption{Face Shield 3D View}
+		\label{fig:faseshield3dview}
+	\end{subfigure}
+	\caption{Face Shield}
+	\label{fig:faceshield}
+\end{figure}
+
+The face shield of the body is designed to protect the components inside the body.
+The face shield is designed to be flexible to absorb the shock from any external objects that might hit the robot. It is screwed with two screws to the body.
+%cable mangment
+The cable management is considered in the design of the robot to make sure that the cables are routed from and to all the components in the robot in a safe way to protect the cables form tearing or getting damaged as well as to protect the cables from interfering with the movement of the robot.
 
 
 
 \section{Design for Manufacturability and Assembly}
 % Discuss how the design facilitates manufacturing and assembly.
 % Explain any design choices made to simplify these processes of manufacturing and assembly.
+% Discuss any design features that were added to facilitate the manufacturing and assembly processes.
+Design for manufacturability and assembly was considered throughout the design process.
+Design consideration was taken into account to make sure that the robot parts can be printed using 3D printing technology.
+Considering the limitations of 3D printing technology, the design was modified to make sure that the parts can be printed with acceptable quality.
+The orientation at which the parts are printed was considered while designing the parts.
+Assembly fitting and clearance were considered to make sure that the parts can be assembled with ease.
+
 \section{Prototyping and Iterative Design}
 % Discuss the process of prototyping.
 % Explain how feedback from prototyping phases was incorporated into design revisions.
 
+During the design process, the sketches for the different parts were drawn relying on each other so that future modifications can be easily applied.
+ The design was prototyped using 3D printing.
+Therefore, different problems were encountered during the prototyping process.
+The problems were analyzed and the design was modified accordingly to solve the problems.
+Some of the problems were related to the 3D printing process, and some were related to the design itself, such as the clearance between the parts, the cable management dimensions.
+The actual physical parts were slightly different in dimensions than the CAD model.
+This is why ititrations were made to the design.
 

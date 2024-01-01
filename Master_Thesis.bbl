@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -103,6 +103,58 @@ Sangtae Kim and SangJoo Kwon.
   robot.
 \newblock \emph{International Journal of Control, Automation and Systems},
   13:\penalty0 926--933, 2015.
+
+\bibitem[Zimit et~al.(2018)Zimit, Yap, Hamza, Siradjuddin, Hendrik, and
+  Herawan]{zimit2018modelling}
+Aminu~Yahaya Zimit, Hwa~Jen Yap, Mukhtar~Fatihu Hamza, Indrazno Siradjuddin,
+  Billy Hendrik, and Tutut Herawan.
+\newblock Modelling and experimental analysis two-wheeled self balance robot
+  using pid controller.
+\newblock In \emph{Computational Science and Its Applications--ICCSA 2018: 18th
+  International Conference, Melbourne, VIC, Australia, July 2-5, 2018,
+  Proceedings, Part II 18}, pages 683--698. Springer, 2018.
+
+\bibitem[Bloch et~al.(1999)Bloch, Leonard, and Marsden]{bloch1999stabilization}
+Anthony~M Bloch, Naomi~Ehrich Leonard, and Jerrold~E Marsden.
+\newblock Stabilization of the pendulum on a rotor arm by the method of
+  controlled lagrangians.
+\newblock In \emph{Proceedings 1999 IEEE International Conference on Robotics
+  and Automation (Cat. No. 99CH36288C)}, volume~1, pages 500--505. IEEE, 1999.
+
+\bibitem[Azimi and Koofigar(2013)]{azimi2013model}
+Mohammad~Mahdi Azimi and Hamid~Reza Koofigar.
+\newblock Model predictive control for a two wheeled self balancing robot.
+\newblock In \emph{2013 First RSI/ISM International Conference on Robotics and
+  Mechatronics (ICRoM)}, pages 152--157. IEEE, 2013.
+
+\bibitem[Cui et~al.(2021)Cui, Wang, Zhang, Zhang, Lai, Zheng, Zhang, and
+  Jiang]{cui2021learning}
+Leilei Cui, Shuai Wang, Jingfan Zhang, Dongsheng Zhang, Jie Lai, Yu~Zheng,
+  Zhengyou Zhang, and Zhong-Ping Jiang.
+\newblock Learning-based balance control of wheel-legged robots.
+\newblock \emph{IEEE Robotics and Automation Letters}, 6\penalty0 (4):\penalty0
+  7667--7674, 2021.
+
+\bibitem[Xu et~al.(2020)Xu, Wang, Yue, Wang, Peng, Liu, Chen, and
+  Shi]{xu2020adaptive}
+Kang Xu, Shoukun Wang, Binkai Yue, Junzheng Wang, Hui Peng, Dongchen Liu,
+  Zhihua Chen, and Mingxin Shi.
+\newblock Adaptive impedance control with variable target stiffness for
+  wheel-legged robot on complex unknown terrain.
+\newblock \emph{Mechatronics}, 69:\penalty0 102388, 2020.
+
+\bibitem[Raj and Kos(2022)]{raj2022comprehensive}
+Ravi Raj and Andrzej Kos.
+\newblock A comprehensive study of mobile robot: history, developments,
+  applications, and future research perspectives.
+\newblock \emph{Applied Sciences}, 12\penalty0 (14):\penalty0 6951, 2022.
+
+\bibitem[Kuutti et~al.(2020)Kuutti, Bowden, Jin, Barber, and
+  Fallah]{kuutti2020survey}
+Sampo Kuutti, Richard Bowden, Yaochu Jin, Phil Barber, and Saber Fallah.
+\newblock A survey of deep learning applications to autonomous vehicle control.
+\newblock \emph{IEEE Transactions on Intelligent Transportation Systems},
+  22\penalty0 (2):\penalty0 712--733, 2020.
 
 \bibitem[Meindl(2019)]{MastersThesis}
 Michael Meindl.
