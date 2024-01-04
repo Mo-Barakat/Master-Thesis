@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  1 JAN 2024 17:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.22)  4 JAN 2024 13:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1910,7 +1910,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 27
 ]) (Content/BodyMatter.tex
 (Content/Introduction.tex
 chapter 1.
-<./Figures/Introduction/boston-dynamics-handle-robot.jpg, id=600, 903.375pt x 5
+<./Figures/Introduction/boston-dynamics-handle-robot.jpg, id=603, 903.375pt x 5
 24.96124pt>
 File: ./Figures/Introduction/boston-dynamics-handle-robot.jpg Graphic file (typ
 e jpg)
@@ -1923,7 +1923,7 @@ g  used on input line 12.
 
  <./Figures/Introduction/boston-dynamics-handle-robot.jpg>] [2]
 chapter 2.
-<./Figures/Literature Review/Ascento robot.jpg, id=613, 759.83875pt x 752.8125p
+<./Figures/Literature Review/Ascento robot.jpg, id=616, 759.83875pt x 752.8125p
 t>
 File: ./Figures/Literature Review/Ascento robot.jpg Graphic file (type jpg)
 <use ./Figures/Literature Review/Ascento robot.jpg>
@@ -1933,14 +1933,14 @@ Package pdftex.def Info: ./Figures/Literature Review/Ascento robot.jpg  used on
 [3
 
  <./Figures/Literature Review/Ascento robot.jpg>]
-<./Figures/Literature Review/Honda's Asimo.jpg, id=620, 925.20656pt x 1156.32pt
+<./Figures/Literature Review/Honda's Asimo.jpg, id=623, 925.20656pt x 1156.32pt
 >
 File: ./Figures/Literature Review/Honda's Asimo.jpg Graphic file (type jpg)
 <use ./Figures/Literature Review/Honda's Asimo.jpg>
 Package pdftex.def Info: ./Figures/Literature Review/Honda's Asimo.jpg  used on
  input line 32.
 (pdftex.def)             Requested size: 136.57462pt x 170.68805pt.
-<./Figures/Literature Review/Boston Dynamics' Atlas.jpg, id=621, 602.25pt x 752
+<./Figures/Literature Review/Boston Dynamics' Atlas.jpg, id=624, 602.25pt x 752
 .8125pt>
 File: ./Figures/Literature Review/Boston Dynamics' Atlas.jpg Graphic file (type
  jpg)
@@ -1948,13 +1948,13 @@ File: ./Figures/Literature Review/Boston Dynamics' Atlas.jpg Graphic file (type
 Package pdftex.def Info: ./Figures/Literature Review/Boston Dynamics' Atlas.jpg
   used on input line 33.
 (pdftex.def)             Requested size: 136.57462pt x 170.71947pt.
-<./Figures/Literature Review/sony QRIO.jpg, id=622, 650.43pt x 813.0375pt>
+<./Figures/Literature Review/sony QRIO.jpg, id=625, 650.43pt x 813.0375pt>
 File: ./Figures/Literature Review/sony QRIO.jpg Graphic file (type jpg)
 <use ./Figures/Literature Review/sony QRIO.jpg>
 Package pdftex.def Info: ./Figures/Literature Review/sony QRIO.jpg  used on inp
 ut line 34.
 (pdftex.def)             Requested size: 136.57462pt x 170.7181pt.
-<./Figures/Literature Review/evoBOT-3.jpg, id=631, 597.432pt x 398.2077pt>
+<./Figures/Literature Review/evoBOT-3.jpg, id=634, 597.432pt x 398.2077pt>
 File: ./Figures/Literature Review/evoBOT-3.jpg Graphic file (type jpg)
 <use ./Figures/Literature Review/evoBOT-3.jpg>
 Package pdftex.def Info: ./Figures/Literature Review/evoBOT-3.jpg  used on inpu
@@ -1967,7 +1967,7 @@ chapter 3.
 [7
 
 ]
-<./Figures/Mechanical Design/Conceptual Design.pdf, id=684, 539.86023pt x 143.7
+<./Figures/Mechanical Design/Conceptual Design.pdf, id=687, 539.86023pt x 143.7
 3386pt>
 File: ./Figures/Mechanical Design/Conceptual Design.pdf Graphic file (type pdf)
 
@@ -1975,13 +1975,13 @@ File: ./Figures/Mechanical Design/Conceptual Design.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figures/Mechanical Design/Conceptual Design.pdf  use
 d on input line 33.
 (pdftex.def)             Requested size: 455.24411pt x 121.20714pt.
-<./Figures/Mechanical Design/Leg Design.pdf, id=686, 199.90388pt x 182.2772pt>
+<./Figures/Mechanical Design/Leg Design.pdf, id=689, 199.90388pt x 182.2772pt>
 File: ./Figures/Mechanical Design/Leg Design.pdf Graphic file (type pdf)
 <use ./Figures/Mechanical Design/Leg Design.pdf>
 Package pdftex.def Info: ./Figures/Mechanical Design/Leg Design.pdf  used on in
 put line 43.
 (pdftex.def)             Requested size: 182.09486pt x 166.04773pt.
-<./Figures/Mechanical Design/Initial Calculations.pdf, id=687, 171.4851pt x 66.
+<./Figures/Mechanical Design/Initial Calculations.pdf, id=690, 171.4851pt x 66.
 29317pt>
 File: ./Figures/Mechanical Design/Initial Calculations.pdf Graphic file (type p
 df)
@@ -2004,21 +2004,21 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [10{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<./Figures/Mechanical Design/Body_Design_1.png, id=721, 1315.16344pt x 670.0031
+<./Figures/Mechanical Design/Body_Design_1.png, id=724, 1315.16344pt x 670.0031
 3pt>
 File: ./Figures/Mechanical Design/Body_Design_1.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Body_Design_1.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/Body_Design_1.png  used on
  input line 139.
 (pdftex.def)             Requested size: 455.24411pt x 231.91808pt.
-<./Figures/Mechanical Design/Body_Design_2.png, id=722, 1315.16344pt x 670.0031
+<./Figures/Mechanical Design/Body_Design_2.png, id=725, 1315.16344pt x 670.0031
 3pt>
 File: ./Figures/Mechanical Design/Body_Design_2.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Body_Design_2.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/Body_Design_2.png  used on
  input line 146.
 (pdftex.def)             Requested size: 455.24411pt x 231.91808pt.
-<./Figures/Mechanical Design/Body_Design_3.png, id=723, 677.53125pt x 602.25pt>
+<./Figures/Mechanical Design/Body_Design_3.png, id=726, 677.53125pt x 602.25pt>
 
 File: ./Figures/Mechanical Design/Body_Design_3.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Body_Design_3.png>
@@ -2031,21 +2031,21 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11 <./Figures/Mechanical Design/Body_Design_1.png>] [12 <./Figures/Mechanical 
 Design/Body_Design_2.png> <./Figures/Mechanical Design/Body_Design_3.png>]
-<./Figures/Mechanical Design/Body_Knee_Link_1.png, id=736, 752.8125pt x 203.259
+<./Figures/Mechanical Design/Body_Knee_Link_1.png, id=739, 752.8125pt x 203.259
 37pt>
 File: ./Figures/Mechanical Design/Body_Knee_Link_1.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Body_Knee_Link_1.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/Body_Knee_Link_1.png  used
  on input line 168.
 (pdftex.def)             Requested size: 455.24411pt x 122.91801pt.
-<./Figures/Mechanical Design/Body_Knee_Link_2.png, id=737, 752.8125pt x 188.203
+<./Figures/Mechanical Design/Body_Knee_Link_2.png, id=740, 752.8125pt x 188.203
 13pt>
 File: ./Figures/Mechanical Design/Body_Knee_Link_2.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Body_Knee_Link_2.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/Body_Knee_Link_2.png  used
  on input line 175.
 (pdftex.def)             Requested size: 455.24411pt x 113.81297pt.
-<./Figures/Mechanical Design/Body_Knee_Link_3.png, id=738, 752.8125pt x 338.765
+<./Figures/Mechanical Design/Body_Knee_Link_3.png, id=741, 752.8125pt x 338.765
 63pt>
 File: ./Figures/Mechanical Design/Body_Knee_Link_3.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Body_Knee_Link_3.png>
@@ -2055,7 +2055,7 @@ Package pdftex.def Info: ./Figures/Mechanical Design/Body_Knee_Link_3.png  used
 
 [13 <./Figures/Mechanical Design/Body_Knee_Link_1.png> <./Figures/Mechanical De
 sign/Body_Knee_Link_2.png> <./Figures/Mechanical Design/Body_Knee_Link_3.png>]
-<./Figures/Mechanical Design/Wheel_Knee_Link_1.png, id=747, 753.5653pt x 188.20
+<./Figures/Mechanical Design/Wheel_Knee_Link_1.png, id=750, 753.5653pt x 188.20
 313pt>
 File: ./Figures/Mechanical Design/Wheel_Knee_Link_1.png Graphic file (type png)
 
@@ -2063,7 +2063,7 @@ File: ./Figures/Mechanical Design/Wheel_Knee_Link_1.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/Mechanical Design/Wheel_Knee_Link_1.png  use
 d on input line 195.
 (pdftex.def)             Requested size: 455.24411pt x 113.69524pt.
-<./Figures/Mechanical Design/Wheel_Knee_Link_2.png, id=748, 753.5653pt x 263.48
+<./Figures/Mechanical Design/Wheel_Knee_Link_2.png, id=751, 753.5653pt x 263.48
 438pt>
 File: ./Figures/Mechanical Design/Wheel_Knee_Link_2.png Graphic file (type png)
 
@@ -2071,7 +2071,7 @@ File: ./Figures/Mechanical Design/Wheel_Knee_Link_2.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/Mechanical Design/Wheel_Knee_Link_2.png  use
 d on input line 202.
 (pdftex.def)             Requested size: 455.24411pt x 159.17332pt.
-<./Figures/Mechanical Design/Wheel_Knee_Link_3.png, id=749, 753.5653pt x 278.54
+<./Figures/Mechanical Design/Wheel_Knee_Link_3.png, id=752, 753.5653pt x 278.54
 062pt>
 File: ./Figures/Mechanical Design/Wheel_Knee_Link_3.png Graphic file (type png)
 
@@ -2083,20 +2083,20 @@ d on input line 209.
 [14 <./Figures/Mechanical Design/Wheel_Knee_Link_1.png> <./Figures/Mechanical D
 esign/Wheel_Knee_Link_2.png> <./Figures/Mechanical Design/Wheel_Knee_Link_3.png
 >]
-<./Figures/Mechanical Design/PCB_Rack_1.png, id=761, 570.933pt x 136.1085pt>
+<./Figures/Mechanical Design/PCB_Rack_1.png, id=764, 570.933pt x 136.1085pt>
 File: ./Figures/Mechanical Design/PCB_Rack_1.png Graphic file (type png)
 <use ./Figures/Mechanical Design/PCB_Rack_1.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/PCB_Rack_1.png  used on in
 put line 224.
 (pdftex.def)             Requested size: 318.66948pt x 75.97308pt.
-<./Figures/Mechanical Design/PCB_Rack_2.png, id=762, 571.53525pt x 335.45325pt>
+<./Figures/Mechanical Design/PCB_Rack_2.png, id=765, 571.53525pt x 335.45325pt>
 
 File: ./Figures/Mechanical Design/PCB_Rack_2.png Graphic file (type png)
 <use ./Figures/Mechanical Design/PCB_Rack_2.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/PCB_Rack_2.png  used on in
 put line 231.
 (pdftex.def)             Requested size: 318.66948pt x 187.03354pt.
-<./Figures/Mechanical Design/PCB_Rack_3.png, id=763, 543.83176pt x 389.65575pt>
+<./Figures/Mechanical Design/PCB_Rack_3.png, id=766, 543.83176pt x 389.65575pt>
 
 File: ./Figures/Mechanical Design/PCB_Rack_3.png Graphic file (type png)
 <use ./Figures/Mechanical Design/PCB_Rack_3.png>
@@ -2105,21 +2105,21 @@ put line 238.
 (pdftex.def)             Requested size: 318.66948pt x 228.33118pt.
  [15 <./Figures/Mechanical Design/PCB_Rack_1.png> <./Figures/Mechanical Design/
 PCB_Rack_2.png> <./Figures/Mechanical Design/PCB_Rack_3.png>]
-<./Figures/Mechanical Design/motor_cover_1.png, id=773, 993.7125pt x 522.15076p
+<./Figures/Mechanical Design/motor_cover_1.png, id=776, 993.7125pt x 522.15076p
 t>
 File: ./Figures/Mechanical Design/motor_cover_1.png Graphic file (type png)
 <use ./Figures/Mechanical Design/motor_cover_1.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/motor_cover_1.png  used on
  input line 251.
 (pdftex.def)             Requested size: 273.14923pt x 143.52417pt.
-<./Figures/Mechanical Design/motor_cover_2.png, id=774, 993.7125pt x 522.15076p
+<./Figures/Mechanical Design/motor_cover_2.png, id=777, 993.7125pt x 522.15076p
 t>
 File: ./Figures/Mechanical Design/motor_cover_2.png Graphic file (type png)
 <use ./Figures/Mechanical Design/motor_cover_2.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/motor_cover_2.png  used on
  input line 258.
 (pdftex.def)             Requested size: 273.14923pt x 143.52417pt.
-<./Figures/Mechanical Design/motor_cover_3.png, id=775, 993.7125pt x 522.15076p
+<./Figures/Mechanical Design/motor_cover_3.png, id=778, 993.7125pt x 522.15076p
 t>
 File: ./Figures/Mechanical Design/motor_cover_3.png Graphic file (type png)
 <use ./Figures/Mechanical Design/motor_cover_3.png>
@@ -2128,21 +2128,21 @@ Package pdftex.def Info: ./Figures/Mechanical Design/motor_cover_3.png  used on
 (pdftex.def)             Requested size: 273.14923pt x 143.52417pt.
  [16 <./Figures/Mechanical Design/motor_cover_1.png> <./Figures/Mechanical Desi
 gn/motor_cover_2.png> <./Figures/Mechanical Design/motor_cover_3.png>]
-<./Figures/Mechanical Design/Robot_Assembly_1.png, id=783, 526.96875pt x 602.25
+<./Figures/Mechanical Design/Robot_Assembly_1.png, id=786, 526.96875pt x 602.25
 pt>
 File: ./Figures/Mechanical Design/Robot_Assembly_1.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Robot_Assembly_1.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/Robot_Assembly_1.png  used
  on input line 278.
 (pdftex.def)             Requested size: 273.14923pt x 312.17932pt.
-<./Figures/Mechanical Design/Robot_Assembly_2.png, id=784, 678.28406pt x 602.25
+<./Figures/Mechanical Design/Robot_Assembly_2.png, id=787, 678.28406pt x 602.25
 pt>
 File: ./Figures/Mechanical Design/Robot_Assembly_2.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Robot_Assembly_2.png>
 Package pdftex.def Info: ./Figures/Mechanical Design/Robot_Assembly_2.png  used
  on input line 285.
 (pdftex.def)             Requested size: 273.14923pt x 242.52228pt.
-<./Figures/Mechanical Design/Robot_Assembly_3.png, id=785, 603.0028pt x 670.003
+<./Figures/Mechanical Design/Robot_Assembly_3.png, id=788, 603.0028pt x 670.003
 13pt>
 File: ./Figures/Mechanical Design/Robot_Assembly_3.png Graphic file (type png)
 <use ./Figures/Mechanical Design/Robot_Assembly_3.png>
@@ -2156,7 +2156,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [17 <./Figures/Mechanical Design/Robot_Assembly_1.png> <./Figures/Mechanical De
 sign/Robot_Assembly_2.png>] [18 <./Figures/Mechanical Design/Robot_Assembly_3.p
 ng>]
-<./Figures/Mechanical Design/Robot_Assembly_V2_Side.pdf, id=800, 569.055pt x 56
+<./Figures/Mechanical Design/Robot_Assembly_V2_Side.pdf, id=803, 569.055pt x 56
 9.055pt>
 File: ./Figures/Mechanical Design/Robot_Assembly_V2_Side.pdf Graphic file (type
  pdf)
@@ -2164,7 +2164,7 @@ File: ./Figures/Mechanical Design/Robot_Assembly_V2_Side.pdf Graphic file (type
 Package pdftex.def Info: ./Figures/Mechanical Design/Robot_Assembly_V2_Side.pdf
   used on input line 311.
 (pdftex.def)             Requested size: 227.62206pt x 227.61797pt.
-<./Figures/Mechanical Design/Robot_Assembly_V2_Top.pdf, id=801, 569.055pt x 569
+<./Figures/Mechanical Design/Robot_Assembly_V2_Top.pdf, id=804, 569.055pt x 569
 .055pt>
 File: ./Figures/Mechanical Design/Robot_Assembly_V2_Top.pdf Graphic file (type 
 pdf)
@@ -2174,7 +2174,7 @@ Package pdftex.def Info: ./Figures/Mechanical Design/Robot_Assembly_V2_Top.pdf
 (pdftex.def)             Requested size: 227.62206pt x 227.61797pt.
  [19 <./Figures/Mechanical Design/Robot_Assembly_V2_Side.pdf> <./Figures/Mechan
 ical Design/Robot_Assembly_V2_Top.pdf>]
-<./Figures/Mechanical Design/Support_flexible_1.png, id=1008, 396.2805pt x 528.
+<./Figures/Mechanical Design/Support_flexible_1.png, id=1011, 396.2805pt x 528.
 17325pt>
 File: ./Figures/Mechanical Design/Support_flexible_1.png Graphic file (type png
 )
@@ -2182,7 +2182,7 @@ File: ./Figures/Mechanical Design/Support_flexible_1.png Graphic file (type png
 Package pdftex.def Info: ./Figures/Mechanical Design/Support_flexible_1.png  us
 ed on input line 335.
 (pdftex.def)             Requested size: 91.04742pt x 121.34834pt.
-<./Figures/Mechanical Design/Support_flexible_2.png, id=1009, 396.2805pt x 528.
+<./Figures/Mechanical Design/Support_flexible_2.png, id=1012, 396.2805pt x 528.
 17325pt>
 File: ./Figures/Mechanical Design/Support_flexible_2.png Graphic file (type png
 )
@@ -2200,7 +2200,7 @@ chapter 4.
 
 pdfTeX warning: pdflatex (file ./Figures/Electronic Design/Component_Diagram.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./Figures/Electronic Design/Component_Diagram.pdf, id=1024, 687.52856pt x 212.
+<./Figures/Electronic Design/Component_Diagram.pdf, id=1027, 687.52856pt x 212.
 71469pt>
 File: ./Figures/Electronic Design/Component_Diagram.pdf Graphic file (type pdf)
 
@@ -2208,7 +2208,7 @@ File: ./Figures/Electronic Design/Component_Diagram.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figures/Electronic Design/Component_Diagram.pdf  use
 d on input line 32.
 (pdftex.def)             Requested size: 455.24411pt x 140.85301pt.
-<./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png, id=1025, 501.875pt x 220
+<./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png, id=1028, 501.875pt x 220
 .825pt>
 File: ./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png Graphic file (type p
 ng)
@@ -2216,7 +2216,7 @@ ng)
 Package pdftex.def Info: ./Figures/Electronic Design/DYNAMIXEL_XM430-W350.png  
 used on input line 43.
 (pdftex.def)             Requested size: 227.62206pt x 100.15541pt.
-<./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png, id=1026, 439.6425pt x 1
+<./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png, id=1029, 439.6425pt x 1
 89.70876pt>
 File: ./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png Graphic file (type 
 png)
@@ -2226,7 +2226,7 @@ Package pdftex.def Info: ./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png
 (pdftex.def)             Requested size: 227.62206pt x 98.2178pt.
 [22 <./Figures/Electronic Design/Component_Diagram.pdf> <./Figures/Electronic D
 esign/DYNAMIXEL_XM430-W350.png>]
-<./Figures/Electronic Design/Raspberry_Pi_4_compute_module.jpg, id=1041, 752.81
+<./Figures/Electronic Design/Raspberry_Pi_4_compute_module.jpg, id=1044, 752.81
 25pt x 752.8125pt>
 File: ./Figures/Electronic Design/Raspberry_Pi_4_compute_module.jpg Graphic fil
 e (type jpg)
@@ -2236,13 +2236,13 @@ ule.jpg  used on input line 84.
 (pdftex.def)             Requested size: 227.62206pt x 227.62596pt.
  [23 <./Figures/Electronic Design/SIMPLEX_MOTION_SC040A.png> <./Figures/Electro
 nic Design/Raspberry_Pi_4_compute_module.jpg>]
-<./Figures/Electronic Design/VL53L1X.png, id=1046, 1274.51157pt x 670.00313pt>
+<./Figures/Electronic Design/VL53L1X.png, id=1049, 1274.51157pt x 670.00313pt>
 File: ./Figures/Electronic Design/VL53L1X.png Graphic file (type png)
 <use ./Figures/Electronic Design/VL53L1X.png>
 Package pdftex.def Info: ./Figures/Electronic Design/VL53L1X.png  used on input
  line 95.
 (pdftex.def)             Requested size: 227.62206pt x 119.6548pt.
-<./Figures/Electronic Design/Raspberry_Pi_Camera_Module_V2.jpg, id=1047, 301.12
+<./Figures/Electronic Design/Raspberry_Pi_Camera_Module_V2.jpg, id=1050, 301.12
 5pt x 301.125pt>
 File: ./Figures/Electronic Design/Raspberry_Pi_Camera_Module_V2.jpg Graphic fil
 e (type jpg)
@@ -2253,7 +2253,7 @@ _V2.jpg  used on input line 105.
 
 [24 <./Figures/Electronic Design/VL53L1X.png> <./Figures/Electronic Design/Rasp
 berry_Pi_Camera_Module_V2.jpg>]
-<./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg, id=1053, 1204.5pt x 80
+<./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg, id=1056, 1204.5pt x 80
 3.25093pt>
 File: ./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg Graphic file (type
  jpg)
@@ -2261,7 +2261,7 @@ File: ./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg Graphic file (type
 Package pdftex.def Info: ./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg
   used on input line 116.
 (pdftex.def)             Requested size: 227.62206pt x 151.78581pt.
-<./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf, id=1054, 597.52838pt
+<./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf, id=1057, 597.52838pt
  x 421.1173pt>
 File: ./Figures/Electronic Design/Legged_TWIPR_Wiring_Tree.pdf Graphic file (ty
 pe pdf)
@@ -2271,7 +2271,7 @@ df  used on input line 127.
 (pdftex.def)             Requested size: 455.24411pt x 320.84924pt.
  [25 <./Figures/Electronic Design/SLS_XTRON_3000MAH_4S1P.jpg> <./Figures/Electr
 onic Design/Legged_TWIPR_Wiring_Tree.pdf>]
-<./Figures/Electronic Design/Robot_Hub_Board.jpg, id=1065, 1925.1925pt x 907.39
+<./Figures/Electronic Design/Robot_Hub_Board.jpg, id=1068, 1925.1925pt x 907.39
 pt>
 File: ./Figures/Electronic Design/Robot_Hub_Board.jpg Graphic file (type jpg)
 <use ./Figures/Electronic Design/Robot_Hub_Board.jpg>
@@ -2280,7 +2280,7 @@ on input line 150.
 (pdftex.def)             Requested size: 455.24411pt x 214.56586pt.
 
 [26 <./Figures/Electronic Design/Robot_Hub_Board.jpg>]
-<./Figures/Electronic Design/Power_Management_Board.jpg, id=1071, 1925.1925pt x
+<./Figures/Electronic Design/Power_Management_Board.jpg, id=1074, 1925.1925pt x
  907.39pt>
 File: ./Figures/Electronic Design/Power_Management_Board.jpg Graphic file (type
  jpg)
@@ -2295,14 +2295,14 @@ chapter 5.
 [28
 
 ]
-<./Figures/Modelling and Simulation/Old model.pdf, id=1081, 57.75998pt x 98.466
+<./Figures/Modelling and Simulation/Old model.pdf, id=1084, 57.75998pt x 98.466
 25pt>
 File: ./Figures/Modelling and Simulation/Old model.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Old model.pdf>
 Package pdftex.def Info: ./Figures/Modelling and Simulation/Old model.pdf  used
  on input line 24.
 (pdftex.def)             Requested size: 84.12878pt x 143.40028pt.
-<./Figures/Modelling and Simulation/New model.pdf, id=1082, 121.21733pt x 186.0
+<./Figures/Modelling and Simulation/New model.pdf, id=1085, 121.21733pt x 186.0
 0047pt>
 File: ./Figures/Modelling and Simulation/New model.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/New model.pdf>
@@ -2315,17 +2315,12 @@ d Simulation/New model.pdf
 pdfTeX warning: pdflatex (file ./Figures/Modelling and Simulation/New model.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-
-LaTeX Warning: Reference `fig:Mechanical model with the local coordinate system
-' on page 30 undefined on input line 50.
-
-
 Overfull \hbox (18.50673pt too wide) in paragraph at lines 56--95
  [][] 
  []
 
 [30]
-<./Figures/Modelling and Simulation/Model.pdf, id=1095, 150.18646pt x 236.27304
+<./Figures/Modelling and Simulation/Model.pdf, id=1099, 150.18646pt x 236.27304
 pt>
 File: ./Figures/Modelling and Simulation/Model.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Model.pdf>
@@ -2333,12 +2328,17 @@ Package pdftex.def Info: ./Figures/Modelling and Simulation/Model.pdf  used on
 input line 116.
 (pdftex.def)             Requested size: 227.62206pt x 358.12567pt.
 
+
+LaTeX Warning: Reference `Mechanical model with the local coordinate system' on
+ page 31 undefined on input line 124.
+
+
 Overfull \hbox (2.66605pt too wide) detected at line 139
 [][][][][]
  []
 
 [31 <./Figures/Modelling and Simulation/Model.pdf>]
-<./Figures/Modelling and Simulation/Angles.pdf, id=1106, 123.30772pt x 202.5695
+<./Figures/Modelling and Simulation/Angles.pdf, id=1109, 123.30772pt x 202.5695
 8pt>
 File: ./Figures/Modelling and Simulation/Angles.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Angles.pdf>
@@ -2346,7 +2346,7 @@ Package pdftex.def Info: ./Figures/Modelling and Simulation/Angles.pdf  used on
  input line 156.
 (pdftex.def)             Requested size: 227.62206pt x 373.96582pt.
  [32 <./Figures/Modelling and Simulation/Angles.pdf>]
-<./Figures/Modelling and Simulation/TWIPR dynamics.pdf, id=1117, 513.13332pt x 
+<./Figures/Modelling and Simulation/TWIPR dynamics.pdf, id=1120, 513.13332pt x 
 207.66928pt>
 File: ./Figures/Modelling and Simulation/TWIPR dynamics.pdf Graphic file (type 
 pdf)
@@ -2364,7 +2364,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [34] [35]
 <./Figures/Modelling and Simulation/Block Diagram of Simulation Environment.png
-, id=1177, 333.6465pt x 124.0635pt>
+, id=1179, 333.6465pt x 124.0635pt>
 File: ./Figures/Modelling and Simulation/Block Diagram of Simulation Environmen
 t.png Graphic file (type png)
 <use ./Figures/Modelling and Simulation/Block Diagram of Simulation Environment
@@ -2377,7 +2377,7 @@ mulation Environment.png  used on input line 406.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [36]
-<./Figures/Modelling and Simulation/Simulation Environment.png, id=1193, 285.46
+<./Figures/Modelling and Simulation/Simulation Environment.png, id=1195, 285.46
 65pt x 291.489pt>
 File: ./Figures/Modelling and Simulation/Simulation Environment.png Graphic fil
 e (type png)
@@ -2395,7 +2395,7 @@ pdfTeX warning: pdflatex (file ./Figures/Modelling and Simulation/Block Diagram
  of State Feedback Controller.pdf): PDF inclusion: found PDF version <1.7>, but
  at most version <1.5> allowed
 <./Figures/Modelling and Simulation/Block Diagram of State Feedback Controller.
-pdf, id=1195, 302.0886pt x 98.2872pt>
+pdf, id=1197, 302.0886pt x 98.2872pt>
 File: ./Figures/Modelling and Simulation/Block Diagram of State Feedback Contro
 ller.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Block Diagram of State Feedback Control
@@ -2421,7 +2421,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<./Figures/Modelling and Simulation/Test Input.pdf, id=1239, 462.52798pt x 346.
+ [40{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+<./Figures/Modelling and Simulation/Test Input.pdf, id=1261, 462.52798pt x 346.
 89601pt>
 File: ./Figures/Modelling and Simulation/Test Input.pdf Graphic file (type pdf)
 
@@ -2429,12 +2430,8 @@ File: ./Figures/Modelling and Simulation/Test Input.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figures/Modelling and Simulation/Test Input.pdf  use
 d on input line 556.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <./Figures/Modelling and Simulation/Step Response of the Internal Input.pdf, id
-=1241, 462.52798pt x 346.89601pt>
+=1263, 462.52798pt x 346.89601pt>
 File: ./Figures/Modelling and Simulation/Step Response of the Internal Input.pd
 f Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Step Response of the Internal Input.pdf
@@ -2443,7 +2440,7 @@ Package pdftex.def Info: ./Figures/Modelling and Simulation/Step Response of th
 e Internal Input.pdf  used on input line 568.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
 <./Figures/Modelling and Simulation/Step Response of the Internal Input hip ang
-le.pdf, id=1242, 462.52798pt x 346.89601pt>
+le.pdf, id=1264, 462.52798pt x 346.89601pt>
 File: ./Figures/Modelling and Simulation/Step Response of the Internal Input hi
 p angle.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Step Response of the Internal Input hip
@@ -2451,51 +2448,44 @@ p angle.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figures/Modelling and Simulation/Step Response of th
 e Internal Input hip angle.pdf  used on input line 574.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./Figures/Modelling and Simulation/S.pdf, id=1245, 462.52798pt x 346.89601pt>
+<./Figures/Modelling and Simulation/S.pdf, id=1267, 462.52798pt x 346.89601pt>
 File: ./Figures/Modelling and Simulation/S.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/S.pdf>
 Package pdftex.def Info: ./Figures/Modelling and Simulation/S.pdf  used on inpu
 t line 593.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
-<./Figures/Modelling and Simulation/S_dot.pdf, id=1246, 462.52798pt x 346.89601
+<./Figures/Modelling and Simulation/S_dot.pdf, id=1268, 462.52798pt x 346.89601
 pt>
 File: ./Figures/Modelling and Simulation/S_dot.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/S_dot.pdf>
 Package pdftex.def Info: ./Figures/Modelling and Simulation/S_dot.pdf  used on 
 input line 598.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./Figures/Modelling and Simulation/Theta.pdf, id=1251, 462.52798pt x 346.89601
+ [41 <./Figures/Modelling and Simulation/Test Input.pdf> <./Figures/Modelling a
+nd Simulation/Step Response of the Internal Input.pdf> <./Figures/Modelling and
+ Simulation/Step Response of the Internal Input hip angle.pdf>]
+<./Figures/Modelling and Simulation/Theta.pdf, id=1348, 462.52798pt x 346.89601
 pt>
 File: ./Figures/Modelling and Simulation/Theta.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Theta.pdf>
 Package pdftex.def Info: ./Figures/Modelling and Simulation/Theta.pdf  used on 
 input line 611.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
-<./Figures/Modelling and Simulation/Theta_dot.pdf, id=1252, 462.52798pt x 346.8
+<./Figures/Modelling and Simulation/Theta_dot.pdf, id=1349, 462.52798pt x 346.8
 9601pt>
 File: ./Figures/Modelling and Simulation/Theta_dot.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Theta_dot.pdf>
 Package pdftex.def Info: ./Figures/Modelling and Simulation/Theta_dot.pdf  used
  on input line 616.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
-[40{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./Figures/Modelling and Simulation/Psi.pdf, id=1274, 462.52798pt x 346.89601pt
+<./Figures/Modelling and Simulation/Psi.pdf, id=1351, 462.52798pt x 346.89601pt
 >
 File: ./Figures/Modelling and Simulation/Psi.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Psi.pdf>
 Package pdftex.def Info: ./Figures/Modelling and Simulation/Psi.pdf  used on in
 put line 629.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
-<./Figures/Modelling and Simulation/Psi_dot.pdf, id=1275, 462.52798pt x 346.896
+<./Figures/Modelling and Simulation/Psi_dot.pdf, id=1352, 462.52798pt x 346.896
 01pt>
 File: ./Figures/Modelling and Simulation/Psi_dot.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Psi_dot.pdf>
@@ -2503,9 +2493,10 @@ Package pdftex.def Info: ./Figures/Modelling and Simulation/Psi_dot.pdf  used o
 n input line 634.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Figures/Modelling and Simulation/Gamma.pdf, id=1277, 462.52798pt x 346.89601
+<./Figures/Modelling and Simulation/Gamma.pdf, id=1354, 462.52798pt x 346.89601
 pt>
 File: ./Figures/Modelling and Simulation/Gamma.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Gamma.pdf>
@@ -2515,7 +2506,7 @@ input line 648.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Figures/Modelling and Simulation/L_m L_x L_b L.pdf, id=1279, 462.52798pt x 3
+<./Figures/Modelling and Simulation/L_m L_x L_b L.pdf, id=1356, 462.52798pt x 3
 46.89601pt>
 File: ./Figures/Modelling and Simulation/L_m L_x L_b L.pdf Graphic file (type p
 df)
@@ -2527,7 +2518,7 @@ used on input line 658.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <./Figures/Modelling and Simulation/Comparison between the two external inputs.
-pdf, id=1281, 462.52798pt x 346.89601pt>
+pdf, id=1358, 462.52798pt x 346.89601pt>
 File: ./Figures/Modelling and Simulation/Comparison between the two external in
 puts.pdf Graphic file (type pdf)
 <use ./Figures/Modelling and Simulation/Comparison between the two external inp
@@ -2535,31 +2526,29 @@ uts.pdf>
 Package pdftex.def Info: ./Figures/Modelling and Simulation/Comparison between 
 the two external inputs.pdf  used on input line 667.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+[42 <./Figures/Modelling and Simulation/S.pdf> <./Figures/Modelling and Simulat
+ion/S_dot.pdf> <./Figures/Modelling and Simulation/Theta.pdf> <./Figures/Modell
+ing and Simulation/Theta_dot.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41 <./Figures/Modelling and Simulation/Test Input.pdf> <./Figures/Modelling an
-d Simulation/Step Response of the Internal Input.pdf> <./Figures/Modelling and 
-Simulation/Step Response of the Internal Input hip angle.pdf>])
-(Content/Mechanical Assembly.tex [42 <./Figures/Modelling and Simulation/S.pdf>
- <./Figures/Modelling and Simulation/S_dot.pdf> <./Figures/Modelling and Simula
-tion/Theta.pdf> <./Figures/Modelling and Simulation/Theta_dot.pdf>] [43 <./Figu
-res/Modelling and Simulation/Psi.pdf> <./Figures/Modelling and Simulation/Psi_d
-ot.pdf> <./Figures/Modelling and Simulation/Gamma.pdf> <./Figures/Modelling and
- Simulation/L_m L_x L_b L.pdf>] [44 <./Figures/Modelling and Simulation/Compari
-son between the two external inputs.pdf>]
+) (Content/Mechanical Assembly.tex [43 <./Figures/Modelling and Simulation/Psi.
+pdf> <./Figures/Modelling and Simulation/Psi_dot.pdf> <./Figures/Modelling and 
+Simulation/Gamma.pdf>] [44 <./Figures/Modelling and Simulation/L_m L_x L_b L.pd
+f> <./Figures/Modelling and Simulation/Comparison between the two external inpu
+ts.pdf>]
 chapter 6.
 [45
 
 ]
-<./Figures/Mechanical Assembly/body_printing.jpg, id=1569, 1172.38pt x 722.7pt>
+<./Figures/Mechanical Assembly/body_printing.jpg, id=1571, 1172.38pt x 722.7pt>
 
 File: ./Figures/Mechanical Assembly/body_printing.jpg Graphic file (type jpg)
 <use ./Figures/Mechanical Assembly/body_printing.jpg>
 Package pdftex.def Info: ./Figures/Mechanical Assembly/body_printing.jpg  used 
 on input line 31.
 (pdftex.def)             Requested size: 318.66948pt x 196.43285pt.
-<./Figures/Mechanical Assembly/screw_head_fitting.png, id=1570, 1272.25313pt x 
+<./Figures/Mechanical Assembly/screw_head_fitting.png, id=1572, 1272.25313pt x 
 670.00313pt>
 File: ./Figures/Mechanical Assembly/screw_head_fitting.png Graphic file (type p
 ng)
@@ -2567,7 +2556,7 @@ ng)
 Package pdftex.def Info: ./Figures/Mechanical Assembly/screw_head_fitting.png  
 used on input line 43.
 (pdftex.def)             Requested size: 227.62206pt x 119.86949pt.
-<./Figures/Mechanical Assembly/hip_knee_motors_assembly.png, id=1572, 501.875pt
+<./Figures/Mechanical Assembly/hip_knee_motors_assembly.png, id=1574, 501.875pt
  x 301.125pt>
 File: ./Figures/Mechanical Assembly/hip_knee_motors_assembly.png Graphic file (
 type png)
@@ -2580,7 +2569,7 @@ Overfull \hbox (34.14728pt too wide) in paragraph at lines 57--58
  [][] 
  []
 
-<./Figures/Mechanical Assembly/horn_assembly_marking.png, id=1573, 255.95625pt 
+<./Figures/Mechanical Assembly/horn_assembly_marking.png, id=1575, 255.95625pt 
 x 276.03125pt>
 File: ./Figures/Mechanical Assembly/horn_assembly_marking.png Graphic file (typ
 e png)
@@ -2590,7 +2579,7 @@ g  used on input line 63.
 (pdftex.def)             Requested size: 132.97693pt x 143.40028pt.
 [46 <./Figures/Mechanical Assembly/body_printing.jpg> <./Figures/Mechanical Ass
 embly/screw_head_fitting.png>]
-<./Figures/Mechanical Assembly/motor_spacer_ring.png, id=1581, 803.0pt x 762.85
+<./Figures/Mechanical Assembly/motor_spacer_ring.png, id=1583, 803.0pt x 762.85
 pt>
 File: ./Figures/Mechanical Assembly/motor_spacer_ring.png Graphic file (type pn
 g)
@@ -2601,7 +2590,7 @@ sed on input line 76.
  [47 <./Figures/Mechanical Assembly/hip_knee_motors_assembly.png> <./Figures/Me
 chanical Assembly/horn_assembly_marking.png> <./Figures/Mechanical Assembly/mot
 or_spacer_ring.png>]
-<./Figures/Mechanical Assembly/chassis_assembled.jpg, id=1589, 3035.34pt x 3035
+<./Figures/Mechanical Assembly/chassis_assembled.jpg, id=1590, 3035.34pt x 3035
 .34pt>
 File: ./Figures/Mechanical Assembly/chassis_assembled.jpg Graphic file (type jp
 g)
@@ -2772,53 +2761,33 @@ Package rerunfilecheck Info: File `Master_Thesis.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  52939 strings out of 475247
- 1098385 string characters out of 5767607
- 2105368 words of memory out of 5000000
- 72750 multiletter control sequences out of 15000+600000
- 671044 words of font info for 254 fonts, out of 8000000 for 9000
+ 1098400 string characters out of 5767607
+ 2096449 words of memory out of 5000000
+ 72751 multiletter control sequences out of 15000+600000
+ 671278 words of font info for 256 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  119i,20n,113p,10934b,1428s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{table.caption.65} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.caption.49} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.66} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.50} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter*.74} has been referenced but does not exist
-, replaced by a fixed one
-
-<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiK
-TeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
-c/lm/lmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Pro
-gram Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/l
-mmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/typ
-e1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr17.pfb
-><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/l
-m/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/public/lm/lmro10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmro8.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/lm/lmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/lm/lmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
+/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr17.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/lm/lmro10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmro8
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Fi
+les/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
 Output written on "D:/MASTERS\semester 4\Legged_TWIPR\Latex\Master Thesis\Maste
-r-Thesis\Master_Thesis.pdf" (67 pages, 36416339 bytes).
+r-Thesis\Master_Thesis.pdf" (67 pages, 36417743 bytes).
 PDF statistics:
- 2072 PDF objects out of 2073 (max. 8388607)
- 334 named destinations out of 1000 (max. 500000)
+ 2069 PDF objects out of 2073 (max. 8388607)
+ 329 named destinations out of 1000 (max. 500000)
  62206 words of extra memory for PDF output out of 74296 (max. 10000000)
 
