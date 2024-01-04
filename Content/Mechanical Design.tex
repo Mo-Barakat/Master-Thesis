@@ -50,6 +50,16 @@ The compliant leg is more flexible and can be used to absorb the shock from the 
 \section{Schmatic Representation of the Robot}
 % the schematic representation of the robot should show the location of the different components such as the motors, wheels, battery, boards, and others
 %figure for the schematic representation of the robot
+\subsection{Schmatic overview of the robot}
+%figure for the schmatic overview of the robot
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{schmatic overview of the robot}
+	\caption[schmatic overview of the robot]{schmatic overview of the robot}
+	\label{fig:schmaticoverviewoftherobot}
+\end{figure}
+As shown in the figure \ref{fig:schmaticoverviewoftherobot}, In order to achieve the desired movements using the new articulated legs, then we need three motors on each leg, one motor for the wheel, one motor for the knee joint and one motor for the hip joint.
+In addition to the motors, the robot needs a battery to power the motors, a control board to control the motors, and a power management board to manage the power distribution between the different components. Some of the components  are passed on from the previous TWIPR robot such as the control board, the power management board. For more information about the electronic components and there specifications, please refer to the electronics design chapter.
 
 \section{Initial Calculations}
 %figure for the initial calculations
@@ -73,7 +83,7 @@ The summation of the torques around point x should be equal to zero to maintain 
 	\sum_{i=1}^{n} \tau_{i}=m_{B}gI-m_{K}g(0.7)D
 \end{equation}
 \begin{equation}
-	\sum_{i=1}^{n} \tau_{i}=0.704(9.81)(0.03)-0.2(9.81)(0.7)(0.15)\approx0 Nm
+	\sum_{i=1}^{n} \tau_{i}=0.704(9.81)(0.03)-0.2(9.81)(0.7)(0.15)\approx0 \mathrm{Nm}
 \end{equation}
 The Lengths of D and I can be modified to make sure that the summation of the torques around point x is equal or approximately equal to zero.
 This will make sure that the robot can balance itself with minimum wheel motor torque.
@@ -84,11 +94,10 @@ The torque required to lift the body is calculated around the knee joint point y
 	\sum_{i=1}^{n} \tau_{i}=m_{B}g(D+I)-m_{K}g(0.3)D
 \end{equation}
 \begin{equation}
-	\sum_{i=1}^{n} \tau_{i}=0.704(9.81)(0.03+0.15)-0.2(9.81)(0.3)(0.15) \approx 1.154 Nm
+	\sum_{i=1}^{n} \tau_{i}=0.704(9.81)(0.03+0.15)-0.2(9.81)(0.3)(0.15) \approx 1.154 \mathrm{Nm}
 \end{equation}
-1.154 Nm is the minimum torque required to hold the body in position.
+1.154 $\mathrm{Nm}$ is the minimum torque required to hold the body in position.
 The Knee motor should be able to generate more torque to be able to lift the body and change the knee angle.
-\vspace{2cm}
 
 The approximate masses of the body and the legs are estimated in the table\ref{tab:initialcalculationsassumptions}.
 After manufacturing the parts and assembling the robot, the actual masses of the body and the legs are measured and the calculations are updated accordingly.
@@ -119,6 +128,13 @@ After manufacturing the parts and assembling the robot, the actual masses of the
 		\item Use gearbox to increase the torque
 	\end{itemize}
 \end{notebox}
+%To reduce the needed torque to lift the body, we can:
+%\begin{itemize}
+%	\item Shorten the links
+%	\item Reduce the body weight
+%	\item Use gearbox to increase the torque
+%\end{itemize}
+
 \newpage
 \section{Detailed Design Development}
 % Elaborate on the development of the detailed mechanical design.
