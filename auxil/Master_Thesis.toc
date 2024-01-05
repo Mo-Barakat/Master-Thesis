@@ -81,11 +81,15 @@
 \contentsline {section}{\numberline {6.5}Troubleshooting and Problem Solving}{51}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Safety Considerations}{52}{section.6.6}%
 \contentsline {chapter}{\numberline {7}Firmware and Testing}{53}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Firmware Development}{54}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Programming Languages and Tools}{54}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Integration with Hardware}{54}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Testing Framework and Methodology}{54}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Test Cases and Scenarios}{54}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Debugging and Troubleshooting}{54}{section.7.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{XII}{chapter*.76}%
+\contentsline {section}{\numberline {7.1}Overview}{54}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Microcontroller Firmware}{54}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Raspberry Pi Software}{55}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Host PC Software}{55}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Integrated Development Environment}{55}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Integration with Hardware}{56}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Debugging and Troubleshooting}{56}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{57}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusion}{57}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{57}{section.8.2}%
+\contentsline {chapter}{\nonumberline Bibliography}{XII}{chapter*.80}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

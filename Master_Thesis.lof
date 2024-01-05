@@ -73,5 +73,10 @@
 \contentsline {figure}{\numberline {6.11}{\ignorespaces Fully assembled chassis}}{50}{figure.caption.74}%
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Electronics mounted on board mounting rack}}{51}{figure.caption.75}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Hardware diagram}}{54}{figure.caption.76}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Pinout \& Configuration}}{55}{figure.caption.77}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Clock Configuration}}{56}{figure.caption.78}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Jlink Debugger}}{56}{figure.caption.79}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
