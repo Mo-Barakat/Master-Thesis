@@ -59,24 +59,26 @@
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Gamma}}{43}{figure.caption.60}%
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Lm Lx Lb and L}}{44}{figure.caption.61}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Comparison between the two external inputs}}{44}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Retuned VS not retuned}}{45}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Controller Setting Comparisons for different poles}}{45}{figure.caption.64}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Printing the body}}{46}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Design techniques used to avoid the need for support material}}{46}{figure.caption.64}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison between the hip and knee motors assembly and the horn assembly marking}}{47}{figure.caption.65}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Motor spacer ring}}{47}{figure.caption.66}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Assembled chassis}}{48}{figure.caption.68}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Thread inserts}}{49}{figure.caption.69}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Mounting motors on knee wheel links}}{49}{figure.caption.70}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Mounting motors on hip knee links}}{49}{figure.caption.71}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Assembling knee wheel links and hip knee links}}{50}{figure.caption.72}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Assembling body to hip knee links}}{50}{figure.caption.73}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Fully assembled chassis}}{50}{figure.caption.74}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Electronics mounted on board mounting rack}}{51}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Printing the body}}{47}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Design techniques used to avoid the need for support material}}{47}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison between the hip and knee motors assembly and the horn assembly marking}}{48}{figure.caption.67}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Motor spacer ring}}{48}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Assembled chassis}}{49}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Thread inserts}}{50}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Mounting motors on knee wheel links}}{50}{figure.caption.72}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Mounting motors on hip knee links}}{50}{figure.caption.73}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Assembling knee wheel links and hip knee links}}{51}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Assembling body to hip knee links}}{51}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Fully assembled chassis}}{51}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Electronics mounted on board mounting rack}}{52}{figure.caption.77}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Hardware diagram}}{54}{figure.caption.76}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Pinout \& Configuration}}{55}{figure.caption.77}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Clock Configuration}}{56}{figure.caption.78}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Jlink Debugger}}{56}{figure.caption.79}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Hardware diagram}}{55}{figure.caption.78}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Pinout \& Configuration}}{56}{figure.caption.79}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Clock Configuration}}{57}{figure.caption.80}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Jlink Debugger}}{57}{figure.caption.81}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
