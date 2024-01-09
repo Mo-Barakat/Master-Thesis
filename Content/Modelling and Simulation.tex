@@ -168,12 +168,12 @@ Since the knee wheel link, the hip knee link and the body are assumed to be cubo
 
 	\newpage
 \subsection{Assumptions and Parameters}
-Many assumptions as outlined in \ref{tab:parameters} for the figure \ref{fig:Mechanical model with the local coordinate system} were made to simplify the model and reduce the complexity of the calculations. The weights and the lengths of the links are constant, and the angles $\phi_2$, $\phi_3$ are input variables that can be controlled to adjust the robot's posture.
+Many assumptions as outlined in \ref{tab:assumptions} for the figure \ref{fig:Mechanical model with the local coordinate system} were made to simplify the model and reduce the complexity of the calculations. The weights and the lengths of the links are constant, and the angles $\phi_2$, $\phi_3$ are input variables that can be controlled to adjust the robot's posture.
 %table of the assumptions
 	\begin{table}[h!]
 		\centering
-		\caption{Parameters of the mechanical system}
-		\label{tab:parameters}
+		\caption{Assumptions of the mechanical system}
+		\label{tab:assumptions}
 		\begin{tabular}{lcl}
 			\toprule
 			Parameter & Value & Description \\
@@ -209,8 +209,6 @@ Many assumptions as outlined in \ref{tab:parameters} for the figure \ref{fig:Mec
 			$a_B$ & - & Length of the body \\
 			$b_B$ & - & Width of the body \\
 			$R_m$ & - & Radius of the knee joint \\
-			$a_B$ & - & Length of the body \\
-			$b_B$ & - & Width of the body \\
 			\bottomrule
 		\end{tabular}
 	\end{table}
@@ -711,7 +709,7 @@ The poles selection is a crucial step in the controller synthesis. The poles are
 	Poles_Exp2 = [0, -30, -2 + 0.1j, -2 - 0.1j, 0, -2.5]
 \end{lstlisting}
 
-As shown in figure \ref{fig:Controller Setting Comparisons for different poles}, the response of the controller with poles $Poles_Exp1$ is a bit faster than the response of the controller with poles $Poles_Exp2$ to converge to the desired state but the overshoot is higher. Both experiments show similar response when changing the configuration of the hip and knee angles at $t=3$ and $t=5$ respectively.
+As shown in figure \ref{fig:Controller Setting Comparisons for different poles}, the response of the controller with poles Poles\_Exp1 is a bit faster than the response of the controller with poles Poles\_Exp2 to converge to the desired state but the overshoot is higher. Both experiments show similar response when changing the configuration of the hip and knee angles at $t=3$ and $t=5$ respectively.
 
 
 %%pitch angle
