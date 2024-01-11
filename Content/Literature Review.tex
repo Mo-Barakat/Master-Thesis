@@ -10,7 +10,7 @@
 \begin {figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{Ascento robot}
-\caption{Ascento Robot by ETH Zurich\cite{klemm2019ascento}}
+\caption{Ascento Robot by ETH Zurich \cite{klemm2019ascento}}
 \label{fig:Ascento robot}
 \end {figure}
 
@@ -32,13 +32,13 @@ Different types of multi-legged robots have been developed such as the quadruped
 \includegraphics[width=0.3\textwidth]{Honda's Asimo}
 \includegraphics[width=0.3\textwidth]{Boston Dynamics' Atlas}
 \includegraphics[width=0.3\textwidth]{sony QRIO}
-\caption{Honda's Asimo, Boston Dynamics' Atlas and Sony QRIO\cite{asimo}\cite{atlas}\cite{qrio}}
+\caption{Honda's Asimo, Boston Dynamics' Atlas and Sony QRIO \cite{asimo} \cite{atlas} \cite{qrio}}
 \label{fig:Asimo, Atlas and QRIO}
 \end {figure}
 
 
 It is obvious that the mass distribution of the robot is a key factor in determining the robot's stability.
-Various design considerations when designing a robot are important to consider, such as the robot's size, degree of freedom, link design, and mass distribution\cite{nath2017design}.
+Various design considerations when designing a robot are important to consider, such as the robot's size, degree of freedom, link design, and mass distribution \cite{nath2017design}.
 Biped robots have many parameters that affect their locomotion, making it difficult to determine the right design parameters to achieve stable and reliable gaits.
 The purpose of designing and assembling this biped robot is to advance research on humanoid robots and to offer a platform for studies on biped locomotion.
 It is simple to change the structure to suit the researcher's interests and the type of testing that must be done.
@@ -46,21 +46,21 @@ As a result, the platform requires little upkeep.
 With the help of sensors, electrical actuators, and mechanical connections, biped robots with full functionality are put together to carry out a specific task.
 An apparatus for processing (PU), primarily consisting of an embedded processor, which methodically regulates every part of the biped robot.
 Several robots are built around these microcontrollers.
-Because of the significant processing power that is contained on a single chip, programmers have a great deal of flexibility\cite{madadi2007design}.
+Because of the significant processing power that is contained on a single chip, programmers have a great deal of flexibility \cite{madadi2007design}.
  The design of bipedal robots is a complex task that requires a thorough understanding of mechanics, control systems, human biomechanics, and robotics software.
 
 %figure for evoBOT-3
 \begin {figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{evoBOT-3}
-\caption{evoBOT-3\cite{klokowski2023evobot}}
+\caption{evoBOT-3 \cite{klokowski2023evobot}}
 \label{fig:evoBOT-3}
 \end {figure}
 
-The Legged Two-Wheeled Inverted Pendulum Robot (LTWIPR) such as the Ascento robot by ETH Zurich \cite{klemm2019ascento} and similar robots designs studied in \cite{guo2022design},\cite{zhang2022dynamic},\cite{cui2022modeling},\cite{hsu2022implementation} and \cite{xin2020online} demonstrate the different design approaches that can be used to design a LTWIPR. The wheel-leg hybrid design of the LTWIPR allows for the robot to have the advantages of both wheeled and legged robots.
+The Legged Two-Wheeled Inverted Pendulum Robot (LTWIPR) such as the Ascento robot by ETH Zurich \cite{klemm2019ascento} and similar robots designs studied in \cite{guo2022design}, \cite{zhang2022dynamic}, \cite{cui2022modeling}, \cite{hsu2022implementation} and \cite{xin2020online} demonstrate the different design approaches that can be used to design a LTWIPR. The wheel-leg hybrid design of the LTWIPR allows for the robot to have the advantages of both wheeled and legged robots.
 another design differs, such as the evoBOT-3.
 High levels of flexibility and agility define the evoBOT. This collaborative robot can be used in complex urban spaces, going beyond the traditional logistical context.
-These extensions include load carriers and the passing and turning of objects.\cite{klokowski2023evobot}
+These extensions include load carriers and the passing and turning of objects \cite{klokowski2023evobot}.
 
 \subsection{Dynamic Modeling of Wheeled Bipedal Robots}
 The dynamic modeling of wheeled bipedal robots is a complex task that requires a thorough understanding of the robot's kinematics and dynamics.
@@ -78,20 +78,20 @@ The control strategies are chosen based on different factors such as the control
 It is important to note that the suggested IMBC system does not require any prior understanding of system dynamics, and that human knowledge's qualitative components are used to adjust the controller parameters. The study \cite {cui2022modeling} shows the implementation of LQR control on a LTWIPR because it efficiently resolves the issue of striking a balance between control effort and good system response.
 The wheels of the Wheel-based robot are controlled by the LQR controller because the pendulum length varies during movement.
 Other studies demonstrate classical control strategies such as PID control on Two-wheeled self-balance robot.
-The study \cite{zimit2018modelling}shows the implementation of PID control on a Two-wheeled self-balance robot where PID gains are tuned until ideal performance is achieved.
-Some other methods such as controlled lagrangian are used to stabilize an inverted pendulum that is fastened to the end of a robotic arm that rotates\cite{bloch1999stabilization}.
+The study \cite{zimit2018modelling} shows the implementation of PID control on a Two-wheeled self-balance robot where PID gains are tuned until ideal performance is achieved.
+Some other methods such as controlled lagrangian are used to stabilize an inverted pendulum that is fastened to the end of a robotic arm that rotates \cite{bloch1999stabilization}.
 Model Predictive Control (MPC) is also a powerful and versatile control strategy that has been used on wheeled self-balancing robots. \cite{azimi2013model} presents the development of model predictive control (MPC) for each subsystem of a two-wheeled self-balancing robot (TWSBR) in order to achieve a stable and robust control system. The control of the robot is an intricate process that involves advanced algorithms to achive the desired control objective.
 \vspace{3 cm}
 \subsection{Integration of Learning and Adaptive Control Mechanisms in Wheeled Bipedal Robots}
 In the absence of an accurate dynamic model of the robot, Adaptive dynamic programming (ADP) and reinforcement learning (RL) can be used to derive an adaptive optimal control solution based on learning.
 In contrast to the LQR control which requires an accurate dynamic model of the robot.
 In complex mechanical structures such as the LTWIPR, the dynamics are difficult to model accurately.
-Learning and adaptive control mechanisms can be used to overcome this challenge. The study \cite{cui2021learning}proposes a data-driven algorithm to generate near optimal balance control for a two-wheeled self-balancing robot.
-In other research, Adaptive variable impedance control (AVIC) is used to control the robot's balance specifically in the case of interaction with complex unknown terrain\cite{xu2020adaptive}.
+Learning and adaptive control mechanisms can be used to overcome this challenge. The study \cite{cui2021learning} proposes a data-driven algorithm to generate near optimal balance control for a two-wheeled self-balancing robot.
+In other research, Adaptive variable impedance control (AVIC) is used to control the robot's balance specifically in the case of interaction with complex unknown terrain \cite{xu2020adaptive}.
 The AVIC controller is used to control the robot's balance by minimizing the force tracking error for each leg that is exerted on the body.
 \subsection{Applications and Future Directions}
 There are many applications for wheeled bipedal robots, including Agriculture, Search and Rescue, surveillance, warehouse automation, military, and others.
 Further research is needed to improve the performance of wheeled bipedal robots in terms of speed, stability, and robustness.
 Solutions for different problems such as the localization of the robot, the navigation of the robot, and the interaction of the robot with its environment are needed to advance the field \cite{raj2022comprehensive}.
-Machine learning and artificial intelligence can be used to improve the performance of wheeled bipedal robots\cite{kuutti2020survey}.
+Machine learning and artificial intelligence can be used to improve the performance of wheeled bipedal robots \cite{kuutti2020survey}.
 

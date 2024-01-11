@@ -30,55 +30,56 @@
 \contentsline {figure}{\numberline {3.21}{\ignorespaces Top view of the Robot Assembly}}{17}{figure.caption.31}%
 \contentsline {figure}{\numberline {3.22}{\ignorespaces 3D view of the Robot Assembly}}{18}{figure.caption.32}%
 \contentsline {figure}{\numberline {3.23}{\ignorespaces Side view of the Robot Assembly}}{19}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Top view of the Robot Assembly}}{19}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Face Shield}}{20}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Top view of the Robot Assembly}}{20}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Robot Assembly Different Configurations}}{20}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Face Shield}}{21}{figure.caption.36}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Components Diagram}}{22}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces DYNAMIXEL XM430-W350}}{22}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces SIMPLEX MOTION SC040A}}{23}{figure.caption.38}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Raspberry Pi 4 compute module}}{23}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces VL53L1X}}{24}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Raspberry Pi Camera Module V2}}{24}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces SLS XTRON 3000MAH 4S1P}}{25}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces brakets for delectronic design second test }}{25}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Robot Hub Board }}{26}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Power Management Board }}{27}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Components Diagram}}{24}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces DYNAMIXEL XM430-W350}}{24}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces SIMPLEX MOTION SC040A}}{25}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Raspberry Pi 4 compute module}}{25}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces VL53L1X}}{26}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Raspberry Pi Camera Module V2}}{26}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces SLS XTRON 3000MAH 4S1P}}{27}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces brakets for delectronic design second test }}{27}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Robot Hub Board }}{28}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Power Management Board }}{29}{figure.caption.46}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Comparison between the old and new models}}{29}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Mechanical model with the local coordinate system}}{30}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Moment of inertia Schematic representation}}{31}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Two-Wheeled Inverted Pendulum Robot Dynamics}}{34}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces The environment consists always of a world entity, other parts like user in- terface(UI), HW-manager and visualization are optional, it is closely linked to the Scheduler \cite {Bachlorsthesis}}}{37}{figure.caption.52}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces The simulation environment}}{38}{figure.caption.53}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Block diagram of a state feedback controller}}{38}{figure.caption.54}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Test input}}{41}{figure.caption.55}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Step response of the internal input}}{41}{figure.caption.56}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces S and S dot}}{42}{figure.caption.57}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Theta and Theta dot}}{42}{figure.caption.58}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Psi and Psi dot}}{43}{figure.caption.59}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Gamma}}{43}{figure.caption.60}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Lm Lx Lb and L}}{44}{figure.caption.61}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Comparison between the two external inputs}}{44}{figure.caption.62}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Retuned VS not retuned}}{45}{figure.caption.63}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Controller Setting Comparisons for different poles}}{45}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Comparison between the old and new models}}{31}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Mechanical model with the local coordinate system}}{32}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Moment of inertia Schematic representation}}{33}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Two-Wheeled Inverted Pendulum Robot Dynamics}}{36}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces The environment consists always of a world entity, other parts like user in- terface(UI), HW-manager and visualization are optional, it is closely linked to the Scheduler \cite {Bachlorsthesis}}}{39}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces The simulation environment}}{40}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Block diagram of a state feedback controller}}{40}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Test input}}{43}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Step response of the internal input}}{43}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces S and S dot}}{44}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Theta and Theta dot}}{44}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Psi and Psi dot}}{45}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Gamma}}{45}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Lm Lx Lb and L}}{46}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Comparison between the two external inputs}}{46}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Retuned VS not retuned}}{47}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Controller Setting Comparisons for different poles}}{47}{figure.caption.65}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Printing the body}}{47}{figure.caption.65}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Design techniques used to avoid the need for support material}}{47}{figure.caption.66}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison between the hip and knee motors assembly and the horn assembly marking}}{48}{figure.caption.67}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Motor spacer ring}}{48}{figure.caption.68}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Assembled chassis}}{49}{figure.caption.70}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Thread inserts}}{50}{figure.caption.71}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Mounting motors on knee wheel links}}{50}{figure.caption.72}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Mounting motors on hip knee links}}{50}{figure.caption.73}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Assembling knee wheel links and hip knee links}}{51}{figure.caption.74}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Assembling body to hip knee links}}{51}{figure.caption.75}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Fully assembled chassis}}{51}{figure.caption.76}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Electronics mounted on board mounting rack}}{52}{figure.caption.77}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Printing the body}}{49}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Design techniques used to avoid the need for support material}}{49}{figure.caption.67}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison between the hip and knee motors assembly and the horn assembly marking}}{50}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Motor spacer ring}}{50}{figure.caption.69}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Assembled chassis}}{51}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Thread inserts}}{52}{figure.caption.72}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Mounting motors on knee wheel links}}{52}{figure.caption.73}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Mounting motors on hip knee links}}{52}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Assembling knee wheel links and hip knee links}}{53}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Assembling body to hip knee links}}{53}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Fully assembled chassis}}{53}{figure.caption.77}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Electronics mounted on board mounting rack}}{54}{figure.caption.78}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Hardware diagram}}{55}{figure.caption.78}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Pinout \& Configuration}}{56}{figure.caption.79}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Clock Configuration}}{57}{figure.caption.80}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Jlink Debugger}}{57}{figure.caption.81}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Hardware diagram}}{57}{figure.caption.79}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Pinout \& Configuration}}{58}{figure.caption.80}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Clock Configuration}}{59}{figure.caption.81}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Jlink Debugger}}{59}{figure.caption.82}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

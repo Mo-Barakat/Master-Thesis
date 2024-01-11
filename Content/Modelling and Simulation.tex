@@ -79,84 +79,81 @@ The following equations are used to calculate the center of gravity location ref
 % input the model figure from the graphics path
 
 
-	\begin{equation}
-		\begin{aligned}
-			x_{CG} = \frac{m_{L1} \cdot 0 + m_K \cdot 0 + m_{L2} \cdot L_{C2} \cdot \sin(\phi_2) + m_B \cdot (L_2 \cdot \sin(\phi_2) + L_{C3} \cdot \sin(\phi_2 + \phi_3))}{m_{L1} + m_{L2} + m_K + m_B}
-		\end{aligned}
-	\end{equation}
-Where $x_{CG}$ is the center of gravity in the x-axis.
+
+\begin{equation}
+    \begin{aligned}
+        x_{\mathrm{CG}} = \frac{m_{\mathrm{L1}} \cdot 0 + m_{\mathrm{K}} \cdot 0 + m_{\mathrm{L2}} \cdot L_{\mathrm{C2}} \cdot \sin(\phi_{\mathrm{2}}) + m_{\mathrm{B}} \cdot (L_{\mathrm{2}} \cdot \sin(\phi_{\mathrm{2}}) + L_{\mathrm{C3}} \cdot \sin(\phi_{\mathrm{2}} + \phi_{\mathrm{3}}))}{m_{\mathrm{L1}} + m_{\mathrm{L2}} + m_{\mathrm{K}} + m_{\mathrm{B}}}
+    \end{aligned}
+\end{equation}
+
+Where $x_{\mathrm{CG}}$ is the center of gravity in the x-axis.
 
 	\begin{equation}
-		\begin{aligned}
-			y_{CG} = \frac{m_{L1} \cdot L_{C1} + m_K \cdot L_1 + m_{L2} \cdot (L_1 + L_{C2} \cdot \cos(\phi_2)) + m_B \cdot (L_1 + L_2 \cdot \cos(\phi_2) + L_{C3} \cdot \cos(\phi_2 + \phi_3))}{m_{L1} + m_{L2} + m_K + m_B}
-		\end{aligned}
-	\end{equation}
-Where $y_{CG}$ is the center of gravity in the y-axis.
+    \begin{aligned}
+        y_{\mathrm{CG}} = \frac{m_{\mathrm{L1}} \cdot L_{\mathrm{C1}} + m_{\mathrm{K}} \cdot L_{\mathrm{1}} + m_{\mathrm{L2}} \cdot (L_{\mathrm{1}} + L_{\mathrm{C2}} \cdot \cos(\phi_{\mathrm{2}})) + m_{\mathrm{B}} \cdot (L_{\mathrm{1}} + L_{\mathrm{2}} \cdot \cos(\phi_{\mathrm{2}}) + L_{\mathrm{C3}} \cdot \cos(\phi_{\mathrm{2}} + \phi_{\mathrm{3}}))}{m_{\mathrm{L1}} + m_{\mathrm{L2}} + m_{\mathrm{K}} + m_{\mathrm{B}}}
+    \end{aligned}
+\end{equation}
+
+Where $y_{\mathrm{CG}}$ is the center of gravity in the y-axis.
 
 %expain the equations in more details
 	\begin{equation}
-		L_G = \sqrt{x_{CG}^2 + y_{CG}^2}
-	\end{equation}
+    L_{\mathrm{G}} = \sqrt{x_{\mathrm{CG}}^2 + y_{\mathrm{CG}}^2}
+\end{equation}
+
 The distance between the center of gravity and the Wheel Joint is calculated using the Pythagorean theorem.
 
 	\begin{equation}
-		\theta = \arctan\left(\frac{{x_{CG}}}{{y_{CG}}}\right)
+    \gamma= \arctan\left(\frac{x_{\mathrm{CG}}}{y_{\mathrm{CG}}}\right)
 	\end{equation}
-The angle between the center of gravity $L_G$ and the knee wheel link $L_1$ is calculated using the arctangent function.
+
+$\gamma$ is the angle between the center of gravity $L_{\mathrm{G}}$ and the knee wheel link $L_1$ is calculated using the arctangent function.
 
 \subsection{Moment of inertia}
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=.5\textwidth]{Angles}
-		\caption[Moment of inertia Schematic representation]{Schematic representation detailing the requisite angles and lengths for calculating the moment of inertia.}
-		\label{fig:Schematic representation xxxxx detailing the requisite angles and lengths for calculating the moment of inertia.}
-	\end{figure}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=.5\textwidth]{Angles}
+        \caption[Moment of inertia Schematic representation]{Schematic representation detailing the requisite angles and lengths for calculating the moment of inertia.}
+        \label{fig:Schematic representation xxxxx detailing the requisite angles and lengths for calculating the moment of inertia.}
+    \end{figure}
 
+    %MOI
+    Moment of inertia calculations are important for the dynamic analysis of the robot. In order to calculate the moment of inertia, the lengths from the wheel joint to the center of mass of each link are calculated. The moment of inertia is calculated using the following equations.
+    \begin{equation}
+        L_{\mathrm{m}} = \sqrt{L_{\mathrm{1}}^2 + L_{\mathrm{C2}}^2 - L_{\mathrm{1}} L_{\mathrm{C2}} \cos(180 - \phi_{\mathrm{2}})}
+    \end{equation}
+    Where $L_{\mathrm{m}}$ is the distance between the wheel joint and the center of mass of the knee wheel link.
+    \begin{equation}
+        L_{\mathrm{x}} = \sqrt{L_{\mathrm{1}}^2 + L_{\mathrm{2}}^2 - L_{\mathrm{1}} L_{\mathrm{2}} \cos(180 - \phi_{\mathrm{2}})}
+    \end{equation}
 
-	%MOI
-	Moment of inertia calculations are important for the dynamic analysis of the robot. In order to calculate the moment of inertia, the lengths from the wheel joint to the center of mass of each link are calculated. The moment of inertia is calculated using the following equations.
-	\begin{equation}
-		L_m = \sqrt{L_1^2 + L_{C2}^2 - L_1 L_{C2} \cos(180 - \phi_2)}
-	\end{equation}
-Where $L_m$ is the distance between the wheel joint and the center of mass of the knee wheel link.
-	\begin{equation}
-		L_{x} = \sqrt{L_1^2 + L_2^2 - L_1 L_2 \cos(180 - \phi_2)}
-	\end{equation}
+    \begin{equation}
+        \alpha = \cos^{-1} \left( \frac{l_{\mathrm{2}}^2 + l_{\mathrm{x}}^2 - l_{\mathrm{1}}^2}{2 l_{\mathrm{2}} l_{\mathrm{x}}} \right)
+    \end{equation}
 
+    \begin{equation}
+        L_{\mathrm{b}} = \sqrt{L_{\mathrm{x}}^2 + L_{\mathrm{C3}}^2 - L_{\mathrm{x}} L_{\mathrm{C3}} \cos(180 - \alpha - \phi_{\mathrm{3}})}
+    \end{equation}
 
-	\begin{equation}
-		\alpha = \cos^{-1} \left( \frac{l_2^2 + l_{x}^2 - l_1^2}{2 l_2 l_{x}} \right)
-	\end{equation}
+    \begin{equation}
+        I_{\mathrm{L1}} = \frac{1}{12} m_{\mathrm{L1}} (a_{\mathrm{1}}^2 + b_{\mathrm{1}}^2)
+    \end{equation}
+    \begin{equation}
+        I_{\mathrm{L2}} = \frac{1}{12} m_{\mathrm{L2}} (a_{\mathrm{2}}^2 + b_{\mathrm{2}}^2)
+    \end{equation}
+    \begin{equation}
+        I_{\mathrm{B}} = \frac{1}{12} m_{\mathrm{B}} (a_{\mathrm{B}}^2 + b_{\mathrm{B}}^2)
+    \end{equation}
+    Since the knee wheel link, the hip knee link, and the body are assumed to be cuboids, the moment of inertia of each link is calculated using the equation above.
+    \begin{equation}
+        I_{\mathrm{K}} = \frac{1}{2} m_{\mathrm{K}} R_{\mathrm{m}}^2
+    \end{equation}
+    The moment of inertia of the knee joint is calculated using the equation above where the knee joint is assumed to be a cylinder.
+    \begin{equation}
+        I = I_{\mathrm{L1}} + m_{\mathrm{L1}} L_{\mathrm{C1}}^2 + I_{\mathrm{K}} + m_{\mathrm{K}} L_{\mathrm{1}}^2 + I_{\mathrm{L2}} + m_{\mathrm{L2}} L_{\mathrm{m}}^2 + I_{\mathrm{B}} + m_{\mathrm{B}} L_{\mathrm{b}}^2
+    \end{equation}
+    The total moment of inertia of the robot is calculated using the equation above.
 
-	%explain the equations in more details
-
-	\begin{equation}
-		L_b = \sqrt{L_{x}^2 + L_{C3}^2 - Lx L_{C3} \cos(180 - \alpha - \phi_3 )}
-	\end{equation}
-
-	\begin{equation}
-		I_{L1} = \frac{1}{12} m_{L1} (a_1^2 + b_1^2)
-	\end{equation}
-	\begin{equation}
-		I_{L2} = \frac{1}{12} m_{L2} (a_2^2 + b_2^2)
-	\end{equation}
-	\begin{equation}
-		I_B = \frac{1}{12} m_B (a_B^2 + b_B^2)
-	\end{equation}
-Since the knee wheel link, the hip knee link and the body are assumed to be cuboids, the moment of inertia of each link is calculated using the equation above.
-	\begin{equation}
-		I_K = \frac{1}{2} m_K R_m^2
-	\end{equation}
-	The moment of inertia of the knee joint is calculated using the equation above where the knee joint is assumed to be a cylinder.
-	\begin{equation}
-		I = I_{L1} + m_{L1} L_{C1}^2 + I_K + m_K L_1^2 + I_{L2} + m_{L2} L_m^2 + I_B + m_B L_b^2
-	\end{equation}
-	The total moment of inertia of the robot is calculated using the equation above.
-%	\item \textbf{Integration into TWIPR Model:} Integration of derived models into a new TWIPR framework.
-
-%	\item \textbf{Linear Model Derivation:} Derivation of the linear model from the integrated TWIPR model.
-
-%	\item Modeling allows for predictive analysis and understanding of the robot's behavior.
 	In order to predict the behavior of the robot under different settings, the modeling procedure entails constructing mathematical representations of the robot's dynamics and control systems.
 %\end{itemize}
 
@@ -168,218 +165,221 @@ Since the knee wheel link, the hip knee link and the body are assumed to be cubo
 
 	\newpage
 \subsection{Assumptions and Parameters}
-Many assumptions as outlined in \ref{tab:assumptions} for the figure \ref{fig:Mechanical model with the local coordinate system} were made to simplify the model and reduce the complexity of the calculations. The weights and the lengths of the links are constant, and the angles $\phi_2$, $\phi_3$ are input variables that can be controlled to adjust the robot's posture.
+Many assumptions as outlined in \ref{tab:assumptions} for the figure \ref{fig:Mechanical model with the local coordinate system} were made to simplify the model and reduce the complexity of the calculations. The weights and the lengths of the links are constant, and the angles $\phi_{\mathrm{2}}$, $\phi_{\mathrm{3}}$ are input variables that can be controlled to adjust the robot's posture.
 %table of the assumptions
-	\begin{table}[h!]
-		\centering
-		\caption{Assumptions of the mechanical system}
-		\label{tab:assumptions}
-		\begin{tabular}{lcl}
-			\toprule
-			Parameter & Value & Description \\
-			\midrule
-			$L_1$ & 0.017 m & Length of the Wheel knee Link \\
-			$L_2$ & 0.017 m & Length of the Body knee Link \\
-			$L_{C1}$ & 0.013 m & Distance between the Wheel Joint and the center of mass of the Wheel knee Link \\
-			$L_{C2}$ & 0.013 m & Distance between the Knee Joint and the center of mass of the Body knee Link \\
-			$L_{C3}$ & 0.01 m & Distance between the Hip Joint and the center of mass of the body \\
-			$m_{L1}$ & 0.2 kg & Mass of the Wheel knee Link \\
-			$m_{L2}$ & 0.2 kg & Mass of the Body knee Link \\
-			$m_K$ & 0.2 kg & Mass of the Knee Joint \\
-			$m_B$ & 0.5 kg & Mass of the Body \\
-			$L_G$ & - & Distance between the center of gravity and the Wheel Joint \\
-			$\theta$ & - & Angle between the center of gravity and the Wheel knee Link \\
-			$\phi_1$ & - & Angle between the Body knee Link and the $y_B$ vertical axis of the body \\
-			$\phi_2$ & - & Angle between the Wheel knee Link and the Body knee Link \\
-			$\phi_3$ & - & Angle between the Body knee Link and the center of mass of the body \\
-			$\phi_4$ & - & Angle between the Body knee Link and the $X_B$ horizontal axis of the body \\
-			$L_m$ & - & Distance between the Wheel Joint and the center of mass of the Wheel knee Link \\
-			$L_x$ & - & Distance between the Wheel Joint and the center of mass of the hip knee Link \\
-			$L_b$ & - & Distance between the Wheel Joint and the center of mass of the body \\
-			$\alpha$ & - & Angle between $L_x$ and $L_2$ \\
-			$I_{L1}$ & - & Moment of inertia of the knee wheel link around the z-axis \\
-			$I_{L2}$ & - & Moment of inertia of the hip knee link around the z-axis \\
-			$I_K$ & - & Moment of inertia of the knee joint around the z-axis \\
-			$I_B$ & - & Moment of inertia of the body around the z-axis \\
-			$I$ & - & Total moment of inertia of the robot around the z-axis \\
-			$a_1$ & - & Length of the knee wheel link \\
-			$b_1$ & - & Width of the knee wheel link \\
-			$a_2$ & - & Length of the hip knee link \\
-			$b_2$ & - & Width of the hip knee link \\
-			$a_B$ & - & Length of the body \\
-			$b_B$ & - & Width of the body \\
-			$R_m$ & - & Radius of the knee joint \\
-			\bottomrule
-		\end{tabular}
-	\end{table}
+\begin{table}[h!]
+    \centering
+    \caption{Assumptions of the mechanical system}
+    \label{tab:assumptions}
+    \begin{tabular}{lcl}
+        \toprule
+        Parameter & Value & Description \\
+        \midrule
+        $L_{\mathrm{1}}$ & 0.017\,m & Length of the Wheel knee Link \\
+        $L_{\mathrm{2}}$ & 0.017\,m & Length of the Body knee Link \\
+        $L_{\mathrm{C1}}$ & 0.013\,m & Distance between the Wheel Joint and the center of mass of the Wheel knee Link \\
+        $L_{\mathrm{C2}}$ & 0.013\,m & Distance between the Knee Joint and the center of mass of the Body knee Link \\
+        $L_{\mathrm{C3}}$ & 0.01\,m & Distance between the Hip Joint and the center of mass of the body \\
+        $m_{\mathrm{L1}}$ & 0.2\,kg & Mass of the Wheel knee Link \\
+        $m_{\mathrm{L2}}$ & 0.2\,kg & Mass of the Body knee Link \\
+        $m_{\mathrm{K}}$ & 0.2\,kg & Mass of the Knee Joint \\
+        $m_{\mathrm{B}}$ & 0.5\,kg & Mass of the Body \\
+        $L_{\mathrm{G}}$ & - & Distance between the center of gravity and the Wheel Joint \\
+        $\gamma$ & - & Angle between the center of gravity and the Wheel knee Link \\
+        $\phi_{\mathrm{1}}$ & - & Angle between the Body knee Link and the $y_{\mathrm{B}}$ vertical axis of the body \\
+        $\phi_{\mathrm{2}}$ & - & Angle between the Wheel knee Link and the Body knee Link \\
+        $\phi_{\mathrm{3}}$ & - & Angle between the Body knee Link and the center of mass of the body \\
+        $\phi_{\mathrm{4}}$ & - & Angle between the Body knee Link and the $X_{\mathrm{B}}$ horizontal axis of the body \\
+        $L_{\mathrm{m}}$ & - & Distance between the Wheel Joint and the center of mass of the Wheel knee Link \\
+        $L_{\mathrm{x}}$ & - & Distance between the Wheel Joint and the center of mass of the hip knee Link \\
+        $L_{\mathrm{b}}$ & - & Distance between the Wheel Joint and the center of mass of the body \\
+        $\alpha$ & - & Angle between $L_{\mathrm{x}}$ and $L_{\mathrm{2}}$ \\
+        $I_{\mathrm{L1}}$ & - & Moment of inertia of the knee wheel link around the z-axis \\
+        $I_{\mathrm{L2}}$ & - & Moment of inertia of the hip knee link around the z-axis \\
+        $I_{\mathrm{K}}$ & - & Moment of inertia of the knee joint around the z-axis \\
+        $I_{\mathrm{B}}$ & - & Moment of inertia of the body around the z-axis \\
+        $I$ & - & Total moment of inertia of the robot around the z-axis \\
+        $a_{\mathrm{1}}$ & - & Length of the knee wheel link \\
+        $b_{\mathrm{1}}$ & - & Width of the knee wheel link \\
+        $a_{\mathrm{2}}$ & - & Length of the hip knee link \\
+        $b_{\mathrm{2}}$ & - & Width of the hip knee link \\
+        $a_{\mathrm{B}}$ & - & Length of the body \\
+        $b_{\mathrm{B}}$ & - & Width of the body \\
+        $R_{\mathrm{m}}$ & - & Radius of the knee joint \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
 	\newpage
-	\subsection{Dynamics of the Two-Wheeled Inverted Pendulum Robot}
-%figure of the TWIPR dynamics
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=1\textwidth]{TWIPR dynamics}
-		\caption[Two-Wheeled Inverted Pendulum Robot Dynamics]{Figure illustrating the Two-Wheeled Inverted Pendulum Robot Dynamics.}
-		\label{fig:Two-Wheeled Inverted Pendulum Robot Dynamics}
-	\end{figure}
+\subsection{Dynamics of the Two-Wheeled Inverted Pendulum Robot}
+    %figure of the TWIPR dynamics
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\textwidth]{TWIPR dynamics}
+        \caption[Two-Wheeled Inverted Pendulum Robot Dynamics]{Figure illustrating the Two-Wheeled Inverted Pendulum Robot Dynamics.}
+        \label{fig:Two-Wheeled Inverted Pendulum Robot Dynamics}
+    \end{figure}
 
-	Given the functions $B_i: \mathbb{R} \rightarrow \mathbb{R}$, $C_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_i: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, the equations of motion are given by:
+    Given the functions $B_{\mathrm{i}}: \mathbb{R} \rightarrow \mathbb{R}$, $C_{\mathrm{ij}}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{\mathrm{ij}}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_{\mathrm{i}}: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, the equations of motion are given by:
 
-	\begin{align}
-		\ddot{s} &= \frac{\sin(\theta)}{V_1(\theta)} \left( -C_{11}(\theta)g + C_{12}\dot{\theta}^2 + C_{13}(\theta)\dot{\psi}^2 \right) - \frac{D_{11}(\theta)}{V_1(\theta)}\dot{s} + \frac{D_{12}(\theta)}{V_1(\theta)}\dot{\theta} + \frac{B_{1}(\theta)}{V_1(\theta)}(\tau_L + \tau_R) \\
-		\ddot{\theta} &= \frac{\sin(\theta)}{V_1(\theta)} \left( C_{21} - C_{22}(\theta)\dot{\theta}^2 - C_{23}(\theta)\dot{\psi}^2 \right) + \frac{D_{21}(\theta)}{V_1(\theta)}\dot{s} - \frac{D_{22}(\theta)}{V_1(\theta)}\dot{\theta} - \frac{B_{2}(\theta)}{V_1(\theta)}(\tau_L + \tau_R)  \\
-		\ddot{\psi} &= \frac{\sin(\theta)}{V_2(\theta)} \left( C_{31}(\theta)\dot{\theta}\dot{\psi} - C_{32}(\theta)\dot{\psi}\dot{s} \right) - \frac{D_{33}(\theta)}{V_2(\theta)}\dot{\psi} - \frac{B_{3}}{V_2(\theta)}(\tau_L - \tau_R)
-	\end{align}
+    \begin{align}
+        \ddot{s} &= \frac{\sin(\theta)}{V_{\mathrm{1}}(\theta)} \left( -C_{\mathrm{11}}(\theta)g + C_{\mathrm{12}}\dot{\theta}^2 + C_{\mathrm{13}}(\theta)\dot{\psi}^2 \right) - \frac{D_{\mathrm{11}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{s} + \frac{D_{\mathrm{12}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{\theta} + \frac{B_{\mathrm{1}}(\theta)}{V_{\mathrm{1}}(\theta)}(\tau_{\mathrm{L}} + \tau_{\mathrm{R}}) \\
+        \ddot{\theta} &= \frac{\sin(\theta)}{V_{\mathrm{1}}(\theta)} \left( C_{\mathrm{21}} - C_{\mathrm{22}}(\theta)\dot{\theta}^2 - C_{\mathrm{23}}(\theta)\dot{\psi}^2 \right) + \frac{D_{\mathrm{21}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{s} - \frac{D_{\mathrm{22}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{\theta} - \frac{B_{\mathrm{2}}(\theta)}{V_{\mathrm{1}}(\theta)}(\tau_{\mathrm{L}} + \tau_{\mathrm{R}})  \\
+        \ddot{\psi} &= \frac{\sin(\theta)}{V_{\mathrm{2}}(\theta)} \left( C_{\mathrm{31}}(\theta)\dot{\theta}\dot{\psi} - C_{\mathrm{32}}(\theta)\dot{\psi}\dot{s} \right) - \frac{D_{\mathrm{33}}(\theta)}{V_{\mathrm{2}}(\theta)}\dot{\psi} - \frac{B_{\mathrm{3}}}{V_{\mathrm{2}}(\theta)}(\tau_{\mathrm{L}} - \tau_{\mathrm{R}})
+    \end{align}
 
+    The equations of motion are derived in \cite{kim2015dynamic}. The functions $B_{\mathrm{i}}: \mathbb{R} \rightarrow \mathbb{R}$, $C_{\mathrm{ij}}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{\mathrm{ij}}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_{\mathrm{i}}: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, are given by:
 
-	The equations of motion are derived in \cite{kim2015dynamic}. The functions $B_i: \mathbb{R} \rightarrow \mathbb{R}$, $C_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_i: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, are given by:
+    \begin{equation}
+        C_{\mathrm{11}}(\theta) = m_{\mathrm{B}}^2 l^2 \cos(\theta)g,
+    \end{equation}
+    \begin{equation}
+        C_{\mathrm{12}} = (I_{\mathrm{2}} + m_{\mathrm{B}} l^2) m_{\mathrm{B}} l,
+    \end{equation}
+    \begin{equation}
+        C_{\mathrm{13}}(\theta) = (I_{\mathrm{2}} + m_{\mathrm{B}} l^2) m_{\mathrm{B}} l + m_{\mathrm{B}} l (I_{\mathrm{3}} - I_{\mathrm{1}} - m_{\mathrm{B}} l^2) \cos^2(\theta),
+    \end{equation}
+    \begin{equation}
+        C_{\mathrm{21}} = (m_{\mathrm{B}} + 2m_{\mathrm{W}} + \frac{2J}{r^2}) m_{\mathrm{B}} l,
+    \end{equation}
+    \begin{equation}
+        C_{\mathrm{22}}(\theta) = m_{\mathrm{B}}^2 l^2 \cos(\theta),
+    \end{equation}
+    \begin{equation}
+        C_{\mathrm{23}}(\theta) = (m_{\mathrm{B}}^2 l^2 + (m_{\mathrm{B}} + 2m_{\mathrm{W}} + \frac{2J}{r^2}) (I_{\mathrm{3}} - I_{\mathrm{1}} - m_{\mathrm{B}} l^2) )\cos(\theta).
+    \end{equation}
+    \begin{equation}
+        C_{\mathrm{31}}(\theta) = 2 (I_{\mathrm{3}} - I_{\mathrm{1}} - m_{\mathrm{B}}l^2) \cos(\theta),
+    \end{equation}
+    \begin{equation}
+        C_{\mathrm{31}}(\theta)  = m_{\mathrm{B}} l,
+    \end{equation}
+    \begin{equation}
+        D_{\mathrm{11}}(\theta) = \frac{(I_{\mathrm{2}} + m_{\mathrm{B}}l^2) 2c_{\mathrm{\alpha}}}{r^2} - \frac{m_{\mathrm{B}} l \cos(\theta) 2c_{\mathrm{\alpha}}}{r},
+    \end{equation}
+    \begin{equation}
+        D_{\mathrm{12}}(\theta) = \frac{(I_{\mathrm{2}} + m_{\mathrm{B}}l^2) 2c_{\mathrm{\alpha}}}{r} - 2m_{\mathrm{B}} l \cos(\theta) c_{\mathrm{\alpha}},
+    \end{equation}
+    \begin{equation}
+        D_{\mathrm{21}}(\theta) = \frac{(m_{\mathrm{B}} + 2m_{\mathrm{W}} + \frac{2J}{r^2}) 2c_{\mathrm{\alpha}}}{r} + \frac{m_{\mathrm{B}} l \cos(\theta) 2c_{\mathrm{\alpha}}}{r^2},
+    \end{equation}
+    \begin{equation}
+        D_{\mathrm{22}}(\theta) = \frac{(m_{\mathrm{B}} + 2m_{\mathrm{W}} + \frac{2J}{r}) 2c_{\mathrm{\alpha}} + m_{\mathrm{B}} l \cos(\theta) 2c_{\mathrm{\alpha}}}{r},
+    \end{equation}
+    \begin{equation}
+        D_{\mathrm{33}}(\theta) = \frac{d^2 c_{\mathrm{\alpha}}}{2r^2 },
+    \end{equation}
+    \begin{equation}
+        B_{\mathrm{1}} = (I_{\mathrm{2}} + m_{\mathrm{B}}l^2) \frac{1}{r} + m_{\mathrm{B}} l \cos(\theta),
+    \end{equation}
+    \begin{equation}
+        B_{\mathrm{2}} = \frac{m_{\mathrm{B}} l \cos(\theta)}{r} + m_{\mathrm{B}} + 2m_{\mathrm{W}} + \frac{2J}{r^2},
+    \end{equation}
+    \begin{equation}
+        B_{\mathrm{3}} = \frac{d}{2r},
+    \end{equation}
+    \begin{equation}
+        V_{\mathrm{1}} = (m_{\mathrm{B}} + 2m_{\mathrm{W}} + \frac{2J}{r^2}) (I_{\mathrm{2}} + m_{\mathrm{B}}l^2) - m_{\mathrm{B}}^2l^2 \cos^2(\theta),
+    \end{equation}
+    \begin{equation}
+        V_{\mathrm{2}} = I_{\mathrm{3}} + 2K + (m_{\mathrm{W}} + \frac{J}{r^2}) \frac{d^2}{2} - (I_{\mathrm{3}} - I_{\mathrm{1}} - m_{\mathrm{B}}l^2) \sin^2(\theta).
+    \end{equation}
 
-	\begin{equation}
-		C_{11}(\theta) = m_B^2 l^2 \cos(\theta)g,
-	\end{equation}
-	\begin{equation}
-		C_{12} = (I_2 + m_B l^2) m_B l,
-	\end{equation}
-	\begin{equation}
-		C_{13}(\theta) = (I_2 + m_B l^2) m_B l + m_B l (I_3 - I_1 - m_B l^2) \cos^2(\theta),
-	\end{equation}
-	\begin{equation}
-		C_{21} = (m_B + 2m_W + \frac{2J}{r^2}) m_B l,
-	\end{equation}
-	\begin{equation}
-		C_{22}(\theta) = m_B^2 l^2 \cos(\theta),
-	\end{equation}
-	\begin{equation}
-		C_{23}(\theta) = (m_B^2 l^2 + (m_B + 2m_W + \frac{2J}{r^2}) (I_3 - I_1 - m_B l^2) )\cos(\theta).
-	\end{equation}
-	\begin{equation}
-		C_{31}(\theta) = 2 (I_3 - I_1 - m_Bl^2) \cos(\theta),
-	\end{equation}
-	\begin{equation}
-		C_{31}(\theta)  = m_B l,
-	\end{equation}
-	\begin{equation}
-		D_{11}(\theta) = \frac{(I_2 + m_Bl^2) 2c_\alpha}{r^2} - \frac{m_B l \cos(\theta) 2c_\alpha}{r},
-	\end{equation}
-	\begin{equation}
-		D_{12}(\theta) = \frac{(I_2 + m_Bl^2) 2c_\alpha}{r} - 2m_B l \cos(\theta) c_\alpha,
-	\end{equation}
-	\begin{equation}
-		D_{21}(\theta) = \frac{(m_B + 2m_W + \frac{2J}{r^2}) 2c_\alpha}{r} + \frac{m_B l \cos(\theta) 2c_\alpha}{r^2},
-	\end{equation}
-	\begin{equation}
-		D_{22}(\theta) = \frac{(m_B + 2m_W + \frac{2J}{r}) 2c_\alpha + m_B l \cos(\theta) 2c_\alpha}{r},
-	\end{equation}
-	\begin{equation}
-		D_{33}(\theta) = \frac{d^2 c_\alpha}{2r^2 },
-	\end{equation}
-	\begin{equation}
-		B_{1} = (I_2 + m_Bl^2) \frac{1}{r} + m_B l \cos(\theta),
-	\end{equation}
-	\begin{equation}
-		B_{2} = \frac{m_B l \cos(\theta)}{r} + m_B + 2m_W + \frac{2J}{r^2},
-	\end{equation}
-	\begin{equation}
-		B_{3} = \frac{d}{2r},
-	\end{equation}
-	\begin{equation}
-		V_{1} = (m_B + 2m_W + \frac{2J}{r^2}) (I_2 + m_Bl^2) - m_B^2l^2 \cos^2(\theta),
-	\end{equation}
-	\begin{equation}
-		V_{2} = I_3 + 2K + (m_W + \frac{J}{r^2}) \frac{d^2}{2} - (I_3 - I_1 - m_Bl^2) \sin^2(\theta).
-	\end{equation}
+The functions $B_{\mathrm{i}}: \mathbb{R} \rightarrow \mathbb{R}$, $C_{\mathrm{ij}}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{\mathrm{ij}}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_{\mathrm{i}}: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, depends on the parameters in table \ref{tab:parameters}.
+    \begin{table}[h]
+        \centering
+        \caption{Parameters of the mechanical system}
+        \label{tab:parameters}
+        \begin{tabular}{lcl}
+            \toprule
+            Parameter & Value & Description \\
+            \midrule
+            $m_{\mathrm{B}}$ & 0.5 kg & mass of the pendulum body \\
+            $m_{\mathrm{W}}$ & 0.636 kg & mass of a wheel \\
+            $l$ & - & distance between the wheel axis and the pendulum's center of gravity \\
+            $d$ & - & distance between the two wheels \\
+            $J$ & \(5.175 \times 10^{-4}\) kgm\textsuperscript{2} & moment of inertia of a wheel w.r.t. reference frame \{C\} in direction of \(c_{\mathrm{2}}\) \\
+            $K$ & - & moment of inertia of a wheel w.r.t. reference frame \{C\} in direction of \(c_{\mathrm{3}}\) \\
+            $I_{\mathrm{1}}$ & - & moment of inertia of pendulum's body w.r.t. reference frame \{B\} in direction of \(b_{\mathrm{1}}\) \\
+            $I_{\mathrm{2}}$ & - & moment of inertia of pendulum's body w.r.t. reference frame \{B\} in direction of \(b_{\mathrm{2}}\) \\
+            $I_{\mathrm{3}}$ & - & moment of inertia of pendulum's body w.r.t. reference frame \{B\} in direction of \(b_{\mathrm{3}}\) \\
+            $c_{\mathrm{\alpha}}$ & \(4.630 \times 10^{-4}\) Nms & viscous friction coefficient \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
 
-The functions $B_i: \mathbb{R} \rightarrow \mathbb{R}$, $C_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, $D_{ij}: \mathbb{R} \rightarrow \mathbb{R}$, and $V_i: \mathbb{R} \rightarrow \mathbb{R}$, $i,j \in \{1,2,3\}$, depends on the parameters in table \ref{tab:parameters}.
-	\begin{table}[h]
-		\centering
-		\caption{Parameters of the mechanical system}
-		\label{tab:parameters}
-		\begin{tabular}{lcl}
-			\toprule
-			Parameter & Value & Description \\
-			\midrule
-			$m_B$ & 0.5 kg & mass of the pendulum body \\
-			$m_W$ & 0.636 kg & mass of a wheel \\
-			$l$ & - & distance between the wheel axis and the pendulum's center of gravity \\
-			$d$ & - & distance between the two wheels \\
-			$J$ & \(5.175 e^{-4}\) kgm\textsuperscript{2} & moment of inertia of a wheel w.r.t. Reference frame \{C\} in direction of \(c_2\) \\
-			$K$ & - & moment of inertia of a wheel w.r.t. reference frame \{C\} in direction of \(c_3\) \\
-			$I_1$ & - & moment of inertia of pendulum's body w.r.t. Reference frame \{B\} in direction of \(b_1\) \\
-			$I_2$ & - & moment of inertia of pendulum's body w.r.t. Reference frame \{B\} in direction of \(b_2\) \\
-			$I_3$ & - & moment of inertia of pendulum's body w.r.t. Reference frame \{B\} in direction of \(b_3\) \\
-			$c_\alpha$ & \(4.630 e^{-4}\) Nms & viscous friction coefficient \\
-			\bottomrule
-		\end{tabular}
-	\end{table}
 	
 	
 
 \subsection{Linearization of the Two-Wheeled Inverted Pendulum Robot}
 In this section, we linearize the equations of motion of the legged TWIPR robot about the upright equilibrium point. Movement of the robot is restricted to the x-y plane.
 
-The torque inputs are $\tau_L$ and $\tau_R$ for the left and right wheels, respectively.
+The torque inputs are $\tau_{\mathrm{L}}$ and $\tau_{\mathrm{R}}$ for the left and right wheels, respectively.
 %equation tau_L and tau_R are equal
 \begin{equation}
-	\tau_L = \tau_R = \tau
+    \tau_{\mathrm{L}} = \tau_{\mathrm{R}} = \tau
 \end{equation}
 %the combined torque input u is equal to the torque tau_L plus tau_R
-the sum of the torques $\tau_L$ and $\tau_R$ is equal to the combined torque input $u$ which is an input and a variable.
+the sum of the torques $\tau_{\mathrm{L}}$ and $\tau_{\mathrm{R}}$ is equal to the combined torque input $u$ which is an input and a variable.
 \begin{equation}
-	u = \tau_L + \tau_R = 2\tau
+    u = \tau_{\mathrm{L}} + \tau_{\mathrm{R}} = 2\tau
 \end{equation}
-The degree of freedom for the rotation around the z-axis $\psi$ is eleinated by assuming that the robot is always moving in the x-y plane in a straight line. therfore the equation of motion would be as follows:
+The degree of freedom for the rotation around the z-axis $\psi$ is eliminated by assuming that the robot is always moving in the x-y plane in a straight line. Therefore the equation of motion would be as follows:
 \begin{equation}
-	\ddot{s} = \frac{\sin(\theta)}{V_1(\theta)} \left( -C_{11}(\theta)g + C_{12}\dot{\theta}^2 \right) - \frac{D_{11}(\theta)}{V_1(\theta)}\dot{s} + \frac{D_{12}(\theta)}{V_1(\theta)}\dot{\theta} + \frac{B_{1}(\theta)}{V_1(\theta)}u
+    \ddot{s} = \frac{\sin(\theta)}{V_{\mathrm{1}}(\theta)} \left( -C_{\mathrm{11}}(\theta)g + C_{\mathrm{12}}\dot{\theta}^2 \right) - \frac{D_{\mathrm{11}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{s} + \frac{D_{\mathrm{12}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{\theta} + \frac{B_{\mathrm{1}}(\theta)}{V_{\mathrm{1}}(\theta)}u
 \end{equation}
 \begin{equation}
-	\ddot{\theta} = \frac{\sin(\theta)}{V_1(\theta)} \left( C_{21} - C_{22}(\theta)\dot{\theta}^2 \right) + \frac{D_{21}(\theta)}{V_1(\theta)}\dot{s} - \frac{D_{22}(\theta)}{V_1(\theta)}\dot{\theta} - \frac{B_{2}(\theta)}{V_1(\theta)}u
+    \ddot{\theta} = \frac{\sin(\theta)}{V_{\mathrm{1}}(\theta)} \left( C_{\mathrm{21}} - C_{\mathrm{22}}(\theta)\dot{\theta}^2 \right) + \frac{D_{\mathrm{21}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{s} - \frac{D_{\mathrm{22}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{\theta} - \frac{B_{\mathrm{2}}(\theta)}{V_{\mathrm{1}}(\theta)}u
 \end{equation}
 Therefore the state vector would be as follows:
 \begin{equation}
-	x = \begin{bmatrix}
-		\theta \\
-		\dot{\theta}\\
-		s \\
-		\dot{s}
-	\end{bmatrix}
+    x = \begin{bmatrix}
+        \theta \\
+        \dot{\theta}\\
+        s \\
+        \dot{s}
+    \end{bmatrix}
 \end{equation}
 
-%Using thr functions
+%Using the functions
 \begin{equation}
-	f_1(x) = \frac{\sin(\theta)}{V_1(\theta)} \left( C_{21} - C_{22}(\theta)\dot{\theta}^2 \right) + \frac{D_{21}(\theta)}{V_1(\theta)}\dot{s} - \frac{D_{22}(\theta)}{V_1(\theta)}\dot{\theta}
+    f_{\mathrm{1}}(x) = \frac{\sin(\theta)}{V_{\mathrm{1}}(\theta)} \left( C_{\mathrm{21}} - C_{\mathrm{22}}(\theta)\dot{\theta}^2 \right) + \frac{D_{\mathrm{21}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{s} - \frac{D_{\mathrm{22}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{\theta}
 \end{equation}
 \begin{equation}
-	f_2(x) = \frac{\sin(\theta)}{V_1(\theta)} \left( -C_{11}(\theta)g + C_{12}\dot{\theta}^2 \right) - \frac{D_{11}(\theta)}{V_1(\theta)}\dot{s} + \frac{D_{12}(\theta)}{V_1(\theta)}\dot{\theta}
+    f_{\mathrm{2}}(x) = \frac{\sin(\theta)}{V_{\mathrm{1}}(\theta)} \left( -C_{\mathrm{11}}(\theta)g + C_{\mathrm{12}}\dot{\theta}^2 \right) - \frac{D_{\mathrm{11}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{s} + \frac{D_{\mathrm{12}}(\theta)}{V_{\mathrm{1}}(\theta)}\dot{\theta}
 \end{equation}
 \begin{equation}
-	g_1(x,u) = \frac{B_{2}(\theta)}{V_1(\theta)}u
+    g_{\mathrm{1}}(x,u) = \frac{B_{\mathrm{2}}(\theta)}{V_{\mathrm{1}}(\theta)}u
 \end{equation}
 \begin{equation}
-	g_2(x,u) = \frac{B_{1}(\theta)}{V_1(\theta)}u
+    g_{\mathrm{2}}(x,u) = \frac{B_{\mathrm{1}}(\theta)}{V_{\mathrm{1}}(\theta)}u
 \end{equation}
 The system can be represented in the following form:
 \begin{equation}
-	\dot{x} = \begin{bmatrix}
-		x_2 \\
-		f_1(x) \\
-		x_4    \\
-		f_2(x)
-	\end{bmatrix} + \begin{bmatrix}
-		0 \\
-		g_1(x,u) \\
-		0 \\
-		g_2(x,u)
-	\end{bmatrix}
+    \dot{x} = \begin{bmatrix}
+        x_{\mathrm{2}} \\
+        f_{\mathrm{1}}(x) \\
+        x_{\mathrm{4}}    \\
+        f_{\mathrm{2}}(x)
+    \end{bmatrix} + \begin{bmatrix}
+        0 \\
+        g_{\mathrm{1}}(x,u) \\
+        0 \\
+        g_{\mathrm{2}}(x,u)
+    \end{bmatrix}
 \end{equation}
 
 Linearization at the point $x = 0$, which corresponds to the upright equilibrium of the inverted pendulum, simplifies the system's dynamics as follows:
 \begin{equation}
-\dot{x} = A_cx + B_cu,
+    \dot{x} = A_{\mathrm{c}}x + B_{\mathrm{c}}u,
 \end{equation}
-where $A_c \in \mathbb{R}^{4\times4}$ is the system matrix of the time-continuous system, and $B_c \in \mathbb{R}^{4\times1}$ is the input matrix of the time-continuous system. Discretization of the system with a sampling frequency of 50 hertz yields:
+where $A_{\mathrm{c}} \in \mathbb{R}^{4\times4}$ is the system matrix of the time-continuous system, and $B_{\mathrm{c}} \in \mathbb{R}^{4\times1}$ is the input matrix of the time-continuous system. Discretization of the system with a sampling frequency of 50 hertz yields:
 \begin{equation}
-x_{k+1} = Ax_k + Bu_k,
+    x_{k+1} = A x_k + B u_k,
 \end{equation}
 where $k \in \mathbb{N}$ indexes the discrete time steps, $x_k \in \mathbb{R}^4$ denotes the state vector at the $k$-th sample, $u_k \in \mathbb{R}$ denotes the input at the $k$-th sample, $A \in \mathbb{R}^{4\times4}$ is the system matrix of the time-discrete system, and $B \in \mathbb{R}^{4\times1}$ is the input matrix of the time-discrete system \cite{MastersThesis}.
+
 
 
 
@@ -393,10 +393,18 @@ Discrete numerical simulations approximate the state of the system step by step 
 \subsection{Discrete double integration method}
 The discrete double integration method is used to calculate the state vector of the system at each time step. The state vector is calculated by integrating the acceleration twice to get the position and velocity. The state vector is calculated using the following equation:
 \begin{equation}
-	x_{k+1} = x_k + \dot{x_k} \Delta t + \frac{1}{2} \ddot{x_k} \Delta t^2
+	x_{k+1} = x_k + \dot{x}_k \Delta t + \frac{1}{2} \ddot{x}_k \Delta t^2
 \end{equation}
-where $x_k$ is the state vector at the $k$-th sample, $\dot{x_k}$ is the derivative of the state vector at the $k$-th sample, $\ddot{x_k}$ is the second derivative of the state vector at the $k$-th sample, and $\Delta t$ is the time step.
+where $x_k$ is the state vector at the $k$-th sample, $\dot{x}_k$ is the derivative of the state vector at the $k$-th sample, $\ddot{x}_k$ is the second derivative of the state vector at the $k$-th sample, and $\Delta t$ is the sampling time.
+\begin{equation}
+    t = k \Delta t
+\end{equation}
+Where $t$ is the time, $k$ is the current time step, and $\Delta t$ is the sampling time. This equation is used to get from discrete time to continuous time and vice versa.
+\begin{equation}
+    \ddot{x}_k = \ddot{x}(k \Delta t)
+\end{equation}
 
+Fixed step discrete forward double integration method is used to calculate the state vector of the system. The $\Delta t$ is constant and the $\ddot{x}_k$ is calculated according to the equations of motion 5.14, 5.15, 5.16.
 
 \section{Simulation Environment}
 %figure of the block diagram of the simulation environment
@@ -408,23 +416,45 @@ terface(UI), HW-manager and visualization are optional, it is closely linked to
 the Scheduler \cite{Bachlorsthesis}}
 	\label{fig:Block diagram of the simulation environment}
 \end{figure}
-The simulation environment is a software framework that is used to simulate the dynamics of the robot. The simulation enviroment is a A complex virtual environment created for realistic testing is the simulation environment. It comprises a variety of spaces with distinct states, dimensions, and mapping capabilities that enable the creation of a wide range of scenarios \cite{Bachlorsthesis}.
+The simulation environment is a software framework that is used to simulate the dynamics of the robot. The simulation enviroment is a A complex virtual environment created for realistic testing is the simulation environment. It comprises a variety of spaces with distinct states, dimensions, and mapping capabilities that enable the creation of a wide range of scenarios.The simulation environment was developed in \cite{Bachlorsthesis}.
 \subsection{Physics and Object Primitives}
-The simulation ensures realistic movements and interactions by incorporating intricate physics. It makes use of object primitives such as spheres, cylinders, and cuboids, which serve as a basis for building a variety of structures and objects\cite{Bachlorsthesis}.
+The simulation ensures realistic movements and interactions by incorporating intricate physics. It makes use of object primitives such as spheres, cylinders, and cuboids, which serve as a basis for building a variety of structures and objects \cite{Bachlorsthesis}.
 \subsection{Collision Checking and Dynamics}
-The simulation uses sophisticated collision checking techniques, such as pre-checking and distinct algorithms for various situations, such as collisions involving cuboids. To simulate realistic physical interactions between objects, this feature is essential\cite{Bachlorsthesis}.
+The simulation uses sophisticated collision checking techniques, such as pre-checking and distinct algorithms for various situations, such as collisions involving cuboids. To simulate realistic physical interactions between objects, this feature is essential \cite{Bachlorsthesis}.
 \subsection{Objects and Agents}
 A range of objects, both static and dynamic, including agents that imitate autonomous behavior, are present in the environment. This variety improves the simulation's ability to mimic interactions in the real world.
 \subsection{Scheduling and Real Robot Integration}
-An advanced scheduling system controls the order and timing of events. Furthermore, the simulation incorporates real robots in a unique way, combining virtual and physical components for thorough testing\cite{Bachlorsthesis}.
+An advanced scheduling system controls the order and timing of events. Furthermore, the simulation incorporates real robots in a unique way, combining virtual and physical components for thorough testing \cite{Bachlorsthesis}.
 \subsection{Integration of the Model}
-%figure of the simulation environment
+
+%three subfigures side by side for the simulation environment
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=.5\textwidth]{Simulation Environment}
-	\caption{The simulation environment}
-	\label{fig:The simulation environment}
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Simulation Environment_1}
+        \label{fig:Simulation Environment_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Simulation Environment_2}
+        \label{fig:Simulation Environment_2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Simulation Environment_3}
+        \label{fig:Simulation Environment_3}
+    \end{subfigure}
+    \caption{The simulation environment}
+    \label{fig:The simulation environment}
 \end{figure}
+
+%%figure of the simulation environment
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=.5\textwidth]{Simulation Environment}
+%	\caption{The simulation environment}
+%	\label{fig:The simulation environment}
+%\end{figure}
 As shown in the figure \ref{fig:The simulation environment}, the simulation environment simulates the dynamics of the robot and the controller. where the blue sphere represents the robot center of gravity which changes its location according to the robot's dynamics.
 
 
@@ -542,11 +572,19 @@ where The code \ref{lst:Changing the knee and hip angles of the robot} Shows the
 \end{lstlisting}
 In the above code \ref{lst:Changing the knee and hip angles in the dynamics and retuning the controller} It hows the function that changes the knee and hip angles in the dynamics and retunes the controller.
 
-\newpage
+
 \section{Simulation Analysis}
 %\begin{itemize}
 %	\item \textbf{Controller Responses:} Analysis of step response and responses to other inputs using one of the controllers in different configurations.
 The simulation analysis is a process of analyzing the performance of the controllers by conducting a series of simulations to evaluate their responses to various inputs in different configurations.
+%figure for internal and external control input
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\textwidth]{Block Diagram of State Feedback Controller_simple}
+    \caption{Internal and external control input}
+    \label{fig:Internal and external control input}
+\end{figure}
+
 \subsection{Controller Responses}
 In order to analyze the performance of the controllers, we conducted a series of simulations to evaluate their responses to various inputs.
 %figure for the test input
@@ -558,6 +596,7 @@ In order to analyze the performance of the controllers, we conducted a series of
 \end{figure}
 
 As shown in the figure \ref{fig:Test input}, this test input data is selected to evaluate the performance of the controllers. External control input is applied at $t=1$ and is maintained until $t=7$ to see the response. Additionally, changing the knee and hip angles at $t=3$ and $t=5$ respectively to see the response of the controller to the change in the configuration.
+\vspace{3cm}
 
 %two figures of the step response of the internal input and zoomed in for the hip angle effect
 \begin{figure}[h]
@@ -565,13 +604,13 @@ As shown in the figure \ref{fig:Test input}, this test input data is selected to
 	\begin{subfigure}[t]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Step Response of the Internal Input}
-		\caption{Step response of the internal input}
+		\caption{Conducted experiment internal input}
 		\label{fig:Step response of the internal input}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Step Response of the Internal Input hip angle}
-		\caption{Step response of the hip and knee angles}
+		\caption{Detailed view from $t=2$ to $t=6$}
 		\label{fig:Step response of the hip and knee angles}
 	\end{subfigure}
 	\caption{Step response of the internal input}
@@ -586,60 +625,64 @@ As shown in the figure \ref{fig:Test input}, this test input data is selected to
 %\end{figure}
 The internal input is the input that is generated by the controller and is used to control the robot.
 The step response of the internal input is shown in the figure \ref{fig:Step response of the internal input}. The figure shows the response at time $t=1$ when the external input is applied where it overshoots and then converges to a value of $0.25$ which indicates that the robot is moving forward and the external input is still applied. The figure \ref{fig:Step response of the hip and knee angles} shows the response of changing the configuration of the hip and knee angles  at $t=3$ and $t=5$ respectively. The effect of the change in knee angle is more significant than the effect of the change in the hip angle since the knee angle has much higher effect on the center of gravity location than the hip angle.The stop of the external input is reflected in the response at $t=7$ where the internal input converges to $0$ which indicates that the robot is not moving forward anymore.
+
 %two sub figures for the s and s dot
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{S}
-		\caption{S}
+		\caption{Forward Position}
 		\label{fig:S}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{S_dot}
-		\caption{S dot}
+		\caption{Forward Velocity}
 		\label{fig:S dot}
 	\end{subfigure}
-	\caption{S and S dot}
+	\caption{Forward Position and Velocity}
 	\label{fig:S and S dot}
 \end{figure}
 
 As shown in the figure \ref{fig:S and S dot}, the s is the x position of the robot. The s dot is the derivative of the s. As showen in the figure \ref{fig:S} at $t=1$ the robot starts moving slightly backward befor it starts moving forward. The center of gravity is learned a bit forward with translates into a slightly backward movement.Afterwards the controller keeps the balance of the robot while it is moving forward.The external input is stopped at $t=7$ which is reflected in the figure \ref{fig:S} at $t=7$ where the robot comes to a stop. The figure \ref{fig:S dot} shows the velocity of the robot. The velocity is disrupted at $t=3$ and $t=5$ when the hip and knee angles are changed respectively.
+\vspace{3cm}
 % two sub figures for the theta and theta dot
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{Theta}
-		\caption{Theta}
+		\caption{Pitch Angle $\theta$}
 		\label{fig:Theta}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{Theta_dot}
-		\caption{Theta dot}
+		\caption{Pitch Angular Velocity $\dot{\theta}$}
 		\label{fig:Theta dot}
 	\end{subfigure}
-	\caption{Theta and Theta dot}
+	\caption{Pitch Angle $\theta$ and Pitch Angular Velocity $\dot{\theta}$}
 	\label{fig:Theta and Theta dot}
 \end{figure}
 
 As shown in the figure \ref{fig:Theta and Theta dot}, the theta is the angle between the center of gravity and the vertical axis to the ground. The theta dot is the derivative of the theta. At $t=0$ the theta is zero since the robot is vertically aligned with the ground. The theta is changed at $t=1$ when the external input is applied to a value of $0.28$ which indicates that the robot is tilted forward. At $t=3$ til $t=7$ the theta is value is between $0.1$ and $0.2$ which indicates that the robot is still tilted forward but not as much as when the external input is applied which translates into a slow controlled forward movement. When the external input is stopped at $t=7$ the theta value drops down to to a negative value which indicates that the robot is tilted backward to stop the forward movement. The change in the hip and knee angles at $t=3$ and $t=5$ respectively is reflected in the theta value at $t=3$ and $t=5$ respectively. The Knee angle has a higher effect on the theta value than the hip angle. Theta changes by approximately $0.03$ when the knee angle is changed and by approximately $0.01$ when the hip angle is changed.
+
 %two sub figures for the psi and psi dot
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{Psi}
-		\caption{Psi}
+		\caption{Rotational angle $\psi$}
 		\label{fig:Psi}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{Psi_dot}
-		\caption{Psi dot}
+		\caption{Rotational Angular Velocity $\dot{\psi}$}
 		\label{fig:Psi dot}
 	\end{subfigure}
-	\caption{Psi and Psi dot}
+	\caption{Rotational angle $\psi$ and Rotational Angular Velocity $\dot{\psi}$}
 	\label{fig:Psi and Psi dot}
 \end{figure}
 
-As shown in the figure \ref{fig:Psi and Psi dot}, the $\psi$ is the angle of rotation around the y-axis. The $\dot{\psi}$ is the derivative of $\psi$. The graph shows that $\psi$ is close to zero since the robot is moving in a straight line along the x-axis. The slight change in $\psi$ below $10^{-5}$ is considered numerical noise, which is due to limited precision in floating point numbers.
+As shown in the figure \ref{fig:Psi and Psi dot}, the $\psi$ is the angle of rotation around the y-axis. The $\dot{\psi}$ is the derivative of $\psi$. The graph shows that $\psi$ is close to zero since the robot is moving in a straight line along the x-axis. The slight change in $\psi$  is considered numerical noise, which is due to limited precision in floating point numbers.
+\vspace{3cm}
 %figure for the Gamma
 \begin{figure}[h]
 	\centering
@@ -648,7 +691,7 @@ As shown in the figure \ref{fig:Psi and Psi dot}, the $\psi$ is the angle of rot
 	\label{fig:Gamma}
 \end{figure}
 
-The Gamma angle is the angle between the center of gravity and the link 1. As shown in the figure \ref{fig:Gamma}, the Gamma angle is changed at $t=3$ and $t=5$ when the hip and knee angles are changed respectively. It decreased to zero if the robot is vertically aligned with the ground meaning when the hip and knee angles are zero.
+The Gamma angle is the angle between the center of gravity and the link 1 \ref{fig:Mechanical model with the local coordinate system}. As shown in the figure \ref{fig:Gamma}, the Gamma angle is changed at $t=3$ and $t=5$ when the hip and knee angles are changed respectively. It decreased to zero if the robot is vertically aligned with the ground meaning when the hip and knee angles are zero.
 %figure for L_m L_x L_b and L
 \begin{figure}[h]
 	\centering
@@ -656,8 +699,9 @@ The Gamma angle is the angle between the center of gravity and the link 1. As sh
 	\caption{Lm Lx Lb and L}
 	\label{fig:Lm Lx Lb and L}
 \end{figure}
-\newpage
-As shown in the figure \ref{fig:Lm Lx Lb and L}, the Lm Lx Lb and L are changed at $t=3$ and $t=5$ when the hip and knee angles are changed respectively.
+
+As shown in the figure \ref{fig:Lm Lx Lb and L}, the Lm Lx Lb and L are changed at $t=3$ and $t=5$ when the hip and knee angles are changed respectively. The figure \ref{fig:Schematic representation xxxxx detailing the requisite angles and lengths for calculating the moment of inertia.} shows the schematic representation for the Lm Lx Lb and L. The change in the \ref{fig:Lm Lx Lb and L} is instantaneous since the model is recalculated in the simulation according to the new configuration but in the real world the change in the Lm Lx Lb and L is gradual.
+\vspace{5cm}
 %figure for comparison between the two external inputs
 \begin{figure}[h]
 	\centering
@@ -668,7 +712,7 @@ As shown in the figure \ref{fig:Lm Lx Lb and L}, the Lm Lx Lb and L are changed 
 
 In the figure \ref{fig:Comparison between the two external inputs}, two different external inputs are applied to the robot. In experment 1, 1 unit of external input is applied to the robot. In experment 2, 3 units of external input is applied to the robot. The experment 2 shows a better response than experment 1.The overshoot is less and the robot converges to the desired state faster. In addition, the robot is more stable when the hip and knee angles are changed at $t=3$ and $t=5$ respectively.
 %	\item \textbf{Impact of Non-Retuning:} Discussion on the effects of not retuning the controllers.
-\newpage
+
 \subsection{Impact of Non-Retuning}
 % figure for the Retuned VS not retuned
 \begin{figure}[h]
@@ -691,25 +735,42 @@ If the controller is not returned when the configuration changes, the old K gain
 %\subsection{Influence of Leg Configuration}
 %	\item \textbf{Controller Setting Comparisons:} Comparative study of different controller settings and a comparison between LQR and Pole-Placement controllers.
 \subsection{Controller Setting Comparisons}
-%figure for the Controller Setting Comparisons for different poles
+%two sub figures for the effect of the poles on the internal input and pitch angle
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=.5\textwidth]{Controller Setting Comparisons}
-	\caption{Controller Setting Comparisons for different poles}
-	\label{fig:Controller Setting Comparisons for different poles}
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{Controller Setting Comparisons}
+        \caption{Internal input for different poles configurations}
+        \label{fig:Internal input for different poles configurations}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{Controller Setting Comparisons_theta}
+        \caption{Pitch angle for different poles configurations}
+        \label{fig:Pitch angle for different poles configurations}
+    \end{subfigure}
+    \caption{Controller Setting Comparisons for different poles}
+    \label{fig:Controller Setting Comparisons for different poles}
 \end{figure}
+%%figure for the Controller Setting Comparisons for different poles
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=.5\textwidth]{Controller Setting Comparisons}
+%	\caption{Controller Setting Comparisons for different poles}
+%	\label{fig:Controller Setting Comparisons for different poles}
+%\end{figure}
 
 %	\item \textbf{Optimal Controller Configuration:} Conclusion on which controller configuration might be best suited for such a robot.
 %\end{itemize}
 
-The poles selection is a crucial step in the controller synthesis. The poles are selected to be in the left half of the complex plane to ensure the stability of the system. The poles are selected to be close to the origin to ensure a fast response. The poles are selected for the experments comparison shown in figure \ref{fig:Controller Setting Comparisons for different poles} are as follows:
+The poles selection is a crucial step in the controller synthesis. The poles are selected to be in the left half of the complex plane to ensure the stability of the system. The poles are selected to be close to the origin to ensure a fast response. The poles are selected for the experments comparison shown in figure \ref{fig:Controller Setting Comparisons for different poles} and \ref{fig:Controller Setting Comparisons for different poles} are as follows:
 %insert python code for the poles twipr_3d_poles_default = [0, -20, -3 + 1j, -3 - 1j, 0, -1.5]
+\newpage
 \begin{lstlisting}[language=Python, caption=The poles for the experments comparison, label={lst:The poles for the experments comparison}]
 	Poles_Exp1 = [0, -20, -3 + 1j, -3 - 1j, 0, -1.5]
 	Poles_Exp2 = [0, -30, -2 + 0.1j, -2 - 0.1j, 0, -2.5]
 \end{lstlisting}
 
-As shown in figure \ref{fig:Controller Setting Comparisons for different poles}, the response of the controller with poles Poles\_Exp1 is a bit faster than the response of the controller with poles Poles\_Exp2 to converge to the desired state but the overshoot is higher. Both experiments show similar response when changing the configuration of the hip and knee angles at $t=3$ and $t=5$ respectively.
+As shown in figure \ref{fig:Controller Setting Comparisons for different poles}, the response of the controller with poles Poles\_Exp1 is a bit faster than the response of the controller with poles Poles\_Exp2 to converge to the desired state but the overshoot is higher. Both experiments show similar response when changing the configuration of the hip and knee angles at $t=3$ and $t=5$ respectively. In figure \ref{fig:Pitch angle for different poles configurations}, the pitch angle for is higher for the controller with poles Poles\_Exp2 when starting the movement but when the the external input stops at $t=7$ the pitch angle for the controller with poles Poles\_Exp1 is higher than the pitch angle for the controller with poles Poles\_Exp2. The poles Poles\_Exp1 is better suited for the robot when it starts moving but the poles Poles\_Exp2 is better suited for the robot when it stops moving.
 
 
 %%pitch angle
